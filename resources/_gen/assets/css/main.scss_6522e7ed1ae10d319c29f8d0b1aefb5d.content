@@ -331,6 +331,10 @@ body [data-aos="zoom-in"] {
   content: "\e619";
 }
 
+.icon-bilibili:before {
+  content: "\e603";
+}
+
 .sidebar-toc-btn:before {
   font-family: "iconfont";
   content: "\e633";
@@ -364,6 +368,11 @@ body [data-aos="zoom-in"] {
 .icon-taichi:before {
   font-family: "iconfont";
   content: "\e62b";
+}
+
+.icon-qq:before {
+  font-family: "iconfont";
+  content: "\e63e";
 }
 
 .icon-image:before {
@@ -3086,6 +3095,14 @@ mjx-container::-webkit-scrollbar {
 
 .sidebar-social-icon:hover {
   transform: scale(1.2);
+}
+
+.icon-bilibili {
+  color: #00a1d6;
+}
+
+.icon-qq {
+  color: #12b7f5;
 }
 
 .sidebar-menu {

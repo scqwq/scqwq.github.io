@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Project</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content from My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    
+    <managingEditor>xxx@example.com (D-Sketon)</managingEditor>
+    <webMaster>xxx@example.com (D-Sketon)</webMaster>
+    
+    <copyright>All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!</copyright>
+    
+    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+    
+    
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/post/hello/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/hello/</guid>
+      <description>
+        <![CDATA[<h1>Hello World</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <p>💘 博麗 霊夢 💘</p>
+        
+        <hr><p>Published on 2023-03-15 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2023-03-15</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/%E8%AE%A1%E7%BB%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/%E8%AE%A1%E7%BB%84/</guid>
+      <description>
+        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <p>title: &lsquo;计组&rsquo;</p>
+<p>date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00</p>
+<h1 id="计组">
+<a class="header-anchor" href="#%e8%ae%a1%e7%bb%84"></a>
+计组
+</h1><h3 id="三总线">
+<a class="header-anchor" href="#%e4%b8%89%e6%80%bb%e7%ba%bf"></a>
+三总线
+</h3><p>1.数据总线</p>
+<p>双线传输 -&gt; 位数即为数据总线概念宽度，即机器位数，与储存器字长相关</p>
+<p>2.地址总线</p>
+<p>表示主存或I/O设备上存储单元的位置，且<strong>单向总线</strong>，总是又CPU发出地址指向存储器</p>
+<p>地址总线的位数与存储单元的个数有关，与存储单元的二进制位长度无关-&gt;即存东西的地方的大小和地址大小无关,32位地址可以指向8位数据类型</p>
+<p>3.控制总线</p>
+<p>发出各种控制信号，单一控制通常单向，控制总线总体双向</p>
+<!-- raw HTML omitted -->
+<p>CPU平时就是不断从主存中去取指令，然后执行指令，不断反复</p>
+<p>主存总线：具有三总线的结构</p>
+<p>DMA:直接存储器访问,在DMA控制器的控制下进行工作的</p>
+<h5 id="主存部分在后面">
+<a class="header-anchor" href="#%e4%b8%bb%e5%ad%98%e9%83%a8%e5%88%86%e5%9c%a8%e5%90%8e%e9%9d%a2"></a>
+主存部分在后面
+</h5><h4 id="总线控制">
+<a class="header-anchor" href="#%e6%80%bb%e7%ba%bf%e6%8e%a7%e5%88%b6"></a>
+总线控制:
+</h4><p>总线事务、主设备、从设备:</p>
+<!-- raw HTML omitted -->
+<h5 id="总线判优">
+<a class="header-anchor" href="#%e6%80%bb%e7%ba%bf%e5%88%a4%e4%bc%98"></a>
+总线判优：
+</h5><!-- raw HTML omitted -->
+<h5 id="集中式">
+<a class="header-anchor" href="#%e9%9b%86%e4%b8%ad%e5%bc%8f"></a>
+集中式
+</h5><h6 id="1链式查询">
+<a class="header-anchor" href="#1%e9%93%be%e5%bc%8f%e6%9f%a5%e8%af%a2"></a>
+1.链式查询:
+</h6><!-- raw HTML omitted -->
+<p>BS、BR、BG都是与控制总线的范畴</p>
+<p>BS有信号表示总线已经被使用</p>
+<p>缺点：对电路故障敏感</p>
+<h6 id="2计数器定时查询方式">
+<a class="header-anchor" href="#2%e8%ae%a1%e6%95%b0%e5%99%a8%e5%ae%9a%e6%97%b6%e6%9f%a5%e8%af%a2%e6%96%b9%e5%bc%8f"></a>
+2.计数器定时查询方式
+</h6><!-- raw HTML omitted -->
+<p>某个接口发生故障对其他接口使用不敏感，缺点是新增设备地址，控制变复杂,计时器通过设备地址线广播正在寻找的设备地址。</p>
+<h6 id="3独立请求方式">
+<a class="header-anchor" href="#3%e7%8b%ac%e7%ab%8b%e8%af%b7%e6%b1%82%e6%96%b9%e5%bc%8f"></a>
+3.独立请求方式:
+</h6><!-- raw HTML omitted -->
+<p>无BS和设备地址线</p>
+        
+        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/web/</guid>
+      <description>
+        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <p>title: &lsquo;计网&rsquo;</p>
+<p>date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00</p>
+<h1 id="计网">
+<a class="header-anchor" href="#%e8%ae%a1%e7%bd%91"></a>
+计网
+</h1><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260201165102084.png" alt="image-20260201165102084"></p>
+<p>Socket其实就是一个门面模式，它把复杂的TCP/IP协议族隐藏在Socket后面，对用户来说只需要调用Socket规定的相关函数，让Socket去组织符合指定的协议数据然后进行通信。</p>
+<p>Socket可以理解为TCP/IP网络的API，它定义了许多函数或例程，程序员可以用它们来开发TCP/IP网络上的应用程序。</p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260201181725112.png" alt="image-20260201181725112"></p>
+<p>WebSocket是一种在单个TCP连接上进行全双工通信的协议
+WebSocket使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据
+在WebSocket API中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输
+需要安装第三方包：
+cmd中：go get -u -v github.com/gorilla/websocket</p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260203171023483.png" alt="image-20260203171023483"></p>
+<p>URL:统一资源定位符
+http://   -&gt; 是个协议
+可以多个域名对应一个IP地址</p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260203171518429.png" alt="image-20260203171518429"></p>
+<p>服务：指一层向它的上一层提供的一种操作</p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260211121353801.png" alt="image-20260211121353801"></p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260212120032880.png" alt="image-20260212120032880"></p>
+<h1 id="网络层部分">
+<a class="header-anchor" href="#%e7%bd%91%e7%bb%9c%e5%b1%82%e9%83%a8%e5%88%86"></a>
+网络层部分
+</h1><h4 id="icmp协议">
+<a class="header-anchor" href="#icmp%e5%8d%8f%e8%ae%ae"></a>
+ICMP协议：
+</h4><p>当路由器处理数据包有意外发生时，通过ICMP向发送方报告
+例如：
+目标主机不可达
+TTL（time to time live）(生存周期)超时:在网络环路当中陷入无限转发
+路径探测</p>
+<p>ping:发送echo(回显)到目的地址，判断目的设备是否活着，或者判断自身是否连接
+traceroute:给目标发送一系列数据包，分别将TTTL = 1、2、3、……TTL归零时返回超时信息，由此可以确定沿途路由器的地址</p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260212115930787.png" alt="image-20260212115930787"></p>
+<h4 id="dhcp协议动态主机配置协议如何给新设备分配地址">
+<a class="header-anchor" href="#dhcp%e5%8d%8f%e8%ae%ae%e5%8a%a8%e6%80%81%e4%b8%bb%e6%9c%ba%e9%85%8d%e7%bd%ae%e5%8d%8f%e8%ae%ae%e5%a6%82%e4%bd%95%e7%bb%99%e6%96%b0%e8%ae%be%e5%a4%87%e5%88%86%e9%85%8d%e5%9c%b0%e5%9d%80"></a>
+DHCP协议:动态主机配置协议(如何给新设备分配地址)
+</h4><p>新设备 -&gt;进行广播，先到交换机 -&gt; 广播 找到局域网DHCP服务器(如果没有局域网服务器，则通过路由广播到外网的DHCP服务器) -&gt; 返回一个DHCP offer -&gt; 拿到新地址</p>
+<h4 id="arp协议地址解析协议">
+<a class="header-anchor" href="#arp%e5%8d%8f%e8%ae%ae%e5%9c%b0%e5%9d%80%e8%a7%a3%e6%9e%90%e5%8d%8f%e8%ae%ae"></a>
+ARP协议:地址解析协议
+</h4><p>背景:链路层需要MAC地址才能发送成帧
+作用:通过ARP将基于目的IP地址找到对应的MAC地址</p>
+<p>在同一局域网内，通过ARP将基于目的IP地址找到对应的MAC地址
+广播寻找IP -&gt; 目标设备发送MAC地址返回</p>
+<h5 id="默认网关">
+<a class="header-anchor" href="#%e9%bb%98%e8%ae%a4%e7%bd%91%e5%85%b3"></a>
+默认网关:
+</h5><p>网关:连接不同网络、负责转发数据包的网络设备或者<strong>路由器接口</strong>，他是网络边境的出入口
+访问的地址在不同局域网时，通过IP查询到网关，而路由（默认网关）将他的MAC地址返回，
+然后发送到路由器时，路由器对比IP和MAC地址，发现IP不是它的而MAC是它的时，路由器会再次使用ARP协议，基于C6的IP获取MAC</p>
+        
+        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/sql/</guid>
+      <description>
+        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <p>title: &lsquo;SQL&rsquo;</p>
+<p>date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00</p>
+<h1 id="sql">
+<a class="header-anchor" href="#sql"></a>
+SQL
+</h1><h1 id="postgre-sql">
+<a class="header-anchor" href="#postgre-sql"></a>
+postgre SQL
+</h1><h2 id="cmd">
+<a class="header-anchor" href="#cmd"></a>
+cmd
+</h2><p>docker ps   查看容器列表
+docker exec -it p1 bash</p>
+<p>如果用postgres用户连接数据库，则不用输入密码
+即psql -U postgres  即可</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-postgresql" data-lang="postgresql"><span style="display:flex;"><span>psql <span style="color:#f92672">-</span>U <span style="color:#66d9ef">user</span> <span style="color:#f92672">-</span>d db_name <span style="color:#f92672">-</span>h <span style="color:#ae81ff">127.0.0.1</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">5432</span>
+</span></span></code></pre></div><h4 id="数据库操作">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e5%ba%93%e6%93%8d%e4%bd%9c"></a>
+数据库操作:
+</h4><p>\l 查看数据库列表
+\c 切换数据库
+create database db1  建库
+drop database db1  删除数据库
+createdb -U postgres mydb  在shell直接建库</p>
+<h3 id="sql-1">
+<a class="header-anchor" href="#sql-1"></a>
+SQL
+</h3><p>按照功能不同可以分为以下几类</p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260311201204430.png" alt="image-20260311201204430"></p>
+<ul>
+<li>
+<p>DDL:用于定义数据库对象，例如数据库、表、列</p>
+</li>
+<li>
+<p>DML:对数据库中的记录进行增删改</p>
+</li>
+<li>
+<p>DQL:查询数据库中的记录</p>
+</li>
+<li>
+<p>DCL:定义数据库的访问权限和安全级别</p>
+</li>
+<li>
+<p><strong>常用关键字如上图所示</strong></p>
+</li>
+</ul>
+<p>注意，MySQL对大小写不敏感，即不区分大小写，但是变量一般大写以便于区分
+左上角的《新建查询》后我们可以在窗口输出各种SQL语句（就像在Mysqlshell一样）</p>
+<h2 id="mysql">
+<a class="header-anchor" href="#mysql"></a>
+MYSQL
+</h2><h6 id="mysqlsh进入mysql-shell工具">
+<a class="header-anchor" href="#mysqlsh%e8%bf%9b%e5%85%a5mysql-shell%e5%b7%a5%e5%85%b7"></a>
+mysqlsh进入mySQL-shell工具
+</h6><p>此工具的命令都是以****开头的</p>
+<p>bash中输入<code>mysqlsh</code>启动,也可以在VScode中找到mysqlsh
+在输入<code>\connect root@localhost</code>连接</p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260311181701033.png" alt="image-20260311181701033"></p>
+<p>出现MySQL与JS代表进入成功</p>
+<p>出现图片所示灰色部分表示连接到本地的mysql服务器了</p>
+<p><code>use name</code>来使用一个数据库,</p>
+        
+        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/javascript/</guid>
+      <description>
+        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <p>title: &lsquo;JS&rsquo;</p>
+<p>date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00</p>
+<h1 id="javascript">
+<a class="header-anchor" href="#javascript"></a>
+JavaScript
+</h1><h2 id="1导入方式">
+<a class="header-anchor" href="#1%e5%af%bc%e5%85%a5%e6%96%b9%e5%bc%8f"></a>
+1.导入方式:
+</h2><h3 id="同样有三种">
+<a class="header-anchor" href="#%e5%90%8c%e6%a0%b7%e6%9c%89%e4%b8%89%e7%a7%8d"></a>
+同样有三种:
+</h3><p>​	1.头部添加 👇</p>
+<p>​	2.body添加 👇</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;   &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>​	3.外部添加,设根目录下的JS文件夹下有一个data.js文件: (路径为相对路径)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./JS/data.js&#34;</span>&gt; &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h2 id="2变量数据类型控制语句">
+<a class="header-anchor" href="#2%e5%8f%98%e9%87%8f%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b%e6%8e%a7%e5%88%b6%e8%af%ad%e5%8f%a5"></a>
+2.变量、数据类型、控制语句
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span>;            <span style="color:#75715e">//var具有函数作用域
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;			<span style="color:#75715e">//let的变量具有块级作用域 let更安全灵活 尽量使用let
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14</span>;
+</span></span><span style="display:flex;"><span>    	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#ae81ff">114514</span>);<span style="color:#75715e">//数字可以直接输出，文字不行，文字可定义变量
+</span></span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;scqwq&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>    	
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>){<span style="color:#75715e">//条件语句 
+</span></span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>(<span style="color:#e6db74">&#34;i &lt; 0&#34;</span>);
+</span></span><span style="display:flex;"><span>        }	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>(<span style="color:#e6db74">&#34;i &gt; 0&#34;</span>);
+</span></span><span style="display:flex;"><span>        } 	<span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;i = 0&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){		<span style="color:#75715e">//循环语句
+</span></span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;i = &#34;</span>,<span style="color:#a6e22e">i</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//for与while循环都与C同理
+</span></span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h2 id="3函数">
+<a class="header-anchor" href="#3%e5%87%bd%e6%95%b0"></a>
+3.函数
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">name</span>(<span style="color:#a6e22e">参数1</span>,<span style="color:#a6e22e">参数2</span>){
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">xx</span>;<span style="color:#75715e">//可选
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>参数前不需要加类型声明</p>
+        
+        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/html/</guid>
+      <description>
+        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <p>title: &lsquo;HTML&rsquo;</p>
+<p>date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00</p>
+<h1 id="html">
+<a class="header-anchor" href="#html"></a>
+<strong>HTML：</strong>
+</h1><h2 id="标签">
+<a class="header-anchor" href="#%e6%a0%87%e7%ad%be"></a>
+标签:
+</h2><p>标签列表功能参考:https://www.w3cschool.cn/htmltags/html-reference.html</p>
+<p>双标签：用于有内容的元素</p>
+<p>单标签：用于没内容的元素</p>
+<h4 id="开头">
+<a class="header-anchor" href="#%e5%bc%80%e5%a4%b4"></a>
+开头:
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>  //告诉浏览器这是一个HTML文件
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;  //文档起始点 or 最外层容器
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;   //表示文档头部 包含一些文件原信息(如标题 编码格式)
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;Document&lt;/<span style="color:#f92672">title</span>&gt; //标题
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;  //编码格式
+</span></span><span style="display:flex;"><span>    	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    	
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;   //body标签对
+</span></span><span style="display:flex;"><span>        //实际显示在浏览器的内容 比如文本图片与链接
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>//多提一嘴 如果你直接在根目录下命令框打code .可以直接在vscode里打开</p>
+<p>//同时 直接输入!补齐上述需要标签就行</p>
+<h5 id="标题标签与段落标签">
+<a class="header-anchor" href="#%e6%a0%87%e9%a2%98%e6%a0%87%e7%ad%be%e4%b8%8e%e6%ae%b5%e8%90%bd%e6%a0%87%e7%ad%be"></a>
+标题标签与段落标签:
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;一级标签&lt;/<span style="color:#f92672">h1</span>&gt; //标题标签 h后面可跟1~6
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;二级标签&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        114514  //段落标签
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">b</span>&gt;加粗标签&lt;/<span style="color:#f92672">b</span>&gt; //Bold == strong
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">i</span>&gt;斜体&lt;/<span style="color:#f92672">i</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">u</span>&gt;下划线&lt;/<span style="color:#f92672">u</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">s</span>&gt;删除线&lt;/<span style="color:#f92672">s</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>	
+</span></span></code></pre></div><h5 id="有序列表无序列表">
+<a class="header-anchor" href="#%e6%9c%89%e5%ba%8f%e5%88%97%e8%a1%a8%e6%97%a0%e5%ba%8f%e5%88%97%e8%a1%a8"></a>
+有序列表&amp;&amp;无序列表
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span>&gt;  //ul表示无序列表  在外部显示·
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素3&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ol</span>&gt; //ol表示有序列表  在外部显示数字
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素3&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ol</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span></code></pre></div><h5 id="表格标签">
+<a class="header-anchor" href="#%e8%a1%a8%e6%a0%bc%e6%a0%87%e7%ad%be"></a>
+表格标签
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">border </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>&gt; //有行有列 border表格边框
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    	&lt;<span style="color:#f92672">th</span>&gt;表格标题 table header&lt;/<span style="color:#f92672">th</span>&gt;  //表头
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt; //table row 表格行 //table data 表格列
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素1&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素2&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素3&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    	&lt;<span style="color:#f92672">td</span>&gt;元素21&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素22&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素23&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">table</span>&gt;
+</span></span></code></pre></div><h5 id="换行分割标签">
+<a class="header-anchor" href="#%e6%8d%a2%e8%a1%8c%e5%88%86%e5%89%b2%e6%a0%87%e7%ad%be"></a>
+换行分割标签:
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">br</span>&gt; 换行标签
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">hr</span>&gt; 水平分割线标签
+</span></span></code></pre></div><p>有一些元素默认独占一行 有一些可以共用一行 想共用一行换行则br</p>
+        
+        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/gin/</guid>
+      <description>
+        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <p>title: &lsquo;GIN&rsquo;</p>
+<p>date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00</p>
+<h1 id="gin">
+<a class="header-anchor" href="#gin"></a>
+GIN
+</h1><p>GIN是一个用go语言编写的Web框架</p>
+<h3 id="小知识提要">
+<a class="header-anchor" href="#%e5%b0%8f%e7%9f%a5%e8%af%86%e6%8f%90%e8%a6%81"></a>
+小知识提要
+</h3><h5 id="0基本路线">
+<a class="header-anchor" href="#0%e5%9f%ba%e6%9c%ac%e8%b7%af%e7%ba%bf"></a>
+0.基本路线:
+</h5><p>1.前端静态页面的制作</p>
+<p>2.前端的动态部分的制作和往后端传入的api和结构体</p>
+<p>3.后端构建需要接收前端（客户端）请求的结构体</p>
+<p>4.构建数据库实例DB，连接数据库</p>
+<p>5.用err检查数据库连接的返回值，不为nil则panic，并记得延迟注册关闭defer DB.Close()</p>
+<p>6.模型绑定 -&gt; DB.AutoMigrate(&amp;Todo{})   Todo{}是一个结构类型，若手动创建表，则表名一定要和后端的一致</p>
+<p>7.r.Static引入静态文件,r.LoadHTMLGlob(&ldquo;template/*&quot;)渲染模板</p>
+<p>8.写入URL最基本的函数r.GET</p>
+<p>9.补全URI参数，并使用c.BindJSON等获取从前端返回的数据，并使用DB.Create、DB.Find等与数据库交互，并使用以下语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">DB</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">todo</span>).<span style="color:#a6e22e">Error</span>; <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">H</span>{<span style="color:#e6db74">&#34;error&#34;</span>: <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">Error</span>()})<span style="color:#75715e">//错误时候返回信息</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusOK</span>, <span style="color:#a6e22e">todo</span>) <span style="color:#75715e">//返回什么格式和前端说好，用JSON就用JSON，或者用gin.H</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>10.r.RUN</p>
+<h6 id="1">
+<a class="header-anchor" href="#1"></a>
+1.
+</h6><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>][]<span style="color:#66d9ef">string</span>
+</span></span></code></pre></div><p>map是键值字符串类型 string为键的类型 []string为值的类型</p>
+<h6 id="2http响应">
+<a class="header-anchor" href="#2http%e5%93%8d%e5%ba%94"></a>
+2.http响应:
+</h6><p><strong>HTTP 响应（HTTP Response）</strong> 是服务器收到客户端的 HTTP 请求后，返回给客户端的一组数据，用来告诉客户端<strong>请求是否成功、返回什么内容、以及相关元数据</strong></p>
+<!-- raw HTML omitted -->
+<h6 id="3gin的安装">
+<a class="header-anchor" href="#3gin%e7%9a%84%e5%ae%89%e8%a3%85"></a>
+3.GIN的安装
+</h6><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">gin</span><span style="color:#f92672">-</span><span style="color:#a6e22e">gonic</span><span style="color:#f92672">/</span><span style="color:#a6e22e">gin</span>
+</span></span></code></pre></div><p>在终端中执行</p>
+<h6 id="4请求含义与作用restful风格下">
+<a class="header-anchor" href="#4%e8%af%b7%e6%b1%82%e5%90%ab%e4%b9%89%e4%b8%8e%e4%bd%9c%e7%94%a8restful%e9%a3%8e%e6%a0%bc%e4%b8%8b"></a>
+4.请求、含义与作用(RESTFUL风格下)
+</h6><p>Gin框架天生只支持restful风格的api</p>
+<ul>
+<li>GET 获取信息</li>
+<li>POST 新建资源（用户上传文件专用）</li>
+<li>PUT 更新资源</li>
+<li>DELETE 删除资源</li>
+</ul>
+<h6 id="5go语言的模板引擎">
+<a class="header-anchor" href="#5go%e8%af%ad%e8%a8%80%e7%9a%84%e6%a8%a1%e6%9d%bf%e5%bc%95%e6%93%8e"></a>
+5.GO语言的模板引擎
+</h6><p>GO内置了文本模板引擎 text/template和用于HTML文档的html/template</p>
+        
+        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/eino/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/eino/</guid>
+      <description>
+        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <p>title: &lsquo;EINO&rsquo;</p>
+<p>date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00</p>
+<h1 id="eino">
+<a class="header-anchor" href="#eino"></a>
+EINO
+</h1><p>godotenv 的实际查找逻辑:</p>
+<p><code>godotenv.Load()</code>使用的文件路径是<strong>精确匹配</strong>，不会自动递归向上搜索</p>
+<p>也就是说，load会默认查找当前目录下的.env,想要查找父目录，则需要</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 文件：/myapp/middle/deep/main.go</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/joho/godotenv&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 只会加载直接父目录（middle）的 .env</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">godotenv</span>.<span style="color:#a6e22e">Load</span>(<span style="color:#e6db74">&#34;../.env&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260402195859251.png" alt="image-20260402195859251"></p>
+<p>而在此图中，虽然main中在ch01/02下，可是工作目录是chatwitheino,使用的是命令</p>
+<p><code>go run ./cmd/ch01</code> or <code>go run ./cmd/ch02</code></p>
+<p>所以默认工作目录是chatwitheino,可以读取chatwitheino下的.env,所以这符合上面提到的.env的读取方法，同时，找对工作目录很重要</p>
+<!-- raw HTML omitted -->
+<h3 id="非阻塞流式迭代器">
+<a class="header-anchor" href="#%e9%9d%9e%e9%98%bb%e5%a1%9e%e6%b5%81%e5%bc%8f%e8%bf%ad%e4%bb%a3%e5%99%a8"></a>
+非阻塞流式迭代器:
+</h3><ol>
+<li><strong>什么是流式迭代器？</strong></li>
+</ol>
+<p>传统迭代器：处理<strong>有限、静态</strong>的集合（如数组、列表）</p>
+<p>流式迭代器：处理<strong>无限、动态</strong>的数据流（如网络流、事件流、传感器数据）</p>
+<ol start="2">
+<li><strong>什么是非阻塞？</strong></li>
+</ol>
+<p><strong>阻塞</strong>：等待数据时，线程被挂起，无法执行其他任务</p>
+<p><strong>非阻塞</strong>：没有数据时立即返回，线程可以处理其他任务</p>
+<h3 id="注册解析命令行参数">
+<a class="header-anchor" href="#%e6%b3%a8%e5%86%8c%e8%a7%a3%e6%9e%90%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0"></a>
+注册解析命令行参数
+</h3><h5 id="命令行基本参数">
+<a class="header-anchor" href="#%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%9f%ba%e6%9c%ac%e5%8f%82%e6%95%b0"></a>
+命令行基本参数
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 示例：git commit -m &#34;message&#34;</span>
+</span></span><span style="display:flex;"><span>git                    <span style="color:#75715e"># 命令</span>
+</span></span><span style="display:flex;"><span>commit                 <span style="color:#75715e"># 子命令</span>
+</span></span><span style="display:flex;"><span>-m                     <span style="color:#75715e"># 参数标识</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;message&#34;</span>              <span style="color:#75715e"># 参数值</span>
+</span></span></code></pre></div><h5 id="注册">
+<a class="header-anchor" href="#%e6%b3%a8%e5%86%8c"></a>
+注册：
+</h5><p>告诉程序：&ldquo;我期望接收这些参数&rdquo;</p>
+        
+        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>
