@@ -1,3 +1,8 @@
+title: 'OS'
+
+date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00
+
 # OS
 
 <img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421130018195.png" alt="image-20260421130018195" style="zoom:67%;" />

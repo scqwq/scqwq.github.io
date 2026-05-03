@@ -1,3 +1,8 @@
+title: 'AGENT'
+
+date: 2026-05-04T11:00:00-07:00
+lastmod: 2026-05-04T11:00:00-07:00
+
 # AGENT
 
 在adk框架中，agent.Agent是所有Agent必须实现的基础接口
