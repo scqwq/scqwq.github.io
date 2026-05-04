@@ -12,7 +12,7 @@
     
     <copyright>All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!</copyright>
     
-    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 11:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss&#43;xml" />
@@ -22,105 +22,15 @@
     
 
     <item>
-      <title>Hello World</title>
-      <link>http://localhost:1313/post/hello/</link>
-      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/hello/</guid>
-      <description>
-        <![CDATA[<h1>Hello World</h1><p>Author: D-Sketon(xxx@example.com)</p>
-        
-          <p>💘 博麗 霊夢 💘</p>
-        
-        <hr><p>Published on 2023-03-15 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2023-03-15</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/%E8%AE%A1%E7%BB%84/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/%E8%AE%A1%E7%BB%84/</guid>
-      <description>
-        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
-        
-          <p>title: &lsquo;计组&rsquo;</p>
-<p>date: 2026-05-04T11:00:00-07:00
-lastmod: 2026-05-04T11:00:00-07:00</p>
-<h1 id="计组">
-<a class="header-anchor" href="#%e8%ae%a1%e7%bb%84"></a>
-计组
-</h1><h3 id="三总线">
-<a class="header-anchor" href="#%e4%b8%89%e6%80%bb%e7%ba%bf"></a>
-三总线
-</h3><p>1.数据总线</p>
-<p>双线传输 -&gt; 位数即为数据总线概念宽度，即机器位数，与储存器字长相关</p>
-<p>2.地址总线</p>
-<p>表示主存或I/O设备上存储单元的位置，且<strong>单向总线</strong>，总是又CPU发出地址指向存储器</p>
-<p>地址总线的位数与存储单元的个数有关，与存储单元的二进制位长度无关-&gt;即存东西的地方的大小和地址大小无关,32位地址可以指向8位数据类型</p>
-<p>3.控制总线</p>
-<p>发出各种控制信号，单一控制通常单向，控制总线总体双向</p>
-<!-- raw HTML omitted -->
-<p>CPU平时就是不断从主存中去取指令，然后执行指令，不断反复</p>
-<p>主存总线：具有三总线的结构</p>
-<p>DMA:直接存储器访问,在DMA控制器的控制下进行工作的</p>
-<h5 id="主存部分在后面">
-<a class="header-anchor" href="#%e4%b8%bb%e5%ad%98%e9%83%a8%e5%88%86%e5%9c%a8%e5%90%8e%e9%9d%a2"></a>
-主存部分在后面
-</h5><h4 id="总线控制">
-<a class="header-anchor" href="#%e6%80%bb%e7%ba%bf%e6%8e%a7%e5%88%b6"></a>
-总线控制:
-</h4><p>总线事务、主设备、从设备:</p>
-<!-- raw HTML omitted -->
-<h5 id="总线判优">
-<a class="header-anchor" href="#%e6%80%bb%e7%ba%bf%e5%88%a4%e4%bc%98"></a>
-总线判优：
-</h5><!-- raw HTML omitted -->
-<h5 id="集中式">
-<a class="header-anchor" href="#%e9%9b%86%e4%b8%ad%e5%bc%8f"></a>
-集中式
-</h5><h6 id="1链式查询">
-<a class="header-anchor" href="#1%e9%93%be%e5%bc%8f%e6%9f%a5%e8%af%a2"></a>
-1.链式查询:
-</h6><!-- raw HTML omitted -->
-<p>BS、BR、BG都是与控制总线的范畴</p>
-<p>BS有信号表示总线已经被使用</p>
-<p>缺点：对电路故障敏感</p>
-<h6 id="2计数器定时查询方式">
-<a class="header-anchor" href="#2%e8%ae%a1%e6%95%b0%e5%99%a8%e5%ae%9a%e6%97%b6%e6%9f%a5%e8%af%a2%e6%96%b9%e5%bc%8f"></a>
-2.计数器定时查询方式
-</h6><!-- raw HTML omitted -->
-<p>某个接口发生故障对其他接口使用不敏感，缺点是新增设备地址，控制变复杂,计时器通过设备地址线广播正在寻找的设备地址。</p>
-<h6 id="3独立请求方式">
-<a class="header-anchor" href="#3%e7%8b%ac%e7%ab%8b%e8%af%b7%e6%b1%82%e6%96%b9%e5%bc%8f"></a>
-3.独立请求方式:
-</h6><!-- raw HTML omitted -->
-<p>无BS和设备地址线</p>
-        
-        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title></title>
+      <title>计网</title>
       <link>http://localhost:1313/post/web/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
       <guid>http://localhost:1313/post/web/</guid>
       <description>
-        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>计网</h1><p>Author: D-Sketon(xxx@example.com)</p>
         
-          <p>title: &lsquo;计网&rsquo;</p>
-<p>date: 2026-05-04T11:00:00-07:00
-lastmod: 2026-05-04T11:00:00-07:00</p>
-<h1 id="计网">
+          <h1 id="计网">
 <a class="header-anchor" href="#%e8%ae%a1%e7%bd%91"></a>
 计网
 </h1><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260201165102084.png" alt="image-20260201165102084"></p>
@@ -171,8 +81,13 @@ ARP协议:地址解析协议
 </h5><p>网关:连接不同网络、负责转发数据包的网络设备或者<strong>路由器接口</strong>，他是网络边境的出入口
 访问的地址在不同局域网时，通过IP查询到网关，而路由（默认网关）将他的MAC地址返回，
 然后发送到路由器时，路由器对比IP和MAC地址，发现IP不是它的而MAC是它的时，路由器会再次使用ARP协议，基于C6的IP获取MAC</p>
+<h4 id="nat网络地址转换">
+<a class="header-anchor" href="#nat%e7%bd%91%e7%bb%9c%e5%9c%b0%e5%9d%80%e8%bd%ac%e6%8d%a2"></a>
+NAT:网络地址转换
+</h4><p>工位IPV4地址有限，而内部网络设备却日益增多，导致IPV4地址枯竭
+NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端口号，并维护一个映射表</p>
         
-        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
     </item>
@@ -180,18 +95,87 @@ ARP协议:地址解析协议
     
 
     <item>
-      <title></title>
+      <title>计组</title>
+      <link>http://localhost:1313/post/%E8%AE%A1%E7%BB%84/</link>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/%E8%AE%A1%E7%BB%84/</guid>
+      <description>
+        <![CDATA[<h1>计组</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <h1 id="计组">
+<a class="header-anchor" href="#%e8%ae%a1%e7%bb%84"></a>
+计组
+</h1><h3 id="三总线">
+<a class="header-anchor" href="#%e4%b8%89%e6%80%bb%e7%ba%bf"></a>
+三总线
+</h3><p>1.数据总线</p>
+<p>双线传输 -&gt; 位数即为数据总线概念宽度，即机器位数，与储存器字长相关</p>
+<p>2.地址总线</p>
+<p>表示主存或I/O设备上存储单元的位置，且<strong>单向总线</strong>，总是又CPU发出地址指向存储器</p>
+<p>地址总线的位数与存储单元的个数有关，与存储单元的二进制位长度无关-&gt;即存东西的地方的大小和地址大小无关,32位地址可以指向8位数据类型</p>
+<p>3.控制总线</p>
+<p>发出各种控制信号，单一控制通常单向，控制总线总体双向</p>
+<!-- raw HTML omitted -->
+<p>CPU平时就是不断从主存中去取指令，然后执行指令，不断反复</p>
+<p>主存总线：具有三总线的结构</p>
+<p>DMA:直接存储器访问,在DMA控制器的控制下进行工作的</p>
+<h5 id="主存部分在后面">
+<a class="header-anchor" href="#%e4%b8%bb%e5%ad%98%e9%83%a8%e5%88%86%e5%9c%a8%e5%90%8e%e9%9d%a2"></a>
+主存部分在后面
+</h5><h4 id="总线控制">
+<a class="header-anchor" href="#%e6%80%bb%e7%ba%bf%e6%8e%a7%e5%88%b6"></a>
+总线控制:
+</h4><p>总线事务、主设备、从设备:</p>
+<!-- raw HTML omitted -->
+<h5 id="总线判优">
+<a class="header-anchor" href="#%e6%80%bb%e7%ba%bf%e5%88%a4%e4%bc%98"></a>
+总线判优：
+</h5><!-- raw HTML omitted -->
+<h5 id="集中式">
+<a class="header-anchor" href="#%e9%9b%86%e4%b8%ad%e5%bc%8f"></a>
+集中式
+</h5><h6 id="1链式查询">
+<a class="header-anchor" href="#1%e9%93%be%e5%bc%8f%e6%9f%a5%e8%af%a2"></a>
+1.链式查询:
+</h6><!-- raw HTML omitted -->
+<p>BS、BR、BG都是与控制总线的范畴</p>
+<p>BS有信号表示总线已经被使用</p>
+<p>缺点：对电路故障敏感</p>
+<h6 id="2计数器定时查询方式">
+<a class="header-anchor" href="#2%e8%ae%a1%e6%95%b0%e5%99%a8%e5%ae%9a%e6%97%b6%e6%9f%a5%e8%af%a2%e6%96%b9%e5%bc%8f"></a>
+2.计数器定时查询方式
+</h6><!-- raw HTML omitted -->
+<p>某个接口发生故障对其他接口使用不敏感，缺点是新增设备地址，控制变复杂,计时器通过设备地址线广播正在寻找的设备地址。</p>
+<h6 id="3独立请求方式">
+<a class="header-anchor" href="#3%e7%8b%ac%e7%ab%8b%e8%af%b7%e6%b1%82%e6%96%b9%e5%bc%8f"></a>
+3.独立请求方式:
+</h6><!-- raw HTML omitted -->
+<p>无BS和设备地址线</p>
+<p>主要部件：排队器,同时使用则排队，选择优先权高的</p>
+<p>响应速度快，优先次序控制灵活。但是控制线数目多，总线控制逻辑更加复杂</p>
+<h3 id="存储器">
+<a class="header-anchor" href="#%e5%ad%98%e5%82%a8%e5%99%a8"></a>
+存储器
+</h3><p>主存 = 内存 -&gt;掉电丢失</p>
+        
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>SQL</title>
       <link>http://localhost:1313/post/sql/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
       <guid>http://localhost:1313/post/sql/</guid>
       <description>
-        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>SQL</h1><p>Author: D-Sketon(xxx@example.com)</p>
         
-          <p>title: &lsquo;SQL&rsquo;</p>
-<p>date: 2026-05-04T11:00:00-07:00
-lastmod: 2026-05-04T11:00:00-07:00</p>
-<h1 id="sql">
+          <h1 id="sql">
 <a class="header-anchor" href="#sql"></a>
 SQL
 </h1><h1 id="postgre-sql">
@@ -250,8 +234,16 @@ mysqlsh进入mySQL-shell工具
 <p>出现MySQL与JS代表进入成功</p>
 <p>出现图片所示灰色部分表示连接到本地的mysql服务器了</p>
 <p><code>use name</code>来使用一个数据库,</p>
+<p><strong>JS</strong>表示当前语言,M-S支持JS、py、和SQL三种语言,切换语言<code>\dialect</code></p>
+<h3 id="语法">
+<a class="header-anchor" href="#%e8%af%ad%e6%b3%95"></a>
+语法:
+</h3><h5 id="1数据库">
+<a class="header-anchor" href="#1%e6%95%b0%e6%8d%ae%e5%ba%93"></a>
+1.数据库
+</h5><p><em><strong>注意：可以使用navicat等图形化GUI工具，这样不用手动输入指令创建数据库</strong></em></p>
         
-        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
     </item>
@@ -259,18 +251,154 @@ mysqlsh进入mySQL-shell工具
     
 
     <item>
-      <title></title>
+      <title>OS</title>
+      <link>http://localhost:1313/post/os/</link>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/os/</guid>
+      <description>
+        <![CDATA[<h1>OS</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <h1 id="os">
+<a class="header-anchor" href="#os"></a>
+OS
+</h1><!-- raw HTML omitted -->
+<h1 id="第三部分内存管理">
+<a class="header-anchor" href="#%e7%ac%ac%e4%b8%89%e9%83%a8%e5%88%86%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86"></a>
+第三部分:内存管理
+</h1><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422163029624.png" alt="image-20260422163029624"></p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422165512291.png" alt="image-20260422165512291"></p>
+<p><img src="C:%5CUsers%5C56955%5CDesktop%5C333.png" alt="333"></p>
+<h3 id="31内存的基本概念">
+<a class="header-anchor" href="#31%e5%86%85%e5%ad%98%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
+3.1:内存的基本概念
+</h3><h2 id="一内存的分配和回收">
+<a class="header-anchor" href="#%e4%b8%80%e5%86%85%e5%ad%98%e7%9a%84%e5%88%86%e9%85%8d%e5%92%8c%e5%9b%9e%e6%94%b6"></a>
+一、内存的分配和回收
+</h2><h3 id="32连续分配方式">
+<a class="header-anchor" href="#32%e8%bf%9e%e7%bb%ad%e5%88%86%e9%85%8d%e6%96%b9%e5%bc%8f"></a>
+3.2：连续分配方式
+</h3><p>指为一个用户程序分配一个连续的内存空间。</p>
+<h5 id="1单一连续分配">
+<a class="header-anchor" href="#1%e5%8d%95%e4%b8%80%e8%bf%9e%e7%bb%ad%e5%88%86%e9%85%8d"></a>
+1.单一连续分配
+</h5><ul>
+<li>内存分为系统区和用户区。用户区只装入一道用户程序。</li>
+<li><strong>优点</strong>：简单，无外部碎片。</li>
+<li><strong>缺点</strong>：只能用于单用户单任务系统；存在内部碎片（如果程序小于用户区大小）。</li>
+</ul>
+<h5 id="2固定分区分配">
+<a class="header-anchor" href="#2%e5%9b%ba%e5%ae%9a%e5%88%86%e5%8c%ba%e5%88%86%e9%85%8d"></a>
+2.固定分区分配
+</h5><p>将用户内存空间划分为若干个固定大小的分区。每个分区装入一道作业。</p>
+<ul>
+<li>
+<p><strong>分区大小相等</strong>：简单，但缺乏灵活性。</p>
+</li>
+<li>
+<p><strong>分区大小不等</strong>：可以满足不同大小作业的需求。</p>
+<p>当作业到来时，选择一个能容纳它且尚未分配的分区。</p>
+</li>
+<li>
+<p><strong>优点</strong>：实现简单，可用于多道程序系统。</p>
+</li>
+<li>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li><strong>内部碎片</strong>：分配给作业的分区可能大于作业实际需求，多余部分无法利用。</li>
+<li>分区总数固定，限制了并发执行的作业数量。</li>
+</ul>
+</li>
+</ul>
+<h5 id="3动态分区分配">
+<a class="header-anchor" href="#3%e5%8a%a8%e6%80%81%e5%88%86%e5%8c%ba%e5%88%86%e9%85%8d"></a>
+3.动态分区分配
+</h5><ul>
+<li>不预先划分分区，在作业装入时，根据作业的实际需求动态地从可用内存中划分一块连续空间。</li>
+<li><strong>优点</strong>：没有内部碎片（理论上，如果按需分配）。</li>
+<li>缺点：
+<ul>
+<li><strong>外部碎片</strong>：随着内存分配和回收，会产生许多不连续的小空闲区，这些空闲区总和可能很大，但无法满足较大作业的需求。</li>
+<li>需要复杂的分配算法和空闲区管理。</li>
+</ul>
+</li>
+</ul>
+<h3 id="33动态分区分配的算法">
+<a class="header-anchor" href="#33%e5%8a%a8%e6%80%81%e5%88%86%e5%8c%ba%e5%88%86%e9%85%8d%e7%9a%84%e7%ae%97%e6%b3%95"></a>
+3.3：动态分区分配的算法
+</h3><p><strong>动态分区分配算法 (如何从空闲分区链/表中选择一个分区)</strong>：</p>
+<ul>
+<li>
+<h5 id="1首次适应算法">
+<a class="header-anchor" href="#1%e9%a6%96%e6%ac%a1%e9%80%82%e5%ba%94%e7%ae%97%e6%b3%95"></a>
+1.首次适应算法
+</h5><p>从空闲分区链首开始查找，选择第一个能满足大小要求的空闲分区。</p>
+<ul>
+<li><strong>优点</strong>：算法开销小，倾向于保留高地址的大空闲区。</li>
+<li><strong>缺点</strong>：低地址部分不断被划分，产生较多小碎片。</li>
+</ul>
+</li>
+<li>
+<h5 id="2最佳适应算法">
+<a class="header-anchor" href="#2%e6%9c%80%e4%bd%b3%e9%80%82%e5%ba%94%e7%ae%97%e6%b3%95"></a>
+2.最佳适应算法
+</h5><p>遍历整个空闲分区链，选择能满足要求且大小最小的空闲分区。</p>
+<ul>
+<li><strong>优点</strong>：能最好地满足当前请求，尽量保留大块空闲区。</li>
+<li><strong>缺点</strong>：算法开销大；容易产生许多难以利用的非常小的碎片。</li>
+</ul>
+</li>
+<li>
+<h5 id="3最坏适应算法">
+<a class="header-anchor" href="#3%e6%9c%80%e5%9d%8f%e9%80%82%e5%ba%94%e7%ae%97%e6%b3%95"></a>
+3.最坏适应算法
+</h5><p>遍历整个空闲分区链，选择能满足要求且最大的空闲分区，从中分割一部分给作业，剩余部分作为新的空闲分区。</p>
+<ul>
+<li><strong>优点</strong>：减少小碎片的产生，剩余的空闲区较大。</li>
+<li><strong>缺点</strong>：算法开销大；如果大空闲区被分割后，剩余部分不足以容纳大作业，则大作业难以分配。</li>
+</ul>
+</li>
+<li>
+<h5 id="4下次适应算法">
+<a class="header-anchor" href="#4%e4%b8%8b%e6%ac%a1%e9%80%82%e5%ba%94%e7%ae%97%e6%b3%95"></a>
+4.下次适应算法
+</h5><p>从上次查找结束的位置开始查找（而不是每次都从头开始），选择第一个能满足大小要求的空闲分区。</p>
+<ul>
+<li><strong>优点</strong>：算法开销介于首次适应和最佳/最坏适应之间；空闲区分布更均匀。</li>
+<li><strong>缺点</strong>：可能导致高地址的大空闲区也被分割。</li>
+</ul>
+</li>
+</ul>
+<p><strong>碎片整理</strong>： 为了解决外部碎片问题，可以将内存中的所有作业移动到一端，使所有小空闲区合并成一个大空闲区。</p>
+<ul>
+<li><strong>优点</strong>：可以利用外部碎片。</li>
+<li><strong>缺点</strong>：开销大，需要动态重定位支持，且在整理期间系统性能会下降。</li>
+</ul>
+<h3 id="34基本分页存储管理">
+<a class="header-anchor" href="#34%e5%9f%ba%e6%9c%ac%e5%88%86%e9%a1%b5%e5%ad%98%e5%82%a8%e7%ae%a1%e7%90%86"></a>
+3.4：基本分页存储管理
+</h3><h5 id="页页框">
+<a class="header-anchor" href="#%e9%a1%b5%e9%a1%b5%e6%a1%86"></a>
+页、页框:
+</h5><p>将用户程序的逻辑地址空间和内存的物理地址空间都划分为大小相同的、固定大小的<strong>块</strong>。</p>
+        
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>JS</title>
       <link>http://localhost:1313/post/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
       <guid>http://localhost:1313/post/javascript/</guid>
       <description>
-        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>JS</h1><p>Author: D-Sketon(xxx@example.com)</p>
         
-          <p>title: &lsquo;JS&rsquo;</p>
-<p>date: 2026-05-04T11:00:00-07:00
-lastmod: 2026-05-04T11:00:00-07:00</p>
-<h1 id="javascript">
+          <h1 id="javascript">
 <a class="header-anchor" href="#javascript"></a>
 JavaScript
 </h1><h2 id="1导入方式">
@@ -318,8 +446,13 @@ JavaScript
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">xx</span>;<span style="color:#75715e">//可选
 </span></span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>参数前不需要加类型声明</p>
+<p>需要改变原变量推荐将原变量作为数字之类的储存，之后传参可理解为传进了数组的指针</p>
+<h2 id="4事件">
+<a class="header-anchor" href="#4%e4%ba%8b%e4%bb%b6"></a>
+※4.事件
+</h2><p>能与用户交互做出相应的重要部分,常用的如下图：</p>
         
-        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
     </item>
@@ -327,18 +460,15 @@ JavaScript
     
 
     <item>
-      <title></title>
+      <title>HTML</title>
       <link>http://localhost:1313/post/html/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
       <guid>http://localhost:1313/post/html/</guid>
       <description>
-        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>HTML</h1><p>Author: D-Sketon(xxx@example.com)</p>
         
-          <p>title: &lsquo;HTML&rsquo;</p>
-<p>date: 2026-05-04T11:00:00-07:00
-lastmod: 2026-05-04T11:00:00-07:00</p>
-<h1 id="html">
+          <h1 id="html">
 <a class="header-anchor" href="#html"></a>
 <strong>HTML：</strong>
 </h1><h2 id="标签">
@@ -424,7 +554,7 @@ lastmod: 2026-05-04T11:00:00-07:00</p>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">hr</span>&gt; 水平分割线标签
 </span></span></code></pre></div><p>有一些元素默认独占一行 有一些可以共用一行 想共用一行换行则br</p>
         
-        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
     </item>
@@ -432,18 +562,15 @@ lastmod: 2026-05-04T11:00:00-07:00</p>
     
 
     <item>
-      <title></title>
+      <title>GIN</title>
       <link>http://localhost:1313/post/gin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
       <guid>http://localhost:1313/post/gin/</guid>
       <description>
-        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>GIN</h1><p>Author: D-Sketon(xxx@example.com)</p>
         
-          <p>title: &lsquo;GIN&rsquo;</p>
-<p>date: 2026-05-04T11:00:00-07:00
-lastmod: 2026-05-04T11:00:00-07:00</p>
-<h1 id="gin">
+          <h1 id="gin">
 <a class="header-anchor" href="#gin"></a>
 GIN
 </h1><p>GIN是一个用go语言编写的Web框架</p>
@@ -497,8 +624,10 @@ GIN
 <a class="header-anchor" href="#5go%e8%af%ad%e8%a8%80%e7%9a%84%e6%a8%a1%e6%9d%bf%e5%bc%95%e6%93%8e"></a>
 5.GO语言的模板引擎
 </h6><p>GO内置了文本模板引擎 text/template和用于HTML文档的html/template</p>
+<p>模板可以理解为事先定义好的HTML文档文件，模板渲染的作用机制可以简单理解为文本替换操作-&gt;
+即使用相应的数据去替换HTML文档中事先准备好的标记</p>
         
-        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
     </item>
@@ -506,18 +635,15 @@ GIN
     
 
     <item>
-      <title></title>
+      <title>EINO</title>
       <link>http://localhost:1313/post/eino/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
       <guid>http://localhost:1313/post/eino/</guid>
       <description>
-        <![CDATA[<h1></h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>EINO</h1><p>Author: D-Sketon(xxx@example.com)</p>
         
-          <p>title: &lsquo;EINO&rsquo;</p>
-<p>date: 2026-05-04T11:00:00-07:00
-lastmod: 2026-05-04T11:00:00-07:00</p>
-<h1 id="eino">
+          <h1 id="eino">
 <a class="header-anchor" href="#eino"></a>
 EINO
 </h1><p>godotenv 的实际查找逻辑:</p>
@@ -565,9 +691,170 @@ EINO
 <a class="header-anchor" href="#%e6%b3%a8%e5%86%8c"></a>
 注册：
 </h5><p>告诉程序：&ldquo;我期望接收这些参数&rdquo;</p>
+<p>定义参数的名称、类型、默认值、描述</p>
+<p>程序启动时执行</p>
+<h5 id="解析">
+<a class="header-anchor" href="#%e8%a7%a3%e6%9e%90"></a>
+解析:
+</h5><p>从命令行读取并验证实际输入</p>
+<p>将字符串转换为指定类型</p>
         
-        <hr><p>Published on 0001-01-01 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 0001-01-01</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>CSS</title>
+      <link>http://localhost:1313/post/css/</link>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/css/</guid>
+      <description>
+        <![CDATA[<h1>CSS</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <h1 id="css">
+<a class="header-anchor" href="#css"></a>
+CSS
+</h1><p>CSS:层叠样式表，用于定义网页样式和布局的样式表语言,与HTML一起构筑Web页面</p>
+<p>HTML:结构和内容 CSS:外观和样式</p>
+<p>CSS -&gt; 各个元素的颜色、字体、大小、间距、边框、背景 -&gt; 更精确的页面设计</p>
+<p>房子:HTML 结构 大纲 位置  CSS:装修</p>
+<h2 id="1css组成">
+<a class="header-anchor" href="#1css%e7%bb%84%e6%88%90"></a>
+1.CSS组成:
+</h2><p>通常由选择器、属性和属性值组成，多个规则可以组合在一起,每个属性分号结尾(C++)</p>
+<pre tabindex="0"><code>选择器{
+ 属性1:属性值1;
+ 属性2:属性值2;
+}
+</code></pre><p>例如:p1标签选择器，此时所有p1标签都被选中,此时可以作为样式放在<!-- raw HTML omitted -->部分</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">p1</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>此后在body中该样式可以被调用,例如在body中:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p1</span>&gt;这是一个应用了css样式的文本&lt;/<span style="color:#f92672">p1</span>&gt;
+</span></span></code></pre></div><h2 id="2css的导入方式">
+<a class="header-anchor" href="#2css%e7%9a%84%e5%af%bc%e5%85%a5%e6%96%b9%e5%bc%8f"></a>
+2.CSS的导入方式:
+</h2><p>1.内联样式:直接放在HTML元素标签中 因为都有style属性(也就是直接写)
+2.内联样式表:如上例，在head标签中定义
+3.外部样式表:把CSS样式单独放在CSS文件中，再在head中使用另一个标签把这个CSS文件链接进来</p>
+<p>优先级:内敛  &gt; 内部 &gt;  外部</p>
+<p>1.例如:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">style </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;color: red;font-size: 27&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    标题
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span></code></pre></div><p>2.略</p>
+<p>3.例如:
+css文件在根目录的相对目录的&quot;CSS_data&quot;文件夹中,名字叫&quot;test.css&quot;,则在head中:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">herf </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./CSS_data/test.css&#34;</span>&gt;
+</span></span></code></pre></div><p>补充:link的属性有:</p>
+<table>
+  <thead>
+      <tr>
+          <th>rel值</th>
+          <th>用途</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>stylesheet</code></td>
+          <td><strong>主样式表</strong>，立即应用</td>
+          <td><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;</code></td>
+      </tr>
+      <tr>
+          <td><code>preload</code></td>
+          <td>预加载资源，不立即执行</td>
+          <td><code>&lt;link rel=&quot;preload&quot; href=&quot;font.woff2&quot; as=&quot;font&quot;&gt;</code></td>
+      </tr>
+      <tr>
+          <td><code>prefetch</code></td>
+          <td>预获取未来可能需要的资源</td>
+          <td><code>&lt;link rel=&quot;prefetch&quot; href=&quot;next-page.html&quot;&gt;</code></td>
+      </tr>
+      <tr>
+          <td><code>icon</code></td>
+          <td>网站图标</td>
+          <td><code>&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot;&gt;</code></td>
+      </tr>
+      <tr>
+          <td><code>canonical</code></td>
+          <td>规范URL</td>
+          <td><code>&lt;link rel=&quot;canonical&quot; href=&quot;https://example.com/page&quot;&gt;</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="3css选择器">
+<a class="header-anchor" href="#3css%e9%80%89%e6%8b%a9%e5%99%a8"></a>
+3.CSS选择器
+</h2><p>​		是CSS的关键部分，允许你针对特定元素或一组元素定义样式</p>
+        
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>AGENT</title>
+      <link>http://localhost:1313/post/agent/</link>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/agent/</guid>
+      <description>
+        <![CDATA[<h1>AGENT</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <h1 id="agent">
+<a class="header-anchor" href="#agent"></a>
+AGENT
+</h1><p>在adk框架中，agent.Agent是所有Agent必须实现的基础接口</p>
+<p>∵它定义了一个Agent的基本属性以及它的隐形逻辑</p>
+<p>以下是核心方法:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Name</span>() <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//作用：返回该 Agent 的名称（字符串）。AgentTree 中的每个名称必须唯一且不能是 &#34;user&#34;。</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span>() <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//作用：返回该 Agent 的功能描述。如果系统包含多个 Agent，LLM 会依赖这段描述来决定是否将任务委托（Delegate）给该 Agent。建议保持简短明了。</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">SubAgents</span>() []<span style="color:#a6e22e">Agent</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//作用：返回直接归属于该 Agent 的子 Agent 列表（切片）。这定义了 Agent 的层级树结构，框架会自动设置父子关系以支持跨 Agent 路由。</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Run</span>(<span style="color:#a6e22e">InvocationContext</span>) <span style="color:#a6e22e">iter</span>.<span style="color:#a6e22e">Seq2</span>[<span style="color:#f92672">*</span><span style="color:#a6e22e">session</span>.<span style="color:#a6e22e">Event</span>, <span style="color:#66d9ef">error</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//作用：定义该 Agent 的核心执行逻辑。它接收一个 InvocationContext（包含上下文、当前会话、内存、状态等），并返回一个迭代器，该迭代器会持续产出（Yield）执行过程中的事件 (*session.Event) 或报错信息。</span>
+</span></span></code></pre></div><p>agent.Config -&gt; 自定义逻辑基础的Agent</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">Name</span> (<span style="color:#66d9ef">string</span>) <span style="color:#a6e22e">和</span> <span style="color:#a6e22e">Description</span> (<span style="color:#66d9ef">string</span>)<span style="color:#75715e">//基础元数据。</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">SubAgents</span> ([]<span style="color:#a6e22e">Agent</span>)<span style="color:#75715e">//子节点。</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">BeforeAgentCallbacks</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">AfterAgentCallbacks</span><span style="color:#75715e">//Agent 运行前后的生命周期钩子。</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Run</span> (<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">InvocationContext</span>) <span style="color:#a6e22e">iter</span>.<span style="color:#a6e22e">Seq2</span>[<span style="color:#f92672">*</span><span style="color:#a6e22e">session</span>.<span style="color:#a6e22e">Event</span>, <span style="color:#66d9ef">error</span>])
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//这是最关键的区别。你需要在这提供自定义的 Go 函数来完全掌控它如何工作，不一定是调用大模型，也可以是纯代码逻辑（例如 API 聚合器）。</span>
+</span></span></code></pre></div><h3 id="首先我们先创建一个大模型实例">
+<a class="header-anchor" href="#%e9%a6%96%e5%85%88%e6%88%91%e4%bb%ac%e5%85%88%e5%88%9b%e5%bb%ba%e4%b8%80%e4%b8%aa%e5%a4%a7%e6%a8%a1%e5%9e%8b%e5%ae%9e%e4%be%8b"></a>
+首先，我们先创建一个大模型实例
+</h3><h6 id="简单示例">
+<a class="header-anchor" href="#%e7%ae%80%e5%8d%95%e7%a4%ba%e4%be%8b"></a>
+简单示例
+</h6><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;google.golang.org/adk/agent/llmagent&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;google.golang.org/adk/provider/googleai&#34;</span> <span style="color:#75715e">// 引入 GoogleAI Provider</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 生成 Model 实例</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">myGeminiModel</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">googleai</span>.<span style="color:#a6e22e">NewModel</span>(<span style="color:#a6e22e">googleai</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ModelName</span>: <span style="color:#e6db74">&#34;gemini-2.5-flash&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">APIKey</span>:    <span style="color:#e6db74">&#34;YOUR_GEMINI_API_KEY&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 可以在这里配置 Temperature 等生成参数</span>
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><p>对于模型实例，基本都会有Name、APIKey、Base_URL基本参数和其他参数</p>
+        
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+      </description>
+      
+        <category>前端</category>
       
     </item>
     

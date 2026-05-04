@@ -90,6 +90,8 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
+        <category>专业课</category>
+      
     </item>
     
     
@@ -161,6 +163,8 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
+      
+        <category>专业课</category>
       
     </item>
     
@@ -245,6 +249,8 @@ mysqlsh进入mySQL-shell工具
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
+      
+        <category>专业课</category>
       
     </item>
     
@@ -385,6 +391,8 @@ OS
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
+        <category>专业课</category>
+      
     </item>
     
     
@@ -454,6 +462,8 @@ JavaScript
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
+      
+        <category>前端</category>
       
     </item>
     
@@ -557,6 +567,8 @@ JavaScript
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
+        <category>前端</category>
+      
     </item>
     
     
@@ -630,6 +642,8 @@ GIN
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
+        <category>GoLang</category>
+      
     </item>
     
     
@@ -701,6 +715,8 @@ EINO
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
+      
+        <category>Agent</category>
       
     </item>
     
@@ -799,6 +815,8 @@ css文件在根目录的相对目录的&quot;CSS_data&quot;文件夹中,名字�
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
       
+        <category>前端</category>
+      
     </item>
     
     
@@ -853,6 +871,8 @@ AGENT
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
       </description>
+      
+        <category>Agent</category>
       
     </item>
     

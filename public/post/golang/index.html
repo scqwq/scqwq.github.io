@@ -1,0 +1,1072 @@
+<!doctype html>
+<html
+  lang="en-us" 
+  data-theme-mode="auto"
+  >
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/><title>
+  GoLang | D-Sketon
+</title>
+<meta name="description" content="少女祈祷中..."/><script>
+  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_ex15nbittbh\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
+  
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<link
+    rel="preload"
+    href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  /><link rel="stylesheet" href="/css/loader.css" /><meta property="og:type" content="website" />
+  <meta property="og:title" content="GoLang | D-Sketon" />
+  <meta
+    property="og:description"
+    content="少女祈祷中..."
+  />
+  <meta property="og:url" content="http://localhost:1313/post/golang/" />
+  <meta
+    property="og:site_name"
+    content="My New Hugo Project"
+  />
+  <meta property="og:image" content="http://localhost:1313/images/banner.webp" />
+  <meta property="article:author" content="D-Sketon" />
+  <meta property="article:published_time" content="2026-05-04T11:00:00&#43;08:00" />
+  <meta property="article:modified_time" content="2026-05-03T11:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/banner.webp" />
+<link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css"
+    integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/katex@0.16.24/dist/katex.min.css"
+    integrity="sha384-tTgKLjMYmJr94v8qu2PE5MUGSMbyN2xiH266JUB3gpm8vnnJywd1dWSOEfrFz&#43;YI" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><script
+    src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"
+    
+    
+    
+    
+    integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css"
+    integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous"/></head>
+  <body><div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate"><svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+          M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg></div><div class="loading-word">Loading...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script><div id="copy-tooltip"></div>
+<div id="lang-tooltip">
+This article does not have a corresponding language version
+</div>
+<div id="heatmap-tooltip"></div><div id="container">
+      <div id="wrap"><div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation"><a class="main-nav-link-wrap" href="/"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Home</span>
+      </a><a class="main-nav-link-wrap" href="/archives"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Archives</span>
+      </a><a class="main-nav-link-wrap" href="/about"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">About</span>
+      </a><a class="main-nav-link-wrap" href="/friend"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Friend</span>
+      </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
+<header id="header" aria-label="Site header"><picture></picture><img  fetchpriority="high" src="/images/banner.webp" alt="GoLang"><div id="header-outer">
+    <div id="header-title"><span id="logo">
+            <h1 data-aos="slide-up">GoLang</h1>
+          </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
+  </div>
+</header><div id="content"
+          aria-label="Page content"
+          
+          class="sidebar-right"  ><aside id="sidebar" aria-label="Sidebar"><div class="sidebar-wrapper-container sticky"><div class="sidebar-wrapper">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    ><div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#标准开局">标准开局:</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#变量的定义">变量的定义:</a></li>
+    <li><a href="#数据类型">数据类型</a></li>
+    <li><a href="#条件语句">条件语句</a></li>
+    <li><a href="#循环语句">循环语句</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#关于数组切片和字符串">关于数组、切片和字符串</a></li>
+    <li><a href="#对于map是无序的键值对集合">对于map,是无序的键值对集合</a></li>
+    <li><a href="#关于函数">关于函数</a></li>
+    <li><a href="#关于结构体">关于结构体:</a></li>
+    <li><a href="#switch">switch</a></li>
+    <li><a href="#input">input</a></li>
+    <li><a href="#方法">方法</a>
+      <ul>
+        <li></li>
+        <li><a href="#方法集">方法集</a></li>
+      </ul>
+    </li>
+    <li><a href="#接口interface">接口（Interface）</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div></div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.webp"
+    data-sizes="auto"
+    alt="D-Sketon"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">D-Sketon</div>
+  <div class="sidebar-description">少女祈祷中...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div><div class="sidebar-state-number">12</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>Categories</div>
+    <div class="sidebar-state-number">
+      4
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-bilibili sidebar-social-icon">
+        <a
+          href="https://space.bilibili.com"
+          itemprop="url"
+          target="_blank"
+          aria-label="bilibili"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-qq sidebar-social-icon">
+        <a
+          href="2593335313"
+          itemprop="url"
+          target="_blank"
+          aria-label="qq"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="Home"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Home</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="Archives"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Archives</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="About"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">About</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="Friend"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Friend</div>
+    </div></div></div><div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div></div>
+  </div><div class="sidebar-widget"></div></div></aside>
+<section id="main" aria-label="Main content"><article
+  class="h-entry article"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta"><div class="article-date">
+  <span
+    class="article-date-link icon-calendar"
+    data-aos="zoom-in"
+  >
+    <time datetime="2026-05-04 11:00:00 &#43;0800 CST" itemprop="datePublished"
+      >2026-05-04</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2026-05-03</time
+    >
+  </span></div>
+</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="golang">
+<a class="header-anchor" href="#golang"></a>
+GOLANG
+</h1><p>GO会自动帮你把没用到的东西报错、删除，主打一个简洁。</p>
+<h2 id="标准开局">
+<a class="header-anchor" href="#%e6%a0%87%e5%87%86%e5%bc%80%e5%b1%80"></a>
+标准开局:
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){		<span style="color:#75715e">//主函数</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">printkn</span>(<span style="color:#e6db74">&#34;Hello world&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="-">
+<a class="header-anchor" href="#-"></a>
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+</h5><ul>
+<li>
+<h2 id="变量的定义">
+<a class="header-anchor" href="#%e5%8f%98%e9%87%8f%e7%9a%84%e5%ae%9a%e4%b9%89"></a>
+变量的定义:
+</h2></li>
+</ul>
+<p>可使用const \ var  :=定义 ,可以用( )多个定义，可以不用输入数据类型让机器自行判断（也可以输）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">const</span>(  
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v1</span> = <span style="color:#66d9ef">iota</span> <span style="color:#75715e">//此时iota = 0</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">_</span>        <span style="color:#75715e">//可以使用 _ 下划线跳过某些值</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v5</span> = <span style="color:#ae81ff">100</span> <span style="color:#75715e">//中间设置新变量也会跳</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v2</span> = <span style="color:#66d9ef">iota</span> <span style="color:#75715e">//此时iota = 3</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">number</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">114</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">num</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">int</span> <span style="color:#ae81ff">514</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">num2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5461313</span>
+</span></span></code></pre></div><p>使用 := 短声明符号可以便捷地定义并赋值，让机器来默认数据类型</p>
+<p>定义结构体变量如下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">books</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Name</span>    <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Address</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">hundred_alone</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">books</span>{<span style="color:#e6db74">&#34;hundred_alone&#34;</span>, <span style="color:#e6db74">&#34;191810&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">hundred_alone</span>)                             <span style="color:#75715e">//OK but have { }</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">hundred_alone</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#a6e22e">hundred_alone</span>.<span style="color:#a6e22e">Address</span>) <span style="color:#75715e">//OK</span>
+</span></span></code></pre></div><p>对于结构体变量的输出多试几次即可</p>
+<p>对了 赋值时可以在右侧运算 与c相同</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">c</span>[<span style="color:#ae81ff">2</span>] &gt; <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><p>同时 可以使用 &ldquo;_&ldquo;来接收数据（比如函数中的），而这个数据会被抛弃，这个下划线就是匿名变量</p>
+<p>此外，&rdquo;_&ldquo;还可以在编译时检查接口的实现，这里不做详细介绍。</p>
+<hr>
+<ul>
+<li>
+<h2 id="数据类型">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b"></a>
+数据类型
+</h2></li>
+</ul>
+<p>指针：*int(或其他数据类型,后面主要用int举例子)
+数组：b :=  [&hellip;]int{1,2,3}  / c:= [4]uint8{1,2,3}   /  var d = [3]int{1,2,3}
+布尔：var b bool = true / c := false
+一般整形：int
+浮点型：float32/64</p>
+<pre tabindex="0"><code>//unitx  无符号的x为整形(0 ~ 2^x)
+//intx  有符号的x位整形 x = 32 时 -&gt; +-2147483647
+//还有float32 /64 只有这两个类型 没有float与double类型
+//complex64/128 -&gt; 32/64位实数与虚数  虚数部分用 + xi（和数学一样）就行
+//unitptr 无符号整形 用于存放一个指针
+//八进制0开头 16进制0x开头  占位符%b表示二进制
+//byte ASCII码中的字符
+</code></pre><hr>
+<ul>
+<li>
+<h2 id="条件语句">
+<a class="header-anchor" href="#%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5"></a>
+条件语句
+</h2></li>
+</ul>
+<p>注意：Go的条件语句有个很申必的地方：if else不能随便换行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">c</span>[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> { <span style="color:#75715e">//没有括号 当然你加了你会给你删掉</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34; 2 &gt; 18 bro&#34;</span>)
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">c</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34; 1 &gt; 18 bro&#34;</span>)
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> { <span style="color:#75715e">//很神奇但是else不能换行</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34; 丨😠\n&#34;</span>) <span style="color:#75715e">//emoji can output!</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><hr>
+<ul>
+<li>
+<h2 id="循环语句">
+<a class="header-anchor" href="#%e5%be%aa%e7%8e%af%e8%af%ad%e5%8f%a5"></a>
+循环语句
+</h2></li>
+</ul>
+<p>下面是非常经典的for循环，相比C没有括号。而在循环中break和continue的用法和C一样</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> = <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#ae81ff">100</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> { <span style="color:#75715e">//不能加括号！</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><p>除了for循环还有dowhile循环，只不过依然是for为载体</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#66d9ef">int</span> <span style="color:#75715e">//dowhile模式</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">i</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">i</span> &gt; <span style="color:#ae81ff">150</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>		} <span style="color:#75715e">//注意此时i = 100 ,for里面的循环对i有影响</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;sum: &#34;</span>, <span style="color:#a6e22e">sum</span>)
+</span></span></code></pre></div><p>此时要注意，经过第一个for循环后再经 过dowhile时，i = 100,因为for的循环条件中的i会改变</p>
+<h6 id="循环语句的特殊用法">
+<a class="header-anchor" href="#%e5%be%aa%e7%8e%af%e8%af%ad%e5%8f%a5%e7%9a%84%e7%89%b9%e6%ae%8a%e7%94%a8%e6%b3%95"></a>
+循环语句的特殊用法:
+</h6><p>可以用range将数组与切片或者map打印出来,关于map在下方</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">list</span> = <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;001&#34;</span>: <span style="color:#e6db74">&#34;xixi&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;010&#34;</span>: <span style="color:#e6db74">&#34;haha&#34;</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">data</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">list</span> { <span style="color:#75715e">//若是某个数据不用可以用下划线_来代替</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><hr>
+<ul>
+<li>
+<h2 id="关于数组切片和字符串">
+<a class="header-anchor" href="#%e5%85%b3%e4%ba%8e%e6%95%b0%e7%bb%84%e5%88%87%e7%89%87%e5%92%8c%e5%ad%97%e7%ac%a6%e4%b8%b2"></a>
+关于数组、切片和字符串
+</h2></li>
+</ul>
+<p>①可以用make函数创造指定长度的数组</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>		<span style="color:#a6e22e">namelist2</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">namelist2</span>[<span style="color:#ae81ff">0</span>] = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">namelist2</span>[<span style="color:#ae81ff">1</span>] = <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><p>这边的输出会显示 len = 5,其他则默认为0</p>
+<p>②可以直接用上文方法定义或用单引号内多个元素定义:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`&#34;line1&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">		&#34;line2&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	`</span>
+</span></span></code></pre></div><p>③对于字符串，可以直接使用多个字符串相加得到</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>		<span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;hello&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;world&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s4</span>
+</span></span></code></pre></div><p>④而也可以创建可以自由增加长度的数组（或是切片？反正那个意思）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>		<span style="color:#a6e22e">nameLIST</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{} <span style="color:#75715e">//[]中不填数字即可</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">nameLIST</span> = append(<span style="color:#a6e22e">nameLIST</span>, <span style="color:#e6db74">&#34;awd&#34;</span>, <span style="color:#e6db74">&#34;awd2&#34;</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">nameLIST</span> = append(<span style="color:#a6e22e">nameLIST</span>, <span style="color:#e6db74">&#34;wada&#34;</span>, <span style="color:#e6db74">&#34;wada2&#34;</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">nameLIST</span>[<span style="color:#ae81ff">2</span>])
+</span></span></code></pre></div><p>⑤关于切片:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">namelist2</span>[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>])
+</span></span></code></pre></div><p>拿一个变量等于切片也行，切片的位置如下:</p>
+<p>原数组0 a 1 b 2 c 3 d 4 -&gt;0<del>3即拿取0</del>3空中的数据(即a,b,c)</p>
+<hr>
+<ul>
+<li>
+<h2 id="对于map是无序的键值对集合">
+<a class="header-anchor" href="#%e5%af%b9%e4%ba%8emap%e6%98%af%e6%97%a0%e5%ba%8f%e7%9a%84%e9%94%ae%e5%80%bc%e5%af%b9%e9%9b%86%e5%90%88"></a>
+对于map,是无序的键值对集合
+</h2><p>说人话就是自己弄了个数据与索引的对应集</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">number</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">string</span>{ <span style="color:#75715e">//var number = map[int]string //its OK</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ae81ff">1</span>: <span style="color:#e6db74">&#34;114&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#ae81ff">2</span>: <span style="color:#e6db74">&#34;514&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#ae81ff">4</span>: <span style="color:#e6db74">&#34;1919&#34;</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;num[3]:%#v\n&#34;</span>, <span style="color:#a6e22e">number</span>[<span style="color:#ae81ff">3</span>]) <span style="color:#75715e">//%#v输出</span>
+</span></span></code></pre></div><p>那么number[1]就是 &ldquo;114&rdquo; 其他同理 检索的时候可用</p>
+<p>寻找某个键的值：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">myMap</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;114514&#34;</span>,  
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 获取值</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">myMap</span>[<span style="color:#e6db74">&#34;role&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">value</span>)  <span style="color:#75715e">// 输出: 114514</span>
+</span></span></code></pre></div></li>
+</ul>
+<p>顺便 %#v 可以见以数做输出</p>
+<p>而与接口联动，则有</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;xxx&#34;</span>:<span style="color:#a6e22e">xxx</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>interface{}：值的类型是空接口，可以存放任意类型的值（int、string、struct、slice、map 等）。
+就相当于创建了一个“<strong>键是字符串，值什么都能放</strong>”的空 map</p>
+<hr>
+<ul>
+<li>
+<h2 id="关于函数">
+<a class="header-anchor" href="#%e5%85%b3%e4%ba%8e%e5%87%bd%e6%95%b0"></a>
+关于函数
+</h2></li>
+</ul>
+<p>当没有返回值时:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">say</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int</span>) { <span style="color:#75715e">//若两数据类型则可以只用写一个</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world:&#34;</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>当有返回值时，go支持多个返回值</p>
+<p>注意：当只有一个返回值时，括号可以省略</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">num</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int</span>) (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">and</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cha</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">and</span>, <span style="color:#a6e22e">cha</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>main中测试：用法与C相近</p>
+<p>而有多个返回值时，用多个变量接住即可</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>	<span style="color:#a6e22e">say</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>) <span style="color:#75715e">//用法和c几乎一样</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">num</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>) <span style="color:#75715e">//接住函数的返回值</span>
+</span></span></code></pre></div><p>函数里定义函数、函数闭包与函数更多写法:</p>
+<p><em><strong>①函数里定义函数</strong></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">getnumber</span> = <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">num</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> { <span style="color:#75715e">//此时这里不加括号</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">num</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><p>这里本质上是将匿名函数赋值给了getnumber,此时getnum =  func( 输入值)(返回值 ){函数体}</p>
+<p><em><strong>②闭包</strong></em></p>
+<p>在上面的基础上有闭包，闭包是匿名函数的一个强大特性，它可以<strong>捕获外部函数的变量</strong>，</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">counter</span>() <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">count</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">c1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">counter</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">c1</span>())  <span style="color:#75715e">// 1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">c1</span>())  <span style="color:#75715e">// 2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">c1</span>())  <span style="color:#75715e">// 3</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>此时counter是一个函数，其返回的也是一个函数，即func( ) int{ }</p>
+<p>闭包使得语言的垃圾回收机制不会收回a()（或者其他匿名函数）所占用的资源</p>
+<p><em>在给定函数被多次调用的过程中，这些私有变量能够保持其持久性。变量的作用域仅限于包含它们的函数，因此无法从其它程序代码部分进行访问。不过，变量的生存期是可以很长，在一次函数调用期间所创建所生成的值在下次函数调用时仍然存在。正因为这一特点，闭包可以用来完成信息隐藏，并进而应用于需要状态表达的某些编程范型中。</em></p>
+<p><strong>③结合<em>map</em></strong></p>
+<p>fine 结合前面的map可以达成更高阶的函数写法</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">number</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>] <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">int</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;a&#34;</span>: <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">int</span> { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">11</span> },
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;b&#34;</span>: <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">int</span> { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">22</span> },
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;c&#34;</span>: <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">int</span> { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">33</span> },
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">d</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">number</span>[<span style="color:#e6db74">&#34;a&#34;</span>]();
+</span></span></code></pre></div><p>通过map即可调用同一函数名下的不同函数，也可以理解为“函数数组”</p>
+<hr>
+<ul>
+<li>
+<h2 id="关于结构体">
+<a class="header-anchor" href="#%e5%85%b3%e4%ba%8e%e7%bb%93%e6%9e%84%e4%bd%93"></a>
+关于结构体:
+</h2></li>
+</ul>
+<p>基本语法示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Name</span>     <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;name&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Age</span>      <span style="color:#66d9ef">int</span>    <span style="color:#e6db74">`json:&#34;age&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Password</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;password&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//JSON标签高级属性举例 omitempty选项指示当字段值为空或其零值时，应省略该字段</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">t</span> <span style="color:#66d9ef">struct</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Content</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;content,omitempty&#34;`</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 当Content为空字符串时，省略该字段</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">User</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">User</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;scqwq&#34;</span>, <span style="color:#a6e22e">Age</span>: <span style="color:#ae81ff">18</span>, <span style="color:#a6e22e">Password</span>: <span style="color:#e6db74">&#34;123456&#34;</span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Data</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">User</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">Data</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 序列化为JSON</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">user</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(string(<span style="color:#a6e22e">data</span>)) <span style="color:#75715e">// 输出 {&#34;id&#34;:1,&#34;username&#34;:&#34;Alice&#34;}</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>对于json部分，<code>json.Marshal</code>是 Go 语言中将 Go 数据结构序列化为 JSON 字符串的标准方法。一般测试情况下不需要加json</p>
+<p>Marshal -&gt; 序列化JSON   Ummarshal -&gt; 反序列化</p>
+<ul>
+<li>
+<h2 id="switch">
+<a class="header-anchor" href="#switch"></a>
+switch
+</h2></li>
+</ul>
+<p>与C的主要区别是没有break；也不会自动往下掉，需要往下运行反倒需要加代码:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">age</span> { <span style="color:#75715e">//正常用法  并且没有break也可以</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">18</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;u r 18&#34;</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">fallthrough</span> <span style="color:#75715e">//如果需要往下 则需要加这行</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">19</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;u r 19&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;u r not 18 or 19&#34;</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><p>此外，switch和case也可当成条件来用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> { <span style="color:#75715e">//当然也可以当成条件来用</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;u r adult&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">age</span> &lt; <span style="color:#ae81ff">18</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;u r a kid&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;R U born??&#34;</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><ul>
+<li>
+<h2 id="input">
+<a class="header-anchor" href="#input"></a>
+input
+</h2></li>
+</ul>
+<p>关于输入，使用fmt.Scan(&amp;x)即可(对的，也需要加&amp;)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">age</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Scan</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">age</span>)
+</span></span></code></pre></div><h2 id="方法">
+<a class="header-anchor" href="#%e6%96%b9%e6%b3%95"></a>
+方法
+</h2><p>方法是带有接收者（Receiver）的函数，语法如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">接收者</span> <span style="color:#a6e22e">类型</span>) <span style="color:#a6e22e">方法名</span>(<span style="color:#a6e22e">参数列表</span>) <span style="color:#a6e22e">返回值列表</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 方法体</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>类型大部分情况下为自定义的类型，定义之后即可使用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">person</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Person</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#a6e22e">Age</span>: <span style="color:#ae81ff">20</span>} <span style="color:#75715e">//先实例化</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">Birthday</span>()  <span style="color:#75715e">// 调用方法</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">Age</span>)  <span style="color:#75715e">// 输出: 20 </span>
+</span></span></code></pre></div><p>而与C相同，非指针接收者不影响原对象，而指针接收者操作的是原对象</p>
+<h5 id="结构体中的方法继承">
+<a class="header-anchor" href="#%e7%bb%93%e6%9e%84%e4%bd%93%e4%b8%ad%e7%9a%84%e6%96%b9%e6%b3%95%e7%bb%a7%e6%89%bf"></a>
+结构体中的方法继承：
+</h5><p>在golang中，一个类型A中包含一个已经实现I接口的类型B，此时A可以使用接口类型I，给A实现I接口中的方法会把B中实现的接口覆盖</p>
+<p><strong>也就是说，类型A会自动继承类型B的接口实现，但A可以重写（覆盖）B的方法实现。</strong></p>
+<p>原理：方法集规则：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 类型A的方法集 = A的方法 + 嵌入类型的方法</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">RobotDog</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Dog</span>  <span style="color:#75715e">// 嵌入Dog</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// RobotDog的方法集包含：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1. RobotDog.Speak()  ← 自己的方法</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Dog.Speak()       ← 被覆盖，实际调用RobotDog.Speak()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. Dog.Listen()      ← 继承的方法</span>
+</span></span></code></pre></div><p>此时总的方法决定了它实现哪些接口</p>
+<h3 id="方法集">
+<a class="header-anchor" href="#%e6%96%b9%e6%b3%95%e9%9b%86"></a>
+方法集
+</h3><p>决定了类型是否实现了某个接口：</p>
+<h2 id="接口interface">
+<a class="header-anchor" href="#%e6%8e%a5%e5%8f%a3interface"></a>
+接口（Interface）
+</h2><p>接口是一组方法签名的集合，定义行为而非实现：(Go 采用隐式实现，无需显式声明)</p>
+<p>遵循“鸭子准则”：如果一个生物叫得像鸭子，长得像鸭子，那他就是鸭子</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 定义接口</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Animal</span> <span style="color:#66d9ef">interface</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Speak</span>() <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Move</span>() <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>以下用Dog实现接口</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Name</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">d</span> <span style="color:#a6e22e">Dog</span>) <span style="color:#a6e22e">Speak</span>() <span style="color:#66d9ef">string</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; says: Woof!&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">d</span> <span style="color:#a6e22e">Dog</span>) <span style="color:#a6e22e">Move</span>() <span style="color:#66d9ef">string</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; runs&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">describe</span>(<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">Speaker</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;(%v, %T)\n&#34;</span>, <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">s</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>我们通过使用接口类型，把所有会叫会跑的生物当成动物来处理</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#a6e22e">Animal</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">s</span> = <span style="color:#a6e22e">Dog</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Buddy&#34;</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">describe</span>(<span style="color:#a6e22e">s</span>)  <span style="color:#75715e">// (Buddy, main.Dog</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Speak</span>()<span style="color:#75715e">//dog says: Woof!</span>
+</span></span></code></pre></div><h5 id="结构体中的方法继承-1">
+<a class="header-anchor" href="#%e7%bb%93%e6%9e%84%e4%bd%93%e4%b8%ad%e7%9a%84%e6%96%b9%e6%b3%95%e7%bb%a7%e6%89%bf-1"></a>
+结构体中的方法继承
+</h5><hr>
+<hr>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260131140651370.png" alt="image-20260131140651370"></p>
+<p>第一段代码是<strong>将函数作为结构体字段</strong> 使用，调用函数时使用d.fn();</p>
+<p>第二段代码时创建了通道，可以理解为队列，每调用一次函数都会先进先出，后进后出</p>
+<h6 id="另外对于空接口--interfane">
+<a class="header-anchor" href="#%e5%8f%a6%e5%a4%96%e5%af%b9%e4%ba%8e%e7%a9%ba%e6%8e%a5%e5%8f%a3--interfane"></a>
+另外，对于空接口  interfane
+</h6><p>不管什么类型，都算实现了空接口,则任意类型的变量都可以用空接口储存
+则可用map[string]interface{}{}来实现string键与任意值的搭配</p>
+<h4 id="httphandler接口">
+<a class="header-anchor" href="#httphandler%e6%8e%a5%e5%8f%a3"></a>
+http.handler接口
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Handler</span> <span style="color:#66d9ef">interface</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ServeHTTP</span>(<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#f92672">*</span><span style="color:#a6e22e">Request</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="要实现的唯一方法">
+<a class="header-anchor" href="#%e8%a6%81%e5%ae%9e%e7%8e%b0%e7%9a%84%e5%94%af%e4%b8%80%e6%96%b9%e6%b3%95"></a>
+要实现的唯一方法：
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">ServeHTTP</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>)
+</span></span></code></pre></div><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260220122657648.png" alt="image-20260220122657648"></p>
+<h6 id="responsewriter">
+<a class="header-anchor" href="#responsewriter"></a>
+responsewriter:
+</h6><p>主要功能：</p>
+<p>设置响应状态码：<code>w.WriteHeader(statusCode)</code></p>
+<p>设置响应头：<code>w.Header().Set(&quot;Content-Type&quot;, &quot;text/plain&quot;)</code></p>
+<p>写入响应体：<code>w.Write([]byte(&quot;Hello, World&quot;))</code>或 <code>fmt.Fprint(w, &quot;...&quot;)</code></p>
+<h6 id="request">
+<a class="header-anchor" href="#request"></a>
+request:
+</h6><p>表示客户端发起的 <strong>HTTP 请求</strong></p>
+<p>包含的信息有：</p>
+<p>请求方法：<code>r.Method</code>（如 <code>&quot;GET&quot;</code>, <code>&quot;POST&quot;</code>）</p>
+<p>请求路径：<code>r.URL.Path</code></p>
+<p>请求头：<code>r.Header</code></p>
+<p>请求体：<code>r.Body</code>（比如 POST 提交的数据）</p>
+<p>查询参数：<code>r.URL.Query()</code></p>
+<p>客户端信息、Cookies 等</p>
+<h1 id="type">
+<a class="header-anchor" href="#type"></a>
+type
+</h1><p>作用：</p>
+<ul>
+<li>
+<p>定义新的类型别名</p>
+</li>
+<li>
+<p>定义结构体</p>
+</li>
+<li>
+<p>定义接口</p>
+</li>
+<li>
+<p>为现有类型定义方法</p>
+</li>
+<li>
+<p>定义函数类型</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">//1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">MyInt</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">YourInt</span> <span style="color:#66d9ef">int</span>  
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Person</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Name</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Age</span>  <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//3</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Speaker</span> <span style="color:#66d9ef">interface</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Speak</span>() <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//4</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">MyInt</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">m</span> <span style="color:#a6e22e">MyInt</span>) <span style="color:#a6e22e">Double</span>() <span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> int(<span style="color:#a6e22e">m</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//5</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// HandlerFunc是一个接收*Context参数的函数类型</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">HandlerFunc</span> <span style="color:#66d9ef">func</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Context</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 可以将符合签名的函数赋值给这个类型的变量</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">handler</span> <span style="color:#a6e22e">HandlerFunc</span> = <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Context</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 处理逻辑</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 作为参数传递</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Use</span>(<span style="color:#a6e22e">middleware</span> <span style="color:#a6e22e">HandlerFunc</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>func(*Context)</code>
+这是一个函数签名，定义了一个函数类型。
+它表示“一个接受一个参数（类型为*Context指针），并且没有返回值”的函数。
+<code>type HandlerFunc</code>
+使用type关键字，为上面这个函数签名创建了一个新类型，名叫HandlerFunc。
+现在，HandlerFunc不再是一个普通的函数签名，而是一个具体的类型，就像int、string或MyStruct一样。</p>
+<p>核心关系：类型 (Type) vs 值 (Value)
+这是理解的关键：</p>
+<p>HandlerFunc是类型。
+符合 func(*Context)签名的任意函数，都可以作为 HandlerFunc类型的值。</p>
+<h1 id="make">
+<a class="header-anchor" href="#make"></a>
+MAKE
+</h1><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 语法：make([]T, length, capacity)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// length: 初始长度</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// capacity: 容量（可选，默认等于 length）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 示例：</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">5</span>)      <span style="color:#75715e">// 长度=5, 容量=5, 值=[0,0,0,0,0]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>)  <span style="color:#75715e">// 长度=5, 容量=10, 值=[0,0,0,0,0]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">string</span>, <span style="color:#ae81ff">3</span>)   <span style="color:#75715e">// [&#34;&#34;, &#34;&#34;, &#34;&#34;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 对比直接声明</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s4</span> []<span style="color:#66d9ef">int</span>            <span style="color:#75715e">// nil 切片</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s5</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{}           <span style="color:#75715e">// 空切片，非 nil</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s6</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>) <span style="color:#75715e">// 容量5的空切片</span>
+</span></span></code></pre></div><p>容量  &gt;= len 长度&lt;容量时其他为空</p>
+</li>
+</ul>
+<h1 id="heading">
+<a class="header-anchor" href="#heading"></a>
+&hellip;
+</h1><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">NewStore</span>(<span style="color:#a6e22e">keyPairs</span> <span style="color:#f92672">...</span>[]<span style="color:#66d9ef">byte</span>) <span style="color:#a6e22e">Store</span>
+</span></span></code></pre></div><p>&hellip;[]表示其中可以有任意个byte[]变量</p>
+<p>在函数内部，<code>keyPairs</code>实际上是一个<code>[][]byte</code>类型（字节切片的切片）</p>
+<h1 id="结构体嵌套">
+<a class="header-anchor" href="#%e7%bb%93%e6%9e%84%e4%bd%93%e5%b5%8c%e5%a5%97"></a>
+结构体嵌套
+</h1><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 被嵌套的结构体</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Engine</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Power</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Type</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//普通字段</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Car1</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">engine</span> <span style="color:#a6e22e">Engine</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Brand</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 嵌套结构体</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Car</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Engine</span>  <span style="color:#75715e">// 匿名字段：嵌套 Engine</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Brand</span>   <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Model</span>   <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//则在赋值时，嵌套结构体需要:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">myCar</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Car</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Engine</span>: <span style="color:#a6e22e">Engine</span>{<span style="color:#a6e22e">Power</span>: <span style="color:#ae81ff">150</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#e6db74">&#34;V6&#34;</span>},
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Brand</span>:  <span style="color:#e6db74">&#34;Toyota&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//因为此时出现了字段提升和方法提升</span>
+</span></span></code></pre></div></div>
+    <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
+    <a
+      class="article-category-link"
+      href="/categories/golang"
+      data-aos="zoom-in"
+      >GoLang</a
+    >
+    </li></ul>
+<ul class="article-tag-list" itemprop="keywords"></ul>
+</footer>
+  </div><nav
+    id="article-nav"
+    aria-label="Article navigation"
+    data-aos="fade-up"
+  ><div class="article-nav-link-wrap left"><img
+              data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
+              data-sizes="auto"
+              alt="AGENT"
+              class="lazyload"
+            /><a
+          href="/post/agent/"
+          aria-label="Prev:AGENT"
+          title="Prev:AGENT"
+        ></a>
+        <div class="article-nav-caption">Prev</div>
+        <h3 class="article-nav-title">AGENT</h3>
+      </div></nav></article></section>
+        </div><footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info"><div>
+      <span class="icon-copyright"></span>2020-2026<span class="footer-info-sep rotate"></span>D-Sketon
+    </div><div>
+        Powered by&nbsp;<a
+          href="https://gohugo.io/"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Hugo</a
+        >&nbsp;Theme.<a
+          href="https://github.com/D-Sketon/hugo-theme-reimu"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Reimu</a
+        >
+      </div><div>
+        <span class="icon-brush"
+          >&nbsp;7.1k</span
+        >
+        &nbsp;|&nbsp;
+        <span class="icon-coffee">&nbsp;00:39</span>
+      </div><div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv"
+          >Number of visits&nbsp;<span
+            id="busuanzi_value_site_pv"
+          ></span
+        ></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv"
+          >Number of visitors&nbsp;<span
+            id="busuanzi_value_site_uv"
+          ></span
+        ></span>
+      </div></div>
+</footer>
+<div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div><div id="mask" class="hide"></div>
+      </div><nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#标准开局">标准开局:</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#变量的定义">变量的定义:</a></li>
+    <li><a href="#数据类型">数据类型</a></li>
+    <li><a href="#条件语句">条件语句</a></li>
+    <li><a href="#循环语句">循环语句</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#关于数组切片和字符串">关于数组、切片和字符串</a></li>
+    <li><a href="#对于map是无序的键值对集合">对于map,是无序的键值对集合</a></li>
+    <li><a href="#关于函数">关于函数</a></li>
+    <li><a href="#关于结构体">关于结构体:</a></li>
+    <li><a href="#switch">switch</a></li>
+    <li><a href="#input">input</a></li>
+    <li><a href="#方法">方法</a>
+      <ul>
+        <li></li>
+        <li><a href="#方法集">方法集</a></li>
+      </ul>
+    </li>
+    <li><a href="#接口interface">接口（Interface）</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div></div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.webp"
+    data-sizes="auto"
+    alt="D-Sketon"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">D-Sketon</div>
+  <div class="sidebar-description">少女祈祷中...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div><div class="sidebar-state-number">12</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>Categories</div>
+    <div class="sidebar-state-number">
+      4
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-bilibili sidebar-social-icon">
+        <a
+          href="https://space.bilibili.com"
+          itemprop="url"
+          target="_blank"
+          aria-label="bilibili"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-qq sidebar-social-icon">
+        <a
+          href="2593335313"
+          itemprop="url"
+          target="_blank"
+          aria-label="qq"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="Home"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Home</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="Archives"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Archives</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="About"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">About</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="Friend"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Friend</div>
+    </div></div></div></div><div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div></nav>
+</div><script
+    src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
+    
+    
+    
+    
+    integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"
+    
+    
+    
+    
+    integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script src="/js/main.js"  ></script><script src="/js/aos.js"  ></script><script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", aosInit);
+    } else {
+      aosInit();
+    }
+  </script><script src="/js/pjax_main.js" data-pjax ></script><script>
+  var setupFirework = () => {
+    if (! false  || !window.matchMedia('(max-width: 768px)').matches) {
+      if (window.firework) {
+        const options = JSON.parse("{\"excludeelements\":[\"a\",\"button\"],\"particles\":[{\"colors\":[\"var(--red-1)\",\"var(--red-2)\",\"var(--red-3)\",\"var(--red-4)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"emit\"],\"number\":20,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.3,0.5],\"radius\":[16,32]}},{\"colors\":[\"var(--red-0)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"diffuse\"],\"number\":1,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.2,0.5],\"lineWidth\":6,\"radius\":20}}]}");
+        options.excludeElements = options.excludeelements;
+        delete options.excludeelements;
+        window.firework(options);
+      }
+    }
+  }
+</script><script
+    src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js"
+    defer
+    
+    
+    onload="setupFirework()"
+    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script>
+
+<div id="lazy-script">
+  <div><script data-pjax>
+        window.REIMU_POST = {
+          author: "D-Sketon",
+          title: "GoLang",
+          url: "http:\/\/localhost:1313\/post\/golang\/",
+          description: "\rGOLANG\rGO会自动帮你把没用到的东西报错、删除，主打一个简洁。\n标准开局:\rpackage main import ( \u0026#34;fmt\u0026#34; ) func main(){\t\/\/主函数 fmt.printkn(\u0026#34;Hello world\u0026#34;) } …",
+          cover: "http:\/\/localhost:1313\/images\/banner.webp",
+        };
+      </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")}).init();
+          }
+        }
+        const pswp = () => {
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
+        }
+        pswp()
+      </script></div>
+</div><script
+    src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js"
+    
+    async
+    
+    
+    integrity="sha384-0M75wtSkhjIInv4coYlaJU83&#43;OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id&#43;S" crossorigin="anonymous"></script><script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script><script>
+  const reimuCopyright = String.raw`
+   ______     ______     __     __    __     __  __    
+  /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+  \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+   \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+    \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                    
+  `;
+  console.log(String.raw`%c ${reimuCopyright}`, "color: #ff5252;");
+  console.log(
+    "%c Theme.Reimu" + " %c https://github.com/D-Sketon/hugo-theme-reimu ",
+    "color: white; background: #ff5252; padding:5px 0;",
+    "padding:4px;border:1px solid #ff5252;",
+  );
+</script></body>
+</html>

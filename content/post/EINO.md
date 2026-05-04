@@ -1,6 +1,7 @@
 ---
 title: 'EINO'
 draft: false
+categories: ["Agent"]
 date: 2026-05-03T11:00:00+08:00
 lastmod: 2026-05-03T11:00:00+08:00
 ---

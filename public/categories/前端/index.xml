@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on My New Hugo Project</title>
+    <link>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content from My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    
+    <managingEditor>xxx@example.com (D-Sketon)</managingEditor>
+    <webMaster>xxx@example.com (D-Sketon)</webMaster>
+    
+    <copyright>All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!</copyright>
+    
+    <lastBuildDate>Sun, 03 May 2026 11:00:00 +0800</lastBuildDate>
+    
+    
+    <atom:link href="http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>JS</title>
+      <link>http://localhost:1313/post/javascript/</link>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/javascript/</guid>
+      <description>
+        <![CDATA[<h1>JS</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <h1 id="javascript">
+<a class="header-anchor" href="#javascript"></a>
+JavaScript
+</h1><h2 id="1导入方式">
+<a class="header-anchor" href="#1%e5%af%bc%e5%85%a5%e6%96%b9%e5%bc%8f"></a>
+1.导入方式:
+</h2><h3 id="同样有三种">
+<a class="header-anchor" href="#%e5%90%8c%e6%a0%b7%e6%9c%89%e4%b8%89%e7%a7%8d"></a>
+同样有三种:
+</h3><p>​	1.头部添加 👇</p>
+<p>​	2.body添加 👇</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;   &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>​	3.外部添加,设根目录下的JS文件夹下有一个data.js文件: (路径为相对路径)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./JS/data.js&#34;</span>&gt; &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h2 id="2变量数据类型控制语句">
+<a class="header-anchor" href="#2%e5%8f%98%e9%87%8f%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b%e6%8e%a7%e5%88%b6%e8%af%ad%e5%8f%a5"></a>
+2.变量、数据类型、控制语句
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span>;            <span style="color:#75715e">//var具有函数作用域
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;			<span style="color:#75715e">//let的变量具有块级作用域 let更安全灵活 尽量使用let
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14</span>;
+</span></span><span style="display:flex;"><span>    	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#ae81ff">114514</span>);<span style="color:#75715e">//数字可以直接输出，文字不行，文字可定义变量
+</span></span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;scqwq&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>    	
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>){<span style="color:#75715e">//条件语句 
+</span></span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>(<span style="color:#e6db74">&#34;i &lt; 0&#34;</span>);
+</span></span><span style="display:flex;"><span>        }	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>(<span style="color:#e6db74">&#34;i &gt; 0&#34;</span>);
+</span></span><span style="display:flex;"><span>        } 	<span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;i = 0&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){		<span style="color:#75715e">//循环语句
+</span></span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;i = &#34;</span>,<span style="color:#a6e22e">i</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//for与while循环都与C同理
+</span></span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h2 id="3函数">
+<a class="header-anchor" href="#3%e5%87%bd%e6%95%b0"></a>
+3.函数
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">name</span>(<span style="color:#a6e22e">参数1</span>,<span style="color:#a6e22e">参数2</span>){
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">xx</span>;<span style="color:#75715e">//可选
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>参数前不需要加类型声明</p>
+<p>需要改变原变量推荐将原变量作为数字之类的储存，之后传参可理解为传进了数组的指针</p>
+<h2 id="4事件">
+<a class="header-anchor" href="#4%e4%ba%8b%e4%bb%b6"></a>
+※4.事件
+</h2><p>能与用户交互做出相应的重要部分,常用的如下图：</p>
+        
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+      </description>
+      
+        <category>前端</category>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>HTML</title>
+      <link>http://localhost:1313/post/html/</link>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/html/</guid>
+      <description>
+        <![CDATA[<h1>HTML</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <h1 id="html">
+<a class="header-anchor" href="#html"></a>
+<strong>HTML：</strong>
+</h1><h2 id="标签">
+<a class="header-anchor" href="#%e6%a0%87%e7%ad%be"></a>
+标签:
+</h2><p>标签列表功能参考:https://www.w3cschool.cn/htmltags/html-reference.html</p>
+<p>双标签：用于有内容的元素</p>
+<p>单标签：用于没内容的元素</p>
+<h4 id="开头">
+<a class="header-anchor" href="#%e5%bc%80%e5%a4%b4"></a>
+开头:
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>  //告诉浏览器这是一个HTML文件
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;  //文档起始点 or 最外层容器
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;   //表示文档头部 包含一些文件原信息(如标题 编码格式)
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;Document&lt;/<span style="color:#f92672">title</span>&gt; //标题
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;  //编码格式
+</span></span><span style="display:flex;"><span>    	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    	
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;   //body标签对
+</span></span><span style="display:flex;"><span>        //实际显示在浏览器的内容 比如文本图片与链接
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>//多提一嘴 如果你直接在根目录下命令框打code .可以直接在vscode里打开</p>
+<p>//同时 直接输入!补齐上述需要标签就行</p>
+<h5 id="标题标签与段落标签">
+<a class="header-anchor" href="#%e6%a0%87%e9%a2%98%e6%a0%87%e7%ad%be%e4%b8%8e%e6%ae%b5%e8%90%bd%e6%a0%87%e7%ad%be"></a>
+标题标签与段落标签:
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;一级标签&lt;/<span style="color:#f92672">h1</span>&gt; //标题标签 h后面可跟1~6
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;二级标签&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>        114514  //段落标签
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">b</span>&gt;加粗标签&lt;/<span style="color:#f92672">b</span>&gt; //Bold == strong
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">i</span>&gt;斜体&lt;/<span style="color:#f92672">i</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">u</span>&gt;下划线&lt;/<span style="color:#f92672">u</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">s</span>&gt;删除线&lt;/<span style="color:#f92672">s</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>	
+</span></span></code></pre></div><h5 id="有序列表无序列表">
+<a class="header-anchor" href="#%e6%9c%89%e5%ba%8f%e5%88%97%e8%a1%a8%e6%97%a0%e5%ba%8f%e5%88%97%e8%a1%a8"></a>
+有序列表&amp;&amp;无序列表
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span>&gt;  //ul表示无序列表  在外部显示·
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素3&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ol</span>&gt; //ol表示有序列表  在外部显示数字
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;元素3&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ol</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span></code></pre></div><h5 id="表格标签">
+<a class="header-anchor" href="#%e8%a1%a8%e6%a0%bc%e6%a0%87%e7%ad%be"></a>
+表格标签
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">border </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>&gt; //有行有列 border表格边框
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    	&lt;<span style="color:#f92672">th</span>&gt;表格标题 table header&lt;/<span style="color:#f92672">th</span>&gt;  //表头
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt; //table row 表格行 //table data 表格列
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素1&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素2&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素3&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    	&lt;<span style="color:#f92672">td</span>&gt;元素21&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素22&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">td</span>&gt;元素23&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">table</span>&gt;
+</span></span></code></pre></div><h5 id="换行分割标签">
+<a class="header-anchor" href="#%e6%8d%a2%e8%a1%8c%e5%88%86%e5%89%b2%e6%a0%87%e7%ad%be"></a>
+换行分割标签:
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">br</span>&gt; 换行标签
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">hr</span>&gt; 水平分割线标签
+</span></span></code></pre></div><p>有一些元素默认独占一行 有一些可以共用一行 想共用一行换行则br</p>
+        
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+      </description>
+      
+        <category>前端</category>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>CSS</title>
+      <link>http://localhost:1313/post/css/</link>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/css/</guid>
+      <description>
+        <![CDATA[<h1>CSS</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        
+          <h1 id="css">
+<a class="header-anchor" href="#css"></a>
+CSS
+</h1><p>CSS:层叠样式表，用于定义网页样式和布局的样式表语言,与HTML一起构筑Web页面</p>
+<p>HTML:结构和内容 CSS:外观和样式</p>
+<p>CSS -&gt; 各个元素的颜色、字体、大小、间距、边框、背景 -&gt; 更精确的页面设计</p>
+<p>房子:HTML 结构 大纲 位置  CSS:装修</p>
+<h2 id="1css组成">
+<a class="header-anchor" href="#1css%e7%bb%84%e6%88%90"></a>
+1.CSS组成:
+</h2><p>通常由选择器、属性和属性值组成，多个规则可以组合在一起,每个属性分号结尾(C++)</p>
+<pre tabindex="0"><code>选择器{
+ 属性1:属性值1;
+ 属性2:属性值2;
+}
+</code></pre><p>例如:p1标签选择器，此时所有p1标签都被选中,此时可以作为样式放在<!-- raw HTML omitted -->部分</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">p1</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>此后在body中该样式可以被调用,例如在body中:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p1</span>&gt;这是一个应用了css样式的文本&lt;/<span style="color:#f92672">p1</span>&gt;
+</span></span></code></pre></div><h2 id="2css的导入方式">
+<a class="header-anchor" href="#2css%e7%9a%84%e5%af%bc%e5%85%a5%e6%96%b9%e5%bc%8f"></a>
+2.CSS的导入方式:
+</h2><p>1.内联样式:直接放在HTML元素标签中 因为都有style属性(也就是直接写)
+2.内联样式表:如上例，在head标签中定义
+3.外部样式表:把CSS样式单独放在CSS文件中，再在head中使用另一个标签把这个CSS文件链接进来</p>
+<p>优先级:内敛  &gt; 内部 &gt;  外部</p>
+<p>1.例如:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">style </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;color: red;font-size: 27&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    标题
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span></code></pre></div><p>2.略</p>
+<p>3.例如:
+css文件在根目录的相对目录的&quot;CSS_data&quot;文件夹中,名字叫&quot;test.css&quot;,则在head中:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">herf </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./CSS_data/test.css&#34;</span>&gt;
+</span></span></code></pre></div><p>补充:link的属性有:</p>
+<table>
+  <thead>
+      <tr>
+          <th>rel值</th>
+          <th>用途</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>stylesheet</code></td>
+          <td><strong>主样式表</strong>，立即应用</td>
+          <td><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;</code></td>
+      </tr>
+      <tr>
+          <td><code>preload</code></td>
+          <td>预加载资源，不立即执行</td>
+          <td><code>&lt;link rel=&quot;preload&quot; href=&quot;font.woff2&quot; as=&quot;font&quot;&gt;</code></td>
+      </tr>
+      <tr>
+          <td><code>prefetch</code></td>
+          <td>预获取未来可能需要的资源</td>
+          <td><code>&lt;link rel=&quot;prefetch&quot; href=&quot;next-page.html&quot;&gt;</code></td>
+      </tr>
+      <tr>
+          <td><code>icon</code></td>
+          <td>网站图标</td>
+          <td><code>&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot;&gt;</code></td>
+      </tr>
+      <tr>
+          <td><code>canonical</code></td>
+          <td>规范URL</td>
+          <td><code>&lt;link rel=&quot;canonical&quot; href=&quot;https://example.com/page&quot;&gt;</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="3css选择器">
+<a class="header-anchor" href="#3css%e9%80%89%e6%8b%a9%e5%99%a8"></a>
+3.CSS选择器
+</h2><p>​		是CSS的关键部分，允许你针对特定元素或一组元素定义样式</p>
+        
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+      </description>
+      
+        <category>前端</category>
+      
+    </item>
+    
+  </channel>
+</rss>
