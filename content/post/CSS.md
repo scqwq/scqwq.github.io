@@ -1,6 +1,7 @@
 ---
 title: 'CSS'
 draft: false
+cover: "images/covers/ba.webp"
 categories: ["前端"]
 date: 2026-05-03T11:00:00+08:00
 lastmod: 2026-05-03T11:00:00+08:00

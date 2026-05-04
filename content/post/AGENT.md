@@ -2,6 +2,7 @@
 title: 'AGENT'
 draft: false
 categories: ["Agent"]
+cover: "images/covers/2.jpg"
 date: 2026-05-03T11:00:00+08:00
 lastmod: 2026-05-03T11:00:00+08:00
 ---

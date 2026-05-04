@@ -1,6 +1,7 @@
 ---
 title: 'GoLang'
 draft: false
+cover: "images/covers/miku.webp"
 categories: ["GoLang"]
 date: 2026-05-04T11:00:00+08:00
 lastmod: 2026-05-03T11:00:00+08:00

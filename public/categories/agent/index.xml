@@ -7,8 +7,8 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     
-    <managingEditor>xxx@example.com (D-Sketon)</managingEditor>
-    <webMaster>xxx@example.com (D-Sketon)</webMaster>
+    <managingEditor>xxx@example.com (scqwq)</managingEditor>
+    <webMaster>xxx@example.com (scqwq)</webMaster>
     
     <copyright>All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!</copyright>
     
@@ -22,13 +22,87 @@
     
 
     <item>
+      <title>EINO</title>
+      <link>http://localhost:1313/post/eino/</link>
+      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (scqwq)</author>
+      <guid>http://localhost:1313/post/eino/</guid>
+      <description>
+        <![CDATA[<h1>EINO</h1><p>Author: scqwq(xxx@example.com)</p>
+        
+          <h1 id="eino">
+<a class="header-anchor" href="#eino"></a>
+EINO
+</h1><p>godotenv 的实际查找逻辑:</p>
+<p><code>godotenv.Load()</code>使用的文件路径是<strong>精确匹配</strong>，不会自动递归向上搜索</p>
+<p>也就是说，load会默认查找当前目录下的.env,想要查找父目录，则需要</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 文件：/myapp/middle/deep/main.go</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/joho/godotenv&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 只会加载直接父目录（middle）的 .env</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">godotenv</span>.<span style="color:#a6e22e">Load</span>(<span style="color:#e6db74">&#34;../.env&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260402195859251.png" alt="image-20260402195859251"></p>
+<p>而在此图中，虽然main中在ch01/02下，可是工作目录是chatwitheino,使用的是命令</p>
+<p><code>go run ./cmd/ch01</code> or <code>go run ./cmd/ch02</code></p>
+<p>所以默认工作目录是chatwitheino,可以读取chatwitheino下的.env,所以这符合上面提到的.env的读取方法，同时，找对工作目录很重要</p>
+<!-- raw HTML omitted -->
+<h3 id="非阻塞流式迭代器">
+<a class="header-anchor" href="#%e9%9d%9e%e9%98%bb%e5%a1%9e%e6%b5%81%e5%bc%8f%e8%bf%ad%e4%bb%a3%e5%99%a8"></a>
+非阻塞流式迭代器:
+</h3><ol>
+<li><strong>什么是流式迭代器？</strong></li>
+</ol>
+<p>传统迭代器：处理<strong>有限、静态</strong>的集合（如数组、列表）</p>
+<p>流式迭代器：处理<strong>无限、动态</strong>的数据流（如网络流、事件流、传感器数据）</p>
+<ol start="2">
+<li><strong>什么是非阻塞？</strong></li>
+</ol>
+<p><strong>阻塞</strong>：等待数据时，线程被挂起，无法执行其他任务</p>
+<p><strong>非阻塞</strong>：没有数据时立即返回，线程可以处理其他任务</p>
+<h3 id="注册解析命令行参数">
+<a class="header-anchor" href="#%e6%b3%a8%e5%86%8c%e8%a7%a3%e6%9e%90%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%8f%82%e6%95%b0"></a>
+注册解析命令行参数
+</h3><h5 id="命令行基本参数">
+<a class="header-anchor" href="#%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%9f%ba%e6%9c%ac%e5%8f%82%e6%95%b0"></a>
+命令行基本参数
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 示例：git commit -m &#34;message&#34;</span>
+</span></span><span style="display:flex;"><span>git                    <span style="color:#75715e"># 命令</span>
+</span></span><span style="display:flex;"><span>commit                 <span style="color:#75715e"># 子命令</span>
+</span></span><span style="display:flex;"><span>-m                     <span style="color:#75715e"># 参数标识</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;message&#34;</span>              <span style="color:#75715e"># 参数值</span>
+</span></span></code></pre></div><h5 id="注册">
+<a class="header-anchor" href="#%e6%b3%a8%e5%86%8c"></a>
+注册：
+</h5><p>告诉程序：&ldquo;我期望接收这些参数&rdquo;</p>
+<p>定义参数的名称、类型、默认值、描述</p>
+<p>程序启动时执行</p>
+<h5 id="解析">
+<a class="header-anchor" href="#%e8%a7%a3%e6%9e%90"></a>
+解析:
+</h5><p>从命令行读取并验证实际输入</p>
+<p>将字符串转换为指定类型</p>
+        
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+      </description>
+      
+        <category>Agent</category>
+      
+    </item>
+    
+    
+
+    <item>
       <title>AGENT</title>
       <link>http://localhost:1313/post/agent/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/agent/</guid>
       <description>
-        <![CDATA[<h1>AGENT</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>AGENT</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="agent">
 <a class="header-anchor" href="#agent"></a>

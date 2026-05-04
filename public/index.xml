@@ -7,8 +7,8 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     
-    <managingEditor>xxx@example.com (D-Sketon)</managingEditor>
-    <webMaster>xxx@example.com (D-Sketon)</webMaster>
+    <managingEditor>xxx@example.com (scqwq)</managingEditor>
+    <webMaster>xxx@example.com (scqwq)</webMaster>
     
     <copyright>All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!</copyright>
     
@@ -25,10 +25,10 @@
       <title>计网</title>
       <link>http://localhost:1313/post/web/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/web/</guid>
       <description>
-        <![CDATA[<h1>计网</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>计网</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="计网">
 <a class="header-anchor" href="#%e8%ae%a1%e7%bd%91"></a>
@@ -100,10 +100,10 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
       <title>计组</title>
       <link>http://localhost:1313/post/%E8%AE%A1%E7%BB%84/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/%E8%AE%A1%E7%BB%84/</guid>
       <description>
-        <![CDATA[<h1>计组</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>计组</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="计组">
 <a class="header-anchor" href="#%e8%ae%a1%e7%bb%84"></a>
@@ -174,10 +174,10 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
       <title>SQL</title>
       <link>http://localhost:1313/post/sql/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/sql/</guid>
       <description>
-        <![CDATA[<h1>SQL</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>SQL</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="sql">
 <a class="header-anchor" href="#sql"></a>
@@ -260,10 +260,10 @@ mysqlsh进入mySQL-shell工具
       <title>OS</title>
       <link>http://localhost:1313/post/os/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/os/</guid>
       <description>
-        <![CDATA[<h1>OS</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>OS</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="os">
 <a class="header-anchor" href="#os"></a>
@@ -401,10 +401,10 @@ OS
       <title>JS</title>
       <link>http://localhost:1313/post/javascript/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/javascript/</guid>
       <description>
-        <![CDATA[<h1>JS</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>JS</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="javascript">
 <a class="header-anchor" href="#javascript"></a>
@@ -473,10 +473,10 @@ JavaScript
       <title>HTML</title>
       <link>http://localhost:1313/post/html/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/html/</guid>
       <description>
-        <![CDATA[<h1>HTML</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>HTML</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="html">
 <a class="header-anchor" href="#html"></a>
@@ -577,10 +577,10 @@ JavaScript
       <title>GIN</title>
       <link>http://localhost:1313/post/gin/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/gin/</guid>
       <description>
-        <![CDATA[<h1>GIN</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>GIN</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="gin">
 <a class="header-anchor" href="#gin"></a>
@@ -652,10 +652,10 @@ GIN
       <title>EINO</title>
       <link>http://localhost:1313/post/eino/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/eino/</guid>
       <description>
-        <![CDATA[<h1>EINO</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>EINO</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="eino">
 <a class="header-anchor" href="#eino"></a>
@@ -726,10 +726,10 @@ EINO
       <title>CSS</title>
       <link>http://localhost:1313/post/css/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/css/</guid>
       <description>
-        <![CDATA[<h1>CSS</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>CSS</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="css">
 <a class="header-anchor" href="#css"></a>
@@ -825,10 +825,10 @@ css文件在根目录的相对目录的&quot;CSS_data&quot;文件夹中,名字�
       <title>AGENT</title>
       <link>http://localhost:1313/post/agent/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
+      <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/agent/</guid>
       <description>
-        <![CDATA[<h1>AGENT</h1><p>Author: D-Sketon(xxx@example.com)</p>
+        <![CDATA[<h1>AGENT</h1><p>Author: scqwq(xxx@example.com)</p>
         
           <h1 id="agent">
 <a class="header-anchor" href="#agent"></a>
