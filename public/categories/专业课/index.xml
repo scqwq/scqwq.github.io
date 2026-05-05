@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>专业课 on My New Hugo Project</title>
+    <title>专业课 on lets say hello world again</title>
     <link>http://localhost:1313/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/</link>
-    <description>Recent content from My New Hugo Project</description>
+    <description>Recent content from lets say hello world again</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     
@@ -87,7 +87,7 @@ NAT:网络地址转换
 </h4><p>工位IPV4地址有限，而内部网络设备却日益增多，导致IPV4地址枯竭
 NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端口号，并维护一个映射表</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>专业课</category>
@@ -161,7 +161,7 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
 存储器
 </h3><p>主存 = 内存 -&gt;掉电丢失</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>专业课</category>
@@ -247,7 +247,7 @@ mysqlsh进入mySQL-shell工具
 1.数据库
 </h5><p><em><strong>注意：可以使用navicat等图形化GUI工具，这样不用手动输入指令创建数据库</strong></em></p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>专业课</category>
@@ -388,7 +388,7 @@ OS
 页、页框:
 </h5><p>将用户程序的逻辑地址空间和内存的物理地址空间都划分为大小相同的、固定大小的<strong>块</strong>。</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>专业课</category>

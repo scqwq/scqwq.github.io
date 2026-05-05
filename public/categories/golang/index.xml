@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GoLang on My New Hugo Project</title>
+    <title>GoLang on lets say hello world again</title>
     <link>http://localhost:1313/categories/golang/</link>
-    <description>Recent content from My New Hugo Project</description>
+    <description>Recent content from lets say hello world again</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     
@@ -87,7 +87,7 @@ GIN
 <p>模板可以理解为事先定义好的HTML文档文件，模板渲染的作用机制可以简单理解为文本替换操作-&gt;
 即使用相应的数据去替换HTML文档中事先准备好的标记</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>GoLang</category>
@@ -156,7 +156,7 @@ GOLANG
 </span></span></code></pre></div><p>对于结构体变量的输出多试几次即可</p>
 <p>对了 赋值时可以在右侧运算 与c相同</p>
         
-        <hr><p>Published on 2026-05-04 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-04 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>GoLang</category>

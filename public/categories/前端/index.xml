@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>前端 on My New Hugo Project</title>
+    <title>前端 on lets say hello world again</title>
     <link>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</link>
-    <description>Recent content from My New Hugo Project</description>
+    <description>Recent content from lets say hello world again</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     
@@ -84,7 +84,7 @@ JavaScript
 ※4.事件
 </h2><p>能与用户交互做出相应的重要部分,常用的如下图：</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>前端</category>
@@ -188,7 +188,7 @@ JavaScript
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">hr</span>&gt; 水平分割线标签
 </span></span></code></pre></div><p>有一些元素默认独占一行 有一些可以共用一行 想共用一行换行则br</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>前端</category>
@@ -287,7 +287,7 @@ css文件在根目录的相对目录的&quot;CSS_data&quot;文件夹中,名字�
 3.CSS选择器
 </h2><p>​		是CSS的关键部分，允许你针对特定元素或一组元素定义样式</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>前端</category>

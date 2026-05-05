@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Project</title>
+    <title>lets say hello world again</title>
     <link>http://localhost:1313/post/</link>
-    <description>Recent content from My New Hugo Project</description>
+    <description>Recent content from lets say hello world again</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     
@@ -87,7 +87,7 @@ NAT:网络地址转换
 </h4><p>工位IPV4地址有限，而内部网络设备却日益增多，导致IPV4地址枯竭
 NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端口号，并维护一个映射表</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>专业课</category>
@@ -161,7 +161,7 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
 存储器
 </h3><p>主存 = 内存 -&gt;掉电丢失</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>专业课</category>
@@ -247,7 +247,7 @@ mysqlsh进入mySQL-shell工具
 1.数据库
 </h5><p><em><strong>注意：可以使用navicat等图形化GUI工具，这样不用手动输入指令创建数据库</strong></em></p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>专业课</category>
@@ -388,7 +388,7 @@ OS
 页、页框:
 </h5><p>将用户程序的逻辑地址空间和内存的物理地址空间都划分为大小相同的、固定大小的<strong>块</strong>。</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>专业课</category>
@@ -460,7 +460,7 @@ JavaScript
 ※4.事件
 </h2><p>能与用户交互做出相应的重要部分,常用的如下图：</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>前端</category>
@@ -564,7 +564,7 @@ JavaScript
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">hr</span>&gt; 水平分割线标签
 </span></span></code></pre></div><p>有一些元素默认独占一行 有一些可以共用一行 想共用一行换行则br</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>前端</category>
@@ -639,7 +639,7 @@ GIN
 <p>模板可以理解为事先定义好的HTML文档文件，模板渲染的作用机制可以简单理解为文本替换操作-&gt;
 即使用相应的数据去替换HTML文档中事先准备好的标记</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>GoLang</category>
@@ -713,7 +713,7 @@ EINO
 </h5><p>从命令行读取并验证实际输入</p>
 <p>将字符串转换为指定类型</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>Agent</category>
@@ -812,7 +812,7 @@ css文件在根目录的相对目录的&quot;CSS_data&quot;文件夹中,名字�
 3.CSS选择器
 </h2><p>​		是CSS的关键部分，允许你针对特定元素或一组元素定义样式</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>前端</category>
@@ -869,7 +869,7 @@ AGENT
 </span></span><span style="display:flex;"><span>})
 </span></span></code></pre></div><p>对于模型实例，基本都会有Name、APIKey、Base_URL基本参数和其他参数</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>My New Hugo Project</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
       
         <category>Agent</category>

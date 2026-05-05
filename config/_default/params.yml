@@ -28,12 +28,18 @@ timeFormat: "2006-01-02 15:04:05"
 
 author: scqwq
 email: xxx@example.com
-description: "lets do it again;let do it better;let's do it together"
+description: "lets do it again..."
 # subtitle: "少女祈祷中..."
 subtitle:
   typing:
-    enable: false
+    enable: true
     strings:
+    - "物是人非事事休，欲语泪先流"
+    - "赌书消得泼茶香，当时是只道寻常"
+    - "雕栏玉砌应犹在，只是朱颜改"
+    - "温水煮了将军梦 现实压垮少年肩"
+    - "纵使相逢应不识，尘满面，鬓如霜。"
+    - "相顾无言，惟有泪千行。"
       # - Sentence 1
       # - Sentence 2
       # - Sentence 3
@@ -43,11 +49,11 @@ subtitle:
     backDelay: 2000             # 打完一句话后，等待时间
     startDelay: 300             # 页面加载后，等待时间
     loop: true                  # 是否循环播放
-    shuffle: true              # 是否随机输出句子
+    shuffle: false              # 是否随机输出句子
     showCursor: true            # 是否显示闪烁的字符
     cursorChar: "|"             # 字符
     smartBackspace: false       # 智能退格，只删除不同的部分
-  text: "少女祈祷中..."        # 当 typing.enable = false 时使用
+  text: "Hello!make World again!"        # 当 typing.enable = false 时使用
 
 banner: "images/banner.jpg"
 # You can also write it in the form of the following url
@@ -64,7 +70,7 @@ banner_srcset:
     - src: "images/banner.webp"
       media: "(min-width: 800px)"
 
-avatar: "avatar.webp"
+avatar: "avatar.jpg"
 
 # Control the display of the post cover
 # If not set, the banner image will be displayed by default
