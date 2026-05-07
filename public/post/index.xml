@@ -12,7 +12,7 @@
     
     <copyright>All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!</copyright>
     
-    <lastBuildDate>Sun, 03 May 2026 11:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 11:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss&#43;xml" />
@@ -23,71 +23,85 @@
 
     <item>
       <title>计网</title>
-      <link>http://localhost:1313/post/web/</link>
+      <link>http://localhost:1313/post/%E8%AE%A1%E7%BD%91/</link>
       <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (scqwq)</author>
-      <guid>http://localhost:1313/post/web/</guid>
+      <guid>http://localhost:1313/post/%E8%AE%A1%E7%BD%91/</guid>
       <description>
         <![CDATA[<h1>计网</h1><p>Author: scqwq(xxx@example.com)</p>
         
-          <h1 id="计网">
-<a class="header-anchor" href="#%e8%ae%a1%e7%bd%91"></a>
-计网
-</h1><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260201165102084.png" alt="image-20260201165102084"></p>
-<p>Socket其实就是一个门面模式，它把复杂的TCP/IP协议族隐藏在Socket后面，对用户来说只需要调用Socket规定的相关函数，让Socket去组织符合指定的协议数据然后进行通信。</p>
-<p>Socket可以理解为TCP/IP网络的API，它定义了许多函数或例程，程序员可以用它们来开发TCP/IP网络上的应用程序。</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260201181725112.png" alt="image-20260201181725112"></p>
-<p>WebSocket是一种在单个TCP连接上进行全双工通信的协议
-WebSocket使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据
-在WebSocket API中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输
-需要安装第三方包：
-cmd中：go get -u -v github.com/gorilla/websocket</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260203171023483.png" alt="image-20260203171023483"></p>
-<p>URL:统一资源定位符
-http://   -&gt; 是个协议
-可以多个域名对应一个IP地址</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260203171518429.png" alt="image-20260203171518429"></p>
-<p>服务：指一层向它的上一层提供的一种操作</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260211121353801.png" alt="image-20260211121353801"></p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260212120032880.png" alt="image-20260212120032880"></p>
-<h1 id="网络层部分">
-<a class="header-anchor" href="#%e7%bd%91%e7%bb%9c%e5%b1%82%e9%83%a8%e5%88%86"></a>
-网络层部分
-</h1><h4 id="icmp协议">
-<a class="header-anchor" href="#icmp%e5%8d%8f%e8%ae%ae"></a>
-ICMP协议：
-</h4><p>当路由器处理数据包有意外发生时，通过ICMP向发送方报告
-例如：
-目标主机不可达
-TTL（time to time live）(生存周期)超时:在网络环路当中陷入无限转发
-路径探测</p>
-<p>ping:发送echo(回显)到目的地址，判断目的设备是否活着，或者判断自身是否连接
-traceroute:给目标发送一系列数据包，分别将TTTL = 1、2、3、……TTL归零时返回超时信息，由此可以确定沿途路由器的地址</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260212115930787.png" alt="image-20260212115930787"></p>
-<h4 id="dhcp协议动态主机配置协议如何给新设备分配地址">
-<a class="header-anchor" href="#dhcp%e5%8d%8f%e8%ae%ae%e5%8a%a8%e6%80%81%e4%b8%bb%e6%9c%ba%e9%85%8d%e7%bd%ae%e5%8d%8f%e8%ae%ae%e5%a6%82%e4%bd%95%e7%bb%99%e6%96%b0%e8%ae%be%e5%a4%87%e5%88%86%e9%85%8d%e5%9c%b0%e5%9d%80"></a>
-DHCP协议:动态主机配置协议(如何给新设备分配地址)
-</h4><p>新设备 -&gt;进行广播，先到交换机 -&gt; 广播 找到局域网DHCP服务器(如果没有局域网服务器，则通过路由广播到外网的DHCP服务器) -&gt; 返回一个DHCP offer -&gt; 拿到新地址</p>
-<h4 id="arp协议地址解析协议">
-<a class="header-anchor" href="#arp%e5%8d%8f%e8%ae%ae%e5%9c%b0%e5%9d%80%e8%a7%a3%e6%9e%90%e5%8d%8f%e8%ae%ae"></a>
-ARP协议:地址解析协议
-</h4><p>背景:链路层需要MAC地址才能发送成帧
-作用:通过ARP将基于目的IP地址找到对应的MAC地址</p>
-<p>在同一局域网内，通过ARP将基于目的IP地址找到对应的MAC地址
-广播寻找IP -&gt; 目标设备发送MAC地址返回</p>
-<h5 id="默认网关">
-<a class="header-anchor" href="#%e9%bb%98%e8%ae%a4%e7%bd%91%e5%85%b3"></a>
-默认网关:
-</h5><p>网关:连接不同网络、负责转发数据包的网络设备或者<strong>路由器接口</strong>，他是网络边境的出入口
-访问的地址在不同局域网时，通过IP查询到网关，而路由（默认网关）将他的MAC地址返回，
-然后发送到路由器时，路由器对比IP和MAC地址，发现IP不是它的而MAC是它的时，路由器会再次使用ARP协议，基于C6的IP获取MAC</p>
-<h4 id="nat网络地址转换">
-<a class="header-anchor" href="#nat%e7%bd%91%e7%bb%9c%e5%9c%b0%e5%9d%80%e8%bd%ac%e6%8d%a2"></a>
-NAT:网络地址转换
-</h4><p>工位IPV4地址有限，而内部网络设备却日益增多，导致IPV4地址枯竭
-NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端口号，并维护一个映射表</p>
+          <h1 id="计算机网络">
+<a class="header-anchor" href="#%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bd%91%e7%bb%9c"></a>
+计算机网络
+</h1><p>声明：本笔记参考</p>
+<p>视频：https://www.bilibili.com/video/BV1p69tYZEvN</p>
+<p>博客笔记：https://saurlax.com/blog/computer-network（部分懒得做笔记的地方是直接在他身上修改的）</p>
+<p>**叠甲：**本笔记仅供参考，易有错漏和不足</p>
+<img src="/note_images/computer_network/image-20260503132506036.png" alt="image-20260503132506036" style="zoom:50%;" />
+<h2 id="计网模型">
+<a class="header-anchor" href="#%e8%ae%a1%e7%bd%91%e6%a8%a1%e5%9e%8b"></a>
+计网模型
+</h2><h3 id="osi模型计网七大层次">
+<a class="header-anchor" href="#osi%e6%a8%a1%e5%9e%8b%e8%ae%a1%e7%bd%91%e4%b8%83%e5%a4%a7%e5%b1%82%e6%ac%a1"></a>
+OSI模型计网七大层次：
+</h3><h5 id="交换单元">
+<a class="header-anchor" href="#%e4%ba%a4%e6%8d%a2%e5%8d%95%e5%85%83"></a>
+交换单元:
+</h5><h5 id="1应用层--------------apdu">
+<a class="header-anchor" href="#1%e5%ba%94%e7%94%a8%e5%b1%82--------------apdu"></a>
+1.应用层              APDU
+</h5><p>Application Layer</p>
+<h5 id="2表示层--------------ppdu">
+<a class="header-anchor" href="#2%e8%a1%a8%e7%a4%ba%e5%b1%82--------------ppdu"></a>
+2.表示层              PPDU
+</h5><p>Presentation Layer</p>
+<h5 id="3会话层-------------spud">
+<a class="header-anchor" href="#3%e4%bc%9a%e8%af%9d%e5%b1%82-------------spud"></a>
+3.会话层             SPUD
+</h5><p>Session Layer</p>
+<h5 id="4传输层--各层协议--tpdu">
+<a class="header-anchor" href="#4%e4%bc%a0%e8%be%93%e5%b1%82--%e5%90%84%e5%b1%82%e5%8d%8f%e8%ae%ae--tpdu"></a>
+4.传输层  &lt;&ndash;各层协议&ndash;&gt;  TPDU
+</h5><p>Transport Layer</p>
+<h5 id="5网络层-------------数据报">
+<a class="header-anchor" href="#5%e7%bd%91%e7%bb%9c%e5%b1%82-------------%e6%95%b0%e6%8d%ae%e6%8a%a5"></a>
+5.网络层             数据报
+</h5><p>Network Layer</p>
+<h5 id="6数据链路层---------帧">
+<a class="header-anchor" href="#6%e6%95%b0%e6%8d%ae%e9%93%be%e8%b7%af%e5%b1%82---------%e5%b8%a7"></a>
+6.数据链路层         帧
+</h5><p>Data Link Layer</p>
+<h5 id="7物理层-------------比特">
+<a class="header-anchor" href="#7%e7%89%a9%e7%90%86%e5%b1%82-------------%e6%af%94%e7%89%b9"></a>
+7.物理层             比特
+</h5><p>Physical Layer</p>
+<p>传输过程一定从上到下 再 从下到上</p>
+<p>同层之间可以在 <strong>逻辑上</strong> 以某种协议进行传输</p>
+<h3 id="tcpip模型四层次">
+<a class="header-anchor" href="#tcpip%e6%a8%a1%e5%9e%8b%e5%9b%9b%e5%b1%82%e6%ac%a1"></a>
+TCP/IP模型四层次：
+</h3><p>只有1、4、5、6，6为链路层层</p>
+<h2 id="五层参考模型">
+<a class="header-anchor" href="#%e4%ba%94%e5%b1%82%e5%8f%82%e8%80%83%e6%a8%a1%e5%9e%8b"></a>
+※五层参考模型
+</h2><p>综合了<strong>SI 七层模型</strong>的理论严谨性和 <strong>TCP/IP 四层模型</strong>的实践简洁性</p>
+<p>应用、传输、网络、链路、物理:</p>
+<ul>
+<li>应用层：网络应用程序及其应用层协议。应用层的数据单元称为<strong>报文</strong>（message）。</li>
+<li>运输层：提供端到端的数据传输。如 TCP、UDP。运输层的分组称为<strong>报文段</strong>（segment）。</li>
+<li>网络层：将<strong>数据报</strong>（datagram）从源主机传输到目的主机。如 IP。</li>
+<li>链路层：将<strong>数据帧</strong>（frame）从一个节点传输到相邻节点。</li>
+<li>物理层：传输<strong>比特流</strong>。</li>
+</ul>
+<h3 id="每一层的用处">
+<a class="header-anchor" href="#%e6%af%8f%e4%b8%80%e5%b1%82%e7%9a%84%e7%94%a8%e5%a4%84"></a>
+每一层的用处
+</h3><h5 id="1物理">
+<a class="header-anchor" href="#1%e7%89%a9%e7%90%86"></a>
+1.物理
+</h5><p>关注信道，不关注物理的介质</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
+        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-07</p>]]>
       </description>
       
         <category>专业课</category>
@@ -118,7 +132,7 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
 <p>地址总线的位数与存储单元的个数有关，与存储单元的二进制位长度无关-&gt;即存东西的地方的大小和地址大小无关,32位地址可以指向8位数据类型</p>
 <p>3.控制总线</p>
 <p>发出各种控制信号，单一控制通常单向，控制总线总体双向</p>
-<!-- raw HTML omitted -->
+<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260315164856223.png" alt="image-20260315164856223" style="zoom: 67%;" />
 <p>CPU平时就是不断从主存中去取指令，然后执行指令，不断反复</p>
 <p>主存总线：具有三总线的结构</p>
 <p>DMA:直接存储器访问,在DMA控制器的控制下进行工作的</p>
@@ -129,30 +143,30 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
 <a class="header-anchor" href="#%e6%80%bb%e7%ba%bf%e6%8e%a7%e5%88%b6"></a>
 总线控制:
 </h4><p>总线事务、主设备、从设备:</p>
-<!-- raw HTML omitted -->
+<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260315170441142.png" alt="image-20260315170441142" style="zoom:67%;" />
 <h5 id="总线判优">
 <a class="header-anchor" href="#%e6%80%bb%e7%ba%bf%e5%88%a4%e4%bc%98"></a>
 总线判优：
-</h5><!-- raw HTML omitted -->
+</h5><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260315170525899.png" alt="image-20260315170525899" style="zoom:67%;" />
 <h5 id="集中式">
 <a class="header-anchor" href="#%e9%9b%86%e4%b8%ad%e5%bc%8f"></a>
 集中式
 </h5><h6 id="1链式查询">
 <a class="header-anchor" href="#1%e9%93%be%e5%bc%8f%e6%9f%a5%e8%af%a2"></a>
 1.链式查询:
-</h6><!-- raw HTML omitted -->
+</h6><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260315170620624.png" alt="image-20260315170620624" style="zoom:67%;" />
 <p>BS、BR、BG都是与控制总线的范畴</p>
 <p>BS有信号表示总线已经被使用</p>
 <p>缺点：对电路故障敏感</p>
 <h6 id="2计数器定时查询方式">
 <a class="header-anchor" href="#2%e8%ae%a1%e6%95%b0%e5%99%a8%e5%ae%9a%e6%97%b6%e6%9f%a5%e8%af%a2%e6%96%b9%e5%bc%8f"></a>
 2.计数器定时查询方式
-</h6><!-- raw HTML omitted -->
+</h6><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260315171017050.png" alt="image-20260315171017050" style="zoom:67%;" />
 <p>某个接口发生故障对其他接口使用不敏感，缺点是新增设备地址，控制变复杂,计时器通过设备地址线广播正在寻找的设备地址。</p>
 <h6 id="3独立请求方式">
 <a class="header-anchor" href="#3%e7%8b%ac%e7%ab%8b%e8%af%b7%e6%b1%82%e6%96%b9%e5%bc%8f"></a>
 3.独立请求方式:
-</h6><!-- raw HTML omitted -->
+</h6><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260315171400511.png" alt="image-20260315171400511" style="zoom:67%;" />
 <p>无BS和设备地址线</p>
 <p>主要部件：排队器,同时使用则排队，选择优先权高的</p>
 <p>响应速度快，优先次序控制灵活。但是控制线数目多，总线控制逻辑更加复杂</p>
@@ -160,6 +174,8 @@ NAT在数据包经过路由器时，修改其源（或目的）的IP地址/端�
 <a class="header-anchor" href="#%e5%ad%98%e5%82%a8%e5%99%a8"></a>
 存储器
 </h3><p>主存 = 内存 -&gt;掉电丢失</p>
+<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260315173757199.png" alt="image-20260315173757199"></p>
+<p>读写电路直接连接数据总线，数据总线是数据传输的通道</p>
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
@@ -268,7 +284,7 @@ mysqlsh进入mySQL-shell工具
           <h1 id="os">
 <a class="header-anchor" href="#os"></a>
 OS
-</h1><!-- raw HTML omitted -->
+</h1><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421130018195.png" alt="image-20260421130018195" style="zoom:67%;" />
 <h1 id="第三部分内存管理">
 <a class="header-anchor" href="#%e7%ac%ac%e4%b8%89%e9%83%a8%e5%88%86%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86"></a>
 第三部分:内存管理
@@ -616,7 +632,7 @@ GIN
 <a class="header-anchor" href="#2http%e5%93%8d%e5%ba%94"></a>
 2.http响应:
 </h6><p><strong>HTTP 响应（HTTP Response）</strong> 是服务器收到客户端的 HTTP 请求后，返回给客户端的一组数据，用来告诉客户端<strong>请求是否成功、返回什么内容、以及相关元数据</strong></p>
-<!-- raw HTML omitted -->
+<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260224190641470.png" alt="image-20260224190641470" style="zoom: 67%;" />
 <h6 id="3gin的安装">
 <a class="header-anchor" href="#3gin%e7%9a%84%e5%ae%89%e8%a3%85"></a>
 3.GIN的安装
@@ -638,6 +654,7 @@ GIN
 </h6><p>GO内置了文本模板引擎 text/template和用于HTML文档的html/template</p>
 <p>模板可以理解为事先定义好的HTML文档文件，模板渲染的作用机制可以简单理解为文本替换操作-&gt;
 即使用相应的数据去替换HTML文档中事先准备好的标记</p>
+<p>模板文件用{{  &hellip; }}表示需要传输的数据</p>
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
@@ -676,7 +693,7 @@ EINO
 <p>而在此图中，虽然main中在ch01/02下，可是工作目录是chatwitheino,使用的是命令</p>
 <p><code>go run ./cmd/ch01</code> or <code>go run ./cmd/ch02</code></p>
 <p>所以默认工作目录是chatwitheino,可以读取chatwitheino下的.env,所以这符合上面提到的.env的读取方法，同时，找对工作目录很重要</p>
-<!-- raw HTML omitted -->
+<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260402200111774.png" alt="image-20260402200111774" style="zoom:50%;" />
 <h3 id="非阻塞流式迭代器">
 <a class="header-anchor" href="#%e9%9d%9e%e9%98%bb%e5%a1%9e%e6%b5%81%e5%bc%8f%e8%bf%ad%e4%bb%a3%e5%99%a8"></a>
 非阻塞流式迭代器:
@@ -712,6 +729,13 @@ EINO
 解析:
 </h5><p>从命令行读取并验证实际输入</p>
 <p>将字符串转换为指定类型</p>
+<p>验证参数合法性</p>
+<p>通常在执行具体功能前进行</p>
+<h6 id="例如">
+<a class="header-anchor" href="#%e4%be%8b%e5%a6%82"></a>
+例如：
+</h6><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">StringVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">sessionID</span>, <span style="color:#e6db74">&#34;session&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;session ID (creates new if empty)&#34;</span>)
+</span></span></code></pre></div><p>则参数标识为 &ndash;session 默认值为&quot;&quot; ，最后的参数为usage</p>
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>
@@ -746,7 +770,7 @@ CSS
  属性1:属性值1;
  属性2:属性值2;
 }
-</code></pre><p>例如:p1标签选择器，此时所有p1标签都被选中,此时可以作为样式放在<!-- raw HTML omitted -->部分</p>
+</code></pre><p>例如:p1标签选择器，此时所有p1标签都被选中,此时可以作为样式放在<head>部分</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">p1</span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;

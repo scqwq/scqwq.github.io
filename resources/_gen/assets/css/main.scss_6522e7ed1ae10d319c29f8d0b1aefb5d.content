@@ -331,10 +331,6 @@ body [data-aos="zoom-in"] {
   content: "\e619";
 }
 
-.icon-bilibili:before {
-  content: "\e603";
-}
-
 .sidebar-toc-btn:before {
   font-family: "iconfont";
   content: "\e633";
@@ -3097,8 +3093,12 @@ mjx-container::-webkit-scrollbar {
   transform: scale(1.2);
 }
 
-.icon-bilibili {
-  color: #00a1d6;
+.icon-github {
+  color: #191717;
+}
+
+[data-theme="dark"] .icon-github {
+  color: #bc88ff;
 }
 
 .icon-qq {

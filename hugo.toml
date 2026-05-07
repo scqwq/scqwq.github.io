@@ -2,3 +2,9 @@ baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'lets say hello world again'
 theme = "reimu"
+
+#显示图片用
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

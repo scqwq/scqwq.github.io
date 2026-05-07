@@ -1,0 +1,451 @@
+:root {
+  /* Cyberpunk neon color palette */
+  --cyber-black: #0a0a0f;
+  --cyber-dark: #161620;
+  --cyber-darker: #0d0d15;
+  --cyber-grid: #1a1a2e;
+
+  /* 原亮度方案（已停用，保留）：
+  --neon-pink: #ff006e;
+  --neon-cyan: #00f5ff;
+  --neon-purple: #b300ff;
+  --neon-yellow: #ffed00;
+  --neon-orange: #ff4500;
+  --neon-green: #39ff14;
+  */
+  --neon-pink: #d94a86;
+  --neon-cyan: #4cc6cf;
+  --neon-purple: #9360d9;
+  --neon-yellow: #d8c35a;
+  --neon-orange: #d97a4a;
+  --neon-green: #67bf56;
+
+  /* 原亮度方案（已停用，保留）：
+  --glow-pink: rgba(255, 0, 110, 0.5);
+  --glow-cyan: rgba(0, 245, 255, 0.5);
+  --glow-purple: rgba(179, 0, 255, 0.5);
+  --glow-green: rgba(57, 255, 20, 0.5);
+  */
+  --glow-pink: rgba(217, 74, 134, 0.22);
+  --glow-cyan: rgba(76, 198, 207, 0.2);
+  --glow-purple: rgba(147, 96, 217, 0.2);
+  --glow-green: rgba(103, 191, 86, 0.2);
+
+  /* 原亮度方案（已停用，保留）：
+  --text-primary: #e0e0ff;
+  --text-secondary: #a0a0c0;
+  */
+  --text-primary: #c9c9e5;
+  --text-secondary: #9494b2;
+  --text-muted: #606080;
+  --monospace: "Fira Code", "JetBrains Mono", "Courier New", monospace;
+}
+
+@keyframes cyber-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes cyber-flicker-h1 {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 10px var(--glow-cyan),
+      0 0 20px var(--glow-cyan),
+      0 0 30px var(--glow-cyan);
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+/* Reimu markdown container */
+.article-entry {
+  max-width: 90ch;
+  margin: 0 auto;
+  padding: 2.2rem;
+  position: relative;
+  color: var(--text-primary);
+  background:
+    linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(180deg, var(--cyber-dark), var(--cyber-black));
+  background-size:
+    50px 50px,
+    50px 50px,
+    100% 100%;
+  border: 1px solid rgba(0, 245, 255, 0.35);
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 24px rgba(0, 245, 255, 0.08),
+    0 0 20px rgba(0, 245, 255, 0.08);
+  font-family: "Rajdhani", "Roboto", "Arial", sans-serif;
+  line-height: 1.8;
+}
+
+.article-entry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--neon-pink) 0%,
+    var(--neon-cyan) 25%,
+    var(--neon-purple) 50%,
+    var(--neon-green) 75%,
+    var(--neon-pink) 100%
+  );
+  box-shadow: 0 0 10px var(--glow-cyan);
+  animation: cyber-pulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.article-entry::after {
+  content: "[ CYBERPUNK MODE ACTIVE ]";
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  color: var(--neon-cyan);
+  font-size: 0.65rem;
+  font-family: "Orbitron", monospace;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  opacity: 0.35;
+  text-shadow: 0 0 5px var(--glow-cyan);
+  pointer-events: none;
+}
+
+.article-entry h1,
+.article-entry h2,
+.article-entry h3,
+.article-entry h4,
+.article-entry h5,
+.article-entry h6 {
+  font-family: "Orbitron", "Rajdhani", "Arial Black", sans-serif;
+  font-weight: 700;
+  margin: 2.3rem 0 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.article-entry h1 {
+  color: var(--neon-cyan);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  border-bottom: 2px solid var(--neon-cyan);
+  padding-bottom: 0.45rem;
+  text-shadow:
+    0 0 10px var(--glow-cyan),
+    0 0 20px var(--glow-cyan),
+    0 0 30px var(--glow-cyan);
+  animation: cyber-flicker-h1 5s linear infinite;
+}
+
+.article-entry h1::before {
+  content: "▸ ";
+  color: var(--neon-pink);
+}
+
+.article-entry h2 {
+  color: var(--neon-pink);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-shadow:
+    0 0 10px var(--glow-pink),
+    0 0 20px var(--glow-pink);
+}
+
+.article-entry h2::before {
+  content: "// ";
+  color: var(--neon-purple);
+}
+
+.article-entry h3 {
+  color: var(--neon-purple);
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  text-shadow:
+    0 0 10px var(--glow-purple),
+    0 0 15px var(--glow-purple);
+}
+
+.article-entry h3::before {
+  content: "> ";
+  color: var(--neon-cyan);
+}
+
+.article-entry h4 {
+  color: var(--neon-green);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  text-shadow: 0 0 10px var(--glow-green);
+}
+
+.article-entry h4::before {
+  content: ":: ";
+  color: var(--neon-yellow);
+}
+
+.article-entry h5 {
+  color: var(--neon-yellow);
+  font-size: 1.12rem;
+}
+
+.article-entry h6 {
+  color: var(--neon-orange);
+  font-size: 1.02rem;
+}
+
+.article-entry p {
+  margin: 1rem 0;
+}
+
+.article-entry a {
+  color: var(--neon-cyan) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--neon-cyan);
+  transition: all 0.25s ease;
+}
+
+.article-entry a:hover {
+  color: var(--neon-pink) !important;
+  border-bottom-color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--glow-pink);
+}
+
+.article-entry strong,
+.article-entry b {
+  color: var(--neon-pink);
+  text-shadow: 0 0 5px var(--glow-pink);
+}
+
+.article-entry em,
+.article-entry i {
+  color: var(--neon-purple);
+}
+
+.article-entry ul,
+.article-entry ol {
+  margin: 1rem 0;
+  padding-left: 1.8rem;
+}
+
+.article-entry ul li,
+.article-entry ol li {
+  margin: 0.5rem 0;
+}
+
+.article-entry ul li::marker {
+  color: transparent;
+}
+
+.article-entry ul li::before {
+  content: "▸";
+  position: absolute;
+  transform: translateX(-1.35rem);
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px var(--glow-cyan);
+}
+
+.article-entry ol li::marker {
+  color: var(--neon-pink);
+  font-weight: 700;
+}
+
+/* 已停用：Cyberpunk 代码块配色（保留以便随时恢复）
+.article-entry pre,
+.article-entry .highlight pre,
+.article-entry .chroma pre {
+  background: oklch(0.15 0 0) !important;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  border-radius: 6px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  position: relative;
+  overflow: auto;
+  box-shadow:
+    inset 0 0 20px rgba(57, 255, 20, 0.1),
+    0 0 10px rgba(57, 255, 20, 0.2);
+}
+*/
+
+/* 已停用：绿色 [ CODE ] 标签（保留以便随时恢复）
+.article-entry pre::before,
+.article-entry .highlight pre::before,
+.article-entry .chroma pre::before {
+  content: "[ CODE ]";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--neon-green);
+  color: var(--cyber-black);
+  padding: 3px 10px;
+  font-size: 0.65rem;
+  font-family: "Orbitron", monospace;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+*/
+
+/* 已停用：覆盖 .highlight/.chroma 的 code 颜色（保留以便随时恢复）
+.article-entry pre code,
+.article-entry .highlight pre code,
+.article-entry .chroma pre code {
+  border: 0;
+  background: transparent !important;
+  box-shadow: none;
+  padding: 0;
+  color: inherit;
+}
+*/
+
+.article-entry p code,
+.article-entry li code,
+.article-entry td code,
+.article-entry blockquote code {
+  font-family: var(--monospace);
+  background: oklch(0.15 0 0) !important;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 0.18rem 0.42rem;
+  border-radius: 4px;
+}
+
+.article-entry blockquote {
+  border-left: 4px solid var(--neon-purple);
+  background: rgba(179, 0, 255, 0.08);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  color: var(--text-secondary);
+  box-shadow: -5px 0 10px rgba(179, 0, 255, 0.2);
+}
+
+.article-entry hr {
+  border: none !important;
+  height: 2px !important;
+  margin: 2.2rem 0 !important;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--neon-cyan) 20%,
+    var(--neon-pink) 40%,
+    var(--neon-purple) 60%,
+    var(--neon-cyan) 80%,
+    transparent
+  ) !important;
+  box-shadow: 0 0 10px var(--glow-cyan);
+  filter: none !important;
+}
+
+.article-entry table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.6rem 0;
+  border: 1px solid var(--neon-cyan);
+}
+
+.article-entry th,
+.article-entry td {
+  border: 1px solid var(--neon-cyan);
+  padding: 0.75rem 0.9rem;
+  text-align: left;
+}
+
+.article-entry th {
+  background: var(--cyber-grid);
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 5px var(--glow-cyan);
+}
+
+.article-entry tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.article-entry tr:hover {
+  background: rgba(0, 245, 255, 0.06);
+}
+
+.article-entry mark {
+  background: var(--neon-yellow);
+  color: var(--cyber-black);
+  padding: 0.08rem 0.25rem;
+  box-shadow: 0 0 10px rgba(255, 237, 0, 0.5);
+}
+
+.article-entry img,
+.article-entry video {
+  border: 1px solid rgba(0, 245, 255, 0.35);
+  box-shadow: 0 0 16px rgba(0, 245, 255, 0.12);
+}
+
+.article-entry input[type="checkbox"] {
+  accent-color: var(--neon-pink);
+}
+
+.article-entry ::selection {
+  background: var(--glow-cyan);
+  color: var(--cyber-black);
+}
+
+@media (max-width: 768px) {
+  .article-entry {
+    padding: 1.2rem;
+    border-radius: 8px;
+  }
+
+  .article-entry::after {
+    content: "[ CYBER MODE ]";
+    font-size: 0.56rem;
+    right: 10px;
+    bottom: 8px;
+  }
+}
+
+@media print {
+  .article-entry {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+
+  .article-entry::before,
+  .article-entry::after {
+    display: none;
+  }
+
+  .article-entry h1,
+  .article-entry h2,
+  .article-entry h3,
+  .article-entry h4,
+  .article-entry h5,
+  .article-entry h6 {
+    text-shadow: none !important;
+    animation: none !important;
+    color: #111 !important;
+  }
+
+  .article-entry pre,
+  .article-entry code {
+    background: #f5f5f5 !important;
+    color: #111 !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+  }
+}

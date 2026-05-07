@@ -49,7 +49,7 @@ EINO
 <p>而在此图中，虽然main中在ch01/02下，可是工作目录是chatwitheino,使用的是命令</p>
 <p><code>go run ./cmd/ch01</code> or <code>go run ./cmd/ch02</code></p>
 <p>所以默认工作目录是chatwitheino,可以读取chatwitheino下的.env,所以这符合上面提到的.env的读取方法，同时，找对工作目录很重要</p>
-<!-- raw HTML omitted -->
+<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260402200111774.png" alt="image-20260402200111774" style="zoom:50%;" />
 <h3 id="非阻塞流式迭代器">
 <a class="header-anchor" href="#%e9%9d%9e%e9%98%bb%e5%a1%9e%e6%b5%81%e5%bc%8f%e8%bf%ad%e4%bb%a3%e5%99%a8"></a>
 非阻塞流式迭代器:
@@ -85,6 +85,13 @@ EINO
 解析:
 </h5><p>从命令行读取并验证实际输入</p>
 <p>将字符串转换为指定类型</p>
+<p>验证参数合法性</p>
+<p>通常在执行具体功能前进行</p>
+<h6 id="例如">
+<a class="header-anchor" href="#%e4%be%8b%e5%a6%82"></a>
+例如：
+</h6><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">StringVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">sessionID</span>, <span style="color:#e6db74">&#34;session&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;session ID (creates new if empty)&#34;</span>)
+</span></span></code></pre></div><p>则参数标识为 &ndash;session 默认值为&quot;&quot; ，最后的参数为usage</p>
         
         <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-03</p>]]>
       </description>

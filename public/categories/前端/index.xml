@@ -221,7 +221,7 @@ CSS
  属性1:属性值1;
  属性2:属性值2;
 }
-</code></pre><p>例如:p1标签选择器，此时所有p1标签都被选中,此时可以作为样式放在<!-- raw HTML omitted -->部分</p>
+</code></pre><p>例如:p1标签选择器，此时所有p1标签都被选中,此时可以作为样式放在<head>部分</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">style</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">p1</span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
