@@ -3,7 +3,7 @@
   lang="en-us" 
   data-theme-mode="auto"
   >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>head_end:'<link rel="stylesheet" href="/css/cyberpunk.css">'<meta charset="utf-8" />
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -11,7 +11,7 @@
   OS | scqwq
 </title>
 <meta name="description" content="lets do it again..."/><script>
-  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_ex15nbittbh\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
+  window.siteConfig = JSON.parse("{\"anchor_icon\":false,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_ex15nbittbh\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
   
 </script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -68,7 +68,7 @@
     integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link
     rel="stylesheet"
     href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css"
-    integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous"/></head>
+    integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous"/><link rel="stylesheet" href="/css/cyberpunk.css"></head>
   <body><div id='loader'>
     <div class="loading-left-bg loading-bg"></div>
     <div class="loading-right-bg loading-bg"></div>
@@ -138,72 +138,176 @@ This article does not have a corresponding language version
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#os">OS</a></li>
+    <li><a href="#第三部分内存管理">第三部分:内存管理</a>
       <ul>
-        <li><a href="#31内存的基本概念">3.1:内存的基本概念</a></li>
+        <li>
+          <ul>
+            <li><a href="#31内存的基本概念">3.1:内存的基本概念</a></li>
+          </ul>
+        </li>
+        <li><a href="#一内存的分配和回收">一、内存的分配和回收</a>
+          <ul>
+            <li><a href="#32连续分配方式">3.2：连续分配方式</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#33动态分区分配的算法">3.3：动态分区分配的算法</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#34基本分页存储管理">3.4：基本分页存储管理</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#35基本分段存储管理">3.5：基本分段存储管理</a></li>
+            <li><a href="#36段页式存储管理">3.6：段页式存储管理</a></li>
+          </ul>
+        </li>
+        <li><a href="#二内存空间的扩充">二、内存空间的扩充</a>
+          <ul>
+            <li><a href="#37覆盖与交换">3.7：覆盖与交换</a></li>
+            <li><a href="#38虚拟内存">3.8：虚拟内存</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#39请求分页管理方式">3.9：请求分页管理方式</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#310页面置换算法">3.10：页面置换算法</a></li>
+            <li><a href="#311页面分配策略">3.11：页面分配策略</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#三地址转换">三、地址转换</a>
+          <ul>
+            <li><a href="#312地址转换的三种方式">3.12：地址转换的三种方式</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#四存储保护">四、存储保护</a>
+          <ul>
+            <li><a href="#313存储保护的两种方式">3.13：存储保护的两种方式</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#五杂项">五、杂项</a>
+          <ul>
+            <li><a href="#314内存映射文件与进程的内存映像">3.14：内存映射文件与进程的内存映像</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#一内存的分配和回收">一、内存的分配和回收</a>
+    <li><a href="#第四部分文件管理">第四部分：文件管理</a>
       <ul>
-        <li><a href="#32连续分配方式">3.2：连续分配方式</a></li>
-        <li><a href="#33动态分区分配的算法">3.3：动态分区分配的算法</a></li>
-        <li><a href="#34基本分页存储管理">3.4：基本分页存储管理</a></li>
-        <li><a href="#35基本分段存储管理">3.5：基本分段存储管理</a></li>
-        <li><a href="#36段页式存储管理">3.6：段页式存储管理</a></li>
+        <li>
+          <ul>
+            <li><a href="#1文件属性描述文件特征的信息通常存储在文件控制块中">1.文件属性：描述文件特征的信息，通常存储在文件控制块中。</a>
+              <ul>
+                <li></li>
+                <li><a href="#基本功能">基本功能:</a></li>
+              </ul>
+            </li>
+            <li><a href="#2文件的逻辑结构">2.文件的逻辑结构:</a>
+              <ul>
+                <li><a href="#文件的逻辑结构">文件的逻辑结构</a></li>
+              </ul>
+            </li>
+            <li><a href="#3文件目录该如何实现">3.文件目录:该如何实现</a>
+              <ul>
+                <li></li>
+                <li><a href="#控制块和索引结点">控制块和索引结点：</a></li>
+                <li><a href="#目录结构">目录结构:</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#二内存空间的扩充">二、内存空间的扩充</a>
+    <li><a href="#第五部分io设备">第五部分：I/O设备</a>
       <ul>
-        <li><a href="#37覆盖与交换">3.7：覆盖与交换</a></li>
-        <li><a href="#38虚拟内存">3.8：虚拟内存</a></li>
-        <li><a href="#39请求分页管理方式">3.9：请求分页管理方式</a></li>
-        <li><a href="#310页面置换算法">3.10：页面置换算法</a></li>
-        <li><a href="#311页面分配策略">3.11：页面分配策略</a></li>
-      </ul>
-    </li>
-    <li><a href="#三地址转换">三、地址转换</a>
-      <ul>
-        <li><a href="#312地址转换的三种方式">3.12：地址转换的三种方式</a></li>
-      </ul>
-    </li>
-    <li><a href="#四存储保护">四、存储保护</a>
-      <ul>
-        <li><a href="#313存储保护的两种方式">3.13：存储保护的两种方式</a></li>
-      </ul>
-    </li>
-    <li><a href="#五杂项">五、杂项</a>
-      <ul>
-        <li><a href="#314内存映射文件与进程的内存映像">3.14：内存映射文件与进程的内存映像</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#1文件属性描述文件特征的信息通常存储在文件控制块中">1.文件属性：描述文件特征的信息，通常存储在文件控制块中。</a></li>
-        <li><a href="#2文件的逻辑结构">2.文件的逻辑结构:</a></li>
-        <li><a href="#3文件目录该如何实现">3.文件目录:该如何实现</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#1基本概念与分类">1.基本概念与分类</a></li>
-        <li><a href="#io-控制方式与接口">I/O 控制方式与接口</a></li>
-        <li><a href="#io软件的层次结构">I/O软件的层次结构</a></li>
-        <li><a href="#输出输入应用程序接口">输出/输入应用程序接口</a></li>
-        <li><a href="#设备驱动接口">设备驱动接口:</a></li>
-        <li><a href="#io核心子系统">I/O核心子系统：</a></li>
-        <li><a href="#假脱机spooling技术">假脱机(SPOOLing)技术：</a></li>
-        <li><a href="#设备的分配与回收">设备的分配与回收</a></li>
-        <li><a href="#缓冲区">缓冲区</a></li>
-        <li><a href="#磁盘的结构">磁盘的结构</a></li>
-        <li><a href="#磁盘调度算法">磁盘调度算法</a></li>
-        <li><a href="#磁盘管理">磁盘管理</a></li>
-        <li><a href="#固态硬盘ssd">固态硬盘SSD</a></li>
+        <li>
+          <ul>
+            <li><a href="#1基本概念与分类">1.基本概念与分类</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#io-控制方式与接口">I/O 控制方式与接口</a>
+              <ul>
+                <li><a href="#对于控制器">对于控制器：</a></li>
+                <li><a href="#对于控制方式">对于控制方式：</a></li>
+                <li><a href="#此事在计组中亦有记载">此事在计组中亦有记载</a></li>
+              </ul>
+            </li>
+            <li><a href="#io软件的层次结构">I/O软件的层次结构</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#输出输入应用程序接口">输出/输入应用程序接口</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#设备驱动接口">设备驱动接口:</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#io核心子系统">I/O核心子系统：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#假脱机spooling技术">假脱机(SPOOLing)技术：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#设备的分配与回收">设备的分配与回收</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#缓冲区">缓冲区</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#磁盘的结构">磁盘的结构</a></li>
+            <li><a href="#磁盘调度算法">磁盘调度算法</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#磁盘管理">磁盘管理</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#固态硬盘ssd">固态硬盘SSD</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1881,72 +1985,176 @@ Saurlax：
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#os">OS</a></li>
+    <li><a href="#第三部分内存管理">第三部分:内存管理</a>
       <ul>
-        <li><a href="#31内存的基本概念">3.1:内存的基本概念</a></li>
+        <li>
+          <ul>
+            <li><a href="#31内存的基本概念">3.1:内存的基本概念</a></li>
+          </ul>
+        </li>
+        <li><a href="#一内存的分配和回收">一、内存的分配和回收</a>
+          <ul>
+            <li><a href="#32连续分配方式">3.2：连续分配方式</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#33动态分区分配的算法">3.3：动态分区分配的算法</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#34基本分页存储管理">3.4：基本分页存储管理</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#35基本分段存储管理">3.5：基本分段存储管理</a></li>
+            <li><a href="#36段页式存储管理">3.6：段页式存储管理</a></li>
+          </ul>
+        </li>
+        <li><a href="#二内存空间的扩充">二、内存空间的扩充</a>
+          <ul>
+            <li><a href="#37覆盖与交换">3.7：覆盖与交换</a></li>
+            <li><a href="#38虚拟内存">3.8：虚拟内存</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#39请求分页管理方式">3.9：请求分页管理方式</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#310页面置换算法">3.10：页面置换算法</a></li>
+            <li><a href="#311页面分配策略">3.11：页面分配策略</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#三地址转换">三、地址转换</a>
+          <ul>
+            <li><a href="#312地址转换的三种方式">3.12：地址转换的三种方式</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#四存储保护">四、存储保护</a>
+          <ul>
+            <li><a href="#313存储保护的两种方式">3.13：存储保护的两种方式</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#五杂项">五、杂项</a>
+          <ul>
+            <li><a href="#314内存映射文件与进程的内存映像">3.14：内存映射文件与进程的内存映像</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#一内存的分配和回收">一、内存的分配和回收</a>
+    <li><a href="#第四部分文件管理">第四部分：文件管理</a>
       <ul>
-        <li><a href="#32连续分配方式">3.2：连续分配方式</a></li>
-        <li><a href="#33动态分区分配的算法">3.3：动态分区分配的算法</a></li>
-        <li><a href="#34基本分页存储管理">3.4：基本分页存储管理</a></li>
-        <li><a href="#35基本分段存储管理">3.5：基本分段存储管理</a></li>
-        <li><a href="#36段页式存储管理">3.6：段页式存储管理</a></li>
+        <li>
+          <ul>
+            <li><a href="#1文件属性描述文件特征的信息通常存储在文件控制块中">1.文件属性：描述文件特征的信息，通常存储在文件控制块中。</a>
+              <ul>
+                <li></li>
+                <li><a href="#基本功能">基本功能:</a></li>
+              </ul>
+            </li>
+            <li><a href="#2文件的逻辑结构">2.文件的逻辑结构:</a>
+              <ul>
+                <li><a href="#文件的逻辑结构">文件的逻辑结构</a></li>
+              </ul>
+            </li>
+            <li><a href="#3文件目录该如何实现">3.文件目录:该如何实现</a>
+              <ul>
+                <li></li>
+                <li><a href="#控制块和索引结点">控制块和索引结点：</a></li>
+                <li><a href="#目录结构">目录结构:</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#二内存空间的扩充">二、内存空间的扩充</a>
+    <li><a href="#第五部分io设备">第五部分：I/O设备</a>
       <ul>
-        <li><a href="#37覆盖与交换">3.7：覆盖与交换</a></li>
-        <li><a href="#38虚拟内存">3.8：虚拟内存</a></li>
-        <li><a href="#39请求分页管理方式">3.9：请求分页管理方式</a></li>
-        <li><a href="#310页面置换算法">3.10：页面置换算法</a></li>
-        <li><a href="#311页面分配策略">3.11：页面分配策略</a></li>
-      </ul>
-    </li>
-    <li><a href="#三地址转换">三、地址转换</a>
-      <ul>
-        <li><a href="#312地址转换的三种方式">3.12：地址转换的三种方式</a></li>
-      </ul>
-    </li>
-    <li><a href="#四存储保护">四、存储保护</a>
-      <ul>
-        <li><a href="#313存储保护的两种方式">3.13：存储保护的两种方式</a></li>
-      </ul>
-    </li>
-    <li><a href="#五杂项">五、杂项</a>
-      <ul>
-        <li><a href="#314内存映射文件与进程的内存映像">3.14：内存映射文件与进程的内存映像</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#1文件属性描述文件特征的信息通常存储在文件控制块中">1.文件属性：描述文件特征的信息，通常存储在文件控制块中。</a></li>
-        <li><a href="#2文件的逻辑结构">2.文件的逻辑结构:</a></li>
-        <li><a href="#3文件目录该如何实现">3.文件目录:该如何实现</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#1基本概念与分类">1.基本概念与分类</a></li>
-        <li><a href="#io-控制方式与接口">I/O 控制方式与接口</a></li>
-        <li><a href="#io软件的层次结构">I/O软件的层次结构</a></li>
-        <li><a href="#输出输入应用程序接口">输出/输入应用程序接口</a></li>
-        <li><a href="#设备驱动接口">设备驱动接口:</a></li>
-        <li><a href="#io核心子系统">I/O核心子系统：</a></li>
-        <li><a href="#假脱机spooling技术">假脱机(SPOOLing)技术：</a></li>
-        <li><a href="#设备的分配与回收">设备的分配与回收</a></li>
-        <li><a href="#缓冲区">缓冲区</a></li>
-        <li><a href="#磁盘的结构">磁盘的结构</a></li>
-        <li><a href="#磁盘调度算法">磁盘调度算法</a></li>
-        <li><a href="#磁盘管理">磁盘管理</a></li>
-        <li><a href="#固态硬盘ssd">固态硬盘SSD</a></li>
+        <li>
+          <ul>
+            <li><a href="#1基本概念与分类">1.基本概念与分类</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#io-控制方式与接口">I/O 控制方式与接口</a>
+              <ul>
+                <li><a href="#对于控制器">对于控制器：</a></li>
+                <li><a href="#对于控制方式">对于控制方式：</a></li>
+                <li><a href="#此事在计组中亦有记载">此事在计组中亦有记载</a></li>
+              </ul>
+            </li>
+            <li><a href="#io软件的层次结构">I/O软件的层次结构</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#输出输入应用程序接口">输出/输入应用程序接口</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#设备驱动接口">设备驱动接口:</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#io核心子系统">I/O核心子系统：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#假脱机spooling技术">假脱机(SPOOLing)技术：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#设备的分配与回收">设备的分配与回收</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#缓冲区">缓冲区</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#磁盘的结构">磁盘的结构</a></li>
+            <li><a href="#磁盘调度算法">磁盘调度算法</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#磁盘管理">磁盘管理</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#固态硬盘ssd">固态硬盘SSD</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

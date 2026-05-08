@@ -98,7 +98,7 @@
 }
 
 [data-theme="dark"] img {
-  filter: brightness(70%);
+  filter: brightness(100%);
 }
 
 [data-theme="dark"] .pswp__img {
@@ -3267,9 +3267,9 @@ mjx-container::-webkit-scrollbar {
 
 .sidebar-toc-wrapper nav > ul ul,
 .sidebar-toc-wrapper nav > ol ol {
-  transform: scaleY(0);
-  height: 0;
-  overflow: hidden;
+  transform: scaleY(1);
+  height: auto;
+  overflow: visible;
   transition: 0.3s;
   transform-origin: top;
 }

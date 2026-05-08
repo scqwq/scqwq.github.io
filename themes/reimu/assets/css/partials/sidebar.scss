@@ -556,9 +556,9 @@
 
   nav > ul ul,
   nav > ol ol {
-    transform: scaleY(0);
-    height: 0;
-    overflow: hidden;
+    transform: scaleY(1);
+    height: auto;
+    overflow: visible;
     transition: 0.3s;
     transform-origin: top;
 
