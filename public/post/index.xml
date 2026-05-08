@@ -24,7 +24,7 @@
     <item>
       <title>计网</title>
       <link>http://localhost:1313/post/%E8%AE%A1%E7%BD%91/</link>
-      <pubDate>Sun, 03 May 2026 11:00:00 &#43;0800</pubDate>
+      <pubDate>Fri, 08 May 2026 11:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (scqwq)</author>
       <guid>http://localhost:1313/post/%E8%AE%A1%E7%BD%91/</guid>
       <description>
@@ -36,7 +36,7 @@
 </h1><p>声明：本笔记参考</p>
 <p>视频：https://www.bilibili.com/video/BV1p69tYZEvN</p>
 <p>博客笔记：https://saurlax.com/blog/computer-network（部分懒得做笔记的地方是直接在他身上修改的）</p>
-<p>**叠甲：**本笔记仅供参考，易有错漏和不足</p>
+<p><strong>叠甲</strong>：本笔记仅供参考，易有错漏和不足，有一些后面加上的也来不及及时更新到网页上</p>
 <img src="/note_images/computer_network/image-20260503132506036.png" alt="image-20260503132506036" style="zoom:50%;" />
 <h2 id="计网模型">
 <a class="header-anchor" href="#%e8%ae%a1%e7%bd%91%e6%a8%a1%e5%9e%8b"></a>
@@ -101,7 +101,7 @@ TCP/IP模型四层次：
 1.物理
 </h5><p>关注信道，不关注物理的介质</p>
         
-        <hr><p>Published on 2026-05-03 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-07</p>]]>
+        <hr><p>Published on 2026-05-08 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-05-07</p>]]>
       </description>
       
         <category>专业课</category>

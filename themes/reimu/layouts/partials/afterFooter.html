@@ -59,6 +59,7 @@
 
 {{- if $params.firework.enable -}}
 <script>
+  /*
   var setupFirework = () => {
     if (!{{ $params.firework.disable_on_mobile | default false }} || !window.matchMedia('(max-width: 768px)').matches) {
       if (window.firework) {
@@ -69,6 +70,7 @@
       }
     }
   }
+  */
 </script>
   {{- partial "helpers/cdnJs.html" (dict "name" "firework" "ctx" . "defer" true "onload" "setupFirework()") -}}
 {{- end -}}
