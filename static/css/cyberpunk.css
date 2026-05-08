@@ -394,6 +394,12 @@ body {
 .article-entry video {
   border: 1px solid rgba(0, 245, 255, 0.35);
   box-shadow: 0 0 16px rgba(0, 245, 255, 0.12);
+  filter: brightness(110%) !important;
+  opacity: 1 !important;
+}
+
+.article-entry img.lazyloaded {
+  filter: brightness(110%) !important;
 }
 
 .article-entry input[type="checkbox"] {

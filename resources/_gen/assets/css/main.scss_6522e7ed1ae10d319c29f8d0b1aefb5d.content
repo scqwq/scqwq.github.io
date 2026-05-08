@@ -98,7 +98,7 @@
 }
 
 [data-theme="dark"] img {
-  filter: brightness(100%);
+  filter: brightness(70%);
 }
 
 [data-theme="dark"] .pswp__img {
