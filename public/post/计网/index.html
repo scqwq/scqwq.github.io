@@ -138,19 +138,19 @@ This article does not have a corresponding language version
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#计算机网络">计算机网络</a>
+    <li><a href="#计网">计网</a>
       <ul>
         <li><a href="#计网模型">计网模型</a>
           <ul>
-            <li><a href="#osi模型计网七大层次">OSI模型计网七大层次：</a>
+            <li><a href="#1osi模型计网七大层次">1.OSI模型计网七大层次：</a>
               <ul>
                 <li></li>
               </ul>
             </li>
-            <li><a href="#tcpip模型四层次">TCP/IP模型四层次：</a></li>
+            <li><a href="#2tcpip模型四层次">2.TCP/IP模型四层次：</a></li>
           </ul>
         </li>
-        <li><a href="#五层参考模型">※五层参考模型</a>
+        <li><a href="#3五层参考模型">※3.五层参考模型</a>
           <ul>
             <li><a href="#每一层的用处">每一层的用处</a>
               <ul>
@@ -162,7 +162,16 @@ This article does not have a corresponding language version
         <li><a href="#计算机网络的定义">计算机网络的定义</a>
           <ul>
             <li><a href="#基本概念">基本概念</a></li>
-            <li><a href="#网络分类">网络分类：</a>
+            <li><a href="#网络分类">网络分类：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#一物理层">一、物理层</a>
+      <ul>
+        <li>
+          <ul>
+            <li>
               <ul>
                 <li></li>
               </ul>
@@ -172,7 +181,7 @@ This article does not have a corresponding language version
                 <li></li>
               </ul>
             </li>
-            <li><a href="#物理层设备">物理层设备：</a></li>
+            <li><a href="#物理设备">物理设备：</a></li>
             <li><a href="#传输标准命名规则">传输标准命名规则：</a></li>
             <li><a href="#编码">编码：</a>
               <ul>
@@ -209,7 +218,7 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
-    <li><a href="#数据链路层">数据链路层</a>
+    <li><a href="#二数据链路层">二、数据链路层</a>
       <ul>
         <li>
           <ul>
@@ -219,7 +228,11 @@ This article does not have a corresponding language version
                 <li><a href="#网络链路">网络链路：</a></li>
               </ul>
             </li>
-            <li><a href="#帧frame">帧（FRAME）</a></li>
+            <li><a href="#帧frame">帧（FRAME）</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
             <li><a href="#封装成帧的方法">封装成帧的方法：</a>
               <ul>
                 <li></li>
@@ -230,7 +243,7 @@ This article does not have a corresponding language version
                 <li></li>
               </ul>
             </li>
-            <li><a href="#介质访问控制子层">介质访问控制子层</a>
+            <li><a href="#介质访问控制子层mac">介质访问控制子层(MAC)</a>
               <ul>
                 <li><a href="#信道分配静态信号分配前文亦有记载">信道分配：静态信号分配(前文亦有记载)</a></li>
                 <li><a href="#信道分配动态信号分配">信道分配：动态信号分配</a></li>
@@ -260,14 +273,15 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
-    <li><a href="#网络层">网络层</a>
+    <li><a href="#三网络层">三、网络层</a>
       <ul>
         <li>
           <ul>
-            <li>
+            <li><a href="#服务类型">服务类型</a>
               <ul>
-                <li><a href="#无连接服务">无连接服务</a></li>
-                <li><a href="#有连接服务">有连接服务</a></li>
+                <li><a href="#无连接服务">无连接服务:</a></li>
+                <li><a href="#有连接服务">有连接服务:</a></li>
+                <li><a href="#一些概念">一些概念:</a></li>
               </ul>
             </li>
             <li><a href="#网络层路由算法">网络层路由算法</a>
@@ -276,11 +290,18 @@ This article does not have a corresponding language version
                 <li><a href="#动态路由算法">动态路由算法</a></li>
               </ul>
             </li>
+            <li><a href="#路由协议">路由协议</a>
+              <ul>
+                <li><a href="#域内路由协议内部网关协议">域内路由协议/内部网关协议</a></li>
+                <li><a href="#域间路由协议外部网关协议">域间路由协议/外部网关协议</a></li>
+              </ul>
+            </li>
             <li><a href="#ipv4数据报格式">IPV4数据报格式</a>
               <ul>
                 <li></li>
               </ul>
             </li>
+            <li><a href="#ipv6数据报">IPV6数据报</a></li>
             <li><a href="#ip地址">IP地址</a>
               <ul>
                 <li><a href="#ip-地址分类">IP 地址分类：</a></li>
@@ -307,19 +328,12 @@ This article does not have a corresponding language version
                 <li></li>
               </ul>
             </li>
-            <li><a href="#ipv6数据报">IPV6数据报</a></li>
-            <li><a href="#路由协议">路由协议</a>
-              <ul>
-                <li><a href="#域内路由协议内部网关协议">域内路由协议/内部网关协议</a></li>
-                <li><a href="#域间路由协议外部网关协议">域间路由协议/外部网关协议</a></li>
-              </ul>
-            </li>
             <li><a href="#冲突域和广播域">冲突域和广播域：</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#传输层">传输层</a>
+    <li><a href="#四传输层">四、传输层</a>
       <ul>
         <li>
           <ul>
@@ -327,6 +341,7 @@ This article does not have a corresponding language version
               <ul>
                 <li><a href="#端口长度16b065535">端口长度16b,0~65535</a></li>
                 <li><a href="#多播">多播</a></li>
+                <li><a href="#udp和tcp差异">UDP和TCP差异</a></li>
               </ul>
             </li>
             <li><a href="#udp">UDP</a>
@@ -342,7 +357,7 @@ This article does not have a corresponding language version
             <li><a href="#可靠传输-1">可靠传输</a>
               <ul>
                 <li><a href="#tcp可靠传输">TCP可靠传输</a></li>
-                <li><a href="#停止-等待协议">停止-等待协议</a></li>
+                <li><a href="#停止-等待协议-1">停止-等待协议</a></li>
                 <li><a href="#滑动窗口协议-1">滑动窗口协议</a></li>
               </ul>
             </li>
@@ -360,7 +375,7 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
-    <li><a href="#应用层">应用层</a>
+    <li><a href="#五应用层">五、应用层</a>
       <ul>
         <li>
           <ul>
@@ -379,6 +394,16 @@ This article does not have a corresponding language version
               </ul>
             </li>
             <li><a href="#http">HTTP</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#p2p架构">P2P架构：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#cs架构">CS架构：</a>
               <ul>
                 <li></li>
               </ul>
@@ -481,9 +506,9 @@ This article does not have a corresponding language version
       >2026-05-07</time
     >
   </span></div>
-</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="计算机网络">
-<a class="header-anchor" href="#%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bd%91%e7%bb%9c"></a>
-计算机网络
+</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="计网">
+<a class="header-anchor" href="#%e8%ae%a1%e7%bd%91"></a>
+计网
 </h1><p>声明：本笔记参考</p>
 <p>视频：https://www.bilibili.com/video/BV1p69tYZEvN</p>
 <p>博客笔记：https://saurlax.com/blog/computer-network（部分懒得做笔记的地方是直接在他身上修改的）</p>
@@ -492,9 +517,9 @@ This article does not have a corresponding language version
 <h2 id="计网模型">
 <a class="header-anchor" href="#%e8%ae%a1%e7%bd%91%e6%a8%a1%e5%9e%8b"></a>
 计网模型
-</h2><h3 id="osi模型计网七大层次">
-<a class="header-anchor" href="#osi%e6%a8%a1%e5%9e%8b%e8%ae%a1%e7%bd%91%e4%b8%83%e5%a4%a7%e5%b1%82%e6%ac%a1"></a>
-OSI模型计网七大层次：
+</h2><h3 id="1osi模型计网七大层次">
+<a class="header-anchor" href="#1osi%e6%a8%a1%e5%9e%8b%e8%ae%a1%e7%bd%91%e4%b8%83%e5%a4%a7%e5%b1%82%e6%ac%a1"></a>
+1.OSI模型计网七大层次：
 </h3><h5 id="交换单元">
 <a class="header-anchor" href="#%e4%ba%a4%e6%8d%a2%e5%8d%95%e5%85%83"></a>
 交换单元:
@@ -528,13 +553,14 @@ OSI模型计网七大层次：
 </h5><p>Physical Layer</p>
 <p>传输过程一定从上到下 再 从下到上</p>
 <p>同层之间可以在 <strong>逻辑上</strong> 以某种协议进行传输</p>
-<h3 id="tcpip模型四层次">
-<a class="header-anchor" href="#tcpip%e6%a8%a1%e5%9e%8b%e5%9b%9b%e5%b1%82%e6%ac%a1"></a>
-TCP/IP模型四层次：
-</h3><p>只有1、4、5、6，6为链路层层</p>
-<h2 id="五层参考模型">
-<a class="header-anchor" href="#%e4%ba%94%e5%b1%82%e5%8f%82%e8%80%83%e6%a8%a1%e5%9e%8b"></a>
-※五层参考模型
+<h3 id="2tcpip模型四层次">
+<a class="header-anchor" href="#2tcpip%e6%a8%a1%e5%9e%8b%e5%9b%9b%e5%b1%82%e6%ac%a1"></a>
+2.TCP/IP模型四层次：
+</h3><p>= TCP/IP协议栈</p>
+<p>应用层、传输层、网络层、链路层（网络接口层）</p>
+<h2 id="3五层参考模型">
+<a class="header-anchor" href="#3%e4%ba%94%e5%b1%82%e5%8f%82%e8%80%83%e6%a8%a1%e5%9e%8b"></a>
+※3.五层参考模型
 </h2><p>综合了<strong>SI 七层模型</strong>的理论严谨性和 <strong>TCP/IP 四层模型</strong>的实践简洁性</p>
 <p>应用、传输、网络、链路、物理:</p>
 <ul>
@@ -610,8 +636,10 @@ TCP/IP模型四层次：
 网络分类：
 </h3><p>1.个域网    2.局域网    3.城域网    4.广域网</p>
 <img src="/note_images/computer_network/image-20260503135528046.png" alt="image-20260503135528046" style="zoom:50%;" />
-<p>#物理层</p>
-<h5 id="研究的不是物理介质而是物理信道">
+<h1 id="一物理层">
+<a class="header-anchor" href="#%e4%b8%80%e7%89%a9%e7%90%86%e5%b1%82"></a>
+一、物理层
+</h1><h5 id="研究的不是物理介质而是物理信道">
 <a class="header-anchor" href="#%e7%a0%94%e7%a9%b6%e7%9a%84%e4%b8%8d%e6%98%af%e7%89%a9%e7%90%86%e4%bb%8b%e8%b4%a8%e8%80%8c%e6%98%af%e7%89%a9%e7%90%86%e4%bf%a1%e9%81%93"></a>
 研究的不是物理介质，而是物理信道
 </h5><img src="/note_images/computer_network/image-20260504175609830.png" alt="image-20260504175609830" style="zoom:50%;" />
@@ -641,9 +669,9 @@ TCP/IP模型四层次：
 <p>微波：卫星通信</p>
 <p>红外线：不可见光的一种，常用于近距离遥控</p>
 <p>激光：点对点，易受天气影响</p>
-<h3 id="物理层设备">
-<a class="header-anchor" href="#%e7%89%a9%e7%90%86%e5%b1%82%e8%ae%be%e5%a4%87"></a>
-物理层设备：
+<h3 id="物理设备">
+<a class="header-anchor" href="#%e7%89%a9%e7%90%86%e8%ae%be%e5%a4%87"></a>
+物理设备：
 </h3><p>各个物理设备工作在不同层次：</p>
 <ul>
 <li>
@@ -789,12 +817,12 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 物理层接口特性
 </h5><p>理解为上</p>
 <img src="/note_images/computer_network/image-20260504175333455.png" alt="image-20260504175333455" style="zoom:50%;" />
-<h1 id="数据链路层">
-<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e9%93%be%e8%b7%af%e5%b1%82"></a>
-数据链路层
+<h1 id="二数据链路层">
+<a class="header-anchor" href="#%e4%ba%8c%e6%95%b0%e6%8d%ae%e9%93%be%e8%b7%af%e5%b1%82"></a>
+二、数据链路层
 </h1><p>核心任务是在物理层提供的比特流基础上，提供可靠的数据传输，并确保数据能正确地从一个设备发送到另一个设备</p>
 <ul>
-<li>封装成帧：将<strong>网络层的数据包</strong>封装成帧，添加帧头和帧尾。</li>
+<li>封装成帧：将<strong>网络层的数据包</strong>封装成帧，添加<strong>帧头</strong>和<strong>帧尾</strong>。</li>
 <li>透明传输：确保数据中的任何比特组合都能够正确传输。</li>
 <li>差错控制：检测并可能纠正传输过程中的差错。</li>
 <li>调节数据流：控制发送方的发送速率，使接收方来得及处理。</li>
@@ -830,10 +858,30 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 <a class="header-anchor" href="#%e5%b8%a7frame"></a>
 帧（FRAME）
 </h3><p>在数据链路层，数据是以“帧”的形式进行传输的，每一帧通常包含：</p>
-<p>帧头（Header）：包含地址信息（源、目的，此时的地址为MAC地址）、帧类型、控制信息等</p>
-<p>数据（payload）：承载来自网络层的数据报文（通常是IP数据）</p>
+<ul>
+<li>
+<p>帧头（Frame Header）：包含地址信息（源、目的，此时的地址为MAC地址）、帧类型、控制信息等</p>
+</li>
+<li>
+<p>数据（Frame payload）：承载来自网络层的数据报文（通常是IP数据）</p>
+</li>
+<li>
 <p>帧尾（Trailer）：通常把包含校验和用于检测数据传输错误</p>
+</li>
+</ul>
 <p><strong>注意：是将网络层数据报封装成帧</strong>，不要理所当然从下往上 ，然后传到物理层的时候，再将帧转换成比特流。</p>
+<h5 id="帧长-64-1518b">
+<a class="header-anchor" href="#%e5%b8%a7%e9%95%bf-64-1518b"></a>
+帧长 64 ~1518B
+</h5><p>帧头一般14B ：目的 MAC（6B）源 MAC（6B）类型/长度（2B） → 共 <strong>14 字节</strong></p>
+<p>帧尾一般4B：FCS（Frame Check Sequence)，帧检验序列，用来检测帧在传输过程中是否出错</p>
+<p><strong>最小帧长</strong>：Minimum frame size，由后文的最小帧长，与早期的2.5km 缆段，经典10Mbps以太网得出最小帧长为500b(512b作为余量)，</p>
+<p><strong>最大帧长</strong>：Maximum frame size，由帧太大 → 占用共享介质太久 → 其他站等待时间长，且帧越大，出错时重传代价越高，一般MTU不高于1500，加18B得1518B。</p>
+<p>最大最小帧长的由各类协议保留沿用至今</p>
+<p><strong>有效数据范围(MTU)</strong>：由上得46 ~ 1500</p>
+<p>帧太大 → 占用共享介质太久 → 其他站等待时间长</p>
+<p><strong>错误影响范围</strong> 帧越大，出错时重传代价越高</p>
+<p><strong>MTU</strong>：数据字段最大长度（不是最大帧长，一般为1500）</p>
 <img src="/note_images/computer_network/image-20260504190546035.png" alt="image-20260504190546035" style="zoom:25%;" />
 <h3 id="封装成帧的方法">
 <a class="header-anchor" href="#%e5%b0%81%e8%a3%85%e6%88%90%e5%b8%a7%e7%9a%84%e6%96%b9%e6%b3%95"></a>
@@ -841,7 +889,8 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 </h3><h5 id="字节计数法">
 <a class="header-anchor" href="#%e5%ad%97%e8%8a%82%e8%ae%a1%e6%95%b0%e6%b3%95"></a>
 字节计数法：
-</h5><p>在帧的头部添加一个字段，指明该帧的字节数</p>
+</h5><p>Byte-count framing</p>
+<p>在帧的头部添加一个字段，指明该帧的字节数</p>
 <ul>
 <li>优点：简单容易实现，占用的额外开销少</li>
 <li>缺点：如果计数字段的数据被传输错误，会导致数据同步错误，接收端可能会错误地解析数据</li>
@@ -849,7 +898,8 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 <h5 id="字符填充法">
 <a class="header-anchor" href="#%e5%ad%97%e7%ac%a6%e5%a1%ab%e5%85%85%e6%b3%95"></a>
 字符填充法：
-</h5><p>使用特殊字符表示起始（SOH）结束（EOT),并在数据中避免特殊字符字段冲突</p>
+</h5><p>Character stuffing</p>
+<p>使用特殊字符表示起始（SOH）结束（EOT),并在数据中避免特殊字符字段冲突</p>
 <p>如果数据中包含SOH或者EOT,则使用转义字符(ESC)加在前面防止误判</p>
 <ul>
 <li>优点：解决了字节计数法的同步问题，适用于<strong>字符流</strong>(传输文本的场景)</li>
@@ -858,7 +908,8 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 <h5 id="比特填充法">
 <a class="header-anchor" href="#%e6%af%94%e7%89%b9%e5%a1%ab%e5%85%85%e6%b3%95"></a>
 比特填充法：
-</h5><p>使用特定的比特模式作为帧的起始和终止标志，并在数据部分中避免比特模式的冲突</p>
+</h5><p>Bit stuffing</p>
+<p>使用特定的比特模式作为帧的起始和终止标志，并在数据部分中避免比特模式的冲突</p>
 <ul>
 <li>优点：适用于任何比特流，不局限于字符编码（比字符填充更通用）</li>
 <li>缺点：需要额外的比特填充，稍微增加了传输的开销</li>
@@ -866,7 +917,8 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 <h5 id="物理层编码法">
 <a class="header-anchor" href="#%e7%89%a9%e7%90%86%e5%b1%82%e7%bc%96%e7%a0%81%e6%b3%95"></a>
 物理层编码法：
-</h5><p>数据报封装成帧之后，直接在物理层使用信号的变化来标识帧的起始和结束，而不是依赖特定的比特模式。  -&gt;  直接用物理层的办法解决边界问题</p>
+</h5><p>Physical layer coding violation</p>
+<p>数据报封装成帧之后，直接在物理层使用信号的变化来标识帧的起始和结束，而不是依赖特定的比特模式。  -&gt;  直接用物理层的办法解决边界问题</p>
 <ul>
 <li>优点：不需要填充比特，不会增加额外的开销</li>
 <li>缺点：以来物理层的编码方式，不适用于所有的链路层协议</li>
@@ -874,15 +926,16 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 <h3 id="错误检测">
 <a class="header-anchor" href="#%e9%94%99%e8%af%af%e6%a3%80%e6%b5%8b"></a>
 错误检测：
-</h3><img src="/note_images/computer_network/image-20260504192629104.png" alt="image-20260504192629104" style="zoom:50%;" />
+</h3><p>以下是错误检测的方法，错误检测广泛存在于各个层次</p>
+<img src="/note_images/computer_network/image-20260504192629104.png" alt="image-20260504192629104" style="zoom:50%;" />
 <h5 id="奇偶校验">
 <a class="header-anchor" href="#%e5%a5%87%e5%81%b6%e6%a0%a1%e9%aa%8c"></a>
 奇偶校验：
 </h5><p>奇/偶校验发送接收方实现协商好的，不管什么校验都是数据中1的个数的奇偶性</p>
 <p>-&gt;在数据末尾添加一位校验位，使得”1”的个数为奇数（奇校验）或偶数（偶校验）。</p>
-<h5 id="校验和">
-<a class="header-anchor" href="#%e6%a0%a1%e9%aa%8c%e5%92%8c"></a>
-校验和：<img src="/note_images/computer_network/image-20260504192926653.png" alt="image-20260504192926653" style="zoom: 25%;" />
+<h5 id="校验和checksum">
+<a class="header-anchor" href="#%e6%a0%a1%e9%aa%8c%e5%92%8cchecksum"></a>
+校验和：Checksum<img src="/note_images/computer_network/image-20260504192926653.png" alt="image-20260504192926653" style="zoom: 25%;" />
 </h5><p>回卷相加：进位加到最低位</p>
 <ul>
 <li>优点：比奇偶校验强，能检测更多错误，简单高效，计算量小</li>
@@ -897,15 +950,15 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 <p>CRC中的多项式实际上时“多进制多项式”，其是实现由协议规定好的，固定不变的</p>
 <p>得到CRC码后放到末尾</p>
 <p>接收方收到数据除以生成多项式，除得尽则没有问题</p>
-<p><strong>常用：WIFI</strong></p>
+<p><strong>常用：WIFI</strong>、Ethernet、PPP</p>
 <h5 id="海明码">
 <a class="header-anchor" href="#%e6%b5%b7%e6%98%8e%e7%a0%81"></a>
 海明码：
 </h5><p>可用于检错：能检测双个比特错，纠正单个比特错。</p>
 <p>校验位位置在 2 的整数次幂处，校验位添0或者1取决于奇校验还是偶校验，然后从低位到高位排序就是出错的地方。</p>
-<h3 id="介质访问控制子层">
-<a class="header-anchor" href="#%e4%bb%8b%e8%b4%a8%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6%e5%ad%90%e5%b1%82"></a>
-介质访问控制子层
+<h3 id="介质访问控制子层mac">
+<a class="header-anchor" href="#%e4%bb%8b%e8%b4%a8%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6%e5%ad%90%e5%b1%82mac"></a>
+介质访问控制子层(MAC)
 </h3><p>介质访问控制子层（MAC）解决多个设备共享同一传输介质的问题，主要方法包括：</p>
 <h4 id="信道分配静态信号分配前文亦有记载">
 <a class="header-anchor" href="#%e4%bf%a1%e9%81%93%e5%88%86%e9%85%8d%e9%9d%99%e6%80%81%e4%bf%a1%e5%8f%b7%e5%88%86%e9%85%8d%e5%89%8d%e6%96%87%e4%ba%a6%e6%9c%89%e8%ae%b0%e8%bd%bd"></a>
@@ -916,8 +969,8 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 信道划分：
 </h5><ul>
 <li>频分多路复用（FDM） Frequency Division Multiplexing</li>
-<li>时分多路复用（TDM）Time-Division Multiplexing</li>
-<li>码分多路复用（CDM）Code Division Multiplexing</li>
+<li>时分多路复用（TDM） Time-Division Multiplexing</li>
+<li>码分多路复用（CDM） Code Division Multiplexing</li>
 <li>波分多路复用（WDM）</li>
 </ul>
 <h4 id="信道分配动态信号分配">
@@ -929,7 +982,7 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 </h5><ul>
 <li>ALOHA 协议：设备可以随时发送数据，冲突后随机延迟重发。（完全随机 + 碰撞重传）</li>
 </ul>
-<p>可以升级为时隙ALOHA。</p>
+<p>可以升级为时隙ALOHA(Slotted ALOHA，将时间划分为等长的<strong>时隙</strong>，节点只能在时隙的<strong>起始时刻</strong>发送数据包，不能在中途或任意时间发送)。</p>
 <ul>
 <li>CSMA（载波侦听多路访问）：发送前先侦听信道是否忙。（没人说话才开口）</li>
 <li>CSMA/CD（CSMA with Collision Detection）：边发送边检测冲突，发现冲突后立即停止。</li>
@@ -948,7 +1001,8 @@ S:信号功率  N:噪声功率  S/N:信噪比 <img src="/note_images/computer_ne
 <h3 id="csmacd">
 <a class="header-anchor" href="#csmacd"></a>
 CSMA/CD：
-</h3><h4 id="传播延迟">
+</h3><p>典型场景：10Mbps / 100Mbps <strong>有线以太网（半双工模式）</strong>，无线网络不使用CD，而是使用CA</p>
+<h4 id="传播延迟">
 <a class="header-anchor" href="#%e4%bc%a0%e6%92%ad%e5%bb%b6%e8%bf%9f"></a>
 传播延迟
 </h4><p>传播延迟  Propagation Delay  传输延迟 Transmission Delay</p>
@@ -956,6 +1010,7 @@ CSMA/CD：
 <p>**传输延迟：**指将数据包从发送方推送到物理信道上所需的时间，即数据长度除以信道带宽（bit rate）。它不包含传播延迟或排队延迟，仅指“把数据推入线路”的时间。</p>
 <p>**传播延迟：**数据或者信号从发送节点到接收节点的时间
 它决定了最坏的情况下，发送节点多久才能得知是否发生了冲突 -&gt; 即两倍的最大延迟</p>
+<p>其无法完全避免冲突，工作方式是“避免+检测”，不是“彻底避免”</p>
 <h4 id="最小帧长">
 <a class="header-anchor" href="#%e6%9c%80%e5%b0%8f%e5%b8%a7%e9%95%bf"></a>
 最小帧长
@@ -965,7 +1020,7 @@ CSMA/CD：
 <h4 id="退避时间">
 <a class="header-anchor" href="#%e9%80%80%e9%81%bf%e6%97%b6%e9%97%b4"></a>
 退避时间
-</h4><p>Back off Time</p>
+</h4><p>Backoff Time</p>
 <p>当多个节点同时发生冲突、同时停下后，设置随机等待机制避免持续碰撞，16次是重传次数的上限，此时k依旧为10不变</p>
 <img src="/note_images/computer_network/image-20260504202228557.png" alt="image-20260504202228557" style="zoom: 25%;" />
 <h4 id="结论">
@@ -975,8 +1030,8 @@ CSMA/CD：
 <h3 id="csmaca协议">
 <a class="header-anchor" href="#csmaca%e5%8d%8f%e8%ae%ae"></a>
 CSMA/CA协议：
-</h3><p>带碰撞避免的CSMA</p>
-<p>解决问题：隐藏站问题、暴露站问题(视频7.开头，此处略)</p>
+</h3><p>带碰撞避免的CSMA，但是也不能彻底避免</p>
+<p><strong>解决问题</strong>：隐藏站问题、暴露站问题(7.开头)</p>
 <p>节点在发送数据之前监听无线信道，如果信号强度超过一定阈值则认为当前有其他节点在该信道上发送数据，此时随机等一点时间后再次监听</p>
 <p>如果侦测带信道空闲，需要等到一个帧间间隔(IFS)之后再发送数据，在等待的时候保持监听。
 IFS分为:DIFS、SIFS、EIFS</p>
@@ -995,13 +1050,14 @@ IFS分为:DIFS、SIFS、EIFS</p>
 流量控制的主要协议包括：</p>
 <ul>
 <li>
-<h5 id="停止-等待协议stopandwait">
-<a class="header-anchor" href="#%e5%81%9c%e6%ad%a2-%e7%ad%89%e5%be%85%e5%8d%8f%e8%ae%aestopandwait"></a>
-停止-等待协议(StopAndWait)：
-</h5><p>发送方发送一帧后必须等待接收方确认，然后才能发送下一帧。</p>
+<h5 id="停止-等待协议">
+<a class="header-anchor" href="#%e5%81%9c%e6%ad%a2-%e7%ad%89%e5%be%85%e5%8d%8f%e8%ae%ae"></a>
+停止-等待协议：
+</h5><p>StopAndWait</p>
+<p>发送方发送一帧后必须等待接收方确认，然后才能发送下一帧。</p>
 </li>
 </ul>
-<p>Ack超时也是Frame重传</p>
+<p>Ack超时也是Frame重传。发送窗口1接收窗口1</p>
 <p>实现最简单，信道利用率极低</p>
 <img src="/note_images/computer_network/image-20260505131621178.png" alt="image-20260505131621178" style="zoom:25%;" />
 <ul>
@@ -1011,22 +1067,20 @@ IFS分为:DIFS、SIFS、EIFS</p>
 滑动窗口协议：
 </h5><p>允许发送方在收到确认前发送多个帧，<strong>提高信道利用率。</strong></p>
 <p>发送方有一个“窗口”，窗口有一定配额，低位收到ACK后移动(如0<del>4  -&gt; 1</del>5)，一直执行</p>
-<p><strong>超时重传时的两种方式</strong>：</p>
+<p><strong>两种滑动窗口协议超时重传时的方式</strong>：</p>
 <ul>
 <li>
-<p>后退 N 帧（Go-Back-N）：<strong>接收方</strong>丢弃错误帧后的所有帧，发送方重传错误帧及其后续帧。接收窗口大小一般为1</p>
+<p>1.<strong>后退 N 帧</strong>（Go-Back-N）：<strong>接收方</strong>丢弃错误帧后的所有帧，发送方重传错误帧及其后续帧。发送窗口N，接收窗口大小一般为1</p>
 <p>若是发送方高位收到确认后低位有丢失的确认帧默认已经接收到，则使用<strong>累计确认</strong>，采用最大的ACK设为已接收，并从ACK后一位重传（若是低位丢失接收方未接收则高位不会有回复，故默认接收到了）</p>
 </li>
 </ul>
 <p>此时只有一个定时器</p>
 <img src="/note_images/computer_network/image-20260505134115932.png" alt="image-20260505134115932" style="zoom:50%;" />
 <ul>
-<li>选择重传（Selective Repeat）：接收方缓存正确接收的帧，只要求发送方重传错误帧。</li>
+<li>2.<strong>选择重传</strong>（Selective Repeat）：接收方缓存正确接收的帧，只要求发送方重传错误帧。</li>
 </ul>
-<p>此时每个帧都会有一个独立的计时器</p>
+<p>此时每个帧都会有一个独立的计时器，发送窗口M接收窗口N。(一般M = N但是也可以不一样)</p>
 <img src="/note_images/computer_network/image-20260505134419198.png" alt="image-20260505134419198" style="zoom:50%;" />
-</li>
-</ul>
 <p><strong>高信道利用率</strong>（尤其是链路延迟大时）；</p>
 <p>可根据窗口大小调节吞吐；</p>
 <p>是现代可靠传输的基础（如 TCP）</p>
@@ -1034,6 +1088,8 @@ IFS分为:DIFS、SIFS、EIFS</p>
 <a class="header-anchor" href="#%e4%bf%a1%e9%81%93%e5%88%a9%e7%94%a8%e7%8e%87%e7%9a%84%e8%ae%a1%e7%ae%97"></a>
 信道利用率的计算
 </h4><p><strong>RTT:Round-Trip Time  往返时延      RTT/2:单程时延      发送周期Tf + Tack + RTT</strong></p>
+</li>
+</ul>
 <img src="/note_images/computer_network/image-20260505132229896.png" alt="image-20260505132229896" style="zoom: 25%;" />
 <h5 id="可靠传输">
 <a class="header-anchor" href="#%e5%8f%af%e9%9d%a0%e4%bc%a0%e8%be%93"></a>
@@ -1081,9 +1137,9 @@ MAC地址：
 <a class="header-anchor" href="#%e6%97%a0%e7%ba%bf%e5%b1%80%e5%9f%9f%e7%bd%91%e8%a1%a5%e5%85%85"></a>
 无线局域网补充
 </h5><p>408自己去视频看</p>
-<h1 id="网络层">
-<a class="header-anchor" href="#%e7%bd%91%e7%bb%9c%e5%b1%82"></a>
-网络层
+<h1 id="三网络层">
+<a class="header-anchor" href="#%e4%b8%89%e7%bd%91%e7%bb%9c%e5%b1%82"></a>
+三、网络层
 </h1><p>网络层主要负责端到端（End-to-End）的数据传输，其主要功能包括：</p>
 <ul>
 <li>异构网络互联：连接不同类型的网络。</li>
@@ -1092,18 +1148,34 @@ MAC地址：
 </ul>
 <p>目标地址可以是多个网络通过路由器连接而成的某个地址</p>
 <p>该层负责<strong>寻址和路由选择</strong></p>
+<h3 id="服务类型">
+<a class="header-anchor" href="#%e6%9c%8d%e5%8a%a1%e7%b1%bb%e5%9e%8b"></a>
+服务类型
+</h3><p>服务类型不止代表网络层，它不是网络层专属概念，各个层次都可能有，但在 TCP/IP 里最关键的是：<strong>网络层（IP）一般是无连接的，有连接在传输层（TCP）</strong>。</p>
 <h4 id="无连接服务">
 <a class="header-anchor" href="#%e6%97%a0%e8%bf%9e%e6%8e%a5%e6%9c%8d%e5%8a%a1"></a>
-无连接服务
+无连接服务:
 </h4><p>每个数据包都是独立的，彼此之间没有关联。此时数据报通常被称为<strong>数据报</strong>，这种网络通常被称为<strong>数据报网络</strong>(Datagram Network)</p>
 <h4 id="有连接服务">
 <a class="header-anchor" href="#%e6%9c%89%e8%bf%9e%e6%8e%a5%e6%9c%8d%e5%8a%a1"></a>
-有连接服务
+有连接服务:
 </h4><p>发送接收方在数据传输之前需要通过网络建立一条虚拟的通信路径（<strong>虚电路</strong>），虚电路始终存在直到通信结束，此时网络成为<strong>虚电路网络</strong>(Virtual-Circuit Network)</p>
 <img src="/note_images/computer_network/image-20260505161725767.png" alt="image-20260505161725767" style="zoom: 33%;" />
-<p><strong>路由</strong>：规划路线</p>
-<p>路由表：包括目的IP地址、子网掩码、下一跳IP地址（指路由器IP地址，最终目的的地址不算在内）、出接口（等）</p>
+<h4 id="一些概念">
+<a class="header-anchor" href="#%e4%b8%80%e4%ba%9b%e6%a6%82%e5%bf%b5"></a>
+一些概念:
+</h4><p><strong>路由</strong>：规划路线</p>
+<p><strong>路由表</strong>：包括目的IP地址、子网掩码、下一跳IP地址（指路由器IP地址，<strong>最终目的的地址不算在内</strong>）、出接口（等）。
+反映的是“到各个目的网络的转发路径”，而不是直接反映“该路由器与所有其他路由器的连接关系”</p>
 <p><strong>转发</strong>：真正执行</p>
+<p><strong>路由器</strong>：是工作在网络层的设备，用于在不同网络之间转发分组（IP 数据报）。
+主要作用:</p>
+<ul>
+<li>连接不同的网络：局域网 ↔ 局域网、内网 ↔ 互联网</li>
+<li>转发（Forwarding）：根据目的 IP 地址，查路由表，决定从哪个接口送出</li>
+<li>路由选择（Routing）：运行路由协议（RIP/OSPF/BGP 等），学习/维护路由信息</li>
+<li>隔离广播域：路由器不转发广播（这是它与交换机的重要区别之一）</li>
+</ul>
 <img src="/note_images/computer_network/image-20260505162002656.png" alt="image-20260505162002656" style="zoom:25%;" />
 <h3 id="网络层路由算法">
 <a class="header-anchor" href="#%e7%bd%91%e7%bb%9c%e5%b1%82%e8%b7%af%e7%94%b1%e7%ae%97%e6%b3%95"></a>
@@ -1117,32 +1189,88 @@ MAC地址：
 <a class="header-anchor" href="#%e5%8a%a8%e6%80%81%e8%b7%af%e7%94%b1%e7%ae%97%e6%b3%95"></a>
 动态路由算法
 </h4><p>路由器通过路由协议自动更新路由信息。</p>
+<p>以下是是一类路由算法的<strong>思想</strong></p>
 <ul>
-<li>距离向量路由协议：根据跳数选择路径（如 RIP）。</li>
+<li><strong>距离向量路由协议</strong>：根据跳数选择路径（如 RIP协议使用了该算法）。
+Distance-Vector Routing Protoco</li>
 </ul>
 <p>每次某个节点更新，重新计算一遍到达各个点的最短路径(针对变换的节点运行一列迪杰斯特拉算法即可)</p>
 <img src="/note_images/computer_network/image-20260505163451624.png" alt="image-20260505163451624" style="zoom: 33%;" />
 <p>但是链路断了之后会出现无穷记数问题</p>
 <ul>
-<li>链路状态路由协议：考虑链路带宽、延迟等因素（如 OSPF）。</li>
+<li><strong>链路状态路由协议</strong>：考虑链路带宽、延迟等因素（如 OSPF）。
+Link-State Routing Protocol</li>
 </ul>
 <p>每个路由器通过广播自己与邻居的链路状态（带宽、延迟）给全网，每个路由器最终都构建出相同的网络拓补图。
 每个路由器用Dijkstra算法计算出到各节点的最短路径 -&gt; 路由表</p>
 <img src="/note_images/computer_network/image-20260505164020907.png" alt="image-20260505164020907" style="zoom:25%;" />
 <img src="/note_images/computer_network/image-20260505170036901.png" alt="image-20260505170036901" style="zoom: 25%;" />
 <ul>
-<li>路径向量路由协议：结合前两种优点（如 BGP）。</li>
+<li><strong>路径向量路由协议</strong>（= 路径矢量）：结合前两种优点（如 BGP）。</li>
 </ul>
+<p>主要用于<strong>自治系统（AS）之间的路由选择</strong></p>
+<h3 id="路由协议">
+<a class="header-anchor" href="#%e8%b7%af%e7%94%b1%e5%8d%8f%e8%ae%ae"></a>
+路由协议
+</h3><p>所谓协议，就是<strong>路由算法的实现</strong>，是<strong>具体实现</strong>了这个思想的一个协议</p>
+<p>路由器是 工作在网络层的设备，可连接多个局域网或广域网，提供路由和转发两个功能(对路由器来说)</p>
+<p>转发：每个数据包到达路由器时，在路由表中查找此是举报应该使用哪条输出线路
+路由：负责填充和更新路由表</p>
+<p>路由协议可分为<strong>域间</strong>路由协议和<strong>域内</strong>路由协议(一个区域中的局域网)</p>
+<h4 id="域内路由协议内部网关协议">
+<a class="header-anchor" href="#%e5%9f%9f%e5%86%85%e8%b7%af%e7%94%b1%e5%8d%8f%e8%ae%ae%e5%86%85%e9%83%a8%e7%bd%91%e5%85%b3%e5%8d%8f%e8%ae%ae"></a>
+域内路由协议/内部网关协议
+</h4><p>Interior Gateway Protocols（IGP）</p>
+<h5 id="rip路由信息-协议">
+<a class="header-anchor" href="#rip%e8%b7%af%e7%94%b1%e4%bf%a1%e6%81%af-%e5%8d%8f%e8%ae%ae"></a>
+RIP(路由信息) 协议
+</h5><p>RIP（Routing Information Protocol）：基于<strong>距离向量</strong>的路由协议。</p>
+<ul>
+<li>使用跳数作为度量，最大跳数为 15，等于16时 表示不可达。</li>
+<li>路由器每 30 秒向邻居广播自己的路由表。</li>
+<li>简单但收敛（各路由表趋近稳定）速度慢，适用于小型网络。</li>
+<li>路由表包含字段：目的网络、条数、下一跳IP地址</li>
+</ul>
+<p>RIP协议本身工作在应用层，基于<strong>UDP</strong>协议封装报文，使用一小规模网络</p>
+<p>好消息传得快，坏消息传得慢</p>
+<h5 id="ospf-开放式最短路径协议">
+<a class="header-anchor" href="#ospf-%e5%bc%80%e6%94%be%e5%bc%8f%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%84%e5%8d%8f%e8%ae%ae"></a>
+OSPF (开放式最短路径)协议
+</h5><p>OSPF（Open Shortest Path First）：基于<strong>链路状态</strong>的路由协议。</p>
+<ul>
+<li>使用 Dijkstra 算法计算最短路径。</li>
+<li>路由器仅在链路状态变化时发送更新。</li>
+<li>支持区域划分，可用于大型网络。</li>
+<li>收敛速度快，支持等价多路径。</li>
+</ul>
+<p>工作在网络层，数据封装在IP分组中进行传输(传输协议为<strong>IP</strong>)</p>
+<h4 id="域间路由协议外部网关协议">
+<a class="header-anchor" href="#%e5%9f%9f%e9%97%b4%e8%b7%af%e7%94%b1%e5%8d%8f%e8%ae%ae%e5%a4%96%e9%83%a8%e7%bd%91%e5%85%b3%e5%8d%8f%e8%ae%ae"></a>
+域间路由协议/外部网关协议
+</h4><p>（Exterior Gateway Protocol，简称 EGP）</p>
+<h5 id="bgp-边界网关协议">
+<a class="header-anchor" href="#bgp-%e8%be%b9%e7%95%8c%e7%bd%91%e5%85%b3%e5%8d%8f%e8%ae%ae"></a>
+BGP (边界网关)协议
+</h5><p>BGP（Border Gateway Protocol）：自治系统之间的路由协议。基于<strong>路径向量</strong>路由算法</p>
+<ul>
+<li>路径向量协议，考虑路由策略而非最短路径。</li>
+<li>通过 TCP 连接交换路由信息，可靠性高。</li>
+<li>用于 Internet 骨干网路由。</li>
+</ul>
+<p>协议工作在应用层，基于<strong>TCP</strong>协议封装报文,适用于大型跨域网络</p>
+<img src="/note_images/computer_network/image-20260507083444278.png" alt="image-20260507083444278" style="zoom:50%;" />
 <h3 id="ipv4数据报格式">
 <a class="header-anchor" href="#ipv4%e6%95%b0%e6%8d%ae%e6%8a%a5%e6%a0%bc%e5%bc%8f"></a>
 IPV4数据报格式
 </h3><p>又称分组/IP分组/数据包</p>
 <p>格式：包含首部和数据部分，首部20~60B,数据部分65535B,最大传输单元（MTU）</p>
+<p><strong>IP</strong>是什么:IP是一种协议，用来实现<strong>异构网络互连</strong>和<strong>主机到主机的分组交付</strong>。分为Ipv4和Ipv6两个版本</p>
+<p><strong>注意</strong>：当出现经典分片问题（比如MTU不同）时，应注意“分片级”的总长度会变，数据报长度也会变，但<strong>重组</strong>后的 IP 数据报的总长度不变</p>
 <img src="/note_images/computer_network/image-20260505170654142.png" alt="image-20260505170654142" style="zoom:33%;" />
 <p>前五行20B,选项长度可变</p>
 <p>版本：规定了数据报的IP协议版本</p>
 <p>首部长度：四个字节为单位 -&gt; 5~15</p>
-<p>数据报长度：整个IP数据报（头部+数据）的长度，单位字节。理论最大长度65535B，但很少有超过1500B的。</p>
+<p><strong>数据报长度</strong>：整个IP数据报（头部+数据）的长度，单位字节。理论最大长度65535B，但很少有超过1500B的，最小长度为20。虽然由于帧要求数据段至少46B，但是IP 层不关心 padding，数据链路层负责，此时数据链路层会自动填充数据至46 -&gt; 总共64B</p>
 <p>**标识：**唯一标识一个原始数据报，用于分片和重组。当一个打的数据报被分片之后，<strong>各分片都带有相同的标识值，以便目的端正确重组</strong>。</p>
 <p>标志：第一位为0，第二位DF为1是部分篇，第三位MF最后一片为0，其他为1</p>
 <p>片偏移量：当前分片在原属数据报中的位置，单位是八个字节，那么则有👇</p>
@@ -1157,6 +1285,14 @@ IPV4数据报格式
 <a class="header-anchor" href="#%e5%9c%b0%e5%9d%80"></a>
 地址：
 </h5><p><strong>此处的地址是IP地址，帧头的地址为Mac地址</strong></p>
+<h3 id="ipv6数据报">
+<a class="header-anchor" href="#ipv6%e6%95%b0%e6%8d%ae%e6%8a%a5"></a>
+IPV6数据报
+</h3><p>长度为16个字节（128bit）,通常是以八段16进制表示，每段16b</p>
+<p>连续的0可以简写成&quot;  ::  &quot;</p>
+<p>IPV6数据报有与IPV4相同的地方，也有完全不同的地方</p>
+<img src="/note_images/computer_network/image-20260505211815348.png" alt="image-20260505211815348" style="zoom: 33%;" />
+<img src="/note_images/computer_network/image-20260505212015376.png" alt="image-20260505212015376" style="zoom: 25%;" />
 <h3 id="ip地址">
 <a class="header-anchor" href="#ip%e5%9c%b0%e5%9d%80"></a>
 IP地址
@@ -1175,6 +1311,7 @@ IP 地址分类：
 </ul>
 <img src="/note_images/computer_network/image-20260505172756398.png" alt="image-20260505172756398" style="zoom:50%;" />
 <p>主机数和部分网络号，全0或全1不可使用，计算总数需要-1 / -2</p>
+<p><strong>注意</strong>：A、B、C类前面的固定的序列是识别特征，<strong>总共</strong>的网络号是8、16、24位，7、14、21也行但是要记住<strong>网络掩码( = 子网掩码 )是8、16、24</strong>位</p>
 <h6 id="全为0">
 <a class="header-anchor" href="#%e5%85%a8%e4%b8%ba0"></a>
 全为0：
@@ -1268,7 +1405,7 @@ DHCP:
 </h4><h6 id="源ip地址怎么获取">
 <a class="header-anchor" href="#%e6%ba%90ip%e5%9c%b0%e5%9d%80%e6%80%8e%e4%b9%88%e8%8e%b7%e5%8f%96"></a>
 源IP地址怎么获取?
-</h6><p>动态主机配置协议 -&gt;  一个新的主机接入互联网时怎么自动获得IP地址</p>
+</h6><p>动态主机配置协议(Dynamic Host Configuration Protocol) -&gt;  一个新的主机接入互联网时怎么自动获得IP地址</p>
 <p>一个新的主机接入时通过路由向局域网DHCP服务器发送信息后局域网DHCP服务器给机器分配地址，没有则（可能通过配置中继）到达外网DHCP服务器获取</p>
 <h4 id="arp">
 <a class="header-anchor" href="#arp"></a>
@@ -1287,7 +1424,7 @@ ARP:
 <h3 id="nat">
 <a class="header-anchor" href="#nat"></a>
 NAT
-</h3><p>NAT：网络地址转换</p>
+</h3><p>NAT：Network Address Translation 网络地址转换 是一种技术而非协议</p>
 <p>公网IPV4地址游戏，内部网络设备日益增多，导致IPV4地址枯竭</p>
 <p>前篇提过的<strong>私有地址</strong>，<img src="/note_images/computer_network/image-20260505211223157.png" alt="image-20260505211223157" style="zoom: 25%;" /></p>
 <p>NAT将私有地址转化为外网认识的IP地址，多个内网进程同时访问时通过端口号来区分</p>
@@ -1295,77 +1432,20 @@ NAT
 <h5 id="默认网关内网转外网的中转站">
 <a class="header-anchor" href="#%e9%bb%98%e8%ae%a4%e7%bd%91%e5%85%b3%e5%86%85%e7%bd%91%e8%bd%ac%e5%a4%96%e7%bd%91%e7%9a%84%e4%b8%ad%e8%bd%ac%e7%ab%99"></a>
 默认网关：内网转外网的中转站
-</h5><h3 id="ipv6数据报">
-<a class="header-anchor" href="#ipv6%e6%95%b0%e6%8d%ae%e6%8a%a5"></a>
-IPV6数据报
-</h3><p>长度为16个字节（128bit）,通常是以八段16进制表示，每段16b</p>
-<p>连续的0可以简写成&quot;  ::  &quot;</p>
-<p>IPV6数据报有与IPV4相同的地方，也有完全不同的地方</p>
-<img src="/note_images/computer_network/image-20260505211815348.png" alt="image-20260505211815348" style="zoom: 33%;" />
-<img src="/note_images/computer_network/image-20260505212015376.png" alt="image-20260505212015376" style="zoom: 25%;" />
-<h3 id="路由协议">
-<a class="header-anchor" href="#%e8%b7%af%e7%94%b1%e5%8d%8f%e8%ae%ae"></a>
-路由协议
-</h3><p>所谓协议，就是<strong>路由算法的实现</strong></p>
-<p>路由器是 工作在网络层的设备，可连接多个局域网或广域网，提供路由和转发两个功能(对路由器来说)</p>
-<p>转发：每个数据包到达路由器时，在路由表中查找此是举报应该使用哪条输出线路
-路由：负责填充和更新路由表</p>
-<p>路由协议可分为<strong>域间</strong>路由协议和<strong>域内</strong>路由协议(一个区域中的局域网)</p>
-<h4 id="域内路由协议内部网关协议">
-<a class="header-anchor" href="#%e5%9f%9f%e5%86%85%e8%b7%af%e7%94%b1%e5%8d%8f%e8%ae%ae%e5%86%85%e9%83%a8%e7%bd%91%e5%85%b3%e5%8d%8f%e8%ae%ae"></a>
-域内路由协议/内部网关协议
-</h4><p>Interior Gateway Protocols（IGP）</p>
-<h5 id="rip路由信息-协议">
-<a class="header-anchor" href="#rip%e8%b7%af%e7%94%b1%e4%bf%a1%e6%81%af-%e5%8d%8f%e8%ae%ae"></a>
-RIP(路由信息) 协议
-</h5><p>RIP（Routing Information Protocol）：基于<strong>距离向量</strong>的路由协议。</p>
-<ul>
-<li>使用跳数作为度量，最大跳数为 15，等于16时 表示不可达。</li>
-<li>路由器每 30 秒向邻居广播自己的路由表。</li>
-<li>简单但收敛（各路由表趋近稳定）速度慢，适用于小型网络。</li>
-<li>路由表包含字段：目的网络、条数、下一跳IP地址</li>
-</ul>
-<p>RIP协议本身工作在应用层，基于<strong>UDP</strong>协议封装报文，使用一小规模网络</p>
-<p>好消息传得快，坏消息传得慢</p>
-<h5 id="ospf-开放式最短路径协议">
-<a class="header-anchor" href="#ospf-%e5%bc%80%e6%94%be%e5%bc%8f%e6%9c%80%e7%9f%ad%e8%b7%af%e5%be%84%e5%8d%8f%e8%ae%ae"></a>
-OSPF (开放式最短路径)协议
-</h5><p>OSPF（Open Shortest Path First）：基于<strong>链路状态</strong>的路由协议。</p>
-<ul>
-<li>使用 Dijkstra 算法计算最短路径。</li>
-<li>路由器仅在链路状态变化时发送更新。</li>
-<li>支持区域划分，可用于大型网络。</li>
-<li>收敛速度快，支持等价多路径。</li>
-</ul>
-<p>工作在网络层，数据封装在IP分组中进行传输(传输协议为<strong>IP</strong>)</p>
-<h4 id="域间路由协议外部网关协议">
-<a class="header-anchor" href="#%e5%9f%9f%e9%97%b4%e8%b7%af%e7%94%b1%e5%8d%8f%e8%ae%ae%e5%a4%96%e9%83%a8%e7%bd%91%e5%85%b3%e5%8d%8f%e8%ae%ae"></a>
-域间路由协议/外部网关协议
-</h4><p>（Exterior Gateway Protocol，简称 EGP）</p>
-<h5 id="bgp-边界网关协议">
-<a class="header-anchor" href="#bgp-%e8%be%b9%e7%95%8c%e7%bd%91%e5%85%b3%e5%8d%8f%e8%ae%ae"></a>
-BGP (边界网关)协议
-</h5><p>BGP（Border Gateway Protocol）：自治系统之间的路由协议。基于<strong>路径向量</strong>路由算法</p>
-<ul>
-<li>路径向量协议，考虑路由策略而非最短路径。</li>
-<li>通过 TCP 连接交换路由信息，可靠性高。</li>
-<li>用于 Internet 骨干网路由。</li>
-</ul>
-<p>协议工作在应用层，基于<strong>TCP</strong>协议封装报文,适用于大型跨域网络</p>
-<img src="/note_images/computer_network/image-20260507083444278.png" alt="image-20260507083444278" style="zoom:50%;" />
-<h3 id="冲突域和广播域">
+</h5><h3 id="冲突域和广播域">
 <a class="header-anchor" href="#%e5%86%b2%e7%aa%81%e5%9f%9f%e5%92%8c%e5%b9%bf%e6%92%ad%e5%9f%9f"></a>
 冲突域和广播域：
 </h3><img src="/note_images/computer_network/image-20260507083743367.png" alt="image-20260507083743367" style="zoom:67%;" />
 <p>交换机所有端口同一广播域（不加Vlan，连接到交换机的可以被广播到），路由器隔离广播域（一个端口的广播不能传到另一个段考）</p>
-<h1 id="传输层">
-<a class="header-anchor" href="#%e4%bc%a0%e8%be%93%e5%b1%82"></a>
-传输层
+<h1 id="四传输层">
+<a class="header-anchor" href="#%e5%9b%9b%e4%bc%a0%e8%be%93%e5%b1%82"></a>
+四、传输层
 </h1><p>目标是向应用层上的<strong>进程</strong>提供高效、可靠、性价比合理的数据传输服务</p>
 <p>其主要功能包括：</p>
 <ul>
 <li><strong>进程间通信</strong>：通过端口号标识不同的应用进程。</li>
-<li>提供多路复用/分用</li>
+<li>提供多路复用/分用（发送端）和多路分解（接收端）
+<strong>※核心功能</strong></li>
 <li>可靠数据传输：保证数据无差错、不丢失、不重复、按序到达。</li>
 <li>流量控制：避免发送方数据发送过快导致接收方缓冲区溢出。</li>
 <li>拥塞控制：防止过多数据注入网络导致网络性能下降。</li>
@@ -1381,6 +1461,7 @@ BGP (边界网关)协议
 <a class="header-anchor" href="#%e7%ab%af%e5%8f%a3%e9%95%bf%e5%ba%a616b065535"></a>
 端口长度16b,0~65535
 </h4><img src="/note_images/computer_network/image-20260507090627200.png" alt="image-20260507090627200" style="zoom:50%;" />
+<p><strong>Socket = IP 地址 + 端口号</strong>，是操作系统提供给应用程序的接口，让应用能通过 TCP/IP 协议收发数据。</p>
 <h4 id="多播">
 <a class="header-anchor" href="#%e5%a4%9a%e6%92%ad"></a>
 多播
@@ -1389,6 +1470,11 @@ BGP (边界网关)协议
 <a class="header-anchor" href="#%e5%a4%9a%e6%92%ad%e5%9c%b0%e5%9d%80"></a>
 多播地址
 </h5><p>IPv4 多播地址范围为 224.0.0.0 到 239.255.255.255（D 类地址）。 IPv6 多播地址前缀为 FF00::/8。</p>
+<h4 id="udp和tcp差异">
+<a class="header-anchor" href="#udp%e5%92%8ctcp%e5%b7%ae%e5%bc%82"></a>
+UDP和TCP差异
+</h4><p>TCP/UDP 是 <strong>传输层协议</strong>，本身<strong>不关心下层是有线还是无线</strong>，下层只要提供 <strong>IP 服务</strong> 就行。</p>
+<p>UDP 天然支持向组播地址发送数据报；TCP 是面向连接的单播协议，不支持组播。</p>
 <h3 id="udp">
 <a class="header-anchor" href="#udp"></a>
 UDP
@@ -1415,10 +1501,18 @@ UDP特点
 <li>无拥塞控制：不会根据网络状况调整发送速率。</li>
 <li>首部开销小：仅 8 字节，比 TCP 的 20 字节小。</li>
 </ul>
+<h5 id="常见使用">
+<a class="header-anchor" href="#%e5%b8%b8%e8%a7%81%e4%bd%bf%e7%94%a8"></a>
+常见使用：
+</h5><p>DNS查询、DHCP、直播游戏</p>
 <h3 id="tcp">
 <a class="header-anchor" href="#tcp"></a>
 TCP
 </h3><p>TCP是一种全双工通信方式</p>
+<h5 id="常见使用-1">
+<a class="header-anchor" href="#%e5%b8%b8%e8%a7%81%e4%bd%bf%e7%94%a8-1"></a>
+常见使用：
+</h5><p>网页浏览（HTTP）、文件传输（FTP）、邮件（SMTP、POP3）</p>
 <h5 id="tcp报文格式">
 <a class="header-anchor" href="#tcp%e6%8a%a5%e6%96%87%e6%a0%bc%e5%bc%8f"></a>
 TCP报文格式
@@ -1436,12 +1530,12 @@ TCP报文格式
 <li>紧急指针（16 位）：当 URG 标志为 1 时有效，指向紧急数据的最后一个字节。</li>
 <li>选项（可变长度）：最大报文段长度（MSS）、窗口扩大等。</li>
 </ul>
-<h5 id="tcp报文序号">
-<a class="header-anchor" href="#tcp%e6%8a%a5%e6%96%87%e5%ba%8f%e5%8f%b7"></a>
-TCP报文—序号
-</h5><p>指示“本报文段所携带数据的第一个字节在连接发送方的序列号，用于在接收端进行重组和排序。在新词握手时，通信双方<strong>各自选择一个随机初始序号</strong>，然后后续<strong>每发送一个字节</strong>，序号<strong>递增</strong>1</p>
+<h5 id="tcp报文序列号">
+<a class="header-anchor" href="#tcp%e6%8a%a5%e6%96%87%e5%ba%8f%e5%88%97%e5%8f%b7"></a>
+TCP报文—序列号
+</h5><p>指示“本报文段所携带数据的第一个字节在连接发送方的<strong>序列号</strong>，用于在接收端进行重组和排序。在新词握手时，通信双方<strong>各自选择一个随机初始序号</strong>，然后后续<strong>每发送一个字节</strong>，序号<strong>递增</strong>1</p>
 <p>1.开始时，SYN是开始建立标志，结束时FIN是结束建立标志</p>
-<p>2.seq代表的是是当前字段的序列号，ack代表某一端下一次收到信息时想要得到的序列号，其由seq和data_len（数据长度）决定</p>
+<p>2.seq代表的是是当前字段的序列号，ack是<strong>确认号</strong>，代表某一端下一次收到信息时想要得到的序列号，其由seq和data_len（数据长度）决定</p>
 <p>**注意：**以下两个主机是可以相互传输的，所以并没有谁一定是服务器，下面只是做了简化</p>
 <h5 id="连接建立三次握手">
 <a class="header-anchor" href="#%e8%bf%9e%e6%8e%a5%e5%bb%ba%e7%ab%8b%e4%b8%89%e6%ac%a1%e6%8f%a1%e6%89%8b"></a>
@@ -1502,8 +1596,8 @@ TCP可靠传输
 <p>当发送方连续发送多个报文段而缺失了一个导致乱序时，接收方会重复发送最后一个<strong>按序到达</strong>的报文段的 ACK，当发送端收到3个冗余ACK时，不再等待超时，立刻重传</p>
 <p>累计确认：发送方虽然缺失了中间的确认断，但是既然能跳过正面传输成功(类似后退N帧)</p>
 <img src="/note_images/computer_network/image-20260507173400793.png" alt="image-20260507173400793" style="zoom:25%;" />
-<h4 id="停止-等待协议">
-<a class="header-anchor" href="#%e5%81%9c%e6%ad%a2-%e7%ad%89%e5%be%85%e5%8d%8f%e8%ae%ae"></a>
+<h4 id="停止-等待协议-1">
+<a class="header-anchor" href="#%e5%81%9c%e6%ad%a2-%e7%ad%89%e5%be%85%e5%8d%8f%e8%ae%ae-1"></a>
 停止-等待协议
 </h4><p>通常只配合<strong>超时重传</strong>（因为同一时间只有一个包在飞，很难形成连续的重复 ACK，所以一般不具备快速重传条件）。</p>
 <p>工作原理：</p>
@@ -1516,8 +1610,7 @@ TCP可靠传输
 <h4 id="滑动窗口协议-1">
 <a class="header-anchor" href="#%e6%bb%91%e5%8a%a8%e7%aa%97%e5%8f%a3%e5%8d%8f%e8%ae%ae-1"></a>
 滑动窗口协议
-</h4><p>同时采用<strong>超时重传 + 快速重传</strong>。滑动窗口允许有多个包在飞，接收方会在收到乱序包时发重复 ACK，从而具备了触发快速重传的条件。</p>
-<p>滑动窗口协议允许发送方在等待确认的同时发送多个分组，提高信道利用率。</p>
+</h4><p>滑动窗口协议允许发送方在等待确认的同时发送多个分组，提高信道利用率。</p>
 <ul>
 <li>发送窗口：发送方允许发送的数据范围。</li>
 <li>接收窗口：接收方允许接收的数据范围。</li>
@@ -1548,7 +1641,7 @@ TCP流量控制
 <p><strong>TCP 拥塞控制算法</strong>包括：</p>
 <ul>
 <li>慢(一开始注入的报文少)启动：初始拥塞窗口小，指数增长直到达到阈值(ssthresh值)。</li>
-<li>拥塞避免(乘法减小 or Multiplicative decrease)：阈值后线性增长，避免网络拥塞。并将慢启动阈值修改为发生拥塞时cwnd的一半，并使cwnd = 1(只是使网络相对不容易出现拥塞)</li>
+<li>拥塞避免(Congestion Avoidion)：阈值后线性增长，避免网络拥塞。并将慢启动阈值修改为发生拥塞时cwnd的一半，并使cwnd = 1(只是使网络相对不容易出现拥塞)</li>
 </ul>
 <p><code>=============================两两一对========================</code></p>
 <ul>
@@ -1556,13 +1649,13 @@ TCP流量控制
 </ul>
 <img src="/note_images/computer_network/image-20260507180110299.png" alt="image-20260507180110299" style="zoom:25%;" />
 <ul>
-<li>快速恢复：<strong>重传</strong>后直接进入拥塞避免阶段，执行快恢复算法，不执行慢启动。
+<li>快速恢复：<strong>重传</strong>后直接进入拥塞避免阶段，执行快恢复算法，不执行慢启动。常用到乘法减小 or Multiplicative decrease
 快恢复算法：ssthresh值和cwnd都调整为当前cwnd一般并开始执行拥塞避免算法</li>
 </ul>
 <p>TCP 拥塞控制的核心思想是”加性增、乘性减”，即在没有拥塞时窗口大小线性增加，发生拥塞时窗口大小乘性减少。</p>
-<h1 id="应用层">
-<a class="header-anchor" href="#%e5%ba%94%e7%94%a8%e5%b1%82"></a>
-应用层
+<h1 id="五应用层">
+<a class="header-anchor" href="#%e4%ba%94%e5%ba%94%e7%94%a8%e5%b1%82"></a>
+五、应用层
 </h1><p>主要包括域名系统和几个网络协议</p>
 <h3 id="域名系统">
 <a class="header-anchor" href="#%e5%9f%9f%e5%90%8d%e7%b3%bb%e7%bb%9f"></a>
@@ -1585,7 +1678,7 @@ TCP流量控制
 <p>子域：二级域下的进一步划分，组织内部划分，如 mail.google.com 中的 mail。</p>
 </li>
 </ul>
-<pre tabindex="0"><code>       mail . google . cn
+<pre tabindex="0"><code>      mail . google . cn
 	//子域     二级域   顶级域
 </code></pre><h5 id="dns服务器层级">
 <a class="header-anchor" href="#dns%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%b1%82%e7%ba%a7"></a>
@@ -1619,7 +1712,7 @@ Saurlax中的域名解析过程：
 <h3 id="ftp">
 <a class="header-anchor" href="#ftp"></a>
 FTP
-</h3><p><strong>文本传输协议FTP(File Transfer Protocol)</strong></p>
+</h3><p><strong>文本传输协议FTP(File Transfer Protocol)</strong>，是一种Out-of-band（ 带外的）传输方式，即控制信息与数据不通过一个连接传输，称控制信息是带外的。与带外相反，In-band 带内的，如HTTP协议。</p>
 <p>FTP 使用两个并行的 TCP 连接：</p>
 <ul>
 <li>控制连接（端口 21）：用于传输命令和响应（如上传下载）。</li>
@@ -1751,6 +1844,67 @@ URI包含URL</p>
       </tr>
   </tbody>
 </table>
+<h3 id="p2p架构">
+<a class="header-anchor" href="#p2p%e6%9e%b6%e6%9e%84"></a>
+P2P架构：
+</h3><ul>
+<li><strong>无严格角色划分</strong>：每个节点既是客户端也是服务器（称为“对等体 Peer”），既能请求资源，也能向其他节点提供资源。</li>
+<li><strong>资源分布式管理</strong>：共享资源分散在所有对等体的本地，无需依赖中心服务器。</li>
+<li><strong>扩展性强</strong>：新增节点不仅会消耗资源，也会带来新的资源和服务能力，系统整体容量随节点数增加自然提升。</li>
+<li><strong>动态性强</strong>：节点可自由加入/离开网络，拓扑变化频繁。</li>
+</ul>
+<h5 id="原理">
+<a class="header-anchor" href="#%e5%8e%9f%e7%90%86"></a>
+原理：
+</h5><p><strong>每个节点既是客户端又是服务器（Peer）</strong>，不再完全依赖中心服务器分发数据。</p>
+<ol>
+<li><strong>文件分块</strong>：把一个大文件切成多个小片（Piece/Chunk）。</li>
+<li><strong>初始拥有者</strong>：一开始只有种子节点（Seed）拥有完整文件。</li>
+<li><strong>互相交换</strong>：节点下载到某个片后，就可以给其他还在下载的节点（Leecher）上传这个片。</li>
+</ol>
+<h5 id="上传和下载的最小时间">
+<a class="header-anchor" href="#%e4%b8%8a%e4%bc%a0%e5%92%8c%e4%b8%8b%e8%bd%bd%e7%9a%84%e6%9c%80%e5%b0%8f%e6%97%b6%e9%97%b4"></a>
+上传和下载的最小时间
+</h5><p>假设场景：</p>
+<ul>
+<li>一个文件大小为 <strong>F</strong>（单位：bit 或 MB，注意统一）。</li>
+<li>服务器上传速率：<strong>u_s</strong>。</li>
+<li>有 <strong>N 个 Peer</strong>，每个 Peer 的上传速率为 <strong>u_i</strong>，下载速率为 <strong>d_i</strong>（若所有 Peer 相同，则 u_i = u，d_i = d）。</li>
+<li>目标是：<strong>所有 N 个 Peer 都完整拿到这个文件</strong>，求最短时间 <strong>T_min</strong>。</li>
+</ul>
+<p>则  T_p2p = max( N*F / (u_s + Σu_i),  F / d_max )</p>
+<p>纯CS架构：T_cs = F / u_s + F / d_min,当d足够大时T_cs ≈ N*F / u_s</p>
+<h5 id="典型应用">
+<a class="header-anchor" href="#%e5%85%b8%e5%9e%8b%e5%ba%94%e7%94%a8"></a>
+典型应用
+</h5><p>早期：BitTorrent 下载、电驴、比特币等区块链网络；现在也有部分即时通讯、分布式存储系统采用 P2P 思路</p>
+<h5 id="bittorrent-协议">
+<a class="header-anchor" href="#bittorrent-%e5%8d%8f%e8%ae%ae"></a>
+BitTorrent 协议
+</h5><p>是最具代表性的 <strong>P2P 文件分发协议</strong>，目标是：让一个大文件能被高效、快速地分发给大量用户，同时避免中心服务器带宽瓶颈</p>
+<h5 id="最稀缺优先原则">
+<a class="header-anchor" href="#%e6%9c%80%e7%a8%80%e7%bc%ba%e4%bc%98%e5%85%88%e5%8e%9f%e5%88%99"></a>
+最稀缺优先原则
+</h5><p>每个 Peer 会统计：当前 Swarm（群/节点，同一个torrent所有 Peer（节点）的集合） 中，每一个 Piece 有多少个 Peer 拥有</p>
+<p><strong>优先下载“拥有者最少”的 Piece</strong></p>
+<h3 id="cs架构">
+<a class="header-anchor" href="#cs%e6%9e%b6%e6%9e%84"></a>
+CS架构：
+</h3><p>Client/Server，客户端/服务器</p>
+<ul>
+<li><strong>角色严格分离</strong>：
+<ul>
+<li>服务器（Server）：一直在线，拥有固定公网 IP，专门提供资源/服务（如 Web 服务器、邮件服务器）。</li>
+<li>客户端（Client）：按需发起请求，向服务器获取服务，不直接与其他客户端通信。</li>
+</ul>
+</li>
+<li><strong>资源集中管理</strong>：所有共享资源（文件、数据、计算能力）都存储在服务器端，客户端不共享自身资源。</li>
+<li><strong>扩展性弱</strong>：服务器容易成为性能瓶颈，用户量增大时需升级服务器硬件或做服务器集群。</li>
+</ul>
+<h5 id="典型应用-1">
+<a class="header-anchor" href="#%e5%85%b8%e5%9e%8b%e5%ba%94%e7%94%a8-1"></a>
+典型应用
+</h5><p>Web 浏览（浏览器/Web 服务器）、电子邮件（邮件客户端/邮件服务器）、FTP、SSH 等。</p>
 </div>
     <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
     <a
@@ -1799,10 +1953,10 @@ URI包含URL</p>
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;8.1k</span
+          >&nbsp;8.4k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;00:44</span>
+        <span class="icon-coffee">&nbsp;00:45</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -1828,19 +1982,19 @@ URI包含URL</p>
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#计算机网络">计算机网络</a>
+    <li><a href="#计网">计网</a>
       <ul>
         <li><a href="#计网模型">计网模型</a>
           <ul>
-            <li><a href="#osi模型计网七大层次">OSI模型计网七大层次：</a>
+            <li><a href="#1osi模型计网七大层次">1.OSI模型计网七大层次：</a>
               <ul>
                 <li></li>
               </ul>
             </li>
-            <li><a href="#tcpip模型四层次">TCP/IP模型四层次：</a></li>
+            <li><a href="#2tcpip模型四层次">2.TCP/IP模型四层次：</a></li>
           </ul>
         </li>
-        <li><a href="#五层参考模型">※五层参考模型</a>
+        <li><a href="#3五层参考模型">※3.五层参考模型</a>
           <ul>
             <li><a href="#每一层的用处">每一层的用处</a>
               <ul>
@@ -1852,7 +2006,16 @@ URI包含URL</p>
         <li><a href="#计算机网络的定义">计算机网络的定义</a>
           <ul>
             <li><a href="#基本概念">基本概念</a></li>
-            <li><a href="#网络分类">网络分类：</a>
+            <li><a href="#网络分类">网络分类：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#一物理层">一、物理层</a>
+      <ul>
+        <li>
+          <ul>
+            <li>
               <ul>
                 <li></li>
               </ul>
@@ -1862,7 +2025,7 @@ URI包含URL</p>
                 <li></li>
               </ul>
             </li>
-            <li><a href="#物理层设备">物理层设备：</a></li>
+            <li><a href="#物理设备">物理设备：</a></li>
             <li><a href="#传输标准命名规则">传输标准命名规则：</a></li>
             <li><a href="#编码">编码：</a>
               <ul>
@@ -1899,7 +2062,7 @@ URI包含URL</p>
         </li>
       </ul>
     </li>
-    <li><a href="#数据链路层">数据链路层</a>
+    <li><a href="#二数据链路层">二、数据链路层</a>
       <ul>
         <li>
           <ul>
@@ -1909,7 +2072,11 @@ URI包含URL</p>
                 <li><a href="#网络链路">网络链路：</a></li>
               </ul>
             </li>
-            <li><a href="#帧frame">帧（FRAME）</a></li>
+            <li><a href="#帧frame">帧（FRAME）</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
             <li><a href="#封装成帧的方法">封装成帧的方法：</a>
               <ul>
                 <li></li>
@@ -1920,7 +2087,7 @@ URI包含URL</p>
                 <li></li>
               </ul>
             </li>
-            <li><a href="#介质访问控制子层">介质访问控制子层</a>
+            <li><a href="#介质访问控制子层mac">介质访问控制子层(MAC)</a>
               <ul>
                 <li><a href="#信道分配静态信号分配前文亦有记载">信道分配：静态信号分配(前文亦有记载)</a></li>
                 <li><a href="#信道分配动态信号分配">信道分配：动态信号分配</a></li>
@@ -1950,14 +2117,15 @@ URI包含URL</p>
         </li>
       </ul>
     </li>
-    <li><a href="#网络层">网络层</a>
+    <li><a href="#三网络层">三、网络层</a>
       <ul>
         <li>
           <ul>
-            <li>
+            <li><a href="#服务类型">服务类型</a>
               <ul>
-                <li><a href="#无连接服务">无连接服务</a></li>
-                <li><a href="#有连接服务">有连接服务</a></li>
+                <li><a href="#无连接服务">无连接服务:</a></li>
+                <li><a href="#有连接服务">有连接服务:</a></li>
+                <li><a href="#一些概念">一些概念:</a></li>
               </ul>
             </li>
             <li><a href="#网络层路由算法">网络层路由算法</a>
@@ -1966,11 +2134,18 @@ URI包含URL</p>
                 <li><a href="#动态路由算法">动态路由算法</a></li>
               </ul>
             </li>
+            <li><a href="#路由协议">路由协议</a>
+              <ul>
+                <li><a href="#域内路由协议内部网关协议">域内路由协议/内部网关协议</a></li>
+                <li><a href="#域间路由协议外部网关协议">域间路由协议/外部网关协议</a></li>
+              </ul>
+            </li>
             <li><a href="#ipv4数据报格式">IPV4数据报格式</a>
               <ul>
                 <li></li>
               </ul>
             </li>
+            <li><a href="#ipv6数据报">IPV6数据报</a></li>
             <li><a href="#ip地址">IP地址</a>
               <ul>
                 <li><a href="#ip-地址分类">IP 地址分类：</a></li>
@@ -1997,19 +2172,12 @@ URI包含URL</p>
                 <li></li>
               </ul>
             </li>
-            <li><a href="#ipv6数据报">IPV6数据报</a></li>
-            <li><a href="#路由协议">路由协议</a>
-              <ul>
-                <li><a href="#域内路由协议内部网关协议">域内路由协议/内部网关协议</a></li>
-                <li><a href="#域间路由协议外部网关协议">域间路由协议/外部网关协议</a></li>
-              </ul>
-            </li>
             <li><a href="#冲突域和广播域">冲突域和广播域：</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#传输层">传输层</a>
+    <li><a href="#四传输层">四、传输层</a>
       <ul>
         <li>
           <ul>
@@ -2017,6 +2185,7 @@ URI包含URL</p>
               <ul>
                 <li><a href="#端口长度16b065535">端口长度16b,0~65535</a></li>
                 <li><a href="#多播">多播</a></li>
+                <li><a href="#udp和tcp差异">UDP和TCP差异</a></li>
               </ul>
             </li>
             <li><a href="#udp">UDP</a>
@@ -2032,7 +2201,7 @@ URI包含URL</p>
             <li><a href="#可靠传输-1">可靠传输</a>
               <ul>
                 <li><a href="#tcp可靠传输">TCP可靠传输</a></li>
-                <li><a href="#停止-等待协议">停止-等待协议</a></li>
+                <li><a href="#停止-等待协议-1">停止-等待协议</a></li>
                 <li><a href="#滑动窗口协议-1">滑动窗口协议</a></li>
               </ul>
             </li>
@@ -2050,7 +2219,7 @@ URI包含URL</p>
         </li>
       </ul>
     </li>
-    <li><a href="#应用层">应用层</a>
+    <li><a href="#五应用层">五、应用层</a>
       <ul>
         <li>
           <ul>
@@ -2069,6 +2238,16 @@ URI包含URL</p>
               </ul>
             </li>
             <li><a href="#http">HTTP</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#p2p架构">P2P架构：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#cs架构">CS架构：</a>
               <ul>
                 <li></li>
               </ul>
@@ -2194,7 +2373,7 @@ URI包含URL</p>
           author: "scqwq",
           title: "计网",
           url: "http:\/\/localhost:1313\/post\/%E8%AE%A1%E7%BD%91\/",
-          description: "\r计算机网络\r声明：本笔记参考\n视频：https:\/\/www.bilibili.com\/video\/BV1p69tYZEvN\n博客笔记：https:\/\/saurlax.com\/blog\/computer-network（部分懒得做笔记的地方是直接在他身上修改的）\n叠甲：本笔记仅供参考，易有错漏和不足，有一些后面加上的也来不及及时更新到网页上\n计网模型\rOSI模型计网七大层次：\r交换单元:\r1.应用层 APDU\rApplication Layer\n2.表示层 PPDU\rPresentation Layer\n3.会话层 SPUD\rSession Layer\n4.传输层 \u0026lt;\u0026ndash;各层协 …",
+          description: "\r计网\r声明：本笔记参考\n视频：https:\/\/www.bilibili.com\/video\/BV1p69tYZEvN\n博客笔记：https:\/\/saurlax.com\/blog\/computer-network（部分懒得做笔记的地方是直接在他身上修改的）\n叠甲：本笔记仅供参考，易有错漏和不足，有一些后面加上的也来不及及时更新到网页上\n计网模型\r1.OSI模型计网七大层次：\r交换单元:\r1.应用层 APDU\rApplication Layer\n2.表示层 PPDU\rPresentation Layer\n3.会话层 SPUD\rSession Layer\n4.传输层 \u0026lt;\u0026ndash;各层协议 …",
           cover: "http:\/\/localhost:1313\/images\/covers\/8.jpg",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {

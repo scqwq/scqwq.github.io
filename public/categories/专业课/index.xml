@@ -30,9 +30,9 @@
       <description>
         <![CDATA[<h1>计网</h1><p>Author: scqwq(xxx@example.com)</p>
         
-          <h1 id="计算机网络">
-<a class="header-anchor" href="#%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bd%91%e7%bb%9c"></a>
-计算机网络
+          <h1 id="计网">
+<a class="header-anchor" href="#%e8%ae%a1%e7%bd%91"></a>
+计网
 </h1><p>声明：本笔记参考</p>
 <p>视频：https://www.bilibili.com/video/BV1p69tYZEvN</p>
 <p>博客笔记：https://saurlax.com/blog/computer-network（部分懒得做笔记的地方是直接在他身上修改的）</p>
@@ -41,9 +41,9 @@
 <h2 id="计网模型">
 <a class="header-anchor" href="#%e8%ae%a1%e7%bd%91%e6%a8%a1%e5%9e%8b"></a>
 计网模型
-</h2><h3 id="osi模型计网七大层次">
-<a class="header-anchor" href="#osi%e6%a8%a1%e5%9e%8b%e8%ae%a1%e7%bd%91%e4%b8%83%e5%a4%a7%e5%b1%82%e6%ac%a1"></a>
-OSI模型计网七大层次：
+</h2><h3 id="1osi模型计网七大层次">
+<a class="header-anchor" href="#1osi%e6%a8%a1%e5%9e%8b%e8%ae%a1%e7%bd%91%e4%b8%83%e5%a4%a7%e5%b1%82%e6%ac%a1"></a>
+1.OSI模型计网七大层次：
 </h3><h5 id="交换单元">
 <a class="header-anchor" href="#%e4%ba%a4%e6%8d%a2%e5%8d%95%e5%85%83"></a>
 交换单元:
@@ -77,13 +77,14 @@ OSI模型计网七大层次：
 </h5><p>Physical Layer</p>
 <p>传输过程一定从上到下 再 从下到上</p>
 <p>同层之间可以在 <strong>逻辑上</strong> 以某种协议进行传输</p>
-<h3 id="tcpip模型四层次">
-<a class="header-anchor" href="#tcpip%e6%a8%a1%e5%9e%8b%e5%9b%9b%e5%b1%82%e6%ac%a1"></a>
-TCP/IP模型四层次：
-</h3><p>只有1、4、5、6，6为链路层层</p>
-<h2 id="五层参考模型">
-<a class="header-anchor" href="#%e4%ba%94%e5%b1%82%e5%8f%82%e8%80%83%e6%a8%a1%e5%9e%8b"></a>
-※五层参考模型
+<h3 id="2tcpip模型四层次">
+<a class="header-anchor" href="#2tcpip%e6%a8%a1%e5%9e%8b%e5%9b%9b%e5%b1%82%e6%ac%a1"></a>
+2.TCP/IP模型四层次：
+</h3><p>= TCP/IP协议栈</p>
+<p>应用层、传输层、网络层、链路层（网络接口层）</p>
+<h2 id="3五层参考模型">
+<a class="header-anchor" href="#3%e4%ba%94%e5%b1%82%e5%8f%82%e8%80%83%e6%a8%a1%e5%9e%8b"></a>
+※3.五层参考模型
 </h2><p>综合了<strong>SI 七层模型</strong>的理论严谨性和 <strong>TCP/IP 四层模型</strong>的实践简洁性</p>
 <p>应用、传输、网络、链路、物理:</p>
 <ul>
