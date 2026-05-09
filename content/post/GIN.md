@@ -63,7 +63,7 @@ map是键值字符串类型 string为键的类型 []string为值的类型
 
 **HTTP 响应（HTTP Response）** 是服务器收到客户端的 HTTP 请求后，返回给客户端的一组数据，用来告诉客户端**请求是否成功、返回什么内容、以及相关元数据**
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260224190641470.png" alt="image-20260224190641470" style="zoom: 67%;" />
+<img src="/note_images/others/image-20260224190641470.png" alt="image-20260224190641470" style="zoom: 67%;" />
 
 ###### 3.GIN的安装
 
@@ -174,7 +174,7 @@ c.FormFile("avatar")   // 上传的文件
 
 **路由组**是将**具有相同前缀的路由**进行分组管理，可以统一添加中间件、统一文档注释等。
 
-![image-20260309165917095](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260309165917095.png)
+![image-20260309165917095](/note_images/others/image-20260309165917095.png)
 
 例如:
 
@@ -227,11 +227,11 @@ defer resp.Body.Close()
 
 ###### 12.序列化
 
-![image-20260319202640594](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260319202640594.png)
+![image-20260319202640594](/note_images/others/image-20260319202640594.png)
 
 ###### 13.查询参数和路劲参数
 
-![image-20260319211409157](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260319211409157.png)
+![image-20260319211409157](/note_images/others/image-20260319211409157.png)
 
 
 
@@ -335,12 +335,12 @@ func main() {
 
 对于handlefunc,用于将路径映射于函数中
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260226120017193.png" alt="image-20260226120017193" style="zoom:67%;" />
+<img src="/note_images/others/image-20260226120017193.png" alt="image-20260226120017193" style="zoom:67%;" />
 
 注意：该函数必须包含两个参数，如以上代码和图所示
 
 对于ListenAndServe，调用后创建 TCP 监听器，绑定到指定地址 
-![image-20260226120115790](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260226120115790.png)
+![image-20260226120115790](/note_images/others/image-20260226120115790.png)
 
 ```go
 func helloHandler(w http.ResponseWriter, r *http.Request) {
@@ -360,7 +360,7 @@ b,_ := ioutil.ReadFile("./hello.txt")
 _,_ = fmt.Fprintln(w,string(b))
 ```
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260320164349436.png" alt="image-20260320164349436" style="zoom:50%;" />
+<img src="/note_images/others/image-20260320164349436.png" alt="image-20260320164349436" style="zoom:50%;" />
 
 ###### 4.HTML模板渲染
 

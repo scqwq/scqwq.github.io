@@ -407,12 +407,12 @@ This article does not have a corresponding language version
 </div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="os">
 <a class="header-anchor" href="#os"></a>
 OS
-</h1><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421130018195.png" alt="image-20260421130018195" style="zoom:67%;" />
+</h1><img src="/note_images/others/image-20260421130018195.png" alt="image-20260421130018195" style="zoom:67%;" />
 <h1 id="第三部分内存管理">
 <a class="header-anchor" href="#%e7%ac%ac%e4%b8%89%e9%83%a8%e5%88%86%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86"></a>
 第三部分:内存管理
-</h1><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422163029624.png" alt="image-20260422163029624"></p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422165512291.png" alt="image-20260422165512291"></p>
+</h1><p><img src="/note_images/others/image-20260422163029624.png" alt="image-20260422163029624"></p>
+<p><img src="/note_images/others/image-20260422165512291.png" alt="image-20260422165512291"></p>
 <p><img src="C:%5CUsers%5C56955%5CDesktop%5C333.png" alt="333"></p>
 <h3 id="31内存的基本概念">
 <a class="header-anchor" href="#31%e5%86%85%e5%ad%98%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
@@ -542,7 +542,7 @@ OS
 <li>每个<strong>页表</strong>由“页号(进程)”和“块号(内存)”组成，记录着进程页面和实际存放的内存块(或者叫页框)之间的映射关系</li>
 </ul>
 <p><strong>注意</strong>：一个页号和块号组成一个页表项，而通常只需计算记录块号所需要的空间，而页号连续存放（一个页表种各项是连续存放的，类比数组），是<strong>不占用存储空间</strong>的。另外，页号从0页开始且记录的是内存块号而非内存起始地址。J号内存块的起始地址 = J * 内存块大小</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423202036631.png" alt="image-20260423202036631" style="zoom:50%;" />
+<img src="/note_images/others/image-20260423202036631.png" alt="image-20260423202036631" style="zoom:50%;" />
 <h5 id="地址转换过程">
 <a class="header-anchor" href="#%e5%9c%b0%e5%9d%80%e8%bd%ac%e6%8d%a2%e8%bf%87%e7%a8%8b"></a>
 地址转换过程：
@@ -562,7 +562,7 @@ OS
 <h5 id="页表项">
 <a class="header-anchor" href="#%e9%a1%b5%e8%a1%a8%e9%a1%b9"></a>
 页表项:
-</h5><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423202728804.png" alt="image-20260423202728804" style="zoom:50%;" />
+</h5><img src="/note_images/others/image-20260423202728804.png" alt="image-20260423202728804" style="zoom:50%;" />
 <p><strong>页表项</strong> 至少包含：</p>
 <ul>
 <li><strong>物理页框号</strong>。</li>
@@ -614,7 +614,7 @@ OS
 二级页表：
 </h6><p>①：可以为离散分配的页表再建立一张页表，成为页目录表，或者外层/顶层页表
 王道视频中的图示：</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423204758737.png" alt="image-20260423204758737" style="zoom:50%;" />
+<img src="/note_images/others/image-20260423204758737.png" alt="image-20260423204758737" style="zoom:50%;" />
 <p>地址转化：给出逻辑地址转为内存地址，与单级页表类似</p>
 <p>各级页表的大小不能超过一个页面,另外，在多级页表中，页表项不存储“逻辑页号”，只存储“下一级页表的物理起始地址”或“最终物理页框号”+ 控制位。</p>
 <p>②：需要访问页面时才把页面调入内存（虚拟内存技术），同时在页表项新增标志位判断页面是否在内存中（③）</p>
@@ -962,7 +962,7 @@ OS
 </li>
 </ul>
 <p>0,0 -&gt; 0,1 -&gt; 0,0 -&gt; 0,1</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424004858501.png" alt="image-20260424004858501" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424004858501.png" alt="image-20260424004858501" style="zoom:50%;" />
 </li>
 <li>
 <p>最不常用算法</p>
@@ -1054,7 +1054,7 @@ OS
 <a class="header-anchor" href="#%e6%8a%96%e5%8a%a8%e5%92%8c%e5%b7%a5%e4%bd%9c%e9%9b%86"></a>
 抖动和工作集
 </h5><p>驻留集一般比所需页数小(虚拟内存)</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260424005559110.png" alt="image-20260424005559110"></p>
+<p><img src="/note_images/others/image-20260424005559110.png" alt="image-20260424005559110"></p>
 <p><strong>抖动</strong>： 如果分配给进程的物理页框太少，导致进程频繁发生缺页中断，大部分时间都用于页面换入换出，而实际有效计算时间很少，从而导致系统性能急剧下降的现象。</p>
 <p><strong>产生抖动的原因</strong>：</p>
 <ul>
@@ -1132,7 +1132,7 @@ OS
 <h6 id="进程的内存映像">
 <a class="header-anchor" href="#%e8%bf%9b%e7%a8%8b%e7%9a%84%e5%86%85%e5%ad%98%e6%98%a0%e5%83%8f"></a>
 进程的内存映像：
-</h6><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423210343402.png" alt="image-20260423210343402" style="zoom:50%;" />
+</h6><img src="/note_images/others/image-20260423210343402.png" alt="image-20260423210343402" style="zoom:50%;" />
 <h6 id="内存映射文件">
 <a class="header-anchor" href="#%e5%86%85%e5%ad%98%e6%98%a0%e5%b0%84%e6%96%87%e4%bb%b6"></a>
 内存映射文件：
@@ -1144,13 +1144,13 @@ OS
 <li><strong>共享</strong>：多个进程可以将同一个文件映射到各自的地址空间，实现共享内存。</li>
 </ul>
 <p><strong>实现</strong>： 通过系统调用（如 POSIX 的<code>mmap()</code>）实现。操作系统在进程的页表中建立文件页与虚拟地址页的映射。当访问这些虚拟地址时，如果对应的文件页不在内存，则发生缺页中断，由操作系统从磁盘调入。对映射区域的修改可以根据映射参数写回磁盘。</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260423210441555.png" alt="image-20260423210441555"></p>
+<p><img src="/note_images/others/image-20260423210441555.png" alt="image-20260423210441555"></p>
 <h1 id="第四部分文件管理">
 <a class="header-anchor" href="#%e7%ac%ac%e5%9b%9b%e9%83%a8%e5%88%86%e6%96%87%e4%bb%b6%e7%ae%a1%e7%90%86"></a>
 第四部分：文件管理
-</h1><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421162914884.png" alt="image-20260421162914884" style="zoom:67%;" />
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424092856039.png" alt="image-20260424092856039" style="zoom:50%;" />
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424215450825.png" alt="image-20260424215450825" style="zoom:67%;" />
+</h1><img src="/note_images/others/image-20260421162914884.png" alt="image-20260421162914884" style="zoom:67%;" />
+<img src="/note_images/others/image-20260424092856039.png" alt="image-20260424092856039" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424215450825.png" alt="image-20260424215450825" style="zoom:67%;" />
 <h3 id="1文件属性描述文件特征的信息通常存储在文件控制块中">
 <a class="header-anchor" href="#1%e6%96%87%e4%bb%b6%e5%b1%9e%e6%80%a7%e6%8f%8f%e8%bf%b0%e6%96%87%e4%bb%b6%e7%89%b9%e5%be%81%e7%9a%84%e4%bf%a1%e6%81%af%e9%80%9a%e5%b8%b8%e5%ad%98%e5%82%a8%e5%9c%a8%e6%96%87%e4%bb%b6%e6%8e%a7%e5%88%b6%e5%9d%97%e4%b8%ad"></a>
 1.文件属性：描述文件特征的信息，通常存储在文件控制块中。
@@ -1241,13 +1241,13 @@ OS
 <p>对于顺序存储的<strong>可变长记录</strong>:由于每个记录的长度不一样，可变长无法实现随机存取,每次只能从第一个记录开始依次往后查找</p>
 <p>​		<strong>定长记录</strong>:可实现随机存取</p>
 <p>可否快速检索某条记录：定长顺序存储若是顺序结构则可以</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421165221419.png" alt="image-20260421165221419"  />
+<img src="/note_images/others/image-20260421165221419.png" alt="image-20260421165221419"  />
 <p>优缺点：</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421165446242.png" alt="image-20260421165446242" style="zoom: 50%;" />
+<img src="/note_images/others/image-20260421165446242.png" alt="image-20260421165446242" style="zoom: 50%;" />
 </li>
 <li>
 <p><strong>2.索引文件</strong>：为文件建立索引表，根据记录的键值通过索引快速定位记录。可解决不定长文件的存取问题</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421170923838.png" alt="image-20260421170923838" style="zoom:33%;" />
+<img src="/note_images/others/image-20260421170923838.png" alt="image-20260421170923838" style="zoom:33%;" />
 <p>​	文件的记录在物理上不一定连续存放</p>
 <p>​	但是索引表需要在物理上相邻</p>
 <p>​	索引表本身是定长记录的顺序文件，另外 ，可以用不同的数据项建立多个索引表</p>
@@ -1261,11 +1261,11 @@ OS
 <p>其并不会为每个记录创建一个索引表项，而是一组记录对应一个索引表项
 这样在顺序查找时，可以先确定类，再去类中找（如A~F开头各十个人，先确定开头字母，再去其中找，共要找7 + 10次），而不是找70个人</p>
 <p>索引顺序文件:定长串结构顺序文件,逻辑文件：也是顺序文件</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421171310881.png" alt="image-20260421171310881" style="zoom: 33%;" />
+<img src="/note_images/others/image-20260421171310881.png" alt="image-20260421171310881" style="zoom: 33%;" />
 </li>
 </ul>
 <p>还可以建立多级索引表：以减少索引次数</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421171431661.png" alt="image-20260421171431661" style="zoom:33%;" />
+<img src="/note_images/others/image-20260421171431661.png" alt="image-20260421171431661" style="zoom:33%;" />
 <p>记得计算平均检索次数:</p>
 <ul>
 <li><strong>4.直接文件/散列文件</strong>：根据记录的键值通过散列函数直接计算出记录的物理地址。</li>
@@ -1281,7 +1281,7 @@ OS
 </h3><h6 id="目录本身就是一种结构文件由一条一条的记录组成每条记录对应一个放在该目录下的文件">
 <a class="header-anchor" href="#%e7%9b%ae%e5%bd%95%e6%9c%ac%e8%ba%ab%e5%b0%b1%e6%98%af%e4%b8%80%e7%a7%8d%e7%bb%93%e6%9e%84%e6%96%87%e4%bb%b6%e7%94%b1%e4%b8%80%e6%9d%a1%e4%b8%80%e6%9d%a1%e7%9a%84%e8%ae%b0%e5%bd%95%e7%bb%84%e6%88%90%e6%af%8f%e6%9d%a1%e8%ae%b0%e5%bd%95%e5%af%b9%e5%ba%94%e4%b8%80%e4%b8%aa%e6%94%be%e5%9c%a8%e8%af%a5%e7%9b%ae%e5%bd%95%e4%b8%8b%e7%9a%84%e6%96%87%e4%bb%b6"></a>
 目录本身就是一种结构文件，由一条一条的记录组成，每条记录对应一个放在该目录下的文件
-</h6><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421171837615.png" alt="image-20260421171837615" style="zoom:33%;" />
+</h6><img src="/note_images/others/image-20260421171837615.png" alt="image-20260421171837615" style="zoom:33%;" />
 <h4 id="控制块和索引结点">
 <a class="header-anchor" href="#%e6%8e%a7%e5%88%b6%e5%9d%97%e5%92%8c%e7%b4%a2%e5%bc%95%e7%bb%93%e7%82%b9"></a>
 控制块和索引结点：
@@ -1325,13 +1325,13 @@ OS
 <h5 id="4无环图目录结构方便实现文件共享">
 <a class="header-anchor" href="#4%e6%97%a0%e7%8e%af%e5%9b%be%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84%e6%96%b9%e4%be%bf%e5%ae%9e%e7%8e%b0%e6%96%87%e4%bb%b6%e5%85%b1%e4%ba%ab"></a>
 4.无环图目录结构(方便实现文件共享)
-</h5><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421173432961.png" alt="image-20260421173432961" style="zoom:33%;" />
+</h5><img src="/note_images/others/image-20260421173432961.png" alt="image-20260421173432961" style="zoom:33%;" />
 <p>可以用不同的文件名指向同一个文件、甚至可以指向同一个目录,这样一个用户进行更改，另一个用户也可以看到变化（而非简单的CV）</p>
 <p>可以为每个共享节点设计一个共享计数器，单个用户删除只会让count&ndash;,只有共享计数器为0才会彻底删除</p>
 <h1 id="第五部分io设备">
 <a class="header-anchor" href="#%e7%ac%ac%e4%ba%94%e9%83%a8%e5%88%86io%e8%ae%be%e5%a4%87"></a>
 第五部分：I/O设备
-</h1><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422170637806.png" alt="image-20260422170637806"></p>
+</h1><p><img src="/note_images/others/image-20260422170637806.png" alt="image-20260422170637806"></p>
 <img src="D:\graphif\pj\5.png" alt="5" style="zoom:50%;" />
 <h3 id="1基本概念与分类">
 <a class="header-anchor" href="#1%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5%e4%b8%8e%e5%88%86%e7%b1%bb"></a>
@@ -1375,7 +1375,7 @@ I/O 控制方式与接口
 <h4 id="对于控制方式">
 <a class="header-anchor" href="#%e5%af%b9%e4%ba%8e%e6%8e%a7%e5%88%b6%e6%96%b9%e5%bc%8f"></a>
 对于控制方式：
-</h4><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422203625889.png" alt="image-20260422203625889"></p>
+</h4><p><img src="/note_images/others/image-20260422203625889.png" alt="image-20260422203625889"></p>
 <h4 id="此事在计组中亦有记载">
 <a class="header-anchor" href="#%e6%ad%a4%e4%ba%8b%e5%9c%a8%e8%ae%a1%e7%bb%84%e4%b8%ad%e4%ba%a6%e6%9c%89%e8%ae%b0%e8%bd%bd"></a>
 此事在计组中亦有记载
@@ -1432,7 +1432,7 @@ I/O 控制方式与接口
 <a class="header-anchor" href="#psdma%e6%8e%a7%e5%88%b6%e5%99%a8"></a>
 PS:DMA控制器
 </h6><p>其读入也是一个字一个字读入，但会先读到DR中</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422202802673.png" alt="image-20260422202802673"></p>
+<p><img src="/note_images/others/image-20260422202802673.png" alt="image-20260422202802673"></p>
 </li>
 <li>
 <h5 id="通道控制方式">
@@ -1452,7 +1452,7 @@ PS:DMA控制器
 <h3 id="io软件的层次结构">
 <a class="header-anchor" href="#io%e8%bd%af%e4%bb%b6%e7%9a%84%e5%b1%82%e6%ac%a1%e7%bb%93%e6%9e%84"></a>
 I/O软件的层次结构
-</h3><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260422203819890.png" alt="image-20260422203819890" style="zoom:33%;" />
+</h3><img src="/note_images/others/image-20260422203819890.png" alt="image-20260422203819890" style="zoom:33%;" />
 <p>I/O 软件通常组织成层次结构，以实现设备独立性和提高软件可维护性。越上面的层次越接近用户，越下面的层次越接近硬件。</p>
 <h6 id="中间三层棕色部分属于操作系统的内核部分">
 <a class="header-anchor" href="#%e4%b8%ad%e9%97%b4%e4%b8%89%e5%b1%82%e6%a3%95%e8%89%b2%e9%83%a8%e5%88%86%e5%b1%9e%e4%ba%8e%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e7%9a%84%e5%86%85%e6%a0%b8%e9%83%a8%e5%88%86"></a>
@@ -1517,7 +1517,7 @@ I/O软件的层次结构
 输出/输入应用程序接口
 </h3><p>应用程序I/O接口：你写代码时调用的那个函数 (read, write)。</p>
 <p><strong>输入输出应用程序的接口</strong>：操作系统教材里描述的、负责设备独立性的那个软件层次。</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423002258591.png" alt="image-20260423002258591" style="zoom: 50%;" />
+<img src="/note_images/others/image-20260423002258591.png" alt="image-20260423002258591" style="zoom: 50%;" />
 <p>操作系统向应用程序提供的进行 I/O 操作的接口，通常是一组系统调用。</p>
 <h5 id="输入输出应用程序接口">
 <a class="header-anchor" href="#%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f%e6%8e%a5%e5%8f%a3"></a>
@@ -1546,13 +1546,13 @@ I/O软件的层次结构
 <h5 id="阻塞非阻塞io">
 <a class="header-anchor" href="#%e9%98%bb%e5%a1%9e%e9%9d%9e%e9%98%bb%e5%a1%9eio"></a>
 阻塞/非阻塞IO
-</h5><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260423002912842.png" alt="image-20260423002912842"></p>
+</h5><p><img src="/note_images/others/image-20260423002912842.png" alt="image-20260423002912842"></p>
 <h3 id="设备驱动接口">
 <a class="header-anchor" href="#%e8%ae%be%e5%a4%87%e9%a9%b1%e5%8a%a8%e6%8e%a5%e5%8f%a3"></a>
 设备驱动接口:
 </h3><p>厂商按照统一规定好的标准开发驱动程序</p>
 <p>不同的OS，对设备驱动程序的接口的标准各不相同</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260424190100788.png" alt="image-20260424190100788"></p>
+<p><img src="/note_images/others/image-20260424190100788.png" alt="image-20260424190100788"></p>
 <h6 id="saurlax">
 <a class="header-anchor" href="#saurlax"></a>
 Saurlax
@@ -1571,7 +1571,7 @@ Saurlax
 <a class="header-anchor" href="#io%e6%a0%b8%e5%bf%83%e5%ad%90%e7%b3%bb%e7%bb%9f"></a>
 I/O核心子系统：
 </h3><p>中间棕色的三层：</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260424190447086.png" alt="image-20260424190447086"></p>
+<p><img src="/note_images/others/image-20260424190447086.png" alt="image-20260424190447086"></p>
 <p><strong>I/O调度</strong>：用某种<strong>算法</strong>确定一个好的<strong>顺序</strong>来处理各个IO请求</p>
 <h6 id="需要实现的功能与实现位置">
 <a class="header-anchor" href="#%e9%9c%80%e8%a6%81%e5%ae%9e%e7%8e%b0%e7%9a%84%e5%8a%9f%e8%83%bd%e4%b8%8e%e5%ae%9e%e7%8e%b0%e4%bd%8d%e7%bd%ae"></a>
@@ -1598,7 +1598,7 @@ I/O核心子系统：
 假脱机
 </h5><p>在磁盘开辟出两个存储区域“输入井”和“输出井”</p>
 <p>在设备与井之间是内存中的输入/输出缓冲器，在I/O进程的控制下，用于暂存数据，之后再转到井中</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424191727841.png" alt="image-20260424191727841" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424191727841.png" alt="image-20260424191727841" style="zoom:50%;" />
 <h6 id="saurlax-1">
 <a class="header-anchor" href="#saurlax-1"></a>
 Saurlax：
@@ -1625,7 +1625,7 @@ Saurlax：
 <a class="header-anchor" href="#%e7%94%a8%e9%80%94"></a>
 用途：
 </h5><p>前情提要：</p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424191804285.png" alt="image-20260424191804285" style="zoom:33%;" />
+<img src="/note_images/others/image-20260424191804285.png" alt="image-20260424191804285" style="zoom:33%;" />
 <p>作用：共享打印机 &gt; 将独占式设备“打印机”用SPOOLing技术改造成共享设备</p>
 <h6 id="实现">
 <a class="header-anchor" href="#%e5%ae%9e%e7%8e%b0"></a>
@@ -1636,7 +1636,7 @@ Saurlax：
 <h3 id="设备的分配与回收">
 <a class="header-anchor" href="#%e8%ae%be%e5%a4%87%e7%9a%84%e5%88%86%e9%85%8d%e4%b8%8e%e5%9b%9e%e6%94%b6"></a>
 设备的分配与回收
-</h3><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424192252657.png" alt="image-20260424192252657" style="zoom:33%;" />
+</h3><img src="/note_images/others/image-20260424192252657.png" alt="image-20260424192252657" style="zoom:33%;" />
 <p>**设备的固有属性：**独占设备、共享设备、虚拟设备</p>
 <h5 id="应考虑因素">
 <a class="header-anchor" href="#%e5%ba%94%e8%80%83%e8%99%91%e5%9b%a0%e7%b4%a0"></a>
@@ -1652,11 +1652,11 @@ Saurlax：
 <h5 id="安全性">
 <a class="header-anchor" href="#%e5%ae%89%e5%85%a8%e6%80%a7"></a>
 安全性
-</h5><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424200708220.png" alt="image-20260424200708220" style="zoom:50%;" />
+</h5><img src="/note_images/others/image-20260424200708220.png" alt="image-20260424200708220" style="zoom:50%;" />
 <h5 id="分配过程的数据结构">
 <a class="header-anchor" href="#%e5%88%86%e9%85%8d%e8%bf%87%e7%a8%8b%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84"></a>
 分配过程的数据结构：
-</h5><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424201219222.png" alt="image-20260424201219222" style="zoom:33%;" />
+</h5><img src="/note_images/others/image-20260424201219222.png" alt="image-20260424201219222" style="zoom:33%;" />
 <p>设备控制表（DCT）：为每个设备配一张用于记录设备情况</p>
 <p>控制器控制表（COCT）：每个设备控制器对应一张，OS根据其信息对控制器进行操作和管理</p>
 <p>通道控制表（CHCT）：每个通道对应一张CHCT，操作系统根据CHCT信息对通道进行操作和管理</p>
@@ -1664,13 +1664,13 @@ Saurlax：
 <h6 id="分配过程">
 <a class="header-anchor" href="#%e5%88%86%e9%85%8d%e8%bf%87%e7%a8%8b"></a>
 分配过程：
-</h6><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260424201450500.png" alt="image-20260424201450500"></p>
+</h6><p><img src="/note_images/others/image-20260424201450500.png" alt="image-20260424201450500"></p>
 <p>⑤设备使用完毕后，进程释放设备，系统回收设备，并唤醒等待队列中的进程（如果队列不空）。</p>
 <p>只有设备、控制器、通道三者都分配成功是此次设备分配才算成功，之后便可启动IO设备进行数据传送</p>
 <h6 id="分配步骤的改进">
 <a class="header-anchor" href="#%e5%88%86%e9%85%8d%e6%ad%a5%e9%aa%a4%e7%9a%84%e6%94%b9%e8%bf%9b"></a>
 分配步骤的改进
-</h6><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260424201639277.png" alt="image-20260424201639277"></p>
+</h6><p><img src="/note_images/others/image-20260424201639277.png" alt="image-20260424201639277"></p>
 <h3 id="缓冲区">
 <a class="header-anchor" href="#%e7%bc%93%e5%86%b2%e5%8c%ba"></a>
 缓冲区
@@ -1701,7 +1701,7 @@ Saurlax：
 <li>输出时：用户区 -&gt; 缓冲区 -&gt; 设备。</li>
 <li>当缓冲区满（输入）或空（输出）时，进程可能需要等待。</li>
 </ul>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260424202813690.png" alt="image-20260424202813690"></p>
+<p><img src="/note_images/others/image-20260424202813690.png" alt="image-20260424202813690"></p>
 </li>
 <li>
 <p>2.<strong>双缓冲</strong></p>
@@ -1711,7 +1711,7 @@ Saurlax：
 <li>当一个缓冲区满（输入）或空（输出）后，切换到另一个缓冲区。</li>
 <li>提高了并行度，减少了等待时间。</li>
 </ul>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260424203204035.png" alt="image-20260424203204035"></p>
+<p><img src="/note_images/others/image-20260424203204035.png" alt="image-20260424203204035"></p>
 </li>
 <li>
 <p>3.<strong>循环缓冲</strong></p>
@@ -1784,7 +1784,7 @@ Saurlax：
 设磁盘转速为r，在平均时间T(R) = 1/2r</li>
 <li>传输时间T(t):从磁盘读写数据所需要经历的时间</li>
 </ul>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424205141866.png" alt="image-20260424205141866" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424205141866.png" alt="image-20260424205141866" style="zoom:50%;" />
 <p>由于转速为固有属性，所以OS只能影响寻道时间 -&gt; <strong>磁盘调度算法</strong></p>
 <h5 id="算法">
 <a class="header-anchor" href="#%e7%ae%97%e6%b3%95"></a>
@@ -1869,7 +1869,7 @@ Saurlax：
 <h3 id="固态硬盘ssd">
 <a class="header-anchor" href="#%e5%9b%ba%e6%80%81%e7%a1%ac%e7%9b%98ssd"></a>
 固态硬盘SSD
-</h3><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424210949311.png" alt="image-20260424210949311" style="zoom:50%;" />
+</h3><img src="/note_images/others/image-20260424210949311.png" alt="image-20260424210949311" style="zoom:50%;" />
 <p>SSD 使用闪存作为存储介质，没有机械部件。</p>
 <p>读写以页为单位（对应一个扇区）而不是块</p>
 <p><strong>特性</strong>：</p>
@@ -2255,24 +2255,18 @@ Saurlax：
     } else {
       aosInit();
     }
-  </script><script src="/js/pjax_main.js" data-pjax ></script>/*<script>
-  var setupFirework = () => {
-    if (! false  || !window.matchMedia('(max-width: 768px)').matches) {
-      if (window.firework) {
-        const options = JSON.parse("{\"excludeelements\":[\"a\",\"button\"],\"particles\":[{\"colors\":[\"var(--red-1)\",\"var(--red-2)\",\"var(--red-3)\",\"var(--red-4)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"emit\"],\"number\":20,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.3,0.5],\"radius\":[16,32]}},{\"colors\":[\"var(--red-0)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"diffuse\"],\"number\":1,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.2,0.5],\"lineWidth\":6,\"radius\":20}}]}");
-        options.excludeElements = options.excludeelements;
-        delete options.excludeelements;
-        window.firework(options);
-      }
-    }
-  }
+  </script><script src="/js/pjax_main.js" data-pjax ></script><script>
+  
+
+
+
 </script><script
     src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js"
     defer
     
     
     onload="setupFirework()"
-    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script>*/
+    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script>
 
 <div id="lazy-script">
   <div><script data-pjax>

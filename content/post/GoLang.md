@@ -504,7 +504,7 @@ s.Speak()//dog says: Woof!
 
 ---
 
-![image-20260131140651370](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260131140651370.png)
+![image-20260131140651370](/note_images/others/image-20260131140651370.png)
 
 第一段代码是**将函数作为结构体字段** 使用，调用函数时使用d.fn();
 
@@ -529,7 +529,7 @@ type Handler interface {
 ServeHTTP(w http.ResponseWriter, r *http.Request)
 ```
 
-![image-20260220122657648](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260220122657648.png)
+![image-20260220122657648](/note_images/others/image-20260220122657648.png)
 
 ###### responsewriter:
 

@@ -29,7 +29,7 @@ func main() {
 }
 ```
 
-![image-20260402195859251](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260402195859251.png)
+![image-20260402195859251](/note_images/others/image-20260402195859251.png)
 
 而在此图中，虽然main中在ch01/02下，可是工作目录是chatwitheino,使用的是命令
 
@@ -37,7 +37,7 @@ func main() {
 
 所以默认工作目录是chatwitheino,可以读取chatwitheino下的.env,所以这符合上面提到的.env的读取方法，同时，找对工作目录很重要
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260402200111774.png" alt="image-20260402200111774" style="zoom:50%;" />
+<img src="/note_images/others/image-20260402200111774.png" alt="image-20260402200111774" style="zoom:50%;" />
 
 
 
@@ -150,7 +150,7 @@ type Store struct {
 {"role":"assistant","content":"好的，张三，很高兴认识你！"}
 ```
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260403150816560.png" alt="image-20260403150816560" style="zoom:50%;" />
+<img src="/note_images/others/image-20260403150816560.png" alt="image-20260403150816560" style="zoom:50%;" />
 
 ##### scanner 
 
@@ -281,13 +281,13 @@ func CreateTool() tool.InvokableTool {
 
 
 
-![image-20260403162827397](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260403162827397.png)
+![image-20260403162827397](/note_images/others/image-20260403162827397.png)
 
-![image-20260403163149583](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260403163149583.png)
+![image-20260403163149583](/note_images/others/image-20260403163149583.png)
 
-![image-20260403163201988](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260403163201988.png)
+![image-20260403163201988](/note_images/others/image-20260403163201988.png)
 
-![image-20260403163212251](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260403163212251.png)
+![image-20260403163212251](/note_images/others/image-20260403163212251.png)
 
 ### 编排
 
@@ -299,7 +299,7 @@ func CreateTool() tool.InvokableTool {
 
 Bind相当于将工具注册到大语言模型中，而创建ToolsNode相当于创建了在Agent中创建了一个可以运行的节点，再用Chain或者Graph方式就可以将这些节点连接起来
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260414165314091.png" alt="image-20260414165314091" style="zoom:50%;" />
+<img src="/note_images/others/image-20260414165314091.png" alt="image-20260414165314091" style="zoom:50%;" />
 
 不管如何编排，**注册工具**和**创建节点**总是必须的。
 

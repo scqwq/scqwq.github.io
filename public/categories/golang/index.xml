@@ -64,7 +64,7 @@ GIN
 <a class="header-anchor" href="#2http%e5%93%8d%e5%ba%94"></a>
 2.http响应:
 </h6><p><strong>HTTP 响应（HTTP Response）</strong> 是服务器收到客户端的 HTTP 请求后，返回给客户端的一组数据，用来告诉客户端<strong>请求是否成功、返回什么内容、以及相关元数据</strong></p>
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260224190641470.png" alt="image-20260224190641470" style="zoom: 67%;" />
+<img src="/note_images/others/image-20260224190641470.png" alt="image-20260224190641470" style="zoom: 67%;" />
 <h6 id="3gin的安装">
 <a class="header-anchor" href="#3gin%e7%9a%84%e5%ae%89%e8%a3%85"></a>
 3.GIN的安装

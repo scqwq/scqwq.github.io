@@ -67,7 +67,7 @@ Eino 在核心层定义了一个**统一的 `ChatModel`接口**，业务代码�
 
 ###### 系统提示词参数：
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260407154601909.png" alt="image-20260407154601909" style="zoom:67%;" />
+<img src="/note_images/others/image-20260407154601909.png" alt="image-20260407154601909" style="zoom:67%;" />
 
 ### 关于构建Agent
 
@@ -104,7 +104,7 @@ DisallowTransferToParent / DisallowTransferToPeers 禁止转移到父/同级 age
 则需要通过工作流来调用工具，相对可控但固定，
 而使用LLM驱动，则可让大模型决定是否调用工具
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260407154107966.png" alt="image-20260407154107966" style="zoom:50%;" />
+<img src="/note_images/others/image-20260407154107966.png" alt="image-20260407154107966" style="zoom:50%;" />
 
 ### 文本处理:
 
@@ -133,7 +133,7 @@ llmagent.New(llmagent.Config{
 
 ```
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260407155015556.png" alt="image-20260407155015556" style="zoom:67%;" />
+<img src="/note_images/others/image-20260407155015556.png" alt="image-20260407155015556" style="zoom:67%;" />
 
 ##### Schema约束:
 

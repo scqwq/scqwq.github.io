@@ -221,7 +221,7 @@ createdb -U postgres mydb  在shell直接建库</p>
 <a class="header-anchor" href="#sql-1"></a>
 SQL
 </h3><p>按照功能不同可以分为以下几类</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260311201204430.png" alt="image-20260311201204430"></p>
+<p><img src="/note_images/others/image-20260311201204430.png" alt="image-20260311201204430"></p>
 <ul>
 <li>
 <p>DDL:用于定义数据库对象，例如数据库、表、列</p>
@@ -250,7 +250,7 @@ mysqlsh进入mySQL-shell工具
 </h6><p>此工具的命令都是以****开头的</p>
 <p>bash中输入<code>mysqlsh</code>启动,也可以在VScode中找到mysqlsh
 在输入<code>\connect root@localhost</code>连接</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260311181701033.png" alt="image-20260311181701033"></p>
+<p><img src="/note_images/others/image-20260311181701033.png" alt="image-20260311181701033"></p>
 <p>出现MySQL与JS代表进入成功</p>
 <p>出现图片所示灰色部分表示连接到本地的mysql服务器了</p>
 <p><code>use name</code>来使用一个数据库,</p>
@@ -284,12 +284,12 @@ mysqlsh进入mySQL-shell工具
           <h1 id="os">
 <a class="header-anchor" href="#os"></a>
 OS
-</h1><img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421130018195.png" alt="image-20260421130018195" style="zoom:67%;" />
+</h1><img src="/note_images/others/image-20260421130018195.png" alt="image-20260421130018195" style="zoom:67%;" />
 <h1 id="第三部分内存管理">
 <a class="header-anchor" href="#%e7%ac%ac%e4%b8%89%e9%83%a8%e5%88%86%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86"></a>
 第三部分:内存管理
-</h1><p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422163029624.png" alt="image-20260422163029624"></p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260422165512291.png" alt="image-20260422165512291"></p>
+</h1><p><img src="/note_images/others/image-20260422163029624.png" alt="image-20260422163029624"></p>
+<p><img src="/note_images/others/image-20260422165512291.png" alt="image-20260422165512291"></p>
 <p><img src="C:%5CUsers%5C56955%5CDesktop%5C333.png" alt="333"></p>
 <h3 id="31内存的基本概念">
 <a class="header-anchor" href="#31%e5%86%85%e5%ad%98%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>

@@ -287,7 +287,7 @@ createdb -U postgres mydb  在shell直接建库</p>
 <a class="header-anchor" href="#sql-1"></a>
 SQL
 </h3><p>按照功能不同可以分为以下几类</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260311201204430.png" alt="image-20260311201204430"></p>
+<p><img src="/note_images/others/image-20260311201204430.png" alt="image-20260311201204430"></p>
 <ul>
 <li>
 <p>DDL:用于定义数据库对象，例如数据库、表、列</p>
@@ -316,7 +316,7 @@ mysqlsh进入mySQL-shell工具
 </h6><p>此工具的命令都是以****开头的</p>
 <p>bash中输入<code>mysqlsh</code>启动,也可以在VScode中找到mysqlsh
 在输入<code>\connect root@localhost</code>连接</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260311181701033.png" alt="image-20260311181701033"></p>
+<p><img src="/note_images/others/image-20260311181701033.png" alt="image-20260311181701033"></p>
 <p>出现MySQL与JS代表进入成功</p>
 <p>出现图片所示灰色部分表示连接到本地的mysql服务器了</p>
 <p><code>use name</code>来使用一个数据库,</p>
@@ -389,7 +389,7 @@ mysqlsh进入mySQL-shell工具
 查询:where子句和like
 </h6><p>用于查找满足指定标准的记录</p>
 <p>有时候需要正则表达式:</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260312193520351.png" alt="image-20260312193520351"></p>
+<p><img src="/note_images/others/image-20260312193520351.png" alt="image-20260312193520351"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#66d9ef">where</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> player <span style="color:#66d9ef">WHERE</span> level <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> player <span style="color:#66d9ef">WHERE</span> level <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">AND</span> level <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>
@@ -425,7 +425,7 @@ mysqlsh进入mySQL-shell工具
 </h6><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#a6e22e">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span>  player; <span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">查找玩家数量</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#a6e22e">AVG</span>(LEVEL) <span style="color:#66d9ef">FROM</span>  player <span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">查找等级平均值</span>
 </span></span></code></pre></div><p>以下为常用聚合函数：</p>
-<p><img src="C:%5CUsers%5C56955%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20260312195555627.png" alt="image-20260312195555627"></p>
+<p><img src="/note_images/others/image-20260312195555627.png" alt="image-20260312195555627"></p>
 <h6 id="分组">
 <a class="header-anchor" href="#%e5%88%86%e7%bb%84"></a>
 分组
@@ -667,24 +667,18 @@ mysqlsh进入mySQL-shell工具
     } else {
       aosInit();
     }
-  </script><script src="/js/pjax_main.js" data-pjax ></script>/*<script>
-  var setupFirework = () => {
-    if (! false  || !window.matchMedia('(max-width: 768px)').matches) {
-      if (window.firework) {
-        const options = JSON.parse("{\"excludeelements\":[\"a\",\"button\"],\"particles\":[{\"colors\":[\"var(--red-1)\",\"var(--red-2)\",\"var(--red-3)\",\"var(--red-4)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"emit\"],\"number\":20,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.3,0.5],\"radius\":[16,32]}},{\"colors\":[\"var(--red-0)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"diffuse\"],\"number\":1,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.2,0.5],\"lineWidth\":6,\"radius\":20}}]}");
-        options.excludeElements = options.excludeelements;
-        delete options.excludeelements;
-        window.firework(options);
-      }
-    }
-  }
+  </script><script src="/js/pjax_main.js" data-pjax ></script><script>
+  
+
+
+
 </script><script
     src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js"
     defer
     
     
     onload="setupFirework()"
-    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script>*/
+    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script>
 
 <div id="lazy-script">
   <div><script data-pjax>

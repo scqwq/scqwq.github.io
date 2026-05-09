@@ -37,7 +37,7 @@ createdb -U postgres mydb  在shell直接建库
 
 按照功能不同可以分为以下几类
 
-![image-20260311201204430](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260311201204430.png)
+![image-20260311201204430](/note_images/others/image-20260311201204430.png)
 
 - DDL:用于定义数据库对象，例如数据库、表、列
 
@@ -63,7 +63,7 @@ createdb -U postgres mydb  在shell直接建库
 bash中输入`mysqlsh`启动,也可以在VScode中找到mysqlsh
 在输入`\connect root@localhost`连接
 
-![image-20260311181701033](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260311181701033.png)
+![image-20260311181701033](/note_images/others/image-20260311181701033.png)
 
 出现MySQL与JS代表进入成功
 
@@ -166,7 +166,7 @@ select * from tb_name;
 
 有时候需要正则表达式:
 
-![image-20260312193520351](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260312193520351.png)
+![image-20260312193520351](/note_images/others/image-20260312193520351.png)
 
 ```mysql
 //where
@@ -213,7 +213,7 @@ SELECT AVG(LEVEL) FROM  player //查找等级平均值
 
 以下为常用聚合函数：
 
-![image-20260312195555627](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260312195555627.png)
+![image-20260312195555627](/note_images/others/image-20260312195555627.png)
 
 ###### 分组
 

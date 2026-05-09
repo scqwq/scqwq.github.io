@@ -9,15 +9,15 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 # OS
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421130018195.png" alt="image-20260421130018195" style="zoom:67%;" />
+<img src="/note_images/others/image-20260421130018195.png" alt="image-20260421130018195" style="zoom:67%;" />
 
 
 
 # 第三部分:内存管理
 
-![image-20260422163029624](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260422163029624.png)
+![image-20260422163029624](/note_images/others/image-20260422163029624.png)
 
-![image-20260422165512291](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260422165512291.png)
+![image-20260422165512291](/note_images/others/image-20260422165512291.png)
 
 ![333](C:\Users\56955\Desktop\333.png)
 
@@ -122,7 +122,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 **注意**：一个页号和块号组成一个页表项，而通常只需计算记录块号所需要的空间，而页号连续存放（一个页表种各项是连续存放的，类比数组），是**不占用存储空间**的。另外，页号从0页开始且记录的是内存块号而非内存起始地址。J号内存块的起始地址 = J * 内存块大小
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423202036631.png" alt="image-20260423202036631" style="zoom:50%;" />
+<img src="/note_images/others/image-20260423202036631.png" alt="image-20260423202036631" style="zoom:50%;" />
 
 ##### 地址转换过程：
 
@@ -139,7 +139,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 ##### 页表项:
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423202728804.png" alt="image-20260423202728804" style="zoom:50%;" />
+<img src="/note_images/others/image-20260423202728804.png" alt="image-20260423202728804" style="zoom:50%;" />
 
 **页表项** 至少包含：
 
@@ -187,7 +187,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 ①：可以为离散分配的页表再建立一张页表，成为页目录表，或者外层/顶层页表
 王道视频中的图示：
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423204758737.png" alt="image-20260423204758737" style="zoom:50%;" />
+<img src="/note_images/others/image-20260423204758737.png" alt="image-20260423204758737" style="zoom:50%;" />
 
 地址转化：给出逻辑地址转为内存地址，与单级页表类似
 
@@ -446,7 +446,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 
    0,0 -> 0,1 -> 0,0 -> 0,1
 
-   <img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424004858501.png" alt="image-20260424004858501" style="zoom:50%;" />
+   <img src="/note_images/others/image-20260424004858501.png" alt="image-20260424004858501" style="zoom:50%;" />
 
 6. 最不常用算法
 
@@ -508,7 +508,7 @@ lastmod: 2026-05-03T11:00:00+08:00
   
   驻留集一般比所需页数小(虚拟内存)
   
-  ![image-20260424005559110](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424005559110.png)
+  ![image-20260424005559110](/note_images/others/image-20260424005559110.png)
   
   **抖动**： 如果分配给进程的物理页框太少，导致进程频繁发生缺页中断，大部分时间都用于页面换入换出，而实际有效计算时间很少，从而导致系统性能急剧下降的现象。
   
@@ -589,7 +589,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 ###### 进程的内存映像：
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423210343402.png" alt="image-20260423210343402" style="zoom:50%;" />
+<img src="/note_images/others/image-20260423210343402.png" alt="image-20260423210343402" style="zoom:50%;" />
 
 ###### 内存映射文件：
 
@@ -603,7 +603,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 **实现**： 通过系统调用（如 POSIX 的`mmap()`）实现。操作系统在进程的页表中建立文件页与虚拟地址页的映射。当访问这些虚拟地址时，如果对应的文件页不在内存，则发生缺页中断，由操作系统从磁盘调入。对映射区域的修改可以根据映射参数写回磁盘。
 
-![image-20260423210441555](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423210441555.png)
+![image-20260423210441555](/note_images/others/image-20260423210441555.png)
 
 
 
@@ -611,11 +611,11 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421162914884.png" alt="image-20260421162914884" style="zoom:67%;" />
+<img src="/note_images/others/image-20260421162914884.png" alt="image-20260421162914884" style="zoom:67%;" />
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424092856039.png" alt="image-20260424092856039" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424092856039.png" alt="image-20260424092856039" style="zoom:50%;" />
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424215450825.png" alt="image-20260424215450825" style="zoom:67%;" />
+<img src="/note_images/others/image-20260424215450825.png" alt="image-20260424215450825" style="zoom:67%;" />
 
 ### 1.文件属性：描述文件特征的信息，通常存储在文件控制块中。
 
@@ -692,17 +692,17 @@ lastmod: 2026-05-03T11:00:00+08:00
 
        可否快速检索某条记录：定长顺序存储若是顺序结构则可以
 
-       <img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421165221419.png" alt="image-20260421165221419"  />
+       <img src="/note_images/others/image-20260421165221419.png" alt="image-20260421165221419"  />
 
        优缺点：
 
-       <img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421165446242.png" alt="image-20260421165446242" style="zoom: 50%;" />
+       <img src="/note_images/others/image-20260421165446242.png" alt="image-20260421165446242" style="zoom: 50%;" />
 
        
 
      - **2.索引文件**：为文件建立索引表，根据记录的键值通过索引快速定位记录。可解决不定长文件的存取问题
 
-       <img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421170923838.png" alt="image-20260421170923838" style="zoom:33%;" />
+       <img src="/note_images/others/image-20260421170923838.png" alt="image-20260421170923838" style="zoom:33%;" />
 
        ​	文件的记录在物理上不一定连续存放
 
@@ -721,11 +721,11 @@ lastmod: 2026-05-03T11:00:00+08:00
        
        索引顺序文件:定长串结构顺序文件,逻辑文件：也是顺序文件
        
-       <img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421171310881.png" alt="image-20260421171310881" style="zoom: 33%;" />
+       <img src="/note_images/others/image-20260421171310881.png" alt="image-20260421171310881" style="zoom: 33%;" />
      
      还可以建立多级索引表：以减少索引次数
      
-     <img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421171431661.png" alt="image-20260421171431661" style="zoom:33%;" />
+     <img src="/note_images/others/image-20260421171431661.png" alt="image-20260421171431661" style="zoom:33%;" />
      
      记得计算平均检索次数:
      
@@ -737,7 +737,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 ###### 目录本身就是一种结构文件，由一条一条的记录组成，每条记录对应一个放在该目录下的文件
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421171837615.png" alt="image-20260421171837615" style="zoom:33%;" />
+<img src="/note_images/others/image-20260421171837615.png" alt="image-20260421171837615" style="zoom:33%;" />
 
 
 
@@ -787,7 +787,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 ##### 4.无环图目录结构(方便实现文件共享)
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260421173432961.png" alt="image-20260421173432961" style="zoom:33%;" />
+<img src="/note_images/others/image-20260421173432961.png" alt="image-20260421173432961" style="zoom:33%;" />
 
 可以用不同的文件名指向同一个文件、甚至可以指向同一个目录,这样一个用户进行更改，另一个用户也可以看到变化（而非简单的CV）
 
@@ -799,7 +799,7 @@ lastmod: 2026-05-03T11:00:00+08:00
 
 
 
-![image-20260422170637806](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260422170637806.png)
+![image-20260422170637806](/note_images/others/image-20260422170637806.png)
 
 
 
@@ -855,7 +855,7 @@ I/O控制方式描述了**操作系统如何利用I/O控制器**
 
 #### 对于控制方式：
 
-![image-20260422203625889](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260422203625889.png)
+![image-20260422203625889](/note_images/others/image-20260422203625889.png)
 
 #### 此事在计组中亦有记载
 
@@ -902,7 +902,7 @@ IO控制：指 CPU 如何管理和控制 I/O 设备的操作。
 
    其读入也是一个字一个字读入，但会先读到DR中 
 
-   ![image-20260422202802673](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260422202802673.png)
+   ![image-20260422202802673](/note_images/others/image-20260422202802673.png)
 
    
 
@@ -923,7 +923,7 @@ IO控制：指 CPU 如何管理和控制 I/O 设备的操作。
 
 ### I/O软件的层次结构
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260422203819890.png" alt="image-20260422203819890" style="zoom:33%;" />
+<img src="/note_images/others/image-20260422203819890.png" alt="image-20260422203819890" style="zoom:33%;" />
 
 I/O 软件通常组织成层次结构，以实现设备独立性和提高软件可维护性。越上面的层次越接近用户，越下面的层次越接近硬件。
 
@@ -969,7 +969,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 **输入输出应用程序的接口**：操作系统教材里描述的、负责设备独立性的那个软件层次。
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423002258591.png" alt="image-20260423002258591" style="zoom: 50%;" />
+<img src="/note_images/others/image-20260423002258591.png" alt="image-20260423002258591" style="zoom: 50%;" />
 
 操作系统向应用程序提供的进行 I/O 操作的接口，通常是一组系统调用。
 
@@ -997,7 +997,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 ##### 阻塞/非阻塞IO
 
-![image-20260423002912842](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260423002912842.png)
+![image-20260423002912842](/note_images/others/image-20260423002912842.png)
 
 
 
@@ -1009,7 +1009,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 
 
-![image-20260424190100788](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424190100788.png)
+![image-20260424190100788](/note_images/others/image-20260424190100788.png)
 
 ###### Saurlax
 
@@ -1032,7 +1032,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 中间棕色的三层：
 
-![image-20260424190447086](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424190447086.png)
+![image-20260424190447086](/note_images/others/image-20260424190447086.png)
 
 **I/O调度**：用某种**算法**确定一个好的**顺序**来处理各个IO请求
 
@@ -1069,7 +1069,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 在设备与井之间是内存中的输入/输出缓冲器，在I/O进程的控制下，用于暂存数据，之后再转到井中
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424191727841.png" alt="image-20260424191727841" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424191727841.png" alt="image-20260424191727841" style="zoom:50%;" />
 
 ###### Saurlax：
 
@@ -1096,7 +1096,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 前情提要：
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424191804285.png" alt="image-20260424191804285" style="zoom:33%;" />
+<img src="/note_images/others/image-20260424191804285.png" alt="image-20260424191804285" style="zoom:33%;" />
 
 作用：共享打印机 > 将独占式设备“打印机”用SPOOLing技术改造成共享设备
 
@@ -1110,7 +1110,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 ### 设备的分配与回收
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424192252657.png" alt="image-20260424192252657" style="zoom:33%;" />
+<img src="/note_images/others/image-20260424192252657.png" alt="image-20260424192252657" style="zoom:33%;" />
 
 **设备的固有属性：**独占设备、共享设备、虚拟设备
 
@@ -1130,11 +1130,11 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 ##### 安全性
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424200708220.png" alt="image-20260424200708220" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424200708220.png" alt="image-20260424200708220" style="zoom:50%;" />
 
 ##### 分配过程的数据结构：
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424201219222.png" alt="image-20260424201219222" style="zoom:33%;" />
+<img src="/note_images/others/image-20260424201219222.png" alt="image-20260424201219222" style="zoom:33%;" />
 
 设备控制表（DCT）：为每个设备配一张用于记录设备情况
 
@@ -1146,7 +1146,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 ###### 分配过程：
 
-![image-20260424201450500](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424201450500.png)
+![image-20260424201450500](/note_images/others/image-20260424201450500.png)
 
 ⑤设备使用完毕后，进程释放设备，系统回收设备，并唤醒等待队列中的进程（如果队列不空）。
 
@@ -1154,7 +1154,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
 
 ###### 分配步骤的改进
 
-![image-20260424201639277](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424201639277.png)
+![image-20260424201639277](/note_images/others/image-20260424201639277.png)
 
 ### 缓冲区
 
@@ -1183,7 +1183,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
   - 输出时：用户区 -> 缓冲区 -> 设备。
   - 当缓冲区满（输入）或空（输出）时，进程可能需要等待。
 
-  ![image-20260424202813690](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424202813690.png)
+  ![image-20260424202813690](/note_images/others/image-20260424202813690.png)
 
 - 2.**双缓冲**
 
@@ -1193,7 +1193,7 @@ I/O 软件通常组织成层次结构，以实现设备独立性和提高软件�
   - 当一个缓冲区满（输入）或空（输出）后，切换到另一个缓冲区。
   - 提高了并行度，减少了等待时间。
 
-  ![image-20260424203204035](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424203204035.png)
+  ![image-20260424203204035](/note_images/others/image-20260424203204035.png)
 
 - 3.**循环缓冲**
 
@@ -1258,7 +1258,7 @@ T = 寻找时间 + 延迟时间 + 传输时间
   设磁盘转速为r，在平均时间T(R) = 1/2r
 - 传输时间T(t):从磁盘读写数据所需要经历的时间
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424205141866.png" alt="image-20260424205141866" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424205141866.png" alt="image-20260424205141866" style="zoom:50%;" />
 
 由于转速为固有属性，所以OS只能影响寻道时间 -> **磁盘调度算法**
 
@@ -1319,7 +1319,7 @@ T = 寻找时间 + 延迟时间 + 传输时间
 
 ### 固态硬盘SSD
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260424210949311.png" alt="image-20260424210949311" style="zoom:50%;" />
+<img src="/note_images/others/image-20260424210949311.png" alt="image-20260424210949311" style="zoom:50%;" />
 
 SSD 使用闪存作为存储介质，没有机械部件。
 

@@ -74,7 +74,7 @@ function name(参数1,参数2){
 
 能与用户交互做出相应的重要部分,常用的如下图：
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260117104859425.png" alt="image-20260117104859425" style="zoom:33%;" />
+<img src="/note_images/others/image-20260117104859425.png" alt="image-20260117104859425" style="zoom:33%;" />
 
 ###### 通过事件属性和函数调用实现交互功能如下：
 

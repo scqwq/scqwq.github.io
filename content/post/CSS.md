@@ -86,7 +86,7 @@ css文件在根目录的相对目录的"CSS_data"文件夹中,名字叫"test.css
 
 ​		是CSS的关键部分，允许你针对特定元素或一组元素定义样式
 
-<img src="C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260116163921752.png" alt="image-20260116163921752" style="zoom: 33%;" />
+<img src="/note_images/others/image-20260116163921752.png" alt="image-20260116163921752" style="zoom: 33%;" />
 
 优先级: ID > 类 > 标签名 
 

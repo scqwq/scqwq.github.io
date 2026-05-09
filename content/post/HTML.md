@@ -213,7 +213,7 @@ style:规定元素行内样式
 
 ## 表单:
 
-![image-20260116122117497](C:\Users\56955\AppData\Roaming\Typora\typora-user-images\image-20260116122117497.png)
+![image-20260116122117497](/note_images/others/image-20260116122117497.png)
 
 **比如这种就是一个表单** 看得出来应用很丰富
 
