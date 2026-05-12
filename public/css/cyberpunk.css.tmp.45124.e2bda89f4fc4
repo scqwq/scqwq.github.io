@@ -173,14 +173,13 @@ body {
 }
 
 .article-entry h2::before {
-  content: "//" !important;
+  content: "// " !important;
   color: rgba(147, 96, 217, 0.85) !important;
   position: static !important;
   width: auto !important;
   border: none !important;
   bottom: auto !important;
-  margin-right: 0 !important;
-  letter-spacing: -0.08em !important;
+  margin-right: 1em !important;
 }
 
 .article-entry h3 {

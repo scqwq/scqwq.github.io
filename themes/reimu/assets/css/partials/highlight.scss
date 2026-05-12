@@ -144,17 +144,33 @@
 
 .code-decoration {
   width: 70px;
+  position: relative;
 
+  // 原红绿灯样式（已注释，方便复原）
+  // &:after {
+  //   content: " ";
+  //   position: absolute;
+  //   border-radius: 50%;
+  //   background: #ff5f56;
+  //   width: 12px;
+  //   height: 12px;
+  //   box-shadow:
+  //     20px 0 #ffbd2e,
+  //     40px 0 #27c93f;
+  // }
+
+  // 新样式：粉色圆头直线
   &:after {
     content: " ";
     position: absolute;
-    border-radius: 50%;
-    background: #ff5f56;
-    width: 12px;
-    height: 12px;
-    box-shadow:
-      20px 0 #ffbd2e,
-      40px 0 #27c93f;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 90%;
+    height: 6px;
+    background: var(--neon-pink);
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(217, 74, 134, 0.5);
   }
 }
 
