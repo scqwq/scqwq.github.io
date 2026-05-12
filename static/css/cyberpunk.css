@@ -180,7 +180,7 @@ body {
   border: none !important;
   bottom: auto !important;
   margin-right: 0 !important;
-  letter-spacing: 0 !important;
+  letter-spacing: 0.15em !important;
 }
 
 .article-entry h3 {
