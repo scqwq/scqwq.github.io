@@ -46,7 +46,7 @@
   <meta property="og:image" content="http://localhost:1313/images/covers/7.jpg" />
   <meta property="article:author" content="scqwq" />
   <meta property="article:published_time" content="2026-05-28T21:00:00&#43;08:00" />
-  <meta property="article:modified_time" content="2026-05-28T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/7.jpg" />
+  <meta property="article:modified_time" content="2026-05-29T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/7.jpg" />
 <link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
     rel="preload"
     as="style"
@@ -416,6 +416,7 @@ This article does not have a corresponding language version
           <ul>
             <li><a href="#概述-2">概述：</a>
               <ul>
+                <li></li>
                 <li><a href="#机器指令格式">机器指令格式：</a></li>
               </ul>
             </li>
@@ -423,12 +424,89 @@ This article does not have a corresponding language version
             <li><a href="#操作类型">操作类型</a>
               <ul>
                 <li></li>
+                <li><a href="#程序状态字">程序状态字：</a></li>
                 <li><a href="#操作类型-1">操作类型：</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#寻址方式">寻址方式</a></li>
+        <li><a href="#寻址方式">寻址方式</a>
+          <ul>
+            <li><a href="#指令寻址">指令寻址</a></li>
+            <li><a href="#数据寻址">数据寻址</a>
+              <ul>
+                <li></li>
+                <li><a href="#偏移寻址">偏移寻址</a></li>
+                <li><a href="#堆栈寻址">堆栈寻址</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#cpu的结构和功能">CPU的结构和功能</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#cpu结构">CPU结构</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#cpu的工作">CPU的工作</a>
+              <ul>
+                <li><a href="#指令周期">指令周期</a></li>
+                <li><a href="#机器周期">机器周期：</a></li>
+                <li><a href="#时钟周期">时钟周期：</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#指令周期的数据流">指令周期的数据流</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#基本概念">基本概念：</a></li>
+              </ul>
+            </li>
+            <li><a href="#取指周期">取指周期：</a></li>
+            <li><a href="#间址周期">间址周期：</a></li>
+            <li><a href="#执行周期">执行周期</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#中断周期">中断周期：</a></li>
+            <li><a href="#指令执行方案">指令执行方案：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#控制信号">控制信号：</a>
+              <ul>
+                <li><a href="#数据通路">数据通路</a></li>
+              </ul>
+            </li>
+            <li><a href="#控制方式">控制方式：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#流水线技术">流水线技术：</a>
+              <ul>
+                <li></li>
+                <li><a href="#性能判断">性能判断</a></li>
+                <li><a href="#流水线的结构">流水线的结构：</a></li>
+              </ul>
+            </li>
+            <li><a href="#流水线相关问题">流水线相关问题</a>
+              <ul>
+                <li><a href="#流水线停顿问题">流水线停顿问题：</a></li>
+                <li><a href="#多发射技术">多发射技术：</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -522,13 +600,27 @@ This article does not have a corresponding language version
       >2026-05-28</time
     >
     <time style="display: none;" id="post-update-time"
-      >2026-05-28</time
+      >2026-05-29</time
     >
   </span></div>
 </div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="计组">
 <a class="header-anchor" href="#%e8%ae%a1%e7%bb%84"></a>
 计组
-</h1><p>这是计算机世界的架构：
+</h1><p>笔记参考：</p>
+<ul>
+<li>
+<p>王道计组</p>
+</li>
+<li>
+<p>saurlax：https://saurlax.com/blog/principles-of-computer-composition</p>
+</li>
+<li>
+<p>网盘LCX的PPT（大部分图片来源）</p>
+</li>
+</ul>
+<p>注：本笔记可能有错漏仅供参考，且大部分内容直接照搬，只是提取出来便于总结，有错误可以帮忙踢一脚作者（仅供参考仅供参考）</p>
+<p><code>================================================================</code></p>
+<p>这是计算机世界的架构：
 <img src="/note_images/computer_component/image-20260519154944573.png" alt="image-20260519154944573" style="zoom:50%;" /></p>
 <p>计组就是研究这些硬件在底层如何相互协调工作的</p>
 <h1 id="一概论">
@@ -2081,6 +2173,13 @@ $$
 <p>机器字长：CPU进行一次整数运算能处理的二进制数据的位数</p>
 <p>存储字长：一个存储单元中的二进制代码的位数（通常和MDR位数相同）</p>
 <p>指令字长回应取指令所需时间</p>
+<h5 id="risc和cisc">
+<a class="header-anchor" href="#risc%e5%92%8ccisc"></a>
+RISC和CISC:
+</h5><ul>
+<li><strong>RISC</strong>：精简指令集计算机，指令数量少、每条指令功能简单、长度固定，通常一个时钟周期执行一条指令，典型代表ARM、RISC-V</li>
+<li><strong>CISC</strong>：复杂指令集计算机，指令数量多、功能复杂、长度可变，一条指令可能完成多个低级操作（如内存读取+运算+写回），执行需要多个时钟周期。典型代表x86（Intel/AMD 的 CPU）</li>
+</ul>
 <h4 id="机器指令格式">
 <a class="header-anchor" href="#%e6%9c%ba%e5%99%a8%e6%8c%87%e4%bb%a4%e6%a0%bc%e5%bc%8f"></a>
 机器指令格式：
@@ -2109,7 +2208,6 @@ $$
 <p>需注意：</p>
 <p>不允许短码是长码的前缀，各指令操作码不能重复</p>
 <img src="/note_images/computer_component/image-20260525103255679.png" alt="image-20260525103255679" style="zoom:50%;" />
-<img src="/note_images/computer_component/image-20260525104504082.png" alt="image-20260525104504082" style="zoom:50%;" />
 <h3 id="操作类型">
 <a class="header-anchor" href="#%e6%93%8d%e4%bd%9c%e7%b1%bb%e5%9e%8b"></a>
 操作类型
@@ -2135,6 +2233,11 @@ $$
 </ul>
 <p>也就是起始地址要是自己所占字节的倍数</p>
 <img src="/note_images/computer_component/image-20260528133741621.png" alt="image-20260528133741621" style="zoom:50%;" />
+<h4 id="程序状态字">
+<a class="header-anchor" href="#%e7%a8%8b%e5%ba%8f%e7%8a%b6%e6%80%81%e5%ad%97"></a>
+程序状态字：
+</h4><img src="/note_images/computer_component/image-20260529163702894.png" alt="image-20260529163702894" style="zoom: 67%;" />
+<img src="/note_images/computer_component/image-20260525104504082.png" alt="image-20260525104504082" style="zoom:50%;" />
 <h4 id="操作类型-1">
 <a class="header-anchor" href="#%e6%93%8d%e4%bd%9c%e7%b1%bb%e5%9e%8b-1"></a>
 操作类型：
@@ -2177,7 +2280,479 @@ $$
 <h2 id="寻址方式">
 <a class="header-anchor" href="#%e5%af%bb%e5%9d%80%e6%96%b9%e5%bc%8f"></a>
 寻址方式
-</h2></div>
+</h2><h3 id="指令寻址">
+<a class="header-anchor" href="#%e6%8c%87%e4%bb%a4%e5%af%bb%e5%9d%80"></a>
+指令寻址
+</h3><p>也就是找下一条欲执行指令的地址</p>
+<p>如何确定下一条指令的存放地址？</p>
+<ol>
+<li>顺序寻址：(PC) +“ 1 ”-&gt; PC(程序计数器)，加的数会根据指令字结构改变</li>
+<li>跳跃寻址：由跳跃（JMP）指令给出，直接变为指向的地址并且不加1</li>
+</ol>
+<h3 id="数据寻址">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e5%af%bb%e5%9d%80"></a>
+数据寻址
+</h3><p><strong>目的</strong>：确定本条指令的<strong>地址码指明的真实地址</strong></p>
+<img src="/note_images/computer_component/image-20260529111025307.png" alt="image-20260529111025307" style="zoom: 33%;" />
+<p>由于数据寻址有多种，为了分辨，需在指令中指出寻址方式，则可在地址码前设置一个寻址方式特征字段（寻址方式位），或纳入操作码中。寻址特征可为0~1001。</p>
+<table>
+  <thead>
+      <tr>
+          <th>操作码</th>
+          <th>寻址特征</th>
+          <th>形式地址(A)</th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<ul>
+<li>
+<p>有效地址 （用EA表示） ：操作数的真实地址</p>
+</li>
+<li>
+<p>形式地址（用A表示 ）：指令字中的地址</p>
+</li>
+</ul>
+<p>有效地址由形式地址根据寻址方式来确定，多地址指令需要多个寻址特征，为简化，设后面都是一地址指令，且指令字长 = 存储字长 = 机器字长</p>
+<p>（ ）表示这个地址所指向的存储单元，如（A）</p>
+<h5 id="1直接寻址">
+<a class="header-anchor" href="#1%e7%9b%b4%e6%8e%a5%e5%af%bb%e5%9d%80"></a>
+1.直接寻址：
+</h5><p>指令字中的形式地址就是操作数真实地址，即EA = A，寻址范围有限</p>
+<p>取指令访存一次，执行指令访存一次，不考虑存结果则共访存两次</p>
+<h5 id="2立即寻址">
+<a class="header-anchor" href="#2%e7%ab%8b%e5%8d%b3%e5%af%bb%e5%9d%80"></a>
+2.立即寻址：
+</h5><p>又称作立即数寻址，形式地址部分不是一个操作数的地址，而是操作数本身。一般采用补码形式</p>
+<p>取指访存一次，<strong>指令执行</strong>阶段<strong>不访存</strong>，共访存一次，A 的位数限制了立即数的范围</p>
+<p>教材的<strong>直接寻址特征为&rdquo;#&quot;</strong></p>
+<h5 id="3间接寻址">
+<a class="header-anchor" href="#3%e9%97%b4%e6%8e%a5%e5%af%bb%e5%9d%80"></a>
+3.间接寻址：
+</h5><p>指令的地址字段给出的形式地址不是操作数的真正地址，而是<strong>操作数有效地址所在的存储单元的地址</strong>，也就是操作数地址的地址。</p>
+<p>即EA由A间接提供</p>
+<img src="/note_images/computer_component/image-20260529122320487.png" alt="image-20260529122320487" style="zoom:50%;" />
+<p>访存：取指令访存一次，执行指令访存两(多)次</p>
+<p>优点：扩大寻址范围，因为len（EA） &gt; len（A），同时利于编制程序</p>
+<p>缺点：需要进行多次访存（一次间址需两次，后面递增），效率降低</p>
+<h5 id="4寄存器寻址">
+<a class="header-anchor" href="#4%e5%af%84%e5%ad%98%e5%99%a8%e5%af%bb%e5%9d%80"></a>
+4.寄存器寻址：
+</h5><p>在指令字中直接给出操作数所在的寄存器编号，即EA = R_i，其操作数在由R_i所指的寄存器内</p>
+<p>访存：取指令访存一次，执行指令只访问寄存器，不访存</p>
+<p>优点：指令字短(∵寄存器少)且执行速度块，支持向量/矩阵运算</p>
+<p>缺点：贵，个数有限</p>
+<h5 id="5寄存器间接寻址">
+<a class="header-anchor" href="#5%e5%af%84%e5%ad%98%e5%99%a8%e9%97%b4%e6%8e%a5%e5%af%bb%e5%9d%80"></a>
+5.寄存器间接寻址：
+</h5><p>指令中的形式地址为寄存器的编号，寄存器的内容是操作数的有效地址。即EA = （R_i）</p>
+<p>把3.的第一步换成寄存器而不是主存</p>
+<p>取指令访存一次，执行指令访存一次，不考虑存结果则共访存两次</p>
+<p>特点：比一般的间接寻址块</p>
+<h5 id="6隐含寻址">
+<a class="header-anchor" href="#6%e9%9a%90%e5%90%ab%e5%af%bb%e5%9d%80"></a>
+6.隐含寻址：
+</h5><p>不是直接给出操作数地址，操作数地址通常隐含在操作码（指令）或某个（约定）寄存器中。</p>
+<p>只显式给出一颗操作数的地址，另一个地址默认存放在ALU中（如ADD指令）</p>
+<h4 id="偏移寻址">
+<a class="header-anchor" href="#%e5%81%8f%e7%a7%bb%e5%af%bb%e5%9d%80"></a>
+偏移寻址
+</h4><p>以某一个特定地址为起点便宜，区别在于偏移的“起点”不一样</p>
+<p>以下指令的<strong>执行期间</strong>的访存次数都为1</p>
+<h5 id="7基址寻址">
+<a class="header-anchor" href="#7%e5%9f%ba%e5%9d%80%e5%af%bb%e5%9d%80"></a>
+7.基址寻址：
+</h5><p>以程序的起始存放位置作为“起点”</p>
+<p>指令中的形式地址(A)与基址寄存器(BR)内容之和为有效地址，EA = (BR) + A</p>
+<p>显式：采用通用寄存器作为基址寄存器
+隐式：采用专用寄存器作为基址寄存器</p>
+<p>R作寄存器编号，需要在地址前占用比特位，假设R0作基址寄存器，在程序的执行过程中R0 内容不变，形式地址A可变，A从0开始。</p>
+<p>优点：</p>
+<ul>
+<li>可扩大寻址范围，有利于多道程序</li>
+<li>基址寄存器内容由操作系统或管理程序确定</li>
+</ul>
+<h5 id="8变址寻址">
+<a class="header-anchor" href="#8%e5%8f%98%e5%9d%80%e5%af%bb%e5%9d%80"></a>
+8.变址寻址：
+</h5><p>程序员自己决定从哪里作为“起点”</p>
+<p>指令中的形式地址与变址寄存器内容之和为有效地址。IX 为变址寄存器，通用寄存器也可以作为变址寄存器</p>
+<p><strong>注</strong>：与基址寻址不同的是，变址寄存器是面向用户的，在程序执行的过程中，变址寄存器的内容可由用户改变，而形式地址不变（IX作为偏移量，A作为基地址），与7.正好相反，其便于处理数组问题和编制循环程序。</p>
+<p>以下是王道的例子：</p>
+<img src="/note_images/computer_component/image-20260529135448178.png" alt="image-20260529135448178" style="zoom: 33%;" />
+<h5 id="9相对寻址">
+<a class="header-anchor" href="#9%e7%9b%b8%e5%af%b9%e5%af%bb%e5%9d%80"></a>
+9.相对寻址：
+</h5><p>以程序计数器PC所指地址作为“起点”</p>
+<p>有效地址为程序计数器PC的值与形式地址之和，即EA = (PC) + A
+其中A是相对于PC所指地址的位移量，补码表示，可正可负</p>
+<p><strong>注</strong>：此时PC<strong>已经自增</strong>，因为每次PC取出一条指令都会自动进到下一条指令，即PC + 1(由具体情况判断自增) -&gt; PC，在此基础上再进行的EA = ( PC ) + A
+因此相对寻址是相对于下一条指令的便宜，求位移量时应先判断PC自增后的数</p>
+<p>优点：便于程序浮动，广泛应用于转移指令</p>
+<h4 id="堆栈寻址">
+<a class="header-anchor" href="#%e5%a0%86%e6%a0%88%e5%af%bb%e5%9d%80"></a>
+堆栈寻址
+</h4><h5 id="10堆栈寻址">
+<a class="header-anchor" href="#10%e5%a0%86%e6%a0%88%e5%af%bb%e5%9d%80"></a>
+10.堆栈寻址
+</h5><p>操作数存放在堆栈中，隐含使用堆栈指针（SP）作为操作数地址</p>
+<p>即该存储区中被读/写的单元的地址是用一个特定的寄存器给出的，该寄存器就是SP</p>
+<p>栈：后进先出、先进后出</p>
+<p><strong>种类</strong>：</p>
+<ul>
+<li>硬堆栈：寄存器型（栈底浮动，栈顶不变），执行期间不访存</li>
+<li>软堆栈：存储器型（栈底不变，栈顶浮动），在内存中划一片区域用于堆栈，执行期间访存一次</li>
+</ul>
+<p>工作方式：满栈递减、满栈递增、空栈递减、空栈递增</p>
+<h1 id="cpu的结构和功能">
+<a class="header-anchor" href="#cpu%e7%9a%84%e7%bb%93%e6%9e%84%e5%92%8c%e5%8a%9f%e8%83%bd"></a>
+CPU的结构和功能
+</h1><h3 id="cpu结构">
+<a class="header-anchor" href="#cpu%e7%bb%93%e6%9e%84"></a>
+CPU结构
+</h3><p>CPU由<strong>控制器</strong>和<strong>运算器</strong>两大部分组成</p>
+<p>CPU功能：</p>
+<ul>
+<li>指令控制：取指令、分析质量、执行指令</li>
+<li>操作控制：把各种操作信号送往相应的部件（如访存）</li>
+<li>时间控制：按时间顺序提供应用的控制信号</li>
+<li>数据加工：算是逻辑运算</li>
+<li>中断处理</li>
+</ul>
+<p>运算器：</p>
+<p>对数据进行加工</p>
+<p>控制器：</p>
+<ul>
+<li>
+<p>协调、控制计算机各部件执行程序的指令序列</p>
+</li>
+<li>
+<p>取指令</p>
+</li>
+<li>
+<p>分析指令：操作码译码，产生操作数的有效地址</p>
+</li>
+<li>
+<p>执行指令</p>
+</li>
+<li>
+<p>中断处理</p>
+</li>
+</ul>
+<h5 id="运算器基本结构">
+<a class="header-anchor" href="#%e8%bf%90%e7%ae%97%e5%99%a8%e5%9f%ba%e6%9c%ac%e7%bb%93%e6%9e%84"></a>
+运算器基本结构：
+</h5><ol>
+<li>算术逻辑单元ALU：用于算数与逻辑计算<img src="/note_images/computer_component/image-20260529144628855.png" alt="image-20260529144628855" style="zoom:50%;" /></li>
+<li>通用寄存器组：如AX、BX、CX（也可用R0、R1、R2等表示）、SP等，用于存放操作数，可以用作ALU的输入，SP是堆栈指针，用于指示栈顶地址。</li>
+<li>暂存寄存器：在ALU下，用于暂存从主存读来的数据，这个数据不能存放在通用寄存器中，否则会破坏原有内容。</li>
+<li>累加寄存器ACC，是一个通用寄存器，用于赞数存放ALU运算结果的信息，用于实现加法运算
+<img src="/note_images/computer_component/image-20260529145734643.png" alt="image-20260529145734643" style="zoom: 60%;" /></li>
+<li>程序状态字（标志）寄存器（PSW）：保留由算术逻辑运算指令或测试指令的结果而建立的各种状态信息，如溢出标志，进位标志、零标志等，这些位参与并决定微操作的形成
+<img src="/note_images/computer_component/image-20260525104504082.png" alt="image-20260525104504082" style="zoom:50%;" /></li>
+<li>移位器：对运算结果进行移位运算（如乘法）</li>
+<li>计数器：控制乘除的操作步数</li>
+</ol>
+<p>选择哪个寄存器可向ALU传输数据</p>
+<ul>
+<li>
+<p>直接用导线连接的情况下，有两种方法：
+1.用多路选择器根据控制信号选择一条路输出 ； 2.使用三态门控制每一路的输出</p>
+<p>无冲突，性能高，实现困难</p>
+</li>
+<li>
+<p>CPU内部单总线方式：所有寄存器的IO端都连接到一条公共通路上</p>
+<p>结构简单易实现，性能较低，有冲突</p>
+</li>
+</ul>
+<img src="/note_images/computer_component/image-20260529145313253.png" alt="image-20260529145313253" style="zoom: 33%;" />
+<h5 id="控制器基本结构">
+<a class="header-anchor" href="#%e6%8e%a7%e5%88%b6%e5%99%a8%e5%9f%ba%e6%9c%ac%e7%bb%93%e6%9e%84"></a>
+控制器基本结构：
+</h5><img src="/note_images/computer_component/image-20260529164448696.png" alt="image-20260529164448696" style="zoom:67%;" />
+<h3 id="cpu的工作">
+<a class="header-anchor" href="#cpu%e7%9a%84%e5%b7%a5%e4%bd%9c"></a>
+CPU的工作
+</h3><h4 id="指令周期">
+<a class="header-anchor" href="#%e6%8c%87%e4%bb%a4%e5%91%a8%e6%9c%9f"></a>
+指令周期
+</h4><p>指令周期：取出并执行一条指令所需的全部时间</p>
+<p>指令周期包括（指令周期的长度）</p>
+<ol>
+<li>只有<strong>取指周期</strong>的指令周期：
+取指令PC + 1，并包括对指令译码</li>
+<li>有取指和<strong>执行周期</strong>的指令周期</li>
+<li>具有间接寻址的指令周期(取有效地址)
+<img src="/note_images/computer_component/image-20260529170028128.png" alt="image-20260529170028128" style="zoom:50%;" />
+注意：直接寻址不在间址周期执行，如果指令采用直接寻址，在取指周期CPU 在拿到指令的同时，也就从指令的地址码字段直接获取了操作数的内存地址。</li>
+<li>带有中断周期的指令周期</li>
+</ol>
+<img src="/note_images/computer_component/image-20260529170035008.png" alt="image-20260529170035008" style="zoom:50%;" />
+<h4 id="机器周期">
+<a class="header-anchor" href="#%e6%9c%ba%e5%99%a8%e5%91%a8%e6%9c%9f"></a>
+机器周期：
+</h4><p>指令周期常常用若干机器周期来表示，机器周期又叫CPU周期（上面两图的每个周期都是一个CPU周期）</p>
+<p>一个机器周期又包含若干个<strong>时钟周期</strong>（也称CPU时钟周期、节拍），他是CPU操作的<strong>最基本</strong>单位</p>
+<p>机器周期的确定：以完成最复杂、最慢指令功能的时间为准 或 以访问一次存储器的时间为基准</p>
+<img src="/note_images/computer_component/image-20260529171223646.png" alt="image-20260529171223646" style="zoom: 80%;" />
+<p>CPU主频：3.0Ghz，表示CPU每秒钟可以发出3.0G次时钟周期</p>
+<p>每个指令周期内的机器周期数可以不等，每个机器周期内的节拍数也可以不等</p>
+<h4 id="时钟周期">
+<a class="header-anchor" href="#%e6%97%b6%e9%92%9f%e5%91%a8%e6%9c%9f"></a>
+时钟周期：
+</h4><p>将一个机器周期分成若干个时间相等的时间段，每段称为一 个时钟周期(节拍、状态)</p>
+<p>时钟周期是控制计算机操作的最小单位时间。</p>
+<p>用时钟周期控制微操作命令，每个时钟周期产生一个或几个 微操作命令。</p>
+<h5 id="判断处于哪个周期">
+<a class="header-anchor" href="#%e5%88%a4%e6%96%ad%e5%a4%84%e4%ba%8e%e5%93%aa%e4%b8%aa%e5%91%a8%e6%9c%9f"></a>
+判断处于哪个周期:
+</h5><img src="/note_images/computer_component/image-20260529172938417.png" alt="image-20260529172938417" style="zoom:50%;" />
+<p>每个周期设置一个对应的触发器</p>
+<h2 id="指令周期的数据流">
+<a class="header-anchor" href="#%e6%8c%87%e4%bb%a4%e5%91%a8%e6%9c%9f%e7%9a%84%e6%95%b0%e6%8d%ae%e6%b5%81"></a>
+指令周期的数据流
+</h2><h4 id="基本概念">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
+基本概念：
+</h4><ul>
+<li>PC：程序计数器，存放<strong>当前将要执行的指令</strong>在内存中的地址</li>
+<li>MAR：存储器地址寄存器：用于存放要访问的内存单元的地址</li>
+<li>MDR：存储器数据寄存器：用于暂存从内存读出的数据/将要写入的数据或指令</li>
+<li>1 -&gt; R/W ：发出读/写命令</li>
+<li>M（MAR）：主存中由MAR指向的地址单元的<strong>内容本身</strong></li>
+<li>IR：指令寄存器：用于存放当前正在执行的指令（包括操作码和地址码）</li>
+<li>OP（IR）：IR中的操作码字段，只是此指令要做什么操作</li>
+<li>AD（IR）：IR中的地址码字段</li>
+<li>CU：控制单元，CPU的指挥中心</li>
+<li>EINT：允许中断触发器，为1表示CPU开中断，0表示关中断</li>
+<li>SP：堆栈指针</li>
+</ul>
+<h3 id="取指周期">
+<a class="header-anchor" href="#%e5%8f%96%e6%8c%87%e5%91%a8%e6%9c%9f"></a>
+取指周期：
+</h3><p>下图很清晰：</p>
+<img src="/note_images/computer_component/image-20260529174450135.png" alt="image-20260529174450135" style="zoom: 67%;" />
+<h3 id="间址周期">
+<a class="header-anchor" href="#%e9%97%b4%e5%9d%80%e5%91%a8%e6%9c%9f"></a>
+间址周期：
+</h3><img src="/note_images/computer_component/image-20260529174612948.png" alt="image-20260529174612948" style="zoom:67%;" />
+<p>已经有了操作码了，直接MDR -&gt; (AD)IR覆盖掉形式地址即可</p>
+<h3 id="执行周期">
+<a class="header-anchor" href="#%e6%89%a7%e8%a1%8c%e5%91%a8%e6%9c%9f"></a>
+执行周期
+</h3><p>其实根据IR中的指令字的操作码和操作数通过ALU产生结果，不同指令执行周期操作不同，因此没有统一的数据流向</p>
+<h5 id="1非访存指令">
+<a class="header-anchor" href="#1%e9%9d%9e%e8%ae%bf%e5%ad%98%e6%8c%87%e4%bb%a4"></a>
+1.非访存指令：
+</h5><img src="/note_images/computer_component/image-20260529174915543.png" alt="image-20260529174915543" style="zoom:50%;" />
+<h5 id="2访存指令">
+<a class="header-anchor" href="#2%e8%ae%bf%e5%ad%98%e6%8c%87%e4%bb%a4"></a>
+2.访存指令：
+</h5><img src="/note_images/computer_component/image-20260529174928790.png" alt="image-20260529174928790" style="zoom:50%;" />
+<img src="/note_images/computer_component/image-20260529174937700.png" alt="image-20260529174937700" style="zoom:50%;" />
+<h5 id="3转移指令">
+<a class="header-anchor" href="#3%e8%bd%ac%e7%a7%bb%e6%8c%87%e4%bb%a4"></a>
+3.转移指令：
+</h5><img src="/note_images/computer_component/image-20260529174955243.png" alt="image-20260529174955243" style="zoom:50%;" />
+<h3 id="中断周期">
+<a class="header-anchor" href="#%e4%b8%ad%e6%96%ad%e5%91%a8%e6%9c%9f"></a>
+中断周期：
+</h3><img src="/note_images/computer_component/image-20260529175051073.png" alt="image-20260529175051073" style="zoom:67%;" />
+<p>本质都是：寄存器与寄存器之间，寄存器和主存之间，寄存器和ALU之间</p>
+<h3 id="指令执行方案">
+<a class="header-anchor" href="#%e6%8c%87%e4%bb%a4%e6%89%a7%e8%a1%8c%e6%96%b9%e6%a1%88"></a>
+指令执行方案：
+</h3><h5 id="1单指令周期">
+<a class="header-anchor" href="#1%e5%8d%95%e6%8c%87%e4%bb%a4%e5%91%a8%e6%9c%9f"></a>
+1.单指令周期：
+</h5><p>所有指令选用相同的执行时间完成</p>
+<p>指令之间串行，且短时间指令被拖慢。因此比较低效</p>
+<h5 id="2多指令周期">
+<a class="header-anchor" href="#2%e5%a4%9a%e6%8c%87%e4%bb%a4%e5%91%a8%e6%9c%9f"></a>
+2.多指令周期
+</h5><p>指令串行，单可选用不同个数的时钟周期来完成不同指令，需要更复杂的硬件设计</p>
+<h5 id="3流水线方案">
+<a class="header-anchor" href="#3%e6%b5%81%e6%b0%b4%e7%ba%bf%e6%96%b9%e6%a1%88"></a>
+3.流水线方案：
+</h5><p>每个时钟周期启动一条指令，尽量让多条指令同时运行，但各自在不同的执行步骤，指令之间并行执行。</p>
+<h3 id="控制信号">
+<a class="header-anchor" href="#%e6%8e%a7%e5%88%b6%e4%bf%a1%e5%8f%b7"></a>
+控制信号：
+</h3><h4 id="数据通路">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e9%80%9a%e8%b7%af"></a>
+数据通路
+</h4><p>数据在功能部件之间传送的路径</p>
+<p>基本结构：</p>
+<ol>
+<li>不采用CPU内部总线的方式</li>
+<li>采用CPU内部总线的方式</li>
+</ol>
+<p>细则略</p>
+<h3 id="控制方式">
+<a class="header-anchor" href="#%e6%8e%a7%e5%88%b6%e6%96%b9%e5%bc%8f"></a>
+控制方式：
+</h3><p>微操作：<strong>微操作</strong>是执行一条指令时的<strong>最基本、不可再分的原子操作</strong>。</p>
+<p>控制方式：产生不同微操作命令序列所用的时序方式</p>
+<h5 id="1同步控制方式">
+<a class="header-anchor" href="#1%e5%90%8c%e6%ad%a5%e6%8e%a7%e5%88%b6%e6%96%b9%e5%bc%8f"></a>
+1.同步控制方式：
+</h5><p>任一微操作均由统一基准时标的时序信号控制。</p>
+<ul>
+<li>使用定长机器周期：以最长的微操作序列和最繁的微操作作为标准，机器周期内节拍数相同。</li>
+<li>采用不定长的机器周期：机器周期内节拍数不等。</li>
+<li>采用中央控制和局部控制相结合的方法。局部控制的节拍宽度与中央控制的节拍宽度一致。</li>
+</ul>
+<h5 id="2异步控制方式">
+<a class="header-anchor" href="#2%e5%bc%82%e6%ad%a5%e6%8e%a7%e5%88%b6%e6%96%b9%e5%bc%8f"></a>
+2.异步控制方式：
+</h5><ul>
+<li>
+<p>无基准时标信号</p>
+</li>
+<li>
+<p>无固定的周期节拍和严格的时钟同步</p>
+</li>
+<li>
+<p>采用应答方式</p>
+</li>
+</ul>
+<h5 id="3联合控制">
+<a class="header-anchor" href="#3%e8%81%94%e5%90%88%e6%8e%a7%e5%88%b6"></a>
+3.联合控制：
+</h5><p>同步与异步结合</p>
+<h5 id="4人工控制">
+<a class="header-anchor" href="#4%e4%ba%ba%e5%b7%a5%e6%8e%a7%e5%88%b6"></a>
+4.人工控制：
+</h5><p>看不懂</p>
+<img src="/note_images/computer_component/image-20260529211350023.png" alt="image-20260529211350023" style="zoom:50%;" />
+<h3 id="流水线技术">
+<a class="header-anchor" href="#%e6%b5%81%e6%b0%b4%e7%ba%bf%e6%8a%80%e6%9c%af"></a>
+流水线技术：
+</h3><p>PPT吹水部分：如何提高机器速度？</p>
+<img src="/note_images/computer_component/image-20260529211603681.png" alt="image-20260529211603681" style="zoom: 67%;" />
+<h5 id="并行">
+<a class="header-anchor" href="#%e5%b9%b6%e8%a1%8c"></a>
+并行
+</h5><img src="/note_images/computer_component/image-20260529211632789.png" alt="image-20260529211632789" style="zoom:67%;" />
+<h5 id="指令流水">
+<a class="header-anchor" href="#%e6%8c%87%e4%bb%a4%e6%b5%81%e6%b0%b4"></a>
+指令流水：
+</h5><p>设指令的执行分为六个阶段，则理论可作N级流水，以下是指令六级流水样例：</p>
+<img src="/note_images/computer_component/image-20260529211815083.png" alt="image-20260529211815083" style="zoom:50%;" />
+<p>影响指令流水效率加倍的因素：</p>
+<ol>
+<li>执行时间 &gt; 取指时间</li>
+<li>条件转移指令对指令流水的影响。必须等上条指令执行结束，才能确定下条指令的地址。</li>
+</ol>
+<h4 id="性能判断">
+<a class="header-anchor" href="#%e6%80%a7%e8%83%bd%e5%88%a4%e6%96%ad"></a>
+性能判断
+</h4><h5 id="1吞吐量">
+<a class="header-anchor" href="#1%e5%90%9e%e5%90%90%e9%87%8f"></a>
+1.吞吐量：
+</h5><p>单位时间内流水线所完成指令或输出结果的数量</p>
+<p>设 m 级的流水线，各段时间为Δt，连续处理 n 条指令的吞吐率（即<strong>实际吞吐率</strong>）为</p>
+<img src="/note_images/computer_component/image-20260529212113108.png" alt="image-20260529212113108" style="zoom:60%;" />
+<p>最大吞吐率：
+$$
+T_{\text{pmax}} = \frac{1}{\Delta t}
+$$</p>
+<h5 id="2加速比s_p">
+<a class="header-anchor" href="#2%e5%8a%a0%e9%80%9f%e6%af%94s_p"></a>
+2.加速比S_p
+</h5><p>m 段的<strong>流水线</strong>的速度与等功能的<strong>非流水线</strong>的的速度之比</p>
+<p>设流水线各段时间为 Δt，在：</p>
+<ul>
+<li>完成n条指令在m段流水线上共需：T = m·Δt + (n-1)·Δt</li>
+<li>完成n条指令在等效的非流水线上共需：T ′ = n（m · Δt）</li>
+</ul>
+<p>则：<img src="/note_images/computer_component/image-20260529212541669.png" alt="image-20260529212541669" style="zoom: 67%;" /></p>
+<h5 id="3效率">
+<a class="header-anchor" href="#3%e6%95%88%e7%8e%87"></a>
+3.效率：
+</h5><p>流水线中各功能段的利用率。</p>
+<p>产生原因：由于流水线有建立时间和排空时间，因此各功能段的设备 不可能一直处于工作状态。</p>
+<p>图一看就懂：</p>
+<img src="/note_images/computer_component/image-20260529212636976.png" alt="image-20260529212636976" style="zoom:60%;" />
+<h4 id="流水线的结构">
+<a class="header-anchor" href="#%e6%b5%81%e6%b0%b4%e7%ba%bf%e7%9a%84%e7%bb%93%e6%9e%84"></a>
+流水线的结构：
+</h4><ol>
+<li>指令流水线结构</li>
+<li>运算流水线结构</li>
+</ol>
+<h3 id="流水线相关问题">
+<a class="header-anchor" href="#%e6%b5%81%e6%b0%b4%e7%ba%bf%e7%9b%b8%e5%85%b3%e9%97%ae%e9%a2%98"></a>
+流水线相关问题
+</h3><h4 id="流水线停顿问题">
+<a class="header-anchor" href="#%e6%b5%81%e6%b0%b4%e7%ba%bf%e5%81%9c%e9%a1%bf%e9%97%ae%e9%a2%98"></a>
+流水线停顿问题：
+</h4><p>当相近指令之间出现某种关联，使指令流水出现停顿，影响效率。</p>
+<p>问题相关：</p>
+<h5 id="1-结构相关">
+<a class="header-anchor" href="#1-%e7%bb%93%e6%9e%84%e7%9b%b8%e5%85%b3"></a>
+1. 结构相关
+</h5><p>不同指令争用同一功能部件产生资源冲突</p>
+<p>解决方法：</p>
+<ul>
+<li>后续指令停顿(不推荐)</li>
+<li>指令存储器和数据存储器分开，多部件</li>
+<li>指令预取技术 （适用于访存周期短的情况）</li>
+</ul>
+<h5 id="2数据相关">
+<a class="header-anchor" href="#2%e6%95%b0%e6%8d%ae%e7%9b%b8%e5%85%b3"></a>
+2.数据相关
+</h5><p>不同指令因重叠操作，可能改变操作数的读/写访问顺序。根本原因是允许速度不同导致的，数据相关分为3种类型：</p>
+<ol>
+<li>写后读（RAW）：后一条指令要<strong>读</strong>一个寄存器，而前一条指令要<strong>写</strong>这个寄存器。可能会由于某种原因（如顺序不对、写回在取数后面），后一条会读到旧值</li>
+<li>读后写（WAR）：后一条指令要<strong>写</strong>一个寄存器，而前一条指令要<strong>读</strong>这个寄存器。可能会导致先写后读</li>
+<li>写后写（WAW）：两条指令先后写同一个寄存器。流水线中如果前一条写回较晚，后一条写回较早，会导致最终结果错误（后写的值被前写覆盖，比如乘法比加法花时间长，导致加法后执行但先返回）</li>
+</ol>
+<p>解决数据相关的其他方法：</p>
+<ol>
+<li>指令静态调度</li>
+<li>指令动态调度：指令乱序执行</li>
+</ol>
+<h5 id="3控制相关">
+<a class="header-anchor" href="#3%e6%8e%a7%e5%88%b6%e7%9b%b8%e5%85%b3"></a>
+3.控制相关
+</h5><p>由指令转移引起，比如循环判断语句，后一句要先等前句判断才能确定是否执行</p>
+<img src="/note_images/computer_component/image-20260529214137570.png" alt="image-20260529214137570" style="zoom:50%;" />
+<p>解决方法：分支预测法</p>
+<p>由于大部分循环都会符合循环条件，通过预测分支的方向和目标地址，让流水线提前取指和执行后续指令。若预测正确，流水线无停顿；若预测错误，产生<strong>分支惩罚</strong>，需恢复正确现场。</p>
+<h4 id="多发射技术">
+<a class="header-anchor" href="#%e5%a4%9a%e5%8f%91%e5%b0%84%e6%8a%80%e6%9c%af"></a>
+多发射技术：
+</h4><h5 id="超标量技术">
+<a class="header-anchor" href="#%e8%b6%85%e6%a0%87%e9%87%8f%e6%8a%80%e6%9c%af"></a>
+超标量技术
+</h5><ul>
+<li>每个时钟周期内可并发发射多条独立指令，配置多个功能部件。</li>
+<li>不能调整指令的执行顺序：通过编译优化技术，把可并行执行的指令搭配起来。</li>
+</ul>
+<h5 id="超流水线技术">
+<a class="header-anchor" href="#%e8%b6%85%e6%b5%81%e6%b0%b4%e7%ba%bf%e6%8a%80%e6%9c%af"></a>
+超流水线技术
+</h5><ul>
+<li>在一个时钟周期内再分段，在一个时钟周期内一个功能部件使用多次</li>
+<li>不能调整指令的执行顺序，靠编译程序解决优化问题</li>
+</ul>
+<h5 id="超长指令字技术">
+<a class="header-anchor" href="#%e8%b6%85%e9%95%bf%e6%8c%87%e4%bb%a4%e5%ad%97%e6%8a%80%e6%9c%af"></a>
+超长指令字技术
+</h5><ul>
+<li>由编译程序挖掘出指令间潜在的并行性，将多条能并行操作的指令组合成一条</li>
+<li>具有多个操作码字段的超长指令字（可达几百位）</li>
+<li>采用多个处理部件</li>
+</ul>
+<h6 id="指令动态调度不重要">
+<a class="header-anchor" href="#%e6%8c%87%e4%bb%a4%e5%8a%a8%e6%80%81%e8%b0%83%e5%ba%a6%e4%b8%8d%e9%87%8d%e8%a6%81"></a>
+指令动态调度:不重要
+</h6><h6 id="鲲鹏流水线请输入文本">
+<a class="header-anchor" href="#%e9%b2%b2%e9%b9%8f%e6%b5%81%e6%b0%b4%e7%ba%bf%e8%af%b7%e8%be%93%e5%85%a5%e6%96%87%e6%9c%ac"></a>
+鲲鹏流水线:请输入文本
+</h6></div>
     <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
     <a
       class="article-category-link"
@@ -2225,10 +2800,10 @@ $$
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;14.7k</span
+          >&nbsp;16.6k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;01:15</span>
+        <span class="icon-coffee">&nbsp;01:24</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -2532,6 +3107,7 @@ $$
           <ul>
             <li><a href="#概述-2">概述：</a>
               <ul>
+                <li></li>
                 <li><a href="#机器指令格式">机器指令格式：</a></li>
               </ul>
             </li>
@@ -2539,12 +3115,89 @@ $$
             <li><a href="#操作类型">操作类型</a>
               <ul>
                 <li></li>
+                <li><a href="#程序状态字">程序状态字：</a></li>
                 <li><a href="#操作类型-1">操作类型：</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#寻址方式">寻址方式</a></li>
+        <li><a href="#寻址方式">寻址方式</a>
+          <ul>
+            <li><a href="#指令寻址">指令寻址</a></li>
+            <li><a href="#数据寻址">数据寻址</a>
+              <ul>
+                <li></li>
+                <li><a href="#偏移寻址">偏移寻址</a></li>
+                <li><a href="#堆栈寻址">堆栈寻址</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#cpu的结构和功能">CPU的结构和功能</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#cpu结构">CPU结构</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#cpu的工作">CPU的工作</a>
+              <ul>
+                <li><a href="#指令周期">指令周期</a></li>
+                <li><a href="#机器周期">机器周期：</a></li>
+                <li><a href="#时钟周期">时钟周期：</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#指令周期的数据流">指令周期的数据流</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#基本概念">基本概念：</a></li>
+              </ul>
+            </li>
+            <li><a href="#取指周期">取指周期：</a></li>
+            <li><a href="#间址周期">间址周期：</a></li>
+            <li><a href="#执行周期">执行周期</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#中断周期">中断周期：</a></li>
+            <li><a href="#指令执行方案">指令执行方案：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#控制信号">控制信号：</a>
+              <ul>
+                <li><a href="#数据通路">数据通路</a></li>
+              </ul>
+            </li>
+            <li><a href="#控制方式">控制方式：</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#流水线技术">流水线技术：</a>
+              <ul>
+                <li></li>
+                <li><a href="#性能判断">性能判断</a></li>
+                <li><a href="#流水线的结构">流水线的结构：</a></li>
+              </ul>
+            </li>
+            <li><a href="#流水线相关问题">流水线相关问题</a>
+              <ul>
+                <li><a href="#流水线停顿问题">流水线停顿问题：</a></li>
+                <li><a href="#多发射技术">多发射技术：</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2664,7 +3317,7 @@ $$
           author: "scqwq",
           title: "计组",
           url: "http:\/\/localhost:1313\/post\/%E8%AE%A1%E7%BB%84\/",
-          description: "\r计组\r这是计算机世界的架构： 计组就是研究这些硬件在底层如何相互协调工作的\n一、概论\r冯诺依曼机\r硬件:\r冯诺依曼计算机由五大部件构成（现代计算机也是），后面只要学习这五个部分\n运算器：负责算术运算和逻辑运算。 控制器：负责控制整个计算机系统的运行。 存储器：存放数据和指令。 输入设备：将数据输入到计算机中。 输出设备：将计算机处理的数据输出。 部件关系：\n结构特点：\r冯·诺依曼计算机主要由五大部件组成，分别是：运算器、控制器、存储器、输入设备和输出设备； 冯诺依曼体系结构的指令和数据均采用二进制码表示； 指令和数据以同等地位存放于存储器中，均可按地址寻访； 指令由操作码和地址码组成，操作码 …",
+          description: "\r计组\r笔记参考：\n王道计组\nsaurlax：https:\/\/saurlax.com\/blog\/principles-of-computer-composition\n网盘LCX的PPT（大部分图片来源）\n注：本笔记可能有错漏仅供参考，且大部分内容直接照搬，只是提取出来便于总结，有错误可以帮忙踢一脚作者（仅供参考仅供参考）\n================================================================\n这是计算机世界的架构： 计组就是研究这些硬件在底层如何相互协调工作的\n一、概论\r冯诺依曼机\r硬件:\r冯诺依曼计算机由五大部件构成（现代计算机也是 …",
           cover: "http:\/\/localhost:1313\/images\/covers\/7.jpg",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
