@@ -255,7 +255,7 @@
         {{- partial "helpers/cdnJs.html" (dict "name" "snapdom" "ctx" . "pjax" true "defer" true) -}}
       {{- end -}}
     {{- end -}}
-    {{- if .Params.math -}}
+    {{- if or .Params.math (or .Site.Params.math.katex.enable .Site.Params.math.mathjax.enable) -}}
       {{- if .Site.Params.math.katex.enable -}}
         {{- partial "helpers/cdnJs.html" (dict "name" "katex" "ctx" . "pjax" true) -}}
         {{- partial "helpers/cdnJs.html" (dict "name" "katex_auto_render" "ctx" . "pjax" true) -}}
