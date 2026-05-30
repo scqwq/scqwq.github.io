@@ -314,9 +314,9 @@ clipboard:
 
 math:
   katex:
-    enable: true
-  mathjax:
     enable: false
+  mathjax:
+    enable: true
     options: # see https://docs.mathjax.org/en/latest/web/configuration.html
     # we need to put the configuration in an array, because hugo will automatically convert the key to lowercase
       [

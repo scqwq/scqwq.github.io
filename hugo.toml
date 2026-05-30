@@ -8,6 +8,19 @@ theme = "reimu"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          inline = [['$', '$'], ['\\(', '\\)']]
+          block = [['$$', '$$'], ['\\[', '\\]']]
 [markup.tableOfContents]
   startLevel = 1
   endLevel = 4
+
+# 数学公式支持
+[params.math]
+  [params.math.katex]
+    enable = false
+  [params.math.mathjax]
+    enable = true

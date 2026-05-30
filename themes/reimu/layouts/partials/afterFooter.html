@@ -262,7 +262,28 @@
         <script data-pjax>
           var renderMath = () => {
             if (!window.renderMathInElement) return;
-            window.renderMathInElement(_$("article"), {
+            const article = _$("article");
+
+            // 修复：部分 Markdown 在数学环境中会把 '*' 等符号解析成 <em>，
+            // 或在换行处插入 <br>，导致 KaTeX auto-render 无法识别完整的 TeX 段。
+            // 这里在渲染前把 $$...$$ 区段内常见被替换的标签还原为原始符号。
+            try {
+              const html = article.innerHTML;
+              const fixed = html.replace(/(\$\$)([\s\S]*?)(\$\$)/g, function (m, p1, body, p3) {
+                let b = body;
+                // 将 <br> 还原为换行（某些编辑器会在公式中插入 <br>）
+                b = b.replace(/<br\s*\/?\s*>/gi, '\\n');
+                // 将被解析成强调的部分恢复为下划线（'_'），以还原下标语法，如 _{...} 被转为 <em>
+                b = b.replace(/<em\b[^>]*>/gi, '_').replace(/<\/em>/gi, '_');
+                // 移除可能由 Markdown 插入的空格换行断裂
+                return p1 + b + p3;
+              });
+              if (fixed !== html) article.innerHTML = fixed;
+            } catch (e) {
+              console.error('math sanitize failed', e);
+            }
+
+            window.renderMathInElement(article, {
               delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "\\[", right: "\\]", display: true },
