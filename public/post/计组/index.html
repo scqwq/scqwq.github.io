@@ -302,6 +302,7 @@ This article does not have a corresponding language version
                 <li><a href="#程序查询轮询方式">程序查询/轮询方式：</a></li>
                 <li><a href="#程序中断方式">程序中断方式：</a></li>
                 <li><a href="#dma控制方式">DMA控制方式：</a></li>
+                <li><a href="#外围处理机-1">外围处理机</a></li>
               </ul>
             </li>
             <li><a href="#io系统基本组成">I/O系统基本组成</a>
@@ -360,6 +361,7 @@ This article does not have a corresponding language version
               <ul>
                 <li><a href="#定点表示">定点表示</a></li>
                 <li><a href="#浮点表示">浮点表示</a></li>
+                <li><a href="#阶数尾数都是规格化补码的时候">阶数尾数都是规格化补码的时候:</a></li>
               </ul>
             </li>
           </ul>
@@ -505,6 +507,12 @@ This article does not have a corresponding language version
                 <li><a href="#多发射技术">多发射技术：</a></li>
               </ul>
             </li>
+            <li><a href="#微指令">微指令：</a>
+              <ul>
+                <li><a href="#优点">优点</a></li>
+                <li><a href="#缺点">缺点</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -524,7 +532,7 @@ This article does not have a corresponding language version
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">14</div>
+    <div>Posts</div><div class="sidebar-state-number">16</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -618,7 +626,7 @@ This article does not have a corresponding language version
 <p>网盘LCX的PPT（大部分图片来源）</p>
 </li>
 </ul>
-<p>注：本笔记可能有错漏仅供参考，且大部分内容直接照搬，只是提取出来便于总结，有错误可以帮忙踢一脚作者（仅供参考仅供参考）</p>
+<p>注（叠甲）：本笔记可能有错漏仅供参考，且大部分内容直接照搬，只是提取出来便于总结，有错误可以帮忙踢一脚作者（仅供参考仅供参考）</p>
 <p>标题等级颜色对应：一二三四五级标题对应蓝红紫绿黄，红色小字是加粗</p>
 <p><code>================================================================</code></p>
 <p>这是计算机世界的架构：
@@ -1008,6 +1016,7 @@ VS 现代计算机
 </h6></li>
 </ul>
 <p>总线收到 BR 信号后，当 BS=0 未被使用时，总线计数器发出设备地址信号，与地址匹配的设备获得总线使用权，并发出 BS 信号结束计数器。计时器通过设备地址线广播正在寻找的设备地址。</p>
+<p><strong>注</strong>：分为两种情况，技术可以从0开始也可以从上次结束的地方开始，只有从上次结束的地方开始才优先级相等</p>
 <p>控制线数 log2n向上取整 + 2 = 总线请求(1) + 总线忙(1) + 总线允许 (log2n上取整)</p>
 <img src="/note_images/computer_component/image-20260522141013620.png" alt="image-20260522141013620" style="zoom:67%;" />
 <p>优点：某个接口发生故障对其他接口使用不敏感，</p>
@@ -1032,7 +1041,7 @@ VS 现代计算机
 <ul>
 <li>申请阶段（T1）：主模块申请，总线仲裁决定。</li>
 <li>寻址阶段（T2）：主模块发出地址和命令。</li>
-<li>传数阶段（T3）：主模块和从模块蒋欢数据。</li>
+<li>传数阶段（T3）：主模块和从模块交换数据。</li>
 <li>结束阶段（T4）：主模块撤销相关信号。</li>
 </ul>
 <h4 id="通信控制方式">
@@ -1094,7 +1103,7 @@ VS 现代计算机
 <h4 id="按数据保存方式">
 <a class="header-anchor" href="#%e6%8c%89%e6%95%b0%e6%8d%ae%e4%bf%9d%e5%ad%98%e6%96%b9%e5%bc%8f"></a>
 按数据保存方式：
-</h4><p><strong>随机存储器（RAM）</strong>：存取时间与地址无关，断电后数据丢失（易失性）。</p>
+</h4><p><strong>随机存储器（RAM）</strong>：存取时间与地址无关，可随机存取，断电后数据丢失（易失性）。</p>
 <ul>
 <li>静态 RAM（SRAM）：触发器原理，存取速度快，价格高，主要用于缓存。</li>
 <li>动态 RAM（DRAM）：电容原理，存取速度慢，价格低，主要用于主存。</li>
@@ -1252,7 +1261,7 @@ SRAM和DRAM的比较：
 <a class="header-anchor" href="#%e8%bf%9e%e6%8e%a5%e6%97%b6"></a>
 连接时：
 </h5><p><strong>※注意：当需要接线的时候低位地址线应当一样多</strong></p>
-<p>即RAM 芯片和 ROM 芯片所需要的片内地址线根数（地址引脚数）相等且这些芯片的地址引脚可以直接并联接到 CPU 的同一组低位地址总线上。从而连线简单，译码清晰，能大大简化逻辑。</p>
+<p>即RAM 芯片和 ROM 芯片所需要的片内地址线根数（地址引脚数）相等且这些芯片的地址引脚可以直接并联接到 CPU 的同一组低位地址总线上。这样，只改变高位的电路即可改变选片，从而连线简单，译码清晰，能大大简化逻辑。</p>
 <p>否则，例如ROM字扩展，不仅需要译码来控制使能端，还需要再这上面接入RAM的译码以保证地址再RAM的范围内时不影响ROM，导致逻辑复杂化。</p>
 <h3 id="cache">
 <a class="header-anchor" href="#cache"></a>
@@ -1282,9 +1291,9 @@ Cache基础
 Cache 容量 :
 </h6><p>指的是 Cache 能够存储的总数据量大小，通常以字节（Byte）、KB、MB 为单位。</p>
 <p>它<strong>不包括</strong>用于管理 Cache 的标签位（tag）和有效位等额外开销，仅仅是指<strong>数据存储部分的总大小</strong>。</p>
-<h6 id="cache块长-">
-<a class="header-anchor" href="#cache%e5%9d%97%e9%95%bf-"></a>
-Cache块长 :
+<h6 id="cache-块长-">
+<a class="header-anchor" href="#cache-%e5%9d%97%e9%95%bf-"></a>
+Cache 块长 :
 </h6><p>指的是 Cache 与主存之间交换数据的一块连续内存的最小单位。太大可能会载入大量不需要的数据，太小可能无法利用空间局限性</p>
 <h4 id="主存与cache">
 <a class="header-anchor" href="#%e4%b8%bb%e5%ad%98%e4%b8%8ecache"></a>
@@ -1305,7 +1314,7 @@ $$
 T_总 = T_C * P_中 + T_内 * (1 - P_中)
 $$<p>
 关于同时访问内存和Cache：</p>
-<p>在理论上是可行的，但在实际处理器设计中几乎不会被采用，主要是因为内存访问无法被“优雅地取消”，甚至可能因为异常取消导致更长的延迟。因此，提前终止内存访问并不能节省多少时间</p>
+<p>在理论上是可行的，但在实际处理器设计中几乎不会被采用，主要是因为内存访问无法被“优雅地取消”，甚至可能因为异常取消导致更长的延迟。因此，提前终止内存访问并不能节省多少时间，但学校是按同时访问来算的，那就按同时访问来算了。</p>
 <img src="/note_images/computer_component/image-20260525183625396.png" alt="image-20260525183625396" style="zoom:50%;" />
 <h5 id="效率">
 <a class="header-anchor" href="#%e6%95%88%e7%8e%87"></a>
@@ -1508,11 +1517,18 @@ DMA控制方式：
 </h4><p>DMA接口即DMA控制器，也是一种特殊的I/O控制器</p>
 <p>主存和IO设备之间有一条直接的数据通路（DMA总线），CPU向DMA接口发出W/R命令，并指明参数(主存地址、磁盘地址、读写数据量等)</p>
 <p>DMA控制器（接口）自动控制磁盘和主存的数据读写，每完成一整块数据读写才会向CPU发送一次中断请求</p>
+<p>DMA请求：DMA控制器想总线发送总线请求</p>
+<p>DMA中断请求：已经完成一次读入，表示数据传输已完成</p>
+<p>过程：</p>
+<img src="/note_images/computer_component/image-20260531183026168.png" alt="image-20260531183026168" style="zoom:50%;" />
 <img src="/note_images/computer_component/image-20260527115646369.png" alt="image-20260527115646369" style="zoom: 67%;" />
 <p>####通道控制方式</p>
 <p>“弱化版”CPU，可以识别并执行一系列的“通道指令”，指令种类和功能比较单一</p>
 <p>CPU向通道发送I/O指令，指明通道程序在内存中哪个位置，并指明要操作的是哪个IO设备，然后CPU做其他事情，通道执行完规定任务后猜向CPU发中断请求</p>
-<h3 id="io系统基本组成">
+<h4 id="外围处理机-1">
+<a class="header-anchor" href="#%e5%a4%96%e5%9b%b4%e5%a4%84%e7%90%86%e6%9c%ba-1"></a>
+外围处理机
+</h4><h3 id="io系统基本组成">
 <a class="header-anchor" href="#io%e7%b3%bb%e7%bb%9f%e5%9f%ba%e6%9c%ac%e7%bb%84%e6%88%90"></a>
 I/O系统基本组成
 </h3><h5 id="io-软件">
@@ -1610,6 +1626,13 @@ I/O 设备与主机的连接方式：
 <p>实现(中断隐指令)：</p>
 <img src="/note_images/computer_component/image-20260527153127228.png" alt="image-20260527153127228" style="zoom:50%;" />
 <p>具体过程略</p>
+<p>大致顺序：</p>
+<ol>
+<li>检测中断屏蔽字/中断允许触发器</li>
+<li>中断隐指令（包括保护现场）</li>
+<li>中断处理程序（包括恢复现场）</li>
+<li>回归</li>
+</ol>
 <p>中断服务程序要开中断（隐指令中关中断了），具体什么时候开看需求</p>
 <h4 id="中断屏蔽技术">
 <a class="header-anchor" href="#%e4%b8%ad%e6%96%ad%e5%b1%8f%e8%94%bd%e6%8a%80%e6%9c%af"></a>
@@ -1644,7 +1667,8 @@ I/O 设备与主机的连接方式：
 <h3 id="dma工作方式">
 <a class="header-anchor" href="#dma%e5%b7%a5%e4%bd%9c%e6%96%b9%e5%bc%8f"></a>
 DMA工作方式
-</h3><p>与主存交换数据的三种方式：</p>
+</h3><p>当使用三总线结构且不能和CPU同时访问主存时，有以下三种方式：</p>
+<p>与主存交换数据的三种方式：</p>
 <ol>
 <li>停止CPU访问主存</li>
 <li>周期挪用（周期窃取）</li>
@@ -1689,6 +1713,7 @@ DMA接口类型：
 比较
 </h3><img src="/note_images/computer_component/image-20260527161946018.png" alt="image-20260527161946018" style="zoom:60%;" />
 <p>对于I/O性能的度量，不存在完美的度量标准，不同标准有可能相互冲突，例如 响应时间和吞吐量。</p>
+<img src="/note_images/computer_component/image-20260531183428063.png" alt="image-20260531183428063" style="zoom:40%;" />
 <h3 id="典型外设">
 <a class="header-anchor" href="#%e5%85%b8%e5%9e%8b%e5%a4%96%e8%ae%be"></a>
 典型外设：
@@ -1761,6 +1786,7 @@ $$<p>
 小数：
 </p>
 $$
+\
 [x]_{\text{原}}=
 \begin{cases}
 x & 1>x\ge 0 \\
@@ -1855,6 +1881,11 @@ $$<p><img src="/note_images/computer_component/image-20260527173156329.png" alt=
 <p>float：32位精度，9 + 23</p>
 <p>double ：64位精度，12 + 52</p>
 <p>隐藏位问题一般不考虑吧 //TODO</p>
+<h4 id="阶数尾数都是规格化补码的时候">
+<a class="header-anchor" href="#%e9%98%b6%e6%95%b0%e5%b0%be%e6%95%b0%e9%83%bd%e6%98%af%e8%a7%84%e6%a0%bc%e5%8c%96%e8%a1%a5%e7%a0%81%e7%9a%84%e6%97%b6%e5%80%99"></a>
+阶数尾数都是规格化补码的时候:
+</h4><img src="/note_images/computer_component/image-20260530211813868.png" alt="image-20260530211813868" style="zoom: 60%;" />
+<img src="/note_images/computer_component/image-20260530212453018.png" alt="image-20260530212453018" style="zoom:50%;" />
 <h5 id="规格化表示">
 <a class="header-anchor" href="#%e8%a7%84%e6%a0%bc%e5%8c%96%e8%a1%a8%e7%a4%ba"></a>
 规格化表示：
@@ -1895,10 +1926,10 @@ $$<p><img src="/note_images/computer_component/image-20260527173156329.png" alt=
 算术移位和逻辑移位
 </h5><ul>
 <li>
-<p>算数移位：有符号数的移位</p>
+<p>算数移位：有符号数的移位，即移动时不移动符号位</p>
 </li>
 <li>
-<p>逻辑移位：无符号数的移位</p>
+<p>逻辑移位：无符号数的移位 ，即移动时连带符号位移动</p>
 <ul>
 <li>
 <p>逻辑左移：低位补0，高位移丢</p>
@@ -1953,6 +1984,7 @@ $$<p><img src="/note_images/computer_component/image-20260527173156329.png" alt=
 <li>用移位的次数判断乘法是否结束</li>
 <li>绝对值运算</li>
 <li>使用了逻辑移位（无符号数移位）</li>
+<li>乘数有几位，移位几次（不包括符号位），即乘完最后一个乘数之后也需要移位</li>
 </ol>
 <h5 id="补码一位乘">
 <a class="header-anchor" href="#%e8%a1%a5%e7%a0%81%e4%b8%80%e4%bd%8d%e4%b9%98"></a>
@@ -1975,7 +2007,7 @@ $$
 X=[X]_补-2=1.X_1X_2X_3-2=-1+0.X_1X_2X_3
 $$<ul>
 <li>
-<p><strong>补码右移</strong>：</p>
+<p><strong>补码右移</strong>：(此时为算数移位)</p>
 <p>连同符号位将数右移一位，并保持符号位不变，相当于乘 1/2</p>
 </li>
 </ul>
@@ -1989,7 +2021,8 @@ $$<ul>
 <p><strong>注</strong>：</p>
 <ul>
 <li>过程中用了两个符号位</li>
-<li>乘数用Y的补码</li>
+<li><strong>乘数用Y的补码</strong></li>
+<li>需要知道：[X]补、[-X]补、[Y]补</li>
 </ul>
 <p>PPT中的例子：</p>
 <img src="/note_images/computer_component/image-20260527215518858.png" alt="image-20260527215518858" style="zoom: 50%;" />
@@ -2005,7 +2038,12 @@ $$
 $$<p>
 此时N+1项相加，最高项权为1，注意是低位减高位，此时有三种不同的可能性，根据可能性做：</p>
 <img src="/note_images/computer_component/image-20260527220015621.png" alt="image-20260527220015621" style="zoom: 67%;" />
-<p>也就是说，后项减前项，得1则+[X]补，得0加0，得-1加 +[-X]补，然后每比一次右移一位</p>
+<p>也就是说，后项减前项，得1则+[X]补，得0加0，得-1加 +[-X]补，然后每比一次右移一位，</p>
+<ul>
+<li>则需要知道：[X]补、[-X]补、[Y]补</li>
+<li>乘数Y同样是补码</li>
+<li>同样移位次数和乘数Y位置相同</li>
+</ul>
 <p>PPT的例子:</p>
 <img src="/note_images/computer_component/image-20260527220114600.png" alt="image-20260527220114600" style="zoom: 67%;" />
 <p>两种方法都使用了两位符号位和补码右移</p>
@@ -2014,19 +2052,26 @@ $$<p>
 定点数两位乘
 </h4><p>两位乘技术可减少部分积个数、提高乘法速度</p>
 <p><strong>注</strong>：此时符号位为<strong>三位</strong></p>
+<p>依旧原码乘逻辑右移，补码算数右移</p>
 <h5 id="原码两位乘">
 <a class="header-anchor" href="#%e5%8e%9f%e7%a0%81%e4%b8%a4%e4%bd%8d%e4%b9%98"></a>
 原码两位乘
 </h5><p>两位乘数有四种组合，其中1 1 相当于 3*X，部分积P_i + 3X并右移两位</p>
 <p>由于不能通过移动获得3X，故采用进位C记录，由于3X = 4X - X，此时先-X，右移两位后 +X(也就相当于吧这个+X放大为四倍)，则可实现+3X</p>
 <p>在下表中可以看到，当控制位两个Y表示的数+C为3时，需要保证进位为1，并此时-X，当两个Y表示数+C = 4（4X）时，相当于右移两位后+1（+X），故操作无需-X，并将1 -&gt; C</p>
+<ul>
+<li>需要：X，2X，4X，[-X]补，Y(若是X或Y为负数先变为正数，因为原码乘的符号位不带入计算)</li>
+</ul>
 <img src="/note_images/computer_component/image-20260528081719122.png" alt="image-20260528081719122" style="zoom:50%;" />
+<p><strong>注</strong>：如果最后C = 1，最一次右移后还需要+X</p>
 <p>lxc 的PPT样例</p>
 <img src="/note_images/computer_component/image-20260528082402958.png" alt="image-20260528082402958" style="zoom:50%;" />
-<h5 id="">
-<a class="header-anchor" href="#"></a>
-
-</h5><p>由前面的布斯公式有
+<p>#####两位定点补码乘</p>
+<p>依旧是乘数Y为补码，我们需要知道：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 补 2[X]补 [-X]补 2[-X]补 [Y]补</li>
+</ul>
+<p>由前面的布斯公式有
 </p>
 $$
 [P_{i+1}]_{\text{补}} = \left\{ [P_i]_{\text{补}} + (Y_{n-i+1} - Y_{n-i})[X]_{\text{补}} \right\} 2^{-1}
@@ -2046,18 +2091,21 @@ $$<p>反正就是得：</p>
 </ol>
 <p>方法一样例如下：</p>
 <img src="/note_images/computer_component/image-20260528085153985.png" alt="image-20260528085153985" style="zoom: 60%;" />
-<p><strong>补位</strong>是方法1中补成技术位的位，<strong>附加位</strong>是为了凑公式的位（如同一位乘的Booth法），此时两位都参与计算，之后剩的自然的丢掉</p>
+<p><strong>补位</strong>是方法1中补成奇数位的位，<strong>附加位</strong>是为了凑公式的位（如同一位乘的Booth法），此时两位都参与计算，之后剩的自然的丢掉</p>
+<p>由于是补码，所以右补0是无效位数，不影响结果，最后只移一位</p>
 <h3 id="定点数除法">
 <a class="header-anchor" href="#%e5%ae%9a%e7%82%b9%e6%95%b0%e9%99%a4%e6%b3%95"></a>
 定点数除法
-</h3><h4 id="定点原码一位除">
+</h3><p>移位次数和商位数（包括小数点前一位）一样</p>
+<h4 id="定点原码一位除">
 <a class="header-anchor" href="#%e5%ae%9a%e7%82%b9%e5%8e%9f%e7%a0%81%e4%b8%80%e4%bd%8d%e9%99%a4"></a>
 定点原码一位除
-</h4><h5 id="恢复余数法">
+</h4><p>X/Y 时，X为被除数，Y为除数</p>
+<h5 id="恢复余数法">
 <a class="header-anchor" href="#%e6%81%a2%e5%a4%8d%e4%bd%99%e6%95%b0%e6%b3%95"></a>
 恢复余数法
 </h5><p><strong>部分余数</strong>：指的是<strong>每一步求出一位商之后所剩下的余数</strong>。</p>
-<p>每次都减去除数，如果结果为负数则加回去，然后被除数和商同时左移 1 位。商的符号位由被除数和除数的符号位异或得到。商的最高位可以用于溢出判断，若为 1 说明溢出，无法继续计算。</p>
+<p>每次都减去除数，如果结果为负数则加回去，然后被除数和商同时左移 1 位。商的符号位由被除数和除数的符号位异或得到。商的最高位可以用于溢出判断，<strong>若为 1 说明溢出</strong>，无法继续计算。</p>
 <p>所谓恢复余数法就是减后若小于0则将部分余数“恢复”，这个“恢复”指的是计算机的行为，实际直观执行过程就是正常的除法过程</p>
 <ul>
 <li>当差为正：商上1（商写1），不恢复余数，部分余数左移1位。</li>
@@ -2078,13 +2126,15 @@ $$<p>反正就是得：</p>
 <li>当余数 Ri&gt;0 时，上商 1，做 2Ri−y∗ 操作。</li>
 <li>当余数 Ri&lt;0 时，上商 0，做 2Ri+y∗ 操作。</li>
 </ul>
-<p>即：商为1时，求下一轮余数的方法为左移余数减除数，商为0时， 左移余数并且加除数。
-同时，若最后一次上商为0，需恢复余数，即Rn＋Y。（此图中就是最后的00 0111，但是最后一次上上不为0）</p>
-<img src="/note_images/computer_component/image-20260528141811081.png" alt="image-20260528141811081" style="zoom:50%;" />
+<p>即：商为1时，求下一轮余数的方法为左移余数减除数，       商为0时， 左移余数并且加除数。
+同时，<strong>若最后一次上商为0，需恢复余数，即Rn＋Y</strong>。（此图中就是最后的00 0111，但是最后一次上上不为0）</p>
+<img src="/note_images/computer_component/image-20260528141811081.png" alt="image-20260528141811081" style="zoom:60%;" />
 <h4 id="定点补码一位除">
 <a class="header-anchor" href="#%e5%ae%9a%e7%82%b9%e8%a1%a5%e7%a0%81%e4%b8%80%e4%bd%8d%e9%99%a4"></a>
 定点补码一位除
-</h4><p>不重要</p>
+</h4><p>如果被除数与除数同号，用被除数减去除数；如异号，用被 除数加除数。如果余数与除数同号，商为1，如果异号，商 为0。该商即符号位。</p>
+<p>求商的数值部分：如上次商为1，则余数左移一位后减去除 数；如上次商为0，则余数左移一位加除数。求商方法同1。 如此重复执行n-1次。</p>
+<p>异符号最后一位一定是1，同号</p>
 <h2 id="浮点运算">
 <a class="header-anchor" href="#%e6%b5%ae%e7%82%b9%e8%bf%90%e7%ae%97"></a>
 浮点运算
@@ -2162,6 +2212,7 @@ $$<p>
 <a class="header-anchor" href="#%e5%8a%a0%e6%b3%95%e5%99%a8"></a>
 加法器：
 </h3><p>半加器、全加器</p>
+<p>全加器可使用两个半加器和一个或门实现</p>
 <p>n位串行加法器、超前进位加法器</p>
 <p>ALU算术逻辑单元&ndash;进行多种算术运算和逻辑运算</p>
 <h1 id="六指令系统">
@@ -2395,6 +2446,12 @@ RISC和CISC:
 <p><strong>注</strong>：此时PC<strong>已经自增</strong>，因为每次PC取出一条指令都会自动进到下一条指令，即PC + 1(由具体情况判断自增) -&gt; PC，在此基础上再进行的EA = ( PC ) + A
 因此相对寻址是相对于下一条指令的便宜，求位移量时应先判断PC自增后的数</p>
 <p>优点：便于程序浮动，广泛应用于转移指令</p>
+<p>指令的：</p>
+<ul>
+<li><strong>第二字节</strong>：偏移量的<strong>低 8 位</strong>（LSB）</li>
+<li><strong>第三字节</strong>：偏移量的<strong>高 8 位</strong>（MSB）</li>
+</ul>
+<p>若要减则以补码表示，此时高位大概率为FFH</p>
 <h4 id="堆栈寻址">
 <a class="header-anchor" href="#%e5%a0%86%e6%a0%88%e5%af%bb%e5%9d%80"></a>
 堆栈寻址
@@ -2425,9 +2482,9 @@ CPU结构
 <li>数据加工：算是逻辑运算</li>
 <li>中断处理</li>
 </ul>
-<p>运算器：</p>
+<p><strong>运算器</strong>：</p>
 <p>对数据进行加工</p>
-<p>控制器：</p>
+<p><strong>控制器</strong>：</p>
 <ul>
 <li>
 <p>协调、控制计算机各部件执行程序的指令序列</p>
@@ -2514,6 +2571,11 @@ CPU的工作
 判断处于哪个周期:
 </h5><img src="/note_images/computer_component/image-20260529172938417.png" alt="image-20260529172938417" style="zoom:50%;" />
 <p>每个周期设置一个对应的触发器</p>
+<ul>
+<li>主频：1/时钟周期，或者说一秒CPU有多少个时钟周期</li>
+<li>CPI：每条指令平均所需的时钟周期数，= 1 / IPC</li>
+<li>MIPS：每秒百万条指令，MIPS * CPI = 主频（MHZ）</li>
+</ul>
 <h2 id="指令周期的数据流">
 <a class="header-anchor" href="#%e6%8c%87%e4%bb%a4%e5%91%a8%e6%9c%9f%e7%9a%84%e6%95%b0%e6%8d%ae%e6%b5%81"></a>
 指令周期的数据流
@@ -2678,7 +2740,7 @@ $$<h5 id="2加速比s_p">
 3.效率：
 </h5><p>流水线中各功能段的利用率。</p>
 <p>产生原因：由于流水线有建立时间和排空时间，因此各功能段的设备 不可能一直处于工作状态。</p>
-<p>图一看就懂：</p>
+<p>图一看就懂，等于 n / (m + n -1)</p>
 <img src="/note_images/computer_component/image-20260529212636976.png" alt="image-20260529212636976" style="zoom:60%;" />
 <h4 id="流水线的结构">
 <a class="header-anchor" href="#%e6%b5%81%e6%b0%b4%e7%ba%bf%e7%9a%84%e7%bb%93%e6%9e%84"></a>
@@ -2757,10 +2819,30 @@ $$<h5 id="2加速比s_p">
 </h6><h6 id="鲲鹏流水线请输入文本">
 <a class="header-anchor" href="#%e9%b2%b2%e9%b9%8f%e6%b5%81%e6%b0%b4%e7%ba%bf%e8%af%b7%e8%be%93%e5%85%a5%e6%96%87%e6%9c%ac"></a>
 鲲鹏流水线:请输入文本
-</h6><h6 id="微指令听说不考略过了">
-<a class="header-anchor" href="#%e5%be%ae%e6%8c%87%e4%bb%a4%e5%90%ac%e8%af%b4%e4%b8%8d%e8%80%83%e7%95%a5%e8%bf%87%e4%ba%86"></a>
-微指令：听说不考，略过了
-</h6></div>
+</h6><h3 id="微指令">
+<a class="header-anchor" href="#%e5%be%ae%e6%8c%87%e4%bb%a4"></a>
+微指令：
+</h3><p><strong>字段直接编码法</strong>（又称“显式编码”）是微程序控制器中<strong>操作控制字段</strong>的一种编码方式。其核心思想是：</p>
+<ul>
+<li>将微指令中的操作控制字段划分成若干个<strong>互斥类子字段</strong>，每个子字段对应一组<strong>互斥的微命令</strong>（即同一时刻只能执行其中一个）。</li>
+<li>每个子字段的二进制编码直接指定该组中的哪个微命令有效（例如 000 表示空操作，001 表示命令1，010 表示命令2……）。</li>
+</ul>
+<h4 id="优点">
+<a class="header-anchor" href="#%e4%bc%98%e7%82%b9"></a>
+优点
+</h4><ul>
+<li>比“直接表示法”（每位对应一个微命令）所需的位数少得多。</li>
+<li>译码简单、速度快。</li>
+</ul>
+<h4 id="缺点">
+<a class="header-anchor" href="#%e7%bc%ba%e7%82%b9"></a>
+缺点
+</h4><ul>
+<li>需要额外编码译码逻辑（多路选择器），略增加硬件复杂度。</li>
+<li>灵活性略低于完全直接表示。</li>
+</ul>
+<img src="/note_images/computer_component/image-20260531214105511.png" alt="image-20260531214105511" style="zoom:67%;" />
+</div>
     <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
     <a
       class="article-category-link"
@@ -2776,17 +2858,29 @@ $$<h5 id="2加速比s_p">
     aria-label="Article navigation"
     data-aos="fade-up"
   ><div class="article-nav-link-wrap left"><img
-            data-src="/images/covers/5.jpg"
+            data-src="/images/covers/8.jpg"
             data-sizes="auto"
-            alt="SQL简单语法"
+            alt="计网"
             class="lazyload"
           /><a
-          href="/post/sql/"
-          aria-label="Prev:SQL简单语法"
-          title="Prev:SQL简单语法"
+          href="/post/%E8%AE%A1%E7%BD%91/"
+          aria-label="Prev:计网"
+          title="Prev:计网"
         ></a>
         <div class="article-nav-caption">Prev</div>
-        <h3 class="article-nav-title">SQL简单语法</h3>
+        <h3 class="article-nav-title">计网</h3>
+      </div><div class="article-nav-link-wrap right"><img
+            data-src="/images/covers/6.jpg"
+            data-sizes="auto"
+            alt="毛概与中特"
+            class="lazyload"
+          /><a
+          href="/post/%E6%AF%9B%E6%A6%82/"
+          aria-label="Next:毛概与中特"
+          title="Next:毛概与中特"
+        ></a>
+        <div class="article-nav-caption">Next</div>
+        <h3 class="article-nav-title">毛概与中特</h3>
       </div></nav></article></section>
         </div><footer id="footer" aria-label="Site footer">
   <div style="width: 100%; overflow: hidden">
@@ -2808,10 +2902,10 @@ $$<h5 id="2加速比s_p">
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;16.6k</span
+          >&nbsp;18.5k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;01:23</span>
+        <span class="icon-coffee">&nbsp;01:34</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -3001,6 +3095,7 @@ $$<h5 id="2加速比s_p">
                 <li><a href="#程序查询轮询方式">程序查询/轮询方式：</a></li>
                 <li><a href="#程序中断方式">程序中断方式：</a></li>
                 <li><a href="#dma控制方式">DMA控制方式：</a></li>
+                <li><a href="#外围处理机-1">外围处理机</a></li>
               </ul>
             </li>
             <li><a href="#io系统基本组成">I/O系统基本组成</a>
@@ -3059,6 +3154,7 @@ $$<h5 id="2加速比s_p">
               <ul>
                 <li><a href="#定点表示">定点表示</a></li>
                 <li><a href="#浮点表示">浮点表示</a></li>
+                <li><a href="#阶数尾数都是规格化补码的时候">阶数尾数都是规格化补码的时候:</a></li>
               </ul>
             </li>
           </ul>
@@ -3204,6 +3300,12 @@ $$<h5 id="2加速比s_p">
                 <li><a href="#多发射技术">多发射技术：</a></li>
               </ul>
             </li>
+            <li><a href="#微指令">微指令：</a>
+              <ul>
+                <li><a href="#优点">优点</a></li>
+                <li><a href="#缺点">缺点</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -3223,7 +3325,7 @@ $$<h5 id="2加速比s_p">
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">14</div>
+    <div>Posts</div><div class="sidebar-state-number">16</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -3325,7 +3427,7 @@ $$<h5 id="2加速比s_p">
           author: "scqwq",
           title: "计组",
           url: "http:\/\/localhost:1313\/post\/%E8%AE%A1%E7%BB%84\/",
-          description: "\r计组\r笔记参考：\n王道计组\nsaurlax：https:\/\/saurlax.com\/blog\/principles-of-computer-composition\n网盘LCX的PPT（大部分图片来源）\n注：本笔记可能有错漏仅供参考，且大部分内容直接照搬，只是提取出来便于总结，有错误可以帮忙踢一脚作者（仅供参考仅供参考）\n标题等级颜色对应：一二三四五级标题对应蓝红紫绿黄，红色小字是加粗\n================================================================\n这是计算机世界的架构： 计组就是研究这些硬件在底层如何相互协调工作的\n一、概论 …",
+          description: "\r计组\r笔记参考：\n王道计组\nsaurlax：https:\/\/saurlax.com\/blog\/principles-of-computer-composition\n网盘LCX的PPT（大部分图片来源）\n注（叠甲）：本笔记可能有错漏仅供参考，且大部分内容直接照搬，只是提取出来便于总结，有错误可以帮忙踢一脚作者（仅供参考仅供参考）\n标题等级颜色对应：一二三四五级标题对应蓝红紫绿黄，红色小字是加粗\n================================================================\n这是计算机世界的架构： 计组就是研究这些硬件在底层如何相互协调工作的\n一 …",
           cover: "http:\/\/localhost:1313\/images\/covers\/7.jpg",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {

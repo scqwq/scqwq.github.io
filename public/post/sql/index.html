@@ -8,7 +8,7 @@
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 /><title>
-  SQL简单语法 | scqwq
+  SQL | scqwq
 </title>
 <meta name="description" content="lets do it again..."/><script>
   window.siteConfig = JSON.parse("{\"anchor_icon\":false,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_ex15nbittbh\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
@@ -33,7 +33,7 @@
     type="font/woff2"
     crossorigin="anonymous"
   /><link rel="stylesheet" href="/css/loader.css" /><meta property="og:type" content="website" />
-  <meta property="og:title" content="SQL简单语法 | scqwq" />
+  <meta property="og:title" content="SQL | scqwq" />
   <meta
     property="og:description"
     content="lets do it again..."
@@ -43,10 +43,10 @@
     property="og:site_name"
     content="lets say hello world again"
   />
-  <meta property="og:image" content="http://localhost:1313/images/covers/5.jpg" />
+  <meta property="og:image" content="http://localhost:1313/images/covers/7.jpg" />
   <meta property="article:author" content="scqwq" />
-  <meta property="article:published_time" content="2026-05-19T09:00:00&#43;08:00" />
-  <meta property="article:modified_time" content="2026-05-19T09:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/5.jpg" />
+  <meta property="article:published_time" content="2026-06-20T21:00:00&#43;08:00" />
+  <meta property="article:modified_time" content="2026-06-20T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/7.jpg" />
 <link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
     rel="preload"
     as="style"
@@ -122,9 +122,9 @@ This article does not have a corresponding language version
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
 <header id="header" aria-label="Site header"><picture></picture>
-    <img  fetchpriority="high" src="/images/covers/5.jpg" alt="SQL简单语法"><div id="header-outer">
+    <img  fetchpriority="high" src="/images/covers/7.jpg" alt="SQL"><div id="header-outer">
     <div id="header-title"><span id="logo">
-            <h1 data-aos="slide-up">SQL简单语法</h1>
+            <h1 data-aos="slide-up">SQL</h1>
           </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
   </div>
 </header><div id="content"
@@ -138,13 +138,13 @@ This article does not have a corresponding language version
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#sql">SQL</a>
+    <li><a href="#sql">SQL</a></li>
+    <li><a href="#postgre-sql">postgre SQL</a>
       <ul>
-        <li><a href="#postgre-sql">postgre SQL</a>
+        <li><a href="#cmd">cmd</a>
           <ul>
             <li>
               <ul>
-                <li><a href="#在docker中操作">在docker中操作</a></li>
                 <li><a href="#数据库操作">数据库操作:</a></li>
               </ul>
             </li>
@@ -162,18 +162,26 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
+    <li><a href="#概念">概念：</a></li>
     <li><a href="#语法">语法:</a>
       <ul>
         <li>
           <ul>
-            <li><a href="#1数据库">1.数据库</a></li>
-            <li><a href="#2导入导出">2.导入导出</a></li>
+            <li>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
             <li><a href="#3创建表">※3.创建表</a>
               <ul>
                 <li></li>
               </ul>
             </li>
-            <li><a href="#4alter---修改数据">4.Alter -&gt; 修改数据</a></li>
+            <li><a href="#4alter---修改列">4.Alter -&gt; 修改列</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
             <li><a href="#5查看和插入数据">5.查看和插入数据</a>
               <ul>
                 <li><a href="#insert插入数据">INSERT插入数据</a></li>
@@ -210,10 +218,33 @@ This article does not have a corresponding language version
               </ul>
             </li>
             <li><a href="#12重复记录处理">12.重复记录处理</a></li>
-            <li><a href="#13子查询">13.子查询</a></li>
+            <li><a href="#13子查询">13.子查询</a>
+              <ul>
+                <li><a href="#标量子查询">标量子查询</a></li>
+                <li><a href="#with">WITH</a></li>
+                <li><a href="#常用语句">常用语句：</a></li>
+              </ul>
+            </li>
             <li><a href="#14表关联">14.表关联</a></li>
             <li><a href="#15索引">15.索引</a></li>
             <li><a href="#16视图">16.视图</a></li>
+            <li><a href="#17主键外键">17.主键外键</a>
+              <ul>
+                <li><a href="#外键">外键</a></li>
+                <li><a href="#外键-1">外键</a></li>
+              </ul>
+            </li>
+            <li><a href="#18as">18.AS</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#19多表查询">19.多表查询</a>
+              <ul>
+                <li><a href="#多表查询">多表查询</a></li>
+                <li><a href="#集合操作">集合操作</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -233,7 +264,7 @@ This article does not have a corresponding language version
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">14</div>
+    <div>Posts</div><div class="sidebar-state-number">16</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -305,23 +336,23 @@ This article does not have a corresponding language version
     class="article-date-link icon-calendar"
     data-aos="zoom-in"
   >
-    <time datetime="2026-05-19 09:00:00 &#43;0800 CST" itemprop="datePublished"
-      >2026-05-19</time
+    <time datetime="2026-06-20 21:00:00 &#43;0800 CST" itemprop="datePublished"
+      >2026-06-20</time
     >
     <time style="display: none;" id="post-update-time"
-      >2026-05-19</time
+      >2026-06-20</time
     >
   </span></div>
 </div><div class="hr-line"></div><div class="e-content article-entry tex2jax_process" itemprop="articleBody"><h1 id="sql">
 <a class="header-anchor" href="#sql"></a>
 SQL
-</h1><h2 id="postgre-sql">
+</h1><h1 id="postgre-sql">
 <a class="header-anchor" href="#postgre-sql"></a>
 postgre SQL
-</h2><h4 id="在docker中操作">
-<a class="header-anchor" href="#%e5%9c%a8docker%e4%b8%ad%e6%93%8d%e4%bd%9c"></a>
-在docker中操作
-</h4><p>docker ps   查看容器列表
+</h1><h2 id="cmd">
+<a class="header-anchor" href="#cmd"></a>
+cmd
+</h2><p>docker ps   查看容器列表
 docker exec -it p1 bash</p>
 <p>如果用postgres用户连接数据库，则不用输入密码
 即psql -U postgres  即可</p>
@@ -338,7 +369,7 @@ createdb -U postgres mydb  在shell直接建库</p>
 <a class="header-anchor" href="#sql-1"></a>
 SQL
 </h3><p>按照功能不同可以分为以下几类</p>
-<p><img src="/note_images/others/image-20260311201204430.png" alt="image-20260311201204430"></p>
+<p><img src="/note_images/sql/image-20260311201204430.png" alt="image-20260311201204430"></p>
 <ul>
 <li>
 <p>DDL:用于定义数据库对象，例如数据库、表、列</p>
@@ -367,26 +398,36 @@ mysqlsh进入mySQL-shell工具
 </h6><p>此工具的命令都是以****开头的</p>
 <p>bash中输入<code>mysqlsh</code>启动,也可以在VScode中找到mysqlsh
 在输入<code>\connect root@localhost</code>连接</p>
-<p><img src="/note_images/others/image-20260311181701033.png" alt="image-20260311181701033"></p>
+<p><img src="/note_images/sql/image-20260311181701033.png" alt="image-20260311181701033"></p>
 <p>出现MySQL与JS代表进入成功</p>
 <p>出现图片所示灰色部分表示连接到本地的mysql服务器了</p>
 <p><code>use name</code>来使用一个数据库,</p>
 <p><strong>JS</strong>表示当前语言,M-S支持JS、py、和SQL三种语言,切换语言<code>\dialect</code></p>
+<h1 id="概念">
+<a class="header-anchor" href="#%e6%a6%82%e5%bf%b5"></a>
+概念：
+</h1><ul>
+<li><strong>外码</strong>：是指一个表（称为<strong>从表</strong>或<strong>参照表</strong>）中的一个字段或字段组合，它的取值必须<strong>参照</strong>另一个表（称为<strong>主表</strong>或<strong>被参照表</strong>）中的<strong>主码</strong>（Primary Key）或<strong>候选码</strong>。</li>
+<li><strong>字段/变量/列</strong>：字面意思</li>
+<li>查询脚本文件：一般以.sql结尾</li>
+</ul>
 <h1 id="语法">
 <a class="header-anchor" href="#%e8%af%ad%e6%b3%95"></a>
 语法:
 </h1><p>首先默认数据类型是列，对象是行</p>
-<h3 id="1数据库">
+<h5 id="1数据库">
 <a class="header-anchor" href="#1%e6%95%b0%e6%8d%ae%e5%ba%93"></a>
 1.数据库
-</h3><p><em><strong>注意：可以使用navicat等图形化GUI工具，这样不用手动输入指令创建数据库</strong></em></p>
+</h5><p><em><strong>注意：可以使用navicat等图形化GUI工具，这样不用手动输入指令创建数据库</strong></em></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">database</span>; <span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">在当前目录下查询现有数据库</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> database_name; <span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">创建数据库</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">drop</span> db_name  <span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">删除数据库</span>
-</span></span></code></pre></div><h3 id="2导入导出">
+</span></span></code></pre></div><p>当表名/变量名 属于SQL 保留字，应加上双引号</p>
+<p>在 SQL 中，所有文本/日期/字符串常量必须用单引号 <code>'</code> 包裹。否则数据库会把它当成列名或变量名</p>
+<h5 id="2导入导出">
 <a class="header-anchor" href="#2%e5%af%bc%e5%85%a5%e5%af%bc%e5%87%ba"></a>
 2.导入导出
-</h3><p>导入数据:</p>
+</h5><p>导入数据:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span>mysql <span style="color:#f92672">-</span>u root <span style="color:#f92672">-</span>p game <span style="color:#f92672">&lt;</span> game.<span style="color:#66d9ef">sql</span>
 </span></span></code></pre></div><p>root为用户名，game为输入数据库名,game.sql为输入文件名字</p>
 <p>输入后需要输入密码，没有错误则为导入名称</p>
@@ -397,23 +438,133 @@ mysqlsh进入mySQL-shell工具
 <a class="header-anchor" href="#%e5%ae%9a%e4%b9%89%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b"></a>
 定义数据类型
 </h6><p>先选择一个数据库:<code>use db_name;</code></p>
+<p>绝大多数的sql都遵循以下标准：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> [<span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span>] <span style="color:#960050;background-color:#1e0010">表名</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 1. 定义列（Column Definition）
+</span></span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">列名</span><span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">数据类型</span> [<span style="color:#960050;background-color:#1e0010">列级约束</span>] [<span style="color:#960050;background-color:#1e0010">默认值</span>] [<span style="color:#960050;background-color:#1e0010">注释</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">列名</span><span style="color:#ae81ff">2</span> <span style="color:#960050;background-color:#1e0010">数据类型</span> [<span style="color:#960050;background-color:#1e0010">列级约束</span>] [<span style="color:#960050;background-color:#1e0010">默认值</span>] [<span style="color:#960050;background-color:#1e0010">注释</span>],
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 2. 定义约束（Constraint Definition）—— 写在最后
+</span></span></span><span style="display:flex;"><span>    [<span style="color:#960050;background-color:#1e0010">表级约束</span>]
+</span></span><span style="display:flex;"><span>) [<span style="color:#960050;background-color:#1e0010">表选项（如存储引擎、字符集）</span>];
+</span></span></code></pre></div><p>最简单的：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">创建一个表</span> <span style="color:#960050;background-color:#1e0010">括号中时字段名称和数据类型，注意逗号的使用</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> <span style="color:#a6e22e">tb_name</span> (
 </span></span><span style="display:flex;"><span>    id <span style="color:#66d9ef">INT</span>,
 </span></span><span style="display:flex;"><span>    name <span style="color:#a6e22e">VARVHAR</span>(<span style="color:#ae81ff">100</span>),  <span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">字符串</span> <span style="color:#960050;background-color:#1e0010">大小</span><span style="color:#ae81ff">100</span><span style="color:#960050;background-color:#1e0010">个字符</span>
 </span></span><span style="display:flex;"><span>    level <span style="color:#66d9ef">INT</span>,
 </span></span><span style="display:flex;"><span>    exp <span style="color:#66d9ef">INT</span>, 
-</span></span><span style="display:flex;"><span>    god <span style="color:#66d9ef">DECIMAL</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>)  <span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">长度为</span><span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">，保留两位小数的十进制数值</span>
+</span></span><span style="display:flex;"><span>    god <span style="color:#66d9ef">DECIMAL</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>)  <span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">长度为</span><span style="color:#ae81ff">10</span><span style="color:#960050;background-color:#1e0010">，保留两位小数的十进制数值</span> <span style="color:#66d9ef">DECIMAL</span> <span style="color:#960050;background-color:#1e0010">用于存储准确精度防止精度丢失</span>
 </span></span><span style="display:flex;"><span>)
-</span></span></code></pre></div><p>整数类型:tinyint  smallint  int  bigint 反别对应1~8个字节的储存空间</p>
-<p>浮点数:float double  对应4、8个字节不同精度的浮点数</p>
+</span></span></code></pre></div><h5 id="数据类型">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b"></a>
+数据类型：
+</h5><ul>
+<li>
+<p>整数类型:tinyint  smallint  int  bigint 反别对应1~8个字节的储存空间
+INTEGER 存储不带小数点的整数</p>
+</li>
+<li>
+<p>浮点数:float double  对应4、8个字节不同精度的浮点数
+NUMERIC 存储带小数点的精确数字 NUMERIC(10，2)总共10位，其中2位小数</p>
+</li>
+<li>
 <p>时间:date time datetime timestamp 对应：日期  时间  日期时间   时间戳</p>
-<p>字符串:CHAR   VARCHAR   TEXT   BLOB</p>
-<p><strong>描述表的结构</strong>:<code>DESC tb_name</code></p>
-<h3 id="4alter---修改数据">
-<a class="header-anchor" href="#4alter---%e4%bf%ae%e6%94%b9%e6%95%b0%e6%8d%ae"></a>
-4.Alter -&gt; 修改数据
+</li>
+</ul>
+<p>以下是pgsql的格式示例</p>
+<img src="/note_images/sql/image-20260620140937465.png" alt="image-20260620140937465" style="zoom:50%;" />
+<ul>
+<li>
+<p>字符串:CHAR(定长)   VARCHAR（最大可存的字符，可变长）   TEXT   BLOB</p>
+</li>
+<li>
+<p>描述表的结构：DESC tb_name</p>
+</li>
+</ul>
+<h5 id="约束">
+<a class="header-anchor" href="#%e7%ba%a6%e6%9d%9f"></a>
+约束：
+</h5><p>为**保证数据完整性（Data Integrity）**而实施</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">序号</th>
+          <th style="text-align: left">关键字</th>
+          <th style="text-align: left">归属类别</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left"><strong>NOT NULL</strong> 强制该列必须有值，插入时禁止为空。也有NULL但是一般不用。</td>
+          <td style="text-align: left">域完整性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">**DEFAULT **当插入未指定值时，自动填入预设的默认值。</td>
+          <td style="text-align: left">域完整性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">CHECK</td>
+          <td style="text-align: left">域完整性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left"><strong>UNIQUE</strong> 唯一键：确保该列（或组合）的值在该表中不重复</td>
+          <td style="text-align: left">实体完整性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left"><strong>PRIMARY KEY</strong> 主键</td>
+          <td style="text-align: left">实体完整性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left"><strong>FOREIGN KEY</strong> 外键</td>
+          <td style="text-align: left">引用完整性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">INDEX (唯一属性)</td>
+          <td style="text-align: left">隐含物理约束</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">TRIGGER</td>
+          <td style="text-align: left">用户自定义完整性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">DOMAIN</td>
+          <td style="text-align: left">标准高级特性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">10</td>
+          <td style="text-align: left">EXCLUSION</td>
+          <td style="text-align: left">PostgreSQL 专属</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">11</td>
+          <td style="text-align: left">ASSERTION</td>
+          <td style="text-align: left">标准未实现特性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">WITH CHECK OPTION</td>
+          <td style="text-align: left">视图约束</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#66d9ef">CONSTRAINT</span> LLZ_pk_emp <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (empno),         
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (mgr) <span style="color:#66d9ef">REFERENCES</span> llz_emp(empno) <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (deptno) <span style="color:#66d9ef">REFERENCES</span> llz_dept(deptno) <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">NULL</span>
+</span></span></code></pre></div><h3 id="4alter---修改列">
+<a class="header-anchor" href="#4alter---%e4%bf%ae%e6%94%b9%e5%88%97"></a>
+4.Alter -&gt; 修改列
 </h3><p>以及Delete、Update、Drop用法</p>
+<p>D:：删除列/行 U：修改数据（行） D：删除关系</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span> <span style="color:#75715e">-- 修改数据类型
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Alter</span> <span style="color:#66d9ef">table</span> tb_name MODIFY <span style="color:#66d9ef">COLUMN</span> name <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">200</span>); 
 </span></span><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">表示修改表</span>(tb_name)<span style="color:#960050;background-color:#1e0010">中的</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#960050;background-color:#1e0010">列，被操作的对象是</span> <span style="color:#960050;background-color:#1e0010">表和列</span> <span style="color:#960050;background-color:#1e0010">操作方式是修改数据类型</span>
@@ -441,9 +592,67 @@ mysqlsh进入mySQL-shell工具
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> player MODIFY LEVEL <span style="color:#66d9ef">INT</span> <span style="color:#66d9ef">DEFAULT</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e">-- 默认LEVEL认值为1
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 除DEFAULT还可以有FULL、NOT FULL、COMMENT &#39;infor&#39;，UNIQUE不能写在MODIFY COLUMN
 </span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 修改约束
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> unique_ename <span style="color:#66d9ef">UNIQUE</span> (ename);
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">若是把后面的</span>where语句去掉<span style="color:#960050;background-color:#1e0010">，则会把整个表的数据修改</span>,<span style="color:#960050;background-color:#1e0010">使用</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#960050;background-color:#1e0010">连接可以修改多个值</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">关键字</span>table <span style="color:#960050;background-color:#1e0010">、</span> xxx <span style="color:#66d9ef">COLUMN</span>  
-</span></span></code></pre></div><h3 id="5查看和插入数据">
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">NULL</span>; <span style="color:#960050;background-color:#1e0010">父表删除时子表相应部分设为</span> <span style="color:#66d9ef">NULL</span> <span style="color:#960050;background-color:#1e0010">，同时子表数据不能定义为</span>NOT <span style="color:#66d9ef">NULL</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">而</span> <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">CASCADE</span>;<span style="color:#960050;background-color:#1e0010">当父表（主表）的某一行被删除时，数据库会去子表找到引用了该行的所有记录，物理删除那些数据行。</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">而当</span> <span style="color:#66d9ef">CASCADE</span> <span style="color:#960050;background-color:#1e0010">在</span> <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">CONSTRAINT</span> <span style="color:#960050;background-color:#1e0010">后面则只删约束，不删数据，因为作用对象是数据库结构</span>
+</span></span></code></pre></div><h5 id="关于修改约束时的约束名">
+<a class="header-anchor" href="#%e5%85%b3%e4%ba%8e%e4%bf%ae%e6%94%b9%e7%ba%a6%e6%9d%9f%e6%97%b6%e7%9a%84%e7%ba%a6%e6%9d%9f%e5%90%8d"></a>
+关于修改约束时的约束名：
+</h5><img src="/note_images/sql/image-20260618164707958.png" alt="image-20260618164707958" style="zoom:67%;" />
+<p>是否在alter中添加约束需要<code>ADD CONSTRAINT [约束名] [约束]</code>而在创建表定义约束的时候不用，直接在创建语句末尾加入<code>CONSTRAINT [约束名] [约束]</code>语句即可</p>
+<p>当然 <code>CONSTRAINT [约束名]</code>可以省略，让系统自动帮你生成</p>
+<h5 id="添加主键">
+<a class="header-anchor" href="#%e6%b7%bb%e5%8a%a0%e4%b8%bb%e9%94%ae"></a>
+添加主键
+</h5><p>假设表没有主键：则可直接添加主键/复合主键</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 假设表 employees 已有，为 employee_id 列添加主键
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> employees <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (employee_id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 为多个列添加复合主键
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> order_items <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (order_id, product_id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 指定约束名添加主键
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> employees <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> pk_emp_id <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (employee_id);
+</span></span></code></pre></div><h5 id="删除主键">
+<a class="header-anchor" href="#%e5%88%a0%e9%99%a4%e4%b8%bb%e9%94%ae"></a>
+删除主键
+</h5><p>Mysql：表只有一个主键，无需指名</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> employees <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>;
+</span></span></code></pre></div><p>PgSQL/Pracle：必须使用约束名删除。如果没起名需要先查询</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 如果你当初没起名，系统会自动生成一个（如 employees_pkey），需先查询
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> employees <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">CONSTRAINT</span> pk_emp_id;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 查询
+</span></span></span></code></pre></div><h5 id="添加外键">
+<a class="header-anchor" href="#%e6%b7%bb%e5%8a%a0%e5%a4%96%e9%94%ae"></a>
+添加外键
+</h5><p><strong>一个表的外键必须是另一个表的主键</strong></p>
+<p>首先要确保子表的字段类型和长度与父表主键完全一致。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 在 orders 表中添加 customer_id 外键，引用 customers 表的 id
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> orders 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> fk_customer 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (customer_id) <span style="color:#66d9ef">REFERENCES</span> customers (id);
+</span></span></code></pre></div><h5 id="删除外键">
+<a class="header-anchor" href="#%e5%88%a0%e9%99%a4%e5%a4%96%e9%94%ae"></a>
+删除外键
+</h5><p>My：必须使用 DROP FOREIGN KEY 加上<strong>约束名</strong>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> orders <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> fk_customer;
+</span></span></code></pre></div><p>Pg/SQL/Ora：统一使用 DROP CONSTRAINT 加上约束名。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> orders <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">CONSTRAINT</span> fk_customer;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 查看有哪些外键引用了该表的主键，有的话就接触约束：CASCADE
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> orders <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">CONSTRAINT</span> fk_customer <span style="color:#66d9ef">CASCADE</span>;
+</span></span></code></pre></div><p>注：如果主键正被子表的外键引用，直接删除主键会报错。需先执行删除子表外键的操作</p>
+<h5 id="外键使用">
+<a class="header-anchor" href="#%e5%a4%96%e9%94%ae%e4%bd%bf%e7%94%a8"></a>
+外键使用
+</h5><p>当一个属性有外键约束后，不需要特定才做引入父表中的数据，直接写入值即可，是否正确让数据库自动帮你把关。即有外键约束后每插入一个数据会在主表中检测一次，数据库通过匹配这个值，来间接关联到那一行，此时外键存的是父表主键的值的副本。</p>
+<p>另外，父表的主键默认有索引。数据库相当于在做一次 O(log n) 的索引查找，而不是全表扫描。</p>
+<h3 id="5查看和插入数据">
 <a class="header-anchor" href="#5%e6%9f%a5%e7%9c%8b%e5%92%8c%e6%8f%92%e5%85%a5%e6%95%b0%e6%8d%ae"></a>
 5.查看和插入数据
 </h3><h4 id="insert插入数据">
@@ -469,7 +678,11 @@ select查找数据
 </h4><p>*则表示查询所有的列，跟特定数据类型时只会展现特定的列，数据类型用&quot;,&ldquo;连接</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#75715e">-- select选择要查询的列 *则表示查询所有的列 from后面根要查询表的名称
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> tb_name;
-</span></span></code></pre></div><p>除此之外，还可以使用NULL  和 NOT NULL来指定该字段是否为空值,或者使用UNIQUE来指定该字段必须是唯一的,除此之外还有主键约束和外键约束,一个表的外键必须是另一个表的主键</p>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- SELECT后列出要查询的列 FROM后列出有要select的表，然后再在后面加要求
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> ENAME, JOB, HIREDATE, SAL <span style="color:#66d9ef">FROM</span> EMP <span style="color:#66d9ef">WHERE</span> DEPTNO <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span></code></pre></div><p>“加要求”包括：LIKE语句，WHERE语句</p>
+<p>聚合函数是要SELECT的对象经过（聚合函数）处理后的样子，LIKE和WHERE是对象的特征</p>
 <p><code>MODIFY COLUMN</code>表示修改列,后面表示需要修改的列名和数据结构</p>
 <h4 id="update修改数据">
 <a class="header-anchor" href="#update%e4%bf%ae%e6%94%b9%e6%95%b0%e6%8d%ae"></a>
@@ -532,7 +745,7 @@ pgsql
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 查找名字带王的人
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> player name REGEXP <span style="color:#e6db74">&#39;王&#39;</span> 
 </span></span></code></pre></div><p>详情如下：
-<img src="/note_images/others/image-20260312193520351.png" alt="image-20260312193520351" style="zoom:50%;" /></p>
+<img src="/note_images/sql/image-20260312193520351.png" alt="image-20260312193520351" style="zoom:50%;" /></p>
 <h3 id="8like模糊查询">
 <a class="header-anchor" href="#8like%e6%a8%a1%e7%b3%8a%e6%9f%a5%e8%af%a2"></a>
 8.like模糊查询
@@ -597,7 +810,8 @@ tips:null值相关
 <h3 id="10聚合函数">
 <a class="header-anchor" href="#10%e8%81%9a%e5%90%88%e5%87%bd%e6%95%b0"></a>
 10.聚合函数
-</h3><p>使用聚合函数对某列（某个数据类型）进行计算</p>
+</h3><p>聚合函数，内部只做一件事：遍历数据行，维护一个中间状态（累加器/计数器/极值缓存）。即输入多行数据，处理数据，然后<strong>输出只有一行或每个分组一行的结果</strong></p>
+<p>使用聚合函数对某列（某个数据类型）进行计算</p>
 <p>如平均值、中位数、最大最小值等</p>
 <h6 id="对查找结果进行计算">
 <a class="header-anchor" href="#%e5%af%b9%e6%9f%a5%e6%89%be%e7%bb%93%e6%9e%9c%e8%bf%9b%e8%a1%8c%e8%ae%a1%e7%ae%97"></a>
@@ -607,7 +821,7 @@ tips:null值相关
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 查找等级平均值
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#a6e22e">AVG</span>(LEVEL) <span style="color:#66d9ef">FROM</span>  player 
 </span></span></code></pre></div><p>以下为常用聚合函数：</p>
-<img src="/note_images/others/image-20260312195555627.png" alt="image-20260312195555627" style="zoom:67%;" />
+<img src="/note_images/sql/image-20260312195555627.png" alt="image-20260312195555627" style="zoom:67%;" />
 <h3 id="11分组">
 <a class="header-anchor" href="#11%e5%88%86%e7%bb%84"></a>
 11.分组
@@ -619,15 +833,44 @@ tips:null值相关
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 此时SELECT返回两列:s、c，from表示从player表，sex表示按照列的值进行分组
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 得到的结果是所有 sex 相同的行会被归入同一个组，然后对每个组执行 count(*) 聚合计算。
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> level,<span style="color:#a6e22e">count</span>(level) <span style="color:#66d9ef">from</span> player <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> level;<span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">看每个等级各有多少个玩家</span>
-</span></span></code></pre></div><h5 id="having筛选分组后的数据">
+</span></span></code></pre></div><p>注意：所有出现在 <code>SELECT</code> 列表中的列，如果不是聚合函数的参数，则必须出现在 <code>GROUP BY</code> 子句中</p>
+<p>由于level本身就是分组的依据，所以可以在select中。另外，在Mysql的宽松模式下，非分组列进入select中时，可能不报错，并且会<strong>随机</strong>选择该分组内的某个值</p>
+<p>当需要依据多个条件进行分组时：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 1
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    department_id,
+</span></span><span style="display:flex;"><span>    job_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AVG</span>(salary) <span style="color:#66d9ef">AS</span> avg_salary
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> department_id, job_id;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 2  同时使用where和having 两者具体使用在下面
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    department_id,
+</span></span><span style="display:flex;"><span>    job_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AVG</span>(salary) <span style="color:#66d9ef">AS</span> avg_salary
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> job_id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>           <span style="color:#75715e">-- 分组前先筛选出 job_id &gt; 2 的行
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> department_id, job_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">AVG</span>(salary) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5000</span>; <span style="color:#75715e">-- 分组后筛选平均工资 &gt; 5000 的分组
+</span></span></span></code></pre></div><h5 id="having筛选分组后的数据">
 <a class="header-anchor" href="#having%e7%ad%9b%e9%80%89%e5%88%86%e7%bb%84%e5%90%8e%e7%9a%84%e6%95%b0%e6%8d%ae"></a>
 having：筛选分组后的数据
-</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 查询数量大于4的各个等级的数量（不是等级比4大的玩家）
+</h5><p>having主要用途是与 <code>GROUP BY</code> 配合，在部分数据库（如My、pg）中也可以单独使用：此时它将整个表视为一个分组，对聚合函数的结果进行过滤</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 查询数量大于4的各个等级的数量（不是等级比4大的玩家）
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">level</span>,<span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">level</span>) <span style="color:#66d9ef">from</span> player <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">level</span> <span style="color:#66d9ef">having</span> <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">level</span>)<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">4</span> 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 降序排列
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">level</span>,<span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">level</span>) <span style="color:#66d9ef">from</span> player <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">level</span> <span style="color:#66d9ef">having</span> <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">level</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">level</span>) <span style="color:#66d9ef">DESC</span>; 
-</span></span></code></pre></div><h6 id="substr">
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 单独使用对聚合函数过滤
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 检查所有员工的平均工资是否大于 5000
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">AVG</span>(salary) <span style="color:#66d9ef">AS</span> avg_sal
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">AVG</span>(salary) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5000</span>;
+</span></span></code></pre></div><img src="/note_images/sql/image-20260602153624187.png" alt="image-20260602153624187" style="zoom: 67%;" />
+<p><strong>WHERE不能包含聚合函数!!!</strong></p>
+<h6 id="substr">
 <a class="header-anchor" href="#substr"></a>
 SUBSTR:
 </h6><p>截取某个数据类型的变量长度</p>
@@ -635,9 +878,10 @@ SUBSTR:
 <h5 id="limit返回前几名">
 <a class="header-anchor" href="#limit%e8%bf%94%e5%9b%9e%e5%89%8d%e5%87%a0%e5%90%8d"></a>
 LIMIT：返回前几名
-</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#f92672">//</span><span style="color:#960050;background-color:#1e0010">代码如</span>having处<span style="color:#960050;background-color:#1e0010">，省略</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">3</span>  <span style="color:#75715e">-- 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">LIMIT 3,3 -- 返回第四到第六名 第一个三表示偏移量 第二个表示往后取三个
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> level,<span style="color:#a6e22e">count</span>(level) <span style="color:#66d9ef">from</span> player <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> level <span style="color:#66d9ef">having</span> <span style="color:#a6e22e">count</span>(level) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">by</span> <span style="color:#a6e22e">count</span>(level) <span style="color:#66d9ef">DESC</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">代码如</span>having处<span style="color:#960050;background-color:#1e0010">，省略，注意必须要配合</span> <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">使用</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">3</span>  <span style="color:#75715e">-- 只取前三条
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span> <span style="color:#75715e">-- 返回第四到第六名 第一个三表示偏移量 第二个表示往后取三个
 </span></span></span></code></pre></div><h3 id="12重复记录处理">
 <a class="header-anchor" href="#12%e9%87%8d%e5%a4%8d%e8%ae%b0%e5%bd%95%e5%a4%84%e7%90%86"></a>
 12.重复记录处理
@@ -678,7 +922,58 @@ LIMIT：返回前几名
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 插入数据
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> new_player <span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> player <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">level</span> <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">6</span> <span style="color:#66d9ef">and</span> <span style="color:#ae81ff">10</span>;
 </span></span></code></pre></div><p>使用select exists( )判断查询是否有结果  -&gt; 返回0没有结果  返回1有结果</p>
-<h3 id="14表关联">
+<h4 id="标量子查询">
+<a class="header-anchor" href="#%e6%a0%87%e9%87%8f%e5%ad%90%e6%9f%a5%e8%af%a2"></a>
+标量子查询
+</h4><p>定义：<strong>只返回“一个值”（一行一列）的子查询</strong>。这个值可以是数字、字符串、日期等。</p>
+<p>如果子查询没有匹配到数据（返回空），标量子查询会返回 <code>NULL</code>。参与运算时需留意 <code>NULL</code> 的影响。</p>
+<h4 id="with">
+<a class="header-anchor" href="#with"></a>
+WITH
+</h4><p>WITH相当于先定义一个临时的“视图/表”（只在本次查询中生效），然后主查询可以像使用普通表一样多次引用它。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> SAL_GRADE <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> GRADE, LOSAL, HISAL <span style="color:#66d9ef">FROM</span> SALGRADE
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> e.ENAME, e.SAL, (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> s.GRADE <span style="color:#66d9ef">FROM</span> SAL_GRADE s <span style="color:#66d9ef">WHERE</span> e.SAL <span style="color:#66d9ef">BETWEEN</span> s.LOSAL <span style="color:#66d9ef">AND</span> s.HISAL
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">AS</span> GRADE
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> EMP e;
+</span></span></code></pre></div><h4 id="常用语句">
+<a class="header-anchor" href="#%e5%b8%b8%e7%94%a8%e8%af%ad%e5%8f%a5"></a>
+常用语句：
+</h4><h5 id="在where后添加子查询如">
+<a class="header-anchor" href="#%e5%9c%a8where%e5%90%8e%e6%b7%bb%e5%8a%a0%e5%ad%90%e6%9f%a5%e8%af%a2%e5%a6%82"></a>
+在WHERE后添加子查询，如：
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> Sno, Sname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> tb_name
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- IN 谓词 子查询返回多个行
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Sdept <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> Sdept <span style="color:#66d9ef">FROM</span> Student <span style="color:#66d9ef">WHERE</span> Sname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;张三&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 比较运算符 返沪一个聚合查询的结构
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Grade <span style="color:#f92672">&gt;</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">AVG</span>(Grade) <span style="color:#66d9ef">FROM</span> SC);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 带 EXISTS 谓词的子查询 返回是否存在1/0
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">EXISTS</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> SC <span style="color:#66d9ef">WHERE</span> SC.Sno <span style="color:#f92672">=</span> Student.Sno <span style="color:#66d9ef">AND</span> Cno <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- ANY/ALL  返回多个行
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Grade <span style="color:#f92672">&gt;=</span> <span style="color:#66d9ef">ALL</span> (<span style="color:#66d9ef">SELECT</span> Grade <span style="color:#66d9ef">FROM</span> SC <span style="color:#66d9ef">WHERE</span> Cno <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;002&#39;</span>);
+</span></span></code></pre></div><p>ANY/ALL指 要求查询对象(如Grade)要符合条件全部/至少有一个（&gt;=）</p>
+<h5 id="在select语句中查找">
+<a class="header-anchor" href="#%e5%9c%a8select%e8%af%ad%e5%8f%a5%e4%b8%ad%e6%9f%a5%e6%89%be"></a>
+在Select语句中查找
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    r.name <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">零售商名称</span>,
+</span></span><span style="display:flex;"><span>    (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;Order&#34;</span> o
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">WHERE</span> o.rID <span style="color:#f92672">=</span> r.rID 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">AND</span> o.<span style="color:#66d9ef">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;普通订单&#39;</span>
+</span></span><span style="display:flex;"><span>    ) <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">普通订单数量</span>,
+</span></span><span style="display:flex;"><span>    (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;Order&#34;</span> o
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">WHERE</span> o.rID <span style="color:#f92672">=</span> r.rID 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">AND</span> o.<span style="color:#66d9ef">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;加急订单&#39;</span>
+</span></span><span style="display:flex;"><span>    ) <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">加急订单数量</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Retailer r;
+</span></span></code></pre></div><h3 id="14表关联">
 <a class="header-anchor" href="#14%e8%a1%a8%e5%85%b3%e8%81%94"></a>
 14.表关联
 </h3><h3 id="15索引">
@@ -687,7 +982,200 @@ LIMIT：返回前几名
 </h3><h3 id="16视图">
 <a class="header-anchor" href="#16%e8%a7%86%e5%9b%be"></a>
 16.视图
-</h3></div>
+</h3><h3 id="17主键外键">
+<a class="header-anchor" href="#17%e4%b8%bb%e9%94%ae%e5%a4%96%e9%94%ae"></a>
+17.主键外键
+</h3><h4 id="外键">
+<a class="header-anchor" href="#%e5%a4%96%e9%94%ae"></a>
+外键
+</h4><p>查询某表主键名：</p>
+<ul>
+<li><strong>列名</strong>：标识“存储什么数据”（物理存储单元）</li>
+<li><strong>约束名</strong>：标识“用什么规则管理数据”（逻辑规则对象）</li>
+</ul>
+<p>它们是完全不同的数据库对象，一个列上可以有多个约束，而当主键为多个列时只能用一个约束名，删除约束时，必须使用约束名，而不是列名</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-postgresql" data-lang="postgresql"><span style="display:flex;"><span><span style="color:#75715e">-- 此种会给出约束的完整定义，结果包含名字 + 具体是哪个字段做主键
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> conname, pg_get_constraintdef(oid) <span style="color:#66d9ef">AS</span> constraint_def
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> pg_constraint
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> conrelid <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;table_name&#39;</span><span style="color:#f92672">::</span>regclass
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> contype <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;p&#39;</span>;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">-- 只查询 conname（约束名称），只有名字，没有变量名（或者说字段）
+</span></span></span><span style="display:flex;"><span> <span style="color:#66d9ef">SELECT</span> conname 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> pg_constraint 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> conrelid <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;llz_dept&#39;</span><span style="color:#f92672">::</span>regclass <span style="color:#66d9ef">AND</span> contype <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;p&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 修改主键
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 1. 删除现有主键约束（假设约束名为 old_key）
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> emp <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">CONSTRAINT</span> old_key;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 2. 添加新主键约束到目标列（deptno） 此时CONSTRAINT new_key是该改变主键约束名
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> emp <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> new_key <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (deptno);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span></code></pre></div><h4 id="外键-1">
+<a class="header-anchor" href="#%e5%a4%96%e9%94%ae-1"></a>
+外键
+</h4><p>外键是一个表中的一列（或多列），它的值<strong>必须匹配</strong>另一个表的<strong>主键</strong>或<strong>唯一键</strong>中的值。它用来建立两个表之间的<strong>父子关系</strong>。</p>
+<p>特性：</p>
+<ul>
+<li>参照完整性：外键的值必须在父表中存在，或为 <code>NULL</code>（除非明确 <code>NOT NULL</code>）。</li>
+<li>允许重复和 NULL：外键列可以重复，也可以为空。</li>
+<li>可建立多个：一张表可以拥有多个外键，引用不同父表。</li>
+<li>表级依赖：父表必须先创建；删除表时需先删除子表或先移除外键约束。</li>
+</ul>
+<p>构建例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 父表
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> classes (
+</span></span><span style="display:flex;"><span>    class_id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    class_name VARCHAR(<span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 创建时
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 子表，定义外键
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> students (
+</span></span><span style="display:flex;"><span>    student_id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    name VARCHAR(<span style="color:#ae81ff">50</span>),
+</span></span><span style="display:flex;"><span>    class_id INT,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">CONSTRAINT</span> fk_student_class   <span style="color:#75715e">-- 可选，为约束命名
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (class_id) <span style="color:#66d9ef">REFERENCES</span> classes(class_id)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 修改表时：
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> students
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> fk_student_class
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (class_id) <span style="color:#66d9ef">REFERENCES</span> classes(class_id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- delete
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> students <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> fk_student_class;  <span style="color:#75715e">-- MySQL
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> students <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">CONSTRAINT</span> fk_student_class; <span style="color:#75715e">-- (PostgreSQL/SQL Server)
+</span></span></span></code></pre></div><p>作用：级联操作</p>
+<p>当父表的主键值被更新或删除时，可以定义子表的行为。在 <code>REFERENCES</code> 后添加 <code>ON DELETE</code> 和 <code>ON UPDATE</code> 子句。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> students (
+</span></span><span style="display:flex;"><span>    student_id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    name VARCHAR(<span style="color:#ae81ff">50</span>),
+</span></span><span style="display:flex;"><span>    class_id INT,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (class_id) <span style="color:#66d9ef">REFERENCES</span> classes(class_id)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">NULL</span>      <span style="color:#75715e">-- 班级删除后，学生 class_id 变为 NULL
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">UPDATE</span> <span style="color:#66d9ef">CASCADE</span>       <span style="color:#75715e">-- 班级 ID 更新时，学生 class_id 同步更新 
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 除此之外 SET DEFAULT 变为默认值 RESTRICT / NO ACTION阻止父表的删除/更新操作保护重要参照数据不被误删
+</span></span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>外键也可以由多列组成，引用父表的复合主键或复合唯一键，此处略</p>
+<h3 id="18as">
+<a class="header-anchor" href="#18as"></a>
+18.AS
+</h3><p>主要作用是<strong>起别名</strong>（Alias），让查询结果或表引用更清晰、易读。此外，在定义公用表表达式（CTE）或创建新对象时也必不可少。</p>
+<h5 id="1给列起别名">
+<a class="header-anchor" href="#1%e7%bb%99%e5%88%97%e8%b5%b7%e5%88%ab%e5%90%8d"></a>
+1.给列起别名：
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">别名</span> <span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">表名</span>;
+</span></span></code></pre></div><p>别名<strong>只在查询结果</strong>的列标题中生效，不会改变原表结构。</p>
+<p><code>AS</code> 关键字可以省略，但推荐保留以增强可读性</p>
+<h5 id="2给表起别名">
+<a class="header-anchor" href="#2%e7%bb%99%e8%a1%a8%e8%b5%b7%e5%88%ab%e5%90%8d"></a>
+2.给表起别名
+</h5><p>当查询涉及多个表（尤其是多表连接、子查询），或者表名很长时，可以用 <code>AS</code> 给表起一个短别名，然后在查询的其他地方使用该别名。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">别名</span>.<span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">表名</span> <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">别名</span>;
+</span></span></code></pre></div><p><code>AS</code> 在表别名中<strong>也可以省略</strong>，但同样建议保留</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> orders o <span style="color:#75715e">-- o作为order的别名
+</span></span></span></code></pre></div><h5 id="3定义公用表表达式如13">
+<a class="header-anchor" href="#3%e5%ae%9a%e4%b9%89%e5%85%ac%e7%94%a8%e8%a1%a8%e8%a1%a8%e8%be%be%e5%bc%8f%e5%a6%8213"></a>
+3.定义公用表表达式(如13)
+</h5><p><code>WITH ... AS</code> 结构用于定义一个临时的、可重用的结果集（类似派生表，或者说函数/函数返回值），使复杂查询更模块化。基本语法如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> <span style="color:#960050;background-color:#1e0010">别名</span> <span style="color:#66d9ef">AS</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- 子查询
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> ...
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 此时这个表已经经历了一轮筛选，并且被起了别名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 主查询使用这个 
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">别名</span>;
+</span></span></code></pre></div><h3 id="19多表查询">
+<a class="header-anchor" href="#19%e5%a4%9a%e8%a1%a8%e6%9f%a5%e8%af%a2"></a>
+19.多表查询
+</h3><h4 id="多表查询">
+<a class="header-anchor" href="#%e5%a4%9a%e8%a1%a8%e6%9f%a5%e8%af%a2"></a>
+多表查询
+</h4><p>内连接Inner JOIN</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 查询每个员工及其部门名称
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> e.name, d.dept_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> departments d <span style="color:#66d9ef">ON</span> e.dept_id <span style="color:#f92672">=</span> d.dept_id;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 主表：e 被组合的表：e，此时我们可以在select后e.name AS ENAME来起别名，这样当两个表名称一样时则可以右更好的可读性
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- ON 后面跟条件，表示只有当id相同时才会被并入e表里
+</span></span></span></code></pre></div><p>左/右连接</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 左
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> s.student_id, s.name, sc.score
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> students s
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> scores sc <span style="color:#66d9ef">ON</span> s.student_id <span style="color:#f92672">=</span> sc.student_id;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 保留了左表 students 的所有行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 右
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> s.student_id, s.name, sc.score
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> students s
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">RIGHT</span> <span style="color:#66d9ef">JOIN</span> scores sc <span style="color:#66d9ef">ON</span> s.student_id <span style="color:#f92672">=</span> sc.student_id;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 保留了右表 scores 的所有行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 一般主要使用左连接
+</span></span></span></code></pre></div><p>区别：</p>
+<img src="/note_images/sql/image-20260602161942034.png" alt="image-20260602161942034" style="zoom:50%;" />
+<p>FULL [OUTER] JOIN（全外连接）</p>
+<p>返回两个表的<strong>所有行</strong>，对方无匹配时填 NULL。MySQL 原生不支持，但可用 <code>LEFT JOIN UNION RIGHT JOIN</code> 模拟。</p>
+<p>还有交叉连接（笛卡尔积）和自连接</p>
+<h4 id="集合操作">
+<a class="header-anchor" href="#%e9%9b%86%e5%90%88%e6%93%8d%e4%bd%9c"></a>
+集合操作
+</h4><h5 id="union">
+<a class="header-anchor" href="#union"></a>
+UNION
+</h5><p>将两个查询的结果合并，<strong>去除重复行</strong></p>
+<p>会执行隐式的 <code>DISTINCT</code> 操作，性能相对较低。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 查询所有学生的姓名和老师的姓名（合并为一列，且不重复）
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> column1, column2 <span style="color:#66d9ef">FROM</span> tableA
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> column1, column2 <span style="color:#66d9ef">FROM</span> tableB;
+</span></span></code></pre></div><p>假设 <code>students</code> 有 &lsquo;张三&rsquo;, &lsquo;李四&rsquo;；<code>teachers</code> 有 &lsquo;李四&rsquo;, &lsquo;王五&rsquo;，则结果为 &lsquo;张三&rsquo;, &lsquo;李四&rsquo;, &lsquo;王五&rsquo;。</p>
+<h5 id="union-all">
+<a class="header-anchor" href="#union-all"></a>
+UNION ALL
+</h5><p>相比UNION保留所有行（包括重复）,但是性能较高</p>
+<h5 id="intersect">
+<a class="header-anchor" href="#intersect"></a>
+INTERSECT
+</h5><p>返回同时存在于两个查询结果中的行（交集并去重），相当于AND逻辑</p>
+<p>MySQL 不直接支持 <code>INTERSECT</code>，可以使用 <code>INNER JOIN</code> 或 <code>EXISTS</code> 模拟：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> s.name <span style="color:#75715e">-- 直接使用DISTINCT去除重复记录 
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> students s  <span style="color:#75715e">-- 虽然INNER JOIN逻辑是取两个表都有的部分，但是最终指向的还是s表，所以IDSTINCT s 
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> teachers t <span style="color:#66d9ef">ON</span> s.name <span style="color:#f92672">=</span> t.name;
+</span></span></code></pre></div><h5 id="except">
+<a class="header-anchor" href="#except"></a>
+EXCEPT
+</h5><ul>
+<li>返回存在于第一个查询结果，但<strong>不存在于第二个查询结果</strong>中的行（去重），不是A - B!</li>
+<li>有的数据库（如 Oracle）使用 <code>MINUS</code> 关键字。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> column1, column2 <span style="color:#66d9ef">FROM</span> tableA
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">EXCEPT</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> column1, column2 <span style="color:#66d9ef">FROM</span> tableB;
+</span></span></code></pre></div><p>MySQL 不直接支持 <code>EXCEPT</code>，可以使用 <code>LEFT JOIN</code> + <code>WHERE ... IS NULL</code> 或 <code>NOT EXISTS</code> 模拟：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> s.name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> students s
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> teachers t <span style="color:#66d9ef">ON</span> s.name <span style="color:#f92672">=</span> t.name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> t.name <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NULL</span>;
+</span></span></code></pre></div><h5 id="exists">
+<a class="header-anchor" href="#exists"></a>
+EXISTS
+</h5><ul>
+<li>EXISTS（存在）：只要子查询能查出至少 1 条记录，条件就为 <code>TRUE</code>，外层查询就会包含该行。</li>
+<li>NOT EXISTS（不存在）：只有子查询返回空集（0条）时，条件才为 <code>TRUE</code>。</li>
+</ul>
+<p>例如：</p>
+<pre tabindex="0"><code class="language-sqlite" data-lang="sqlite">SELECT r.name, r.phone
+FROM Retailer r
+WHERE EXISTS (
+    SELECT 1
+    FROM &#34;Order&#34; o
+    WHERE o.rID = r.rID
+);
+</code></pre><p>此时select 1 只是一个存在性占位符，不代表任何具体的列或数据</p>
+</div>
     <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
     <a
       class="article-category-link"
@@ -703,29 +1191,17 @@ LIMIT：返回前几名
     aria-label="Article navigation"
     data-aos="fade-up"
   ><div class="article-nav-link-wrap left"><img
-            data-src="/images/covers/8.jpg"
-            data-sizes="auto"
-            alt="计网"
-            class="lazyload"
-          /><a
-          href="/post/%E8%AE%A1%E7%BD%91/"
-          aria-label="Prev:计网"
-          title="Prev:计网"
-        ></a>
-        <div class="article-nav-caption">Prev</div>
-        <h3 class="article-nav-title">计网</h3>
-      </div><div class="article-nav-link-wrap right"><img
             data-src="/images/covers/7.jpg"
             data-sizes="auto"
-            alt="计组"
+            alt="数据库系统概述"
             class="lazyload"
           /><a
-          href="/post/%E8%AE%A1%E7%BB%84/"
-          aria-label="Next:计组"
-          title="Next:计组"
+          href="/post/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"
+          aria-label="Prev:数据库系统概述"
+          title="Prev:数据库系统概述"
         ></a>
-        <div class="article-nav-caption">Next</div>
-        <h3 class="article-nav-title">计组</h3>
+        <div class="article-nav-caption">Prev</div>
+        <h3 class="article-nav-title">数据库系统概述</h3>
       </div></nav></article></section>
         </div><footer id="footer" aria-label="Site footer">
   <div style="width: 100%; overflow: hidden">
@@ -747,10 +1223,10 @@ LIMIT：返回前几名
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;16.6k</span
+          >&nbsp;18.5k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;01:23</span>
+        <span class="icon-coffee">&nbsp;01:34</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -776,13 +1252,13 @@ LIMIT：返回前几名
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#sql">SQL</a>
+    <li><a href="#sql">SQL</a></li>
+    <li><a href="#postgre-sql">postgre SQL</a>
       <ul>
-        <li><a href="#postgre-sql">postgre SQL</a>
+        <li><a href="#cmd">cmd</a>
           <ul>
             <li>
               <ul>
-                <li><a href="#在docker中操作">在docker中操作</a></li>
                 <li><a href="#数据库操作">数据库操作:</a></li>
               </ul>
             </li>
@@ -800,18 +1276,26 @@ LIMIT：返回前几名
         </li>
       </ul>
     </li>
+    <li><a href="#概念">概念：</a></li>
     <li><a href="#语法">语法:</a>
       <ul>
         <li>
           <ul>
-            <li><a href="#1数据库">1.数据库</a></li>
-            <li><a href="#2导入导出">2.导入导出</a></li>
+            <li>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
             <li><a href="#3创建表">※3.创建表</a>
               <ul>
                 <li></li>
               </ul>
             </li>
-            <li><a href="#4alter---修改数据">4.Alter -&gt; 修改数据</a></li>
+            <li><a href="#4alter---修改列">4.Alter -&gt; 修改列</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
             <li><a href="#5查看和插入数据">5.查看和插入数据</a>
               <ul>
                 <li><a href="#insert插入数据">INSERT插入数据</a></li>
@@ -848,10 +1332,33 @@ LIMIT：返回前几名
               </ul>
             </li>
             <li><a href="#12重复记录处理">12.重复记录处理</a></li>
-            <li><a href="#13子查询">13.子查询</a></li>
+            <li><a href="#13子查询">13.子查询</a>
+              <ul>
+                <li><a href="#标量子查询">标量子查询</a></li>
+                <li><a href="#with">WITH</a></li>
+                <li><a href="#常用语句">常用语句：</a></li>
+              </ul>
+            </li>
             <li><a href="#14表关联">14.表关联</a></li>
             <li><a href="#15索引">15.索引</a></li>
             <li><a href="#16视图">16.视图</a></li>
+            <li><a href="#17主键外键">17.主键外键</a>
+              <ul>
+                <li><a href="#外键">外键</a></li>
+                <li><a href="#外键-1">外键</a></li>
+              </ul>
+            </li>
+            <li><a href="#18as">18.AS</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#19多表查询">19.多表查询</a>
+              <ul>
+                <li><a href="#多表查询">多表查询</a></li>
+                <li><a href="#集合操作">集合操作</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -871,7 +1378,7 @@ LIMIT：返回前几名
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">14</div>
+    <div>Posts</div><div class="sidebar-state-number">16</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -971,10 +1478,10 @@ LIMIT：返回前几名
   <div><script data-pjax>
         window.REIMU_POST = {
           author: "scqwq",
-          title: "SQL简单语法",
+          title: "SQL",
           url: "http:\/\/localhost:1313\/post\/sql\/",
-          description: "\rSQL\rpostgre SQL\r在docker中操作\rdocker ps 查看容器列表 docker exec -it p1 bash\n如果用postgres用户连接数据库，则不用输入密码 即psql -U postgres 即可\npsql -U user -d db_name -h 127.0.0.1 -p 5432 数据库操作:\r\\l 查看数据库列表 \\c 切换数据库 create database db1 建库 drop database db1 删除数据库 createdb -U postgres mydb 在shell直接建库\nSQL\r按照功能不同可以分为以下几类\nDDL:用于定义 …",
-          cover: "http:\/\/localhost:1313\/images\/covers\/5.jpg",
+          description: "\rSQL\rpostgre SQL\rcmd\rdocker ps 查看容器列表 docker exec -it p1 bash\n如果用postgres用户连接数据库，则不用输入密码 即psql -U postgres 即可\npsql -U user -d db_name -h 127.0.0.1 -p 5432 数据库操作:\r\\l 查看数据库列表 \\c 切换数据库 create database db1 建库 drop database db1 删除数据库 createdb -U postgres mydb 在shell直接建库\nSQL\r按照功能不同可以分为以下几类\nDDL:用于定义数据库对象，例 …",
+          cover: "http:\/\/localhost:1313\/images\/covers\/7.jpg",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
           if (_$$(`${gallery} ${children}`).length > 0) {

@@ -46,8 +46,8 @@
   />
   <meta property="og:image" content="http://localhost:1313/images/banner.jpg" />
   <meta property="article:author" content="scqwq" />
-  <meta property="article:published_time" content="2026-05-28T21:00:00&#43;08:00" />
-  <meta property="article:modified_time" content="2026-05-29T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/banner.jpg" /><link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="lets say hello world again">
+  <meta property="article:published_time" content="2026-06-20T21:00:00&#43;08:00" />
+  <meta property="article:modified_time" content="2026-06-20T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/banner.jpg" /><link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="lets say hello world again">
 <link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
     rel="preload"
     as="style"
@@ -146,7 +146,7 @@ This article does not have a corresponding language version
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">14</div>
+    <div>Posts</div><div class="sidebar-state-number">16</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -239,20 +239,137 @@ This article does not have a corresponding language version
       <h3 class="widget-title">Recent Posts</h3>
       <div class="widget">
         <ul><li>
+              <a href="/post/sql/" title="SQL">SQL</a>
+            </li><li>
+              <a href="/post/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" title="数据库系统概述">数据库系统概述</a>
+            </li><li>
+              <a href="/post/%E6%AF%9B%E6%A6%82/" title="毛概与中特">毛概与中特</a>
+            </li><li>
               <a href="/post/%E8%AE%A1%E7%BB%84/" title="计组">计组</a>
             </li><li>
-              <a href="/post/sql/" title="SQL简单语法">SQL简单语法</a>
-            </li><li>
               <a href="/post/%E8%AE%A1%E7%BD%91/" title="计网">计网</a>
-            </li><li>
-              <a href="/post/golang/" title="GoLang">GoLang</a>
-            </li><li>
-              <a href="/post/%E8%AE%A1%E7%BB%840/" title="计组">计组</a>
             </li></ul>
       </div>
     </div>
   </div></div></div></aside>
 <section id="main" aria-label="Main content"><div class="post-wrapper">
+  <div
+    class="post-wrap left"
+    data-aos="fade-up"
+  ><a
+        class="post-link"
+        href="/post/sql/"
+        aria-label="SQL"
+        title="SQL"
+      >
+      </a><div class="post-cover left"><img
+          data-src="/images/covers/7.jpg"
+          data-sizes="auto"
+          alt=""
+          class="lazyload"
+        /></div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span
+          ><span class="icon-calendar"></span
+          >2026-06-20</span
+        ><span
+          ><span class="icon-pencil"></span
+          >1854 words</span
+        >
+        <span
+          ><span class="icon-clock"></span
+          >9 mins</span
+        >
+      </div>
+      <h2 class="post-title">SQL</h2>
+      <article class="post-article">SQLpostgre SQLcmddocker ps 查看容器列表 docker exec -it p1 bash
+如果用postgres用户连接数据库，则不用输入密码 即psql -U postgres 即可
+psql -U user -d db_name -h 127.0.0.1 -p 5432 数据库操作:\l 查看数据库列表 \c 切换数据库 create database db1 建库 drop database db1 删除数据库 createdb -U postgres mydb 在shell直接建库
+SQL按照功能不同可以分为以下几类
+DDL:用于定义数据库对象，例 …</article>
+    </div>
+  </div>
+</div>
+<div class="post-wrapper">
+  <div
+    class="post-wrap left"
+    data-aos="fade-up"
+  ><a
+        class="post-link"
+        href="/post/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"
+        aria-label="数据库系统概述"
+        title="数据库系统概述"
+      >
+      </a><div class="post-cover left"><img
+          data-src="/images/covers/7.jpg"
+          data-sizes="auto"
+          alt=""
+          class="lazyload"
+        /></div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span
+          ><span class="icon-calendar"></span
+          >2026-06-20</span
+        ><span
+          ><span class="icon-pencil"></span
+          >570 words</span
+        >
+        <span
+          ><span class="icon-clock"></span
+          >3 mins</span
+        >
+      </div>
+      <h2 class="post-title">数据库系统概述</h2>
+      <article class="post-article">数据库系统相关基本概念：数据（Data）是描述事物的符号记录，是对客观事物的属性的度量或表达，是可以鉴别的、可以被计算机处理的符号，只有数据没有用，要有解释，此时就形成了 信息。 数据库（Database, DB）是长期存储在计算机内、有组织的、可共享的大量数据的集合。数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度、较高的数据独立性和易扩展性，并可为各种用户共享。
+数据库系统（Database System, DBS）是由数据库、数据库管理系统（及其应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。
+数据库管理系统 …</article>
+    </div>
+  </div>
+</div>
+<div class="post-wrapper">
+  <div
+    class="post-wrap left"
+    data-aos="fade-up"
+  ><a
+        class="post-link"
+        href="/post/%E6%AF%9B%E6%A6%82/"
+        aria-label="毛概与中特"
+        title="毛概与中特"
+      >
+      </a><div class="post-cover left"><img
+          data-src="/images/covers/6.jpg"
+          data-sizes="auto"
+          alt=""
+          class="lazyload"
+        /></div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span
+          ><span class="icon-calendar"></span
+          >2026-06-06</span
+        ><span
+          ><span class="icon-pencil"></span
+          >243 words</span
+        >
+        <span
+          ><span class="icon-clock"></span
+          >2 mins</span
+        >
+      </div>
+      <h2 class="post-title">毛概与中特</h2>
+      <article class="post-article">毛概毛泽东思想形成：萌芽：《中国各阶级的分析》《湖南农民运动考察报告》
+解决了无产阶级领导权的中心问题，这些关于新民主主义革命的基本思想的提出，标志着毛泽东思想开始萌芽
+初步形成：土地革命时期，开辟了农村包围城市、武装夺取政权的革命道路，有根本指导作用，具有决定意义的新起点
+成熟：遵义会议以后，这一时期在实践经验教训和科学总结的基础上系统阐述了新民民注意革命理论，实现了马克思主义与中国革命实践相结合的历史性飞跃，，标志着毛泽东思想的成熟
+六届七中全会：肯定了毛泽东在全党领导地位的重大意义，酝酿和讨论毛泽东思想
+1945年七大：毛泽东思想写入党章
+继续发展解放战争时期和新中国成立 …</article>
+    </div>
+  </div>
+</div>
+<div class="post-wrapper">
   <div
     class="post-wrap left"
     data-aos="fade-up"
@@ -275,11 +392,11 @@ This article does not have a corresponding language version
           >2026-05-28</span
         ><span
           ><span class="icon-pencil"></span
-          >1915 words</span
+          >1996 words</span
         >
         <span
           ><span class="icon-clock"></span
-          >9 mins</span
+          >10 mins</span
         >
       </div>
       <h2 class="post-title">计组</h2>
@@ -287,50 +404,11 @@ This article does not have a corresponding language version
 王道计组
 saurlax：https://saurlax.com/blog/principles-of-computer-composition
 网盘LCX的PPT（大部分图片来源）
-注：本笔记可能有错漏仅供参考，且大部分内容直接照搬，只是提取出来便于总结，有错误可以帮忙踢一脚作者（仅供参考仅供参考）
+注（叠甲）：本笔记可能有错漏仅供参考，且大部分内容直接照搬，只是提取出来便于总结，有错误可以帮忙踢一脚作者（仅供参考仅供参考）
 标题等级颜色对应：一二三四五级标题对应蓝红紫绿黄，红色小字是加粗
 ================================================================
 这是计算机世界的架构： 计组就是研究这些硬件在底层如何相互协调工作的
-一、概论 …</article>
-    </div>
-  </div>
-</div>
-<div class="post-wrapper">
-  <div
-    class="post-wrap left"
-    data-aos="fade-up"
-  ><a
-        class="post-link"
-        href="/post/sql/"
-        aria-label="SQL简单语法"
-        title="SQL简单语法"
-      >
-      </a><div class="post-cover left"><img
-          data-src="/images/covers/5.jpg"
-          data-sizes="auto"
-          alt=""
-          class="lazyload"
-        /></div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span
-          ><span class="icon-calendar"></span
-          >2026-05-19</span
-        ><span
-          ><span class="icon-pencil"></span
-          >819 words</span
-        >
-        <span
-          ><span class="icon-clock"></span
-          >4 mins</span
-        >
-      </div>
-      <h2 class="post-title">SQL简单语法</h2>
-      <article class="post-article">SQLpostgre SQL在docker中操作docker ps 查看容器列表 docker exec -it p1 bash
-如果用postgres用户连接数据库，则不用输入密码 即psql -U postgres 即可
-psql -U user -d db_name -h 127.0.0.1 -p 5432 数据库操作:\l 查看数据库列表 \c 切换数据库 create database db1 建库 drop database db1 删除数据库 createdb -U postgres mydb 在shell直接建库
-SQL按照功能不同可以分为以下几类
-DDL:用于定义 …</article>
+一 …</article>
     </div>
   </div>
 </div>
@@ -567,86 +645,6 @@ godotenv.Load()使用的文件路径是精确匹配，不会自动递归向上�
     </div>
   </div>
 </div>
-<div class="post-wrapper">
-  <div
-    class="post-wrap left"
-    data-aos="fade-up"
-  ><a
-        class="post-link"
-        href="/post/gin/"
-        aria-label="GIN"
-        title="GIN"
-      >
-      </a><div class="post-cover left"><img
-          data-src="/images/covers/evening.webp"
-          data-sizes="auto"
-          alt=""
-          class="lazyload"
-        /></div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span
-          ><span class="icon-calendar"></span
-          >2026-05-03</span
-        ><span
-          ><span class="icon-pencil"></span
-          >1570 words</span
-        >
-        <span
-          ><span class="icon-clock"></span
-          >8 mins</span
-        >
-      </div>
-      <h2 class="post-title">GIN</h2>
-      <article class="post-article">GINGIN是一个用go语言编写的Web框架
-小知识提要0.基本路线:1.前端静态页面的制作
-2.前端的动态部分的制作和往后端传入的api和结构体
-3.后端构建需要接收前端（客户端）请求的结构体
-4.构建数据库实例DB，连接数据库
-5.用err检查数据库连接的返回值，不为nil则panic，并记得延迟注册关闭defer DB.Close()
-6.模型绑定 -&gt; DB.AutoMigrate(&amp;Todo{}) Todo{}是一个结构类型，若手动创建表，则表名一定要和后端的一致
-7.r.Static引入静态文件 …</article>
-    </div>
-  </div>
-</div>
-<div class="post-wrapper">
-  <div
-    class="post-wrap left"
-    data-aos="fade-up"
-  ><a
-        class="post-link"
-        href="/post/html/"
-        aria-label="HTML"
-        title="HTML"
-      >
-      </a><div class="post-cover left"><img
-          data-src="/images/covers/3.jpg"
-          data-sizes="auto"
-          alt=""
-          class="lazyload"
-        /></div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span
-          ><span class="icon-calendar"></span
-          >2026-05-03</span
-        ><span
-          ><span class="icon-pencil"></span
-          >299 words</span
-        >
-        <span
-          ><span class="icon-clock"></span
-          >2 mins</span
-        >
-      </div>
-      <h2 class="post-title">HTML</h2>
-      <article class="post-article">HTML：标签:标签列表功能参考:https://www.w3cschool.cn/htmltags/html-reference.html
-双标签：用于有内容的元素
-单标签：用于没内容的元素
-开头:&lt;!DOCTYPE html&gt; //告诉浏览器这是一个HTML文件 &lt;html&gt; //文档起始点 or 最外层容器 &lt;head&gt; //表示文档头部 包含一些文件原信息(如标题 编码格式) &lt;title&gt;Document&lt;/title&gt; //标题 &lt;meta charset=&#34;UTF-8&#34;&gt; //编码格式 …</article>
-    </div>
-  </div>
-</div>
 <nav id="page-nav" aria-label="Pagination navigation" data-aos="fade-up"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">
       Next &raquo;
     </a></nav>
@@ -671,10 +669,10 @@ godotenv.Load()使用的文件路径是精确匹配，不会自动递归向上�
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;16.6k</span
+          >&nbsp;18.5k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;01:23</span>
+        <span class="icon-coffee">&nbsp;01:34</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -708,7 +706,7 @@ godotenv.Load()使用的文件路径是精确匹配，不会自动递归向上�
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">14</div>
+    <div>Posts</div><div class="sidebar-state-number">16</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
