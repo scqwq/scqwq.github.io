@@ -12,12 +12,92 @@
     
     <copyright>All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!</copyright>
     
-    <lastBuildDate>Sat, 20 Jun 2026 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 21:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>统计学习</title>
+      <link>http://localhost:1313/post/gaotong/</link>
+      <pubDate>Sun, 21 Jun 2026 21:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (scqwq)</author>
+      <guid>http://localhost:1313/post/gaotong/</guid>
+      <description>
+        <![CDATA[<h1>统计学习</h1><p>Author: scqwq(xxx@example.com)</p>
+        
+          <h1 id="高统">
+<a class="header-anchor" href="#%e9%ab%98%e7%bb%9f"></a>
+高统
+</h1><h5 id="注意这不是我写的这是云盘里的为了方便观看push上来的">
+<a class="header-anchor" href="#%e6%b3%a8%e6%84%8f%e8%bf%99%e4%b8%8d%e6%98%af%e6%88%91%e5%86%99%e7%9a%84%e8%bf%99%e6%98%af%e4%ba%91%e7%9b%98%e9%87%8c%e7%9a%84%e4%b8%ba%e4%ba%86%e6%96%b9%e4%be%bf%e8%a7%82%e7%9c%8bpush%e4%b8%8a%e6%9d%a5%e7%9a%84"></a>
+<strong>注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!</strong>
+</h5><h4 id="5112024-linxililinxi-2024-gaotong">
+<a class="header-anchor" href="#5112024-linxililinxi-2024-gaotong"></a>
+5/11/2024 Linxi(LiLinxi) 2024 Gaotong
+</h4><h4 id="reference2020yangchengyu">
+<a class="header-anchor" href="#reference2020yangchengyu"></a>
+Reference:2020YangChengYu
+</h4><h4 id="">
+<a class="header-anchor" href="#"></a>
+<a href="https://github.com/EternityQAQ2/DLUT_2024_GaoTong">https://github.com/EternityQAQ2/DLUT_2024_GaoTong</a>
+</h4><p>RSS（残差平方和）、RSE（残差标准误）和MSE（均方误差）
+</p>
+$$
+RSS = \sum_{i=1}^n (Y_i - \hat{Y}_i)^2
+$$<p>
+</p>
+$$
+MSE = \frac{RSS}{n - p}
+$$<p>
+</p>
+$$
+RSE = \sqrt{MSE} = \sqrt{\frac{RSS}{n - p}}
+$$<h2 id="第二章-统计学习">
+<a class="header-anchor" href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e7%bb%9f%e8%ae%a1%e5%ad%a6%e4%b9%a0"></a>
+第二章 统计学习
+</h2><h3 id="什么是统计学习">
+<a class="header-anchor" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%bb%9f%e8%ae%a1%e5%ad%a6%e4%b9%a0"></a>
+什么是统计学习
+</h3><p><strong>输入变量</strong>通常用 <strong>X</strong> 表示，也称为<strong>预测变量</strong>、<strong>自变量</strong>、<strong>属性变量</strong></p>
+<p><strong>输出变量</strong>通常用 <strong>Y</strong> 表示，也称为<strong>响应变量</strong>、<strong>因变量</strong>
+</p>
+$$
+Y = f(X) + ε
+$$<p>
+f是X的函数，固定但未知，f表达了X提供给Y的系统信息，ε是<strong>随机误差项</strong>（与X独立，均值为0）</p>
+<h4 id="什么情况下需要估计f">
+<a class="header-anchor" href="#%e4%bb%80%e4%b9%88%e6%83%85%e5%86%b5%e4%b8%8b%e9%9c%80%e8%a6%81%e4%bc%b0%e8%ae%a1f"></a>
+什么情况下需要估计f
+</h4><p><strong>预测</strong>和<strong>推断</strong>。</p>
+<h5 id="预测">
+<a class="header-anchor" href="#%e9%a2%84%e6%b5%8b"></a>
+预测
+</h5><p>预测主要关心f的估计值的准确性，不关注其是如何预测的（将f当作黑箱）</p>
+<p>精确性包括<strong>可约误差</strong>与<strong>不可约误差</strong>，可约误差可以通过选择更合适的统计学习方法降低</p>
+<h5 id="推断">
+<a class="header-anchor" href="#%e6%8e%a8%e6%96%ad"></a>
+推断
+</h5><p>推断主要关心$X_1$,$X_2$,&hellip;变化时如何对Y产生影响（不能将f当作黑箱）</p>
+<h4 id="如何估计f">
+<a class="header-anchor" href="#%e5%a6%82%e4%bd%95%e4%bc%b0%e8%ae%a1f"></a>
+如何估计f
+</h4><p>估计任务大多可分为<strong>参数方法</strong>和<strong>非参数方法</strong>
+非参数方法的关键特点是：这些方法不假定特定的概率分布或数据模型形式。换句话说，非参数方法不预设数据生成过程的具体数学形式，而是通过数据本身来揭示变量之间的关系。
+<img src="/note_images/gaotong/Y1-178212128365665.png" alt="">
+自然样条曲线并不假设数据符合某种特定的函数形式（如线性或多项式），而是通过分段多项式和节点（knots)来灵活拟合数据。这是非参数特性。
+回归树不需要预先设定任何特定的模型形式，而是通过数据驱动的方式划分输入空间。</p>
+        
+        <hr><p>Published on 2026-06-21 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-06-21</p>]]>
+      </description>
+      
+        <category>专业课</category>
+      
+    </item>
     
     
 
