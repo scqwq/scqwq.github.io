@@ -1,0 +1,2228 @@
+<!doctype html>
+<html
+  lang="en-us" 
+  data-theme-mode="auto"
+  >
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/><title>
+  统计学习 | scqwq
+</title>
+<meta name="description" content="lets do it again..."/><script>
+  window.siteConfig = JSON.parse("{\"anchor_icon\":false,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_ex15nbittbh\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
+  
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<link
+    rel="preload"
+    href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  /><link rel="stylesheet" href="/css/loader.css" /><meta property="og:type" content="website" />
+  <meta property="og:title" content="统计学习 | scqwq" />
+  <meta
+    property="og:description"
+    content="lets do it again..."
+  />
+  <meta property="og:url" content="http://localhost:1313/post/gaotong/" />
+  <meta
+    property="og:site_name"
+    content="lets say hello world again"
+  />
+  <meta property="og:image" content="http://localhost:1313/images/covers/11.png" />
+  <meta property="article:author" content="scqwq" />
+  <meta property="article:published_time" content="2026-06-21T21:00:00&#43;08:00" />
+  <meta property="article:modified_time" content="2026-06-21T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/11.png" />
+<link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css"
+    integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/katex@0.16.24/dist/katex.min.css"
+    integrity="sha384-tTgKLjMYmJr94v8qu2PE5MUGSMbyN2xiH266JUB3gpm8vnnJywd1dWSOEfrFz&#43;YI" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><script
+    src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"
+    
+    
+    
+    
+    integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css"
+    integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous"/><link rel="stylesheet" href="/css/cyberpunk.css"></head>
+  <body><div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate"><svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+          M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg></div><div class="loading-word">Loading...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script><div id="copy-tooltip"></div>
+<div id="lang-tooltip">
+This article does not have a corresponding language version
+</div>
+<div id="heatmap-tooltip"></div><div id="container">
+      <div id="wrap"><div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation"><a class="main-nav-link-wrap" href="/"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Home</span>
+      </a><a class="main-nav-link-wrap" href="/archives"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Archives</span>
+      </a><a class="main-nav-link-wrap" href="/about"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">About</span>
+      </a><a class="main-nav-link-wrap" href="/friend"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Friend</span>
+      </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
+<header id="header" aria-label="Site header"><picture></picture>
+    <img  fetchpriority="high" src="/images/covers/11.png" alt="统计学习"><div id="header-outer">
+    <div id="header-title"><span id="logo">
+            <h1 data-aos="slide-up">统计学习</h1>
+          </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
+  </div>
+</header><div id="content"
+          aria-label="Page content"
+          
+          class="sidebar-right"  ><aside id="sidebar" aria-label="Sidebar"><div class="sidebar-wrapper-container sticky"><div class="sidebar-wrapper">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    ><div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#高统">高统</a>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li></li>
+                <li><a href="#5112024-linxililinxi-2024-gaotong">5/11/2024 Linxi(LiLinxi) 2024 Gaotong</a></li>
+                <li><a href="#reference2020yangchengyu">Reference:2020YangChengYu</a></li>
+                <li><a href="#">https://github.com/EternityQAQ2/DLUT_2024_GaoTong</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第二章-统计学习">第二章 统计学习</a>
+          <ul>
+            <li><a href="#什么是统计学习">什么是统计学习</a>
+              <ul>
+                <li><a href="#什么情况下需要估计f">什么情况下需要估计f</a></li>
+                <li><a href="#如何估计f">如何估计f</a></li>
+                <li><a href="#预测精度和模型解释性的权衡">预测精度和模型解释性的权衡</a></li>
+                <li><a href="#指导学习和无指导学习">指导学习和无指导学习</a></li>
+                <li><a href="#回归与分类问题">回归与分类问题</a></li>
+              </ul>
+            </li>
+            <li><a href="#评价模型精度">评价模型精度</a>
+              <ul>
+                <li><a href="#拟合效果检验">拟合效果检验</a></li>
+                <li><a href="#偏差-方差权衡">偏差-方差权衡</a></li>
+                <li><a href="#分类模型">分类模型</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第三章-线性模型">第三章 线性模型</a>
+          <ul>
+            <li><a href="#简单线性回归">简单线性回归</a>
+              <ul>
+                <li><a href="#定义">定义</a></li>
+                <li><a href="#目标">目标</a></li>
+                <li><a href="#标准误差和置信区间">标准误差和置信区间</a></li>
+                <li><a href="#假设">假设</a></li>
+              </ul>
+            </li>
+            <li><a href="#多元线性回归">多元线性回归</a>
+              <ul>
+                <li><a href="#定义-1">定义</a></li>
+                <li><a href="#目标-1">目标</a></li>
+                <li><a href="#假设-1">假设</a></li>
+              </ul>
+            </li>
+            <li><a href="#评估模型参数">评估模型参数</a></li>
+            <li><a href="#回归模型的其他问题">回归模型的其他问题</a>
+              <ul>
+                <li><a href="#数据的非线性">数据的非线性</a></li>
+                <li><a href="#误差项自相关">误差项自相关</a></li>
+                <li><a href="#误差项方差非恒定">误差项方差非恒定</a></li>
+                <li><a href="#离群点">离群点</a></li>
+                <li><a href="#高杠杆点">高杠杆点</a></li>
+                <li><a href="#r语言-residuals-vs-leverage-图">R语言 Residuals vs Leverage 图</a></li>
+                <li><a href="#共线性">共线性</a></li>
+                <li><a href="#线性回归与k最近邻法的比较-维度灾难">线性回归与K最近邻法的比较 维度灾难。</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第四章-分类">第四章 分类</a>
+          <ul>
+            <li><a href="#逻辑斯蒂回归">逻辑斯蒂回归</a>
+              <ul>
+                <li><a href="#概述">概述</a></li>
+                <li><a href="#数学表达">数学表达</a></li>
+              </ul>
+            </li>
+            <li><a href="#线性判别分析">线性判别分析</a>
+              <ul>
+                <li><a href="#概述-1">概述</a></li>
+                <li><a href="#核心思想">核心思想</a></li>
+                <li><a href="#roc曲线">ROC曲线</a></li>
+              </ul>
+            </li>
+            <li><a href="#二次判别分析">二次判别分析</a></li>
+            <li><a href="#方法比较">方法比较</a></li>
+          </ul>
+        </li>
+        <li><a href="#第五章-重抽样方法">第五章 重抽样方法</a>
+          <ul>
+            <li><a href="#交叉验证法">交叉验证法</a>
+              <ul>
+                <li><a href="#验证集方法">验证集方法</a></li>
+                <li><a href="#留一交叉验证loocv">留一交叉验证（LOOCV）</a></li>
+                <li><a href="#k折交叉验证">K折交叉验证</a></li>
+              </ul>
+            </li>
+            <li><a href="#自助法">自助法</a>
+              <ul>
+                <li><a href="#自助法的其他用途">自助法的其他用途</a></li>
+                <li><a href="#自助法不能估计测试误差的原因">自助法不能估计测试误差的原因</a></li>
+              </ul>
+            </li>
+            <li><a href="#方法比较-1">方法比较</a></li>
+          </ul>
+        </li>
+        <li><a href="#第六章-线性模型选择与正则化">第六章 线性模型选择与正则化</a>
+          <ul>
+            <li><a href="#子集选择">子集选择</a>
+              <ul>
+                <li><a href="#最优子集选择">最优子集选择</a></li>
+                <li><a href="#逐步选择">逐步选择</a></li>
+                <li><a href="#选择最优模型的指标">选择最优模型的指标</a></li>
+              </ul>
+            </li>
+            <li><a href="#压缩估计方法">压缩估计方法</a>
+              <ul>
+                <li><a href="#岭回归l2正则化">岭回归（L2正则化）</a></li>
+                <li><a href="#lassol1正则化">Lasso（L1正则化）</a></li>
+                <li><a href="#岭回归和lasso的等价问题">岭回归和Lasso的等价问题</a></li>
+                <li><a href="#岭回归和lasso的贝叶斯解释">岭回归和Lasso的贝叶斯解释</a></li>
+              </ul>
+            </li>
+            <li><a href="#降维方法">降维方法</a>
+              <ul>
+                <li><a href="#主成分回归pca">主成分回归（PCA）</a></li>
+                <li><a href="#偏最小二乘pls">偏最小二乘（PLS）</a></li>
+                <li><a href="#pca-和-pls-区别">PCA 和 PLS 区别</a></li>
+              </ul>
+            </li>
+            <li><a href="#高维数据的回归问题">高维数据的回归问题</a></li>
+          </ul>
+        </li>
+        <li><a href="#第七章-非线性模型">第七章 非线性模型</a>
+          <ul>
+            <li><a href="#多项式回归">多项式回归</a></li>
+            <li><a href="#阶梯函数">阶梯函数</a></li>
+            <li><a href="#基函数">基函数</a></li>
+            <li><a href="#回归样条">回归样条</a>
+              <ul>
+                <li><a href="#截断幂基">截断幂基</a></li>
+                <li><a href="#确定结点的个数和位置">确定结点的个数和位置</a></li>
+              </ul>
+            </li>
+            <li><a href="#光滑样条">光滑样条</a></li>
+            <li><a href="#局部回归">局部回归</a></li>
+            <li><a href="#广义可加模型">广义可加模型</a>
+              <ul>
+                <li><a href="#gam的优点与不足">GAM的优点与不足</a></li>
+                <li><a href="#用于分类的gam">用于分类的GAM</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第八章-基于树的方法">第八章 基于树的方法</a>
+          <ul>
+            <li><a href="#决策树基本概念">决策树基本概念</a>
+              <ul>
+                <li><a href="#回归树">回归树</a></li>
+                <li><a href="#分类树">分类树</a></li>
+                <li><a href="#分类指标">分类指标</a></li>
+              </ul>
+            </li>
+            <li><a href="#树的剪枝">树的剪枝</a></li>
+            <li><a href="#决策树评估">决策树评估</a>
+              <ul>
+                <li><a href="#树与线性模型的比较">树与线性模型的比较</a></li>
+                <li><a href="#树的优缺点">树的优缺点</a></li>
+              </ul>
+            </li>
+            <li><a href="#装袋法随机森林和提升法">装袋法、随机森林和提升法</a>
+              <ul>
+                <li><a href="#装袋法">装袋法</a></li>
+                <li><a href="#随机森林">随机森林</a></li>
+                <li><a href="#提升法">提升法</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第九章-支持向量机">第九章 支持向量机</a>
+          <ul>
+            <li><a href="#最大间隔分类器">最大间隔分类器</a>
+              <ul>
+                <li><a href="#超平面">超平面</a></li>
+                <li><a href="#最大间隔超平面">最大间隔超平面</a></li>
+              </ul>
+            </li>
+            <li><a href="#支持向量分类器">支持向量分类器</a>
+              <ul>
+                <li><a href="#最大间隔分类器-1">最大间隔分类器</a></li>
+                <li><a href="#支持向量">支持向量</a></li>
+                <li><a href="#支持向量分类器-1">支持向量分类器</a></li>
+                <li><a href="#非线性决策边界分类">非线性决策边界分类</a></li>
+              </ul>
+            </li>
+            <li><a href="#支持向量机">支持向量机</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#多分类的svmsupport-vector-machine">多分类的SVM(support vector machine)</a></li>
+          </ul>
+        </li>
+        <li><a href="#第十章-无监督学习">第十章 无监督学习</a>
+          <ul>
+            <li><a href="#主成分分析-pca">主成分分析 PCA</a>
+              <ul>
+                <li><a href="#标准化">标准化</a></li>
+              </ul>
+            </li>
+            <li><a href="#聚类分析法">聚类分析法</a>
+              <ul>
+                <li><a href="#k均值聚类k-means-clustering">K均值聚类(K-means clustering)</a></li>
+                <li><a href="#系统聚类hierarchical-clustering">系统聚类(hierarchical clustering)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第十一章-各模型评测">第十一章 各模型评测</a>
+          <ul>
+            <li><a href="#各模型偏差-方差均衡以及光滑度-可解释性均衡">各模型偏差-方差均衡以及光滑度-可解释性均衡</a>
+              <ul>
+                <li><a href="#偏差-方差均衡">偏差-方差均衡</a></li>
+                <li><a href="#光滑度-可解释性均衡">光滑度-可解释性均衡</a></li>
+              </ul>
+            </li>
+            <li><a href="#置信区间和预测区间的区别">置信区间和预测区间的区别</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div></div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.jpg"
+    data-sizes="auto"
+    alt="scqwq"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">scqwq</div>
+  <div class="sidebar-description">lets do it again...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div><div class="sidebar-state-number">17</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>Categories</div>
+    <div class="sidebar-state-number">
+      4
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-github sidebar-social-icon">
+        <a
+          href="https://github.com/scqwq"
+          itemprop="url"
+          target="_blank"
+          aria-label="github"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-qq sidebar-social-icon">
+        <a
+          href="https://scqwq.github.io/2593335313"
+          itemprop="url"
+          target="_blank"
+          aria-label="qq"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="Home"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Home</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="Archives"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Archives</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="About"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">About</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="Friend"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Friend</div>
+    </div></div></div><div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div></div>
+  </div><div class="sidebar-widget"></div></div></aside>
+<section id="main" aria-label="Main content"><article
+  class="h-entry article"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta"><div class="article-date">
+  <span
+    class="article-date-link icon-calendar"
+    data-aos="zoom-in"
+  >
+    <time datetime="2026-06-21 21:00:00 &#43;0800 CST" itemprop="datePublished"
+      >2026-06-21</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2026-06-21</time
+    >
+  </span></div>
+</div><div class="hr-line"></div><div class="e-content article-entry tex2jax_process" itemprop="articleBody"><h1 id="高统">
+<a class="header-anchor" href="#%e9%ab%98%e7%bb%9f"></a>
+高统
+</h1><h5 id="注意这不是我写的这是云盘里的为了方便观看push上来的">
+<a class="header-anchor" href="#%e6%b3%a8%e6%84%8f%e8%bf%99%e4%b8%8d%e6%98%af%e6%88%91%e5%86%99%e7%9a%84%e8%bf%99%e6%98%af%e4%ba%91%e7%9b%98%e9%87%8c%e7%9a%84%e4%b8%ba%e4%ba%86%e6%96%b9%e4%be%bf%e8%a7%82%e7%9c%8bpush%e4%b8%8a%e6%9d%a5%e7%9a%84"></a>
+<strong>注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!</strong>
+</h5><h4 id="5112024-linxililinxi-2024-gaotong">
+<a class="header-anchor" href="#5112024-linxililinxi-2024-gaotong"></a>
+5/11/2024 Linxi(LiLinxi) 2024 Gaotong
+</h4><h4 id="reference2020yangchengyu">
+<a class="header-anchor" href="#reference2020yangchengyu"></a>
+Reference:2020YangChengYu
+</h4><h4 id="">
+<a class="header-anchor" href="#"></a>
+<a href="https://github.com/EternityQAQ2/DLUT_2024_GaoTong">https://github.com/EternityQAQ2/DLUT_2024_GaoTong</a>
+</h4><p>RSS（残差平方和）、RSE（残差标准误）和MSE（均方误差）
+</p>
+$$
+RSS = \sum_{i=1}^n (Y_i - \hat{Y}_i)^2
+$$<p>
+</p>
+$$
+MSE = \frac{RSS}{n - p}
+$$<p>
+</p>
+$$
+RSE = \sqrt{MSE} = \sqrt{\frac{RSS}{n - p}}
+$$<h2 id="第二章-统计学习">
+<a class="header-anchor" href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e7%bb%9f%e8%ae%a1%e5%ad%a6%e4%b9%a0"></a>
+第二章 统计学习
+</h2><h3 id="什么是统计学习">
+<a class="header-anchor" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%bb%9f%e8%ae%a1%e5%ad%a6%e4%b9%a0"></a>
+什么是统计学习
+</h3><p><strong>输入变量</strong>通常用 <strong>X</strong> 表示，也称为<strong>预测变量</strong>、<strong>自变量</strong>、<strong>属性变量</strong></p>
+<p><strong>输出变量</strong>通常用 <strong>Y</strong> 表示，也称为<strong>响应变量</strong>、<strong>因变量</strong>
+</p>
+$$
+Y = f(X) + ε
+$$<p>
+f是X的函数，固定但未知，f表达了X提供给Y的系统信息，ε是<strong>随机误差项</strong>（与X独立，均值为0）</p>
+<h4 id="什么情况下需要估计f">
+<a class="header-anchor" href="#%e4%bb%80%e4%b9%88%e6%83%85%e5%86%b5%e4%b8%8b%e9%9c%80%e8%a6%81%e4%bc%b0%e8%ae%a1f"></a>
+什么情况下需要估计f
+</h4><p><strong>预测</strong>和<strong>推断</strong>。</p>
+<h5 id="预测">
+<a class="header-anchor" href="#%e9%a2%84%e6%b5%8b"></a>
+预测
+</h5><p>预测主要关心f的估计值的准确性，不关注其是如何预测的（将f当作黑箱）</p>
+<p>精确性包括<strong>可约误差</strong>与<strong>不可约误差</strong>，可约误差可以通过选择更合适的统计学习方法降低</p>
+<h5 id="推断">
+<a class="header-anchor" href="#%e6%8e%a8%e6%96%ad"></a>
+推断
+</h5><p>推断主要关心$X_1$,$X_2$,&hellip;变化时如何对Y产生影响（不能将f当作黑箱）</p>
+<h4 id="如何估计f">
+<a class="header-anchor" href="#%e5%a6%82%e4%bd%95%e4%bc%b0%e8%ae%a1f"></a>
+如何估计f
+</h4><p>估计任务大多可分为<strong>参数方法</strong>和<strong>非参数方法</strong>
+非参数方法的关键特点是：这些方法不假定特定的概率分布或数据模型形式。换句话说，非参数方法不预设数据生成过程的具体数学形式，而是通过数据本身来揭示变量之间的关系。
+<img src="/note_images/gaotong/Y1-178212128365665.png" alt="">
+自然样条曲线并不假设数据符合某种特定的函数形式（如线性或多项式），而是通过分段多项式和节点（knots)来灵活拟合数据。这是非参数特性。
+回归树不需要预先设定任何特定的模型形式，而是通过数据驱动的方式划分输入空间。</p>
+<h5 id="非参数方法的共同特征">
+<a class="header-anchor" href="#%e9%9d%9e%e5%8f%82%e6%95%b0%e6%96%b9%e6%b3%95%e7%9a%84%e5%85%b1%e5%90%8c%e7%89%b9%e5%be%81"></a>
+非参数方法的共同特征
+</h5><p>模型灵活：无需预设具体的函数形式，模型复杂度与数据量相关。
+数据驱动：模型结构直接依赖于数据，增加数据量可以改善模型表现。
+适用性广：能处理更广泛的数据分布和非线性关系。</p>
+<h5 id="参数方法">
+<a class="header-anchor" href="#%e5%8f%82%e6%95%b0%e6%96%b9%e6%b3%95"></a>
+参数方法
+</h5><p>假设函数f具有一定的形式，用训练数据集去拟合模型（估计参数），即把估计f的问题简化到估计一组参数</p>
+<blockquote>
+<p>过拟合：拟合了错误或噪声</p>
+</blockquote>
+<h5 id="非参数方法">
+<a class="header-anchor" href="#%e9%9d%9e%e5%8f%82%e6%95%b0%e6%96%b9%e6%b3%95"></a>
+非参数方法
+</h5><p>不对函数f的形式做明确的假设，追求尽可能接近数据点</p>
+<p>（薄板样条）</p>
+<h4 id="预测精度和模型解释性的权衡">
+<a class="header-anchor" href="#%e9%a2%84%e6%b5%8b%e7%b2%be%e5%ba%a6%e5%92%8c%e6%a8%a1%e5%9e%8b%e8%a7%a3%e9%87%8a%e6%80%a7%e7%9a%84%e6%9d%83%e8%a1%a1"></a>
+预测精度和模型解释性的权衡
+</h4><p>一般来说，当一种方法的光滑度增强时，其解释性减弱</p>
+<h4 id="指导学习和无指导学习">
+<a class="header-anchor" href="#%e6%8c%87%e5%af%bc%e5%ad%a6%e4%b9%a0%e5%92%8c%e6%97%a0%e6%8c%87%e5%af%bc%e5%ad%a6%e4%b9%a0"></a>
+指导学习和无指导学习
+</h4><p>指导学习：数据集中有对应的响应变量来指导数据分析</p>
+<blockquote>
+<p>逻辑斯蒂回归、支持向量机</p>
+</blockquote>
+<p>无指导学习：数据集缺乏一个响应变量来指导数据分析</p>
+<blockquote>
+<p>聚类分析</p>
+</blockquote>
+<p>半指导学习：部分有，部分没有</p>
+<h4 id="回归与分类问题">
+<a class="header-anchor" href="#%e5%9b%9e%e5%bd%92%e4%b8%8e%e5%88%86%e7%b1%bb%e9%97%ae%e9%a2%98"></a>
+回归与分类问题
+</h4><p>变量常分为<strong>定量</strong>和<strong>定性</strong>两种类型。响应变量定量是回归问题，响应变量定性则是分类问题</p>
+<h3 id="评价模型精度">
+<a class="header-anchor" href="#%e8%af%84%e4%bb%b7%e6%a8%a1%e5%9e%8b%e7%b2%be%e5%ba%a6"></a>
+评价模型精度
+</h3><h4 id="拟合效果检验">
+<a class="header-anchor" href="#%e6%8b%9f%e5%90%88%e6%95%88%e6%9e%9c%e6%a3%80%e9%aa%8c"></a>
+拟合效果检验
+</h4><p>常用的评价准则是<strong>均方误差</strong>（mean squared error, <strong>MSE</strong>）
+</p>
+$$
+MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{f}(x_i))^2
+$$<p>
+</p>
+$$
+MSE = \frac{1}{n}*RSS
+$$<p>
+我们的目标是使模型的测试均方误差最低</p>
+<p>当模型的光滑度增加时，训练均方误差降低，但是测试均方误差不一定降低</p>
+<blockquote>
+<p>当模型有较小的训练均方误差，但是有较大的测试均方误差时，称为过拟合</p>
+<p>降低模型的光滑度可以减小测试均方误差</p>
+</blockquote>
+<h5 id="自由度">
+<a class="header-anchor" href="#%e8%87%aa%e7%94%b1%e5%ba%a6"></a>
+自由度
+</h5><p>自由度是<strong>描述曲线光滑程度</strong>的正式术语</p>
+<h4 id="偏差-方差权衡">
+<a class="header-anchor" href="#%e5%81%8f%e5%b7%ae-%e6%96%b9%e5%b7%ae%e6%9d%83%e8%a1%a1"></a>
+偏差-方差权衡
+</h4>$$
+E(y_0-\hat{f}(x_0))^2=Var(\hat{f}(x_0))+[Bias(\hat{f}(x_0))]^2+Var(ε)
+$$<blockquote>
+<p>测试均方误差的期望能分解为：预测值
+</p>
+$$
+> \hat{f}(x_0)的方差、预测值\hat{f}(x_0)
+> $$<p>
+的偏差的平方、误差项ε的方差</p>
+</blockquote>
+<p>因此我们需要得到一个偏差和方差综合起来最小的模型</p>
+<h5 id="方差和偏差">
+<a class="header-anchor" href="#%e6%96%b9%e5%b7%ae%e5%92%8c%e5%81%8f%e5%b7%ae"></a>
+方差和偏差
+</h5><table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th><strong>偏差</strong></th>
+          <th><strong>方差</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>定义</strong></td>
+          <td>模型预测结果的平均值与真实值之间的偏离程度</td>
+          <td>模型预测值在不同训练集上的波动程度</td>
+      </tr>
+      <tr>
+          <td><strong>本质</strong></td>
+          <td>由模型的假设能力决定，反映模型是否欠拟合</td>
+          <td>由模型对训练数据的敏感性决定，反映模型是否过拟合</td>
+      </tr>
+      <tr>
+          <td><strong>光滑度的影响</strong></td>
+          <td>光滑度低，偏差高（欠拟合）；光滑度高，偏差低</td>
+          <td>光滑度低，方差低；光滑度高，方差高（过拟合）</td>
+      </tr>
+      <tr>
+          <td><strong>训练集大小的影响</strong></td>
+          <td>不直接受到训练集大小影响，偏差主要由模型决定</td>
+          <td>训练集增大通常可以降低方差</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%871-178212128365668.jpg" alt=""></p>
+<p>如果一个统计学习模型被称为测试性能好，则要求该模型有较小的方差和较小的偏差
+<strong>一般而言，使用光滑度更高的方法，所得的模型方差会增加，偏差会减小。</strong></p>
+<h4 id="分类模型">
+<a class="header-anchor" href="#%e5%88%86%e7%b1%bb%e6%a8%a1%e5%9e%8b"></a>
+分类模型
+</h4><p>训练错误率如下公式
+</p>
+$$
+\frac{1}{n}\sum_{i=1}^{n}I(yi\neq \hat yi)
+$$<p>
+测试错误率如下公式，
+</p>
+$$
+Ave(I(y0 \neq \hat y0))
+$$<p>贝叶斯分类器
+KNN
+k 的选择对获得 KNN 分类器有根本性的影响。当 K= 1 时，决策边界很不规则，从数据中拟合的模型不能与贝叶斯决策边界完全契合。这个分类器虽然偏差较低但方差很大。当 K 增加时，模型的光滑性减弱，得到一个接近线性的决策边界。
+<img src="/note_images/gaotong/Y3-178212128365666.png" alt=""></p>
+<hr>
+<h2 id="第三章-线性模型">
+<a class="header-anchor" href="#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e7%ba%bf%e6%80%a7%e6%a8%a1%e5%9e%8b"></a>
+第三章 线性模型
+</h2><p>线性回归是一种统计方法，用于研究两个或多个变量之间的线性关系。根据变量数量的不同，可以分为简单线性回归和多元线性回归。</p>
+<h3 id="简单线性回归">
+<a class="header-anchor" href="#%e7%ae%80%e5%8d%95%e7%ba%bf%e6%80%a7%e5%9b%9e%e5%bd%92"></a>
+简单线性回归
+</h3><h4 id="定义">
+<a class="header-anchor" href="#%e5%ae%9a%e4%b9%89"></a>
+定义
+</h4><p>简单线性回归用于研究两个变量之间的线性关系，其中一个是<strong>自变量</strong>（<code>X</code>），另一个是<strong>因变量</strong>（<code>Y</code>）。其数学模型表示为：
+</p>
+$$
+Y = \beta_0 + \beta_1X + \epsilon
+$$<ul>
+<li>$\beta_0$：截距，表示当<code>X=0</code>时<code>Y</code>的预测值。</li>
+<li>$\beta_1$：斜率，表示<code>X</code>每增加一个单位时，<code>Y</code>的平均变化量。</li>
+<li>$\epsilon$：随机误差。</li>
+</ul>
+<h4 id="目标">
+<a class="header-anchor" href="#%e7%9b%ae%e6%a0%87"></a>
+目标
+</h4><p>通过最小化 <strong>残差平方和（RSS）</strong> 来估计参数 $\beta_0$ 和 $\beta_1$：
+</p>
+$$
+RSS = \sum_{i=1}^n (Y_i - (\beta_0 + \beta_1X_i))^2
+$$<h4 id="标准误差和置信区间">
+<a class="header-anchor" href="#%e6%a0%87%e5%87%86%e8%af%af%e5%b7%ae%e5%92%8c%e7%bd%ae%e4%bf%a1%e5%8c%ba%e9%97%b4"></a>
+标准误差和置信区间
+</h4><p>在线性回归模型中，回归系数 $\beta_1$ 的置信区间用于估计其真实值可能的范围，基于其估计值 $\hat{\beta}_1$ 和标准误差 $SE(\hat{\beta}_1)$。
+$\beta_1$ 的标准误差公式如下：
+</p>
+$$
+SE(\hat{\beta}_1) = \sqrt{\frac{\hat{\sigma}^2}{\sum_{i=1}^n (X_i - \bar{X})^2}}
+$$<p>
+对于线性回归模型，$\beta_1$的置信区间如下：
+</p>
+$$
+\hat \beta_1 \pm 2 *SE(\hat \beta_1)
+$$<h4 id="假设">
+<a class="header-anchor" href="#%e5%81%87%e8%ae%be"></a>
+假设
+</h4><ol>
+<li>自变量和因变量之间存在线性关系。</li>
+<li>残差的期望为零，即 $E(\epsilon) = 0$。</li>
+<li>残差方差恒定（同方差性）。</li>
+<li>残差独立。</li>
+<li>残差服从正态分布（通常用于推断）。</li>
+</ol>
+<hr>
+<h3 id="多元线性回归">
+<a class="header-anchor" href="#%e5%a4%9a%e5%85%83%e7%ba%bf%e6%80%a7%e5%9b%9e%e5%bd%92"></a>
+多元线性回归
+</h3><h4 id="定义-1">
+<a class="header-anchor" href="#%e5%ae%9a%e4%b9%89-1"></a>
+定义
+</h4><p>多元线性回归扩展了简单线性回归，用于研究多个自变量（<code>X1, X2, ..., Xp</code>）与因变量<code>Y</code>之间的线性关系。其数学模型为：
+</p>
+$$
+Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \cdots + \beta_pX_p + \epsilon
+$$<ul>
+<li>$\beta_0$：截距，表示所有自变量为0时<code>Y</code>的预测值。</li>
+<li>$\beta_1, \beta_2, \dots, \beta_p$：各自变量的回归系数，表示该自变量对因变量的影响（假设其他变量保持不变）。</li>
+</ul>
+<h4 id="目标-1">
+<a class="header-anchor" href="#%e7%9b%ae%e6%a0%87-1"></a>
+目标
+</h4><p>通过最小化残差平方和来估计参数：
+</p>
+$$
+RSS = \sum_{i=1}^n \left( Y_i - \left( \beta_0 + \sum_{j=1}^p \beta_jX_{ij} \right) \right)^2
+$$<h4 id="假设-1">
+<a class="header-anchor" href="#%e5%81%87%e8%ae%be-1"></a>
+假设
+</h4><p>与简单线性回归相同，但需要针对多变量：</p>
+<ol>
+<li>自变量与因变量之间的关系是线性的。</li>
+<li>各个自变量之间无高度共线性。</li>
+<li>残差的期望为零，方差恒定，独立且服从正态分布。</li>
+</ol>
+<h3 id="评估模型参数">
+<a class="header-anchor" href="#%e8%af%84%e4%bc%b0%e6%a8%a1%e5%9e%8b%e5%8f%82%e6%95%b0"></a>
+评估模型参数
+</h3><p><img src="/note_images/gaotong/Y4-178212128365667.png" alt="">
+</p>
+$$
+RSE = \sqrt{\hat{\sigma}^2} = \sqrt{\frac{1}{n - p - 1} \sum_{i=1}^n (Y_i - \hat{Y}_i)^2}
+$$<p>
+</p>
+$$
+R^2 = 1 - \frac{\sum_{i=1}^n (Y_i - \hat{Y}_i)^2}{\sum_{i=1}^n (Y_i - \bar{Y})^2} = 1-\frac{RSS}{TSS}
+$$<p>
+</p>
+$$
+F = \frac{\frac{\text{Explained Variance}}{p}}{\frac{\text{Unexplained Variance}}{n - p - 1}} = \frac{\frac{TSS - RSS}{p}}{\frac{RSS}{n - p - 1}}
+$$<p>
+RSE越小、$R^2$越大，F越小，结果越好。</p>
+<h3 id="回归模型的其他问题">
+<a class="header-anchor" href="#%e5%9b%9e%e5%bd%92%e6%a8%a1%e5%9e%8b%e7%9a%84%e5%85%b6%e4%bb%96%e9%97%ae%e9%a2%98"></a>
+回归模型的其他问题
+</h3><h4 id="数据的非线性">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e7%9a%84%e9%9d%9e%e7%ba%bf%e6%80%a7"></a>
+数据的非线性
+</h4><p>残差图( residual plot) 是一种很有用的图形工具，可用于识别非线性。给定一个简单线性回归模型，我们就可以绘制残差 $ ei = Yi - Yi $ 和预测变量 X i 的散点图。在多元回归中，因为有多个预测变量，我们转而绘制残差与预测值(或拟合值 ( fitted)) Yi 的散点图。<strong>理想情况下，残差图显示不出明显的规律。若存在明显规律，则表示线性模型的某些方面可能有问题。</strong></p>
+<p><img src="/note_images/gaotong/Y5-178212128365669.png" alt=""></p>
+<h4 id="误差项自相关">
+<a class="header-anchor" href="#%e8%af%af%e5%b7%ae%e9%a1%b9%e8%87%aa%e7%9b%b8%e5%85%b3"></a>
+误差项自相关
+</h4><p>线性回归模型的一个重要假设是误差项𝜀_1,𝜀_2,… 𝜀_𝑛不相关。如果误差项相关，那么估计标准误往往低估了真实标准误，因此，置信区间和预测区间比真实区间窄。例如95%置信区间包含真实参数的实际概率将远低于0.95。这可能导致得出错误的结论。</p>
+<h4 id="误差项方差非恒定">
+<a class="header-anchor" href="#%e8%af%af%e5%b7%ae%e9%a1%b9%e6%96%b9%e5%b7%ae%e9%9d%9e%e6%81%92%e5%ae%9a"></a>
+误差项方差非恒定
+</h4><p>线性回归模型的另一个重要假设是误差项的方差是恒定的$ VAR(𝜀_𝑖)=𝜎^2$。假设检验和标准误差、置信区间计算依赖这一假设。
+但通常，误差项的方差不是恒定的。例如，误差项的方差可能会随响应值的增加而增加。如果残差图呈漏斗形，说明误差项方差非恒定或存在异方差性。
+下左图，残差随拟合值增加而增加。
+<img src="/note_images/gaotong/Y6-178212128365670.png" alt=""></p>
+<h4 id="离群点">
+<a class="header-anchor" href="#%e7%a6%bb%e7%be%a4%e7%82%b9"></a>
+离群点
+</h4><p>离群点(outlier) 是指 Yi 远离模型预测值的点。
+<img src="/note_images/gaotong/Y7-178212128365672.png" alt=""></p>
+<h4 id="高杠杆点">
+<a class="header-anchor" href="#%e9%ab%98%e6%9d%a0%e6%9d%86%e7%82%b9"></a>
+高杠杆点
+</h4><p>高杠杆(high leverage)表示观测点Xi是异常的。</p>
+<h4 id="r语言-residuals-vs-leverage-图">
+<a class="header-anchor" href="#r%e8%af%ad%e8%a8%80-residuals-vs-leverage-%e5%9b%be"></a>
+R语言 Residuals vs Leverage 图
+</h4><p>横轴（Leverage）：表示杠杆值，衡量每个样本对模型拟合的影响。高杠杆点靠近图的右侧。
+纵轴（Residuals）：表示标准化残差，衡量实际值与预测值的差异。
+Cook’s Distance：用虚线表示，用于综合评估点对模型的影响力。</p>
+<h5 id="离群点-1">
+<a class="header-anchor" href="#%e7%a6%bb%e7%be%a4%e7%82%b9-1"></a>
+离群点：
+</h5><p>通常出现在图的<strong>上部或下部</strong>，残差值明显大于其他点（高出或低于 2 或 3 的范围）。
+这些点虽然对模型的影响力可能不大，但反映了模型在预测这些点时的误差较大。</p>
+<h5 id="高杠杆点-1">
+<a class="header-anchor" href="#%e9%ab%98%e6%9d%a0%e6%9d%86%e7%82%b9-1"></a>
+高杠杆点：
+</h5><p>横轴位置靠右，杠杆值较高。这些点的 Cook’s Distance 较大，可能显著影响模型参数。
+<img src="/note_images/gaotong/Y8-178212128365671.png" alt="">
+117是高杠杆点，纵坐标大于2的是离群点。</p>
+<h4 id="共线性">
+<a class="header-anchor" href="#%e5%85%b1%e7%ba%bf%e6%80%a7"></a>
+共线性
+</h4><p>共线性是指两个或更多的预测变量高度相关。如下图Credit数据集（右图），它会导致难以分离单个变量对响应值的影响。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%873-178212128365673.png" alt="">
+检测共线性的一个简单方法是看预测变量的相关系数矩阵。但即使没有某对变量具有特别高的相关性，有可能三个或更多变量之间存在共线性，成为多重共线性。
+更好的方法是计算方差膨胀引子（VIF），VIF是拟合全模型时的系数(𝛽_𝑗 ) ̂的方差除以单变量回归中(𝛽_𝑗 ) ̂的方差所得的比例。VIF最小可能值是1，表示完全不存在共线性。通常情况，VIF值超过5或10就表示有共线性问题。</p>
+<h4 id="线性回归与k最近邻法的比较-维度灾难">
+<a class="header-anchor" href="#%e7%ba%bf%e6%80%a7%e5%9b%9e%e5%bd%92%e4%b8%8ek%e6%9c%80%e8%bf%91%e9%82%bb%e6%b3%95%e7%9a%84%e6%af%94%e8%be%83-%e7%bb%b4%e5%ba%a6%e7%81%be%e9%9a%be"></a>
+线性回归与K最近邻法的比较 维度灾难。
+</h4><p>预测效果随着维数的增加而恶化是KNN一个普遍问题，因为在高维中样本量大大减少。下图有100个训练观察，当p=1时，这些点提供了足够的信息来准确估计f(X)。然而，当这100个观测值分布在p=20个维度上时，将使给定的观测附近没有邻点——即	若每个预测变量仅有少量观测，参数化方法往往优于非参数方法。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%874-178212128365674.png" alt=""></p>
+<h2 id="第四章-分类">
+<a class="header-anchor" href="#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e5%88%86%e7%b1%bb"></a>
+第四章 分类
+</h2><h3 id="逻辑斯蒂回归">
+<a class="header-anchor" href="#%e9%80%bb%e8%be%91%e6%96%af%e8%92%82%e5%9b%9e%e5%bd%92"></a>
+逻辑斯蒂回归
+</h3><h4 id="概述">
+<a class="header-anchor" href="#%e6%a6%82%e8%bf%b0"></a>
+概述
+</h4><p>逻辑斯蒂回归是一种广泛使用的线性分类模型，用于预测二分类或多分类问题的结果。其核心思想是通过 <strong>逻辑函数 (logistic function)</strong> 将线性回归的预测值映射到 [0, 1] 区间，从而得到分类概率。</p>
+<h4 id="数学表达">
+<a class="header-anchor" href="#%e6%95%b0%e5%ad%a6%e8%a1%a8%e8%be%be"></a>
+数学表达
+</h4>$$
+\log\left(\frac{P}{1-P}\right) = z
+$$<p>
+其中：</p>
+<ul>
+<li>( P ) 是事件发生的概率。</li>
+<li>( 1-P ) 是事件不发生的概率。</li>
+<li>( z = w^T x + b )，表示线性模型的输出。</li>
+</ul>
+<h3 id="线性判别分析">
+<a class="header-anchor" href="#%e7%ba%bf%e6%80%a7%e5%88%a4%e5%88%ab%e5%88%86%e6%9e%90"></a>
+线性判别分析
+</h3><h4 id="概述-1">
+<a class="header-anchor" href="#%e6%a6%82%e8%bf%b0-1"></a>
+概述
+</h4><p>线性判别分析是由费舍尔提出的一种经典的降维与分类方法，常用于将高维数据投影到低维空间，同时保持类别的可分性。LDA的核心思想是通过最大化类间散布与类内散布的比值，以找到数据最优的分割方向。</p>
+<h4 id="核心思想">
+<a class="header-anchor" href="#%e6%a0%b8%e5%bf%83%e6%80%9d%e6%83%b3"></a>
+核心思想
+</h4><p>LDA的目标是找到一个线性变换矩阵 ( W )，使得投影后的数据在类间的距离最大化，同时类内的距离最小化。
+LDA的目的是将高维特征投影到一个低维子空间中同时保持类间的良好可分性和类内的最大化方差。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%875-178212128365675.png" alt=""></p>
+<h4 id="roc曲线">
+<a class="header-anchor" href="#roc%e6%9b%b2%e7%ba%bf"></a>
+ROC曲线
+</h4><p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%876-178212128365677.png" alt="">
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%877-178212128365778.png" alt=""></p>
+<ol>
+<li>
+<p>预测阳性率 (PPV)
+预测阳性率指的是，模型预测为阳性的样本中，实际为阳性的比例。它衡量的是模型预测结果的可靠性，即模型预测为“阳性”时有多大可能是真的阳性。</p>
+</li>
+<li>
+<p>预测阴性率 (NPV)
+预测阴性率指的是，模型预测为阴性的样本中，实际为阴性的比例。它衡量的是模型预测结果为“阴性”时的可靠性。.</p>
+</li>
+<li>
+<p>假阳性率是预测为阳性，但真实是阴性.</p>
+</li>
+<li>
+<p>假阴性率是预测为阴性，真实是阳性。</p>
+</li>
+</ol>
+<h3 id="二次判别分析">
+<a class="header-anchor" href="#%e4%ba%8c%e6%ac%a1%e5%88%a4%e5%88%ab%e5%88%86%e6%9e%90"></a>
+二次判别分析
+</h3><p>如果假设服从多元高斯分布，但每一类观测都有自己的协方差矩阵，则称作二次判别分析(quadratic discriminant analysis, QDA)
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%878-178212128365676.png" alt="">
+贝叶斯（紫色虚钱）、LDA（黑色点钱）、QDA（绿色实钱）</p>
+<h3 id="方法比较">
+<a class="header-anchor" href="#%e6%96%b9%e6%b3%95%e6%af%94%e8%be%83"></a>
+方法比较
+</h3><p>逻辑斯谛回归中参数是由极大似然估计出来的
+LDA是通过估计的正态分布均值和方差计算出来的
+所以两者得到的结果应该是接近的。但LDA假设观测服从每一类协方都相同的高斯分布，当假设成立时，LDA能提供更好的结果</p>
+<blockquote>
+<p>将一个数据集分成大小相同的训练集和测试集，尝试两种不同的分类过程。首先应用逻辑斯谛回归，在训练集上得到错误率为 20%.在测试集上错误率为 30% 。其次应用 1 最近邻法 (K=1) ， 得到平均错误率{在训练集和测试袋上始平均)为 18%。基于这些结果，对新的观测应采取何种分类方法比较好?为什么?
+应用K=1的KNN经过训练集训练后，计算训练数据集上的准确度，我们会得到100%的准确率，原因是模型已经看到了这些值，并且为K=1形成了一个粗略的决策边界。这意味着本题K=1的KNN在训练集上的错误率为0%，而在测试集上的错误率为36%。而逻辑斯蒂回归在测试集上的错误率为30%，比36%低一些，故选择逻辑斯蒂回归分类方法。</p>
+</blockquote>
+<h2 id="第五章-重抽样方法">
+<a class="header-anchor" href="#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e9%87%8d%e6%8a%bd%e6%a0%b7%e6%96%b9%e6%b3%95"></a>
+第五章 重抽样方法
+</h2><p>引入的目的：为了估计测试误差</p>
+<p>基本方法：将可用的样本随机分为<strong>训练集</strong>和<strong>测试集</strong></p>
+<p>定量的响应应使用均方误差估计，定性的响应应使用误分类率评估</p>
+<h3 id="交叉验证法">
+<a class="header-anchor" href="#%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81%e6%b3%95"></a>
+交叉验证法
+</h3><h4 id="验证集方法">
+<a class="header-anchor" href="#%e9%aa%8c%e8%af%81%e9%9b%86%e6%96%b9%e6%b3%95"></a>
+验证集方法
+</h4><p>直接随机将数据集分为训练集和测试集两部分</p>
+<h5 id="优点">
+<a class="header-anchor" href="#%e4%bc%98%e7%82%b9"></a>
+优点
+</h5><ul>
+<li>计算简便</li>
+<li>可解释性较好</li>
+</ul>
+<h5 id="缺点">
+<a class="header-anchor" href="#%e7%bc%ba%e7%82%b9"></a>
+缺点
+</h5><ul>
+<li>测试错误率的验证法的估计波动大，取决于具体哪些观测包含在训练集/验证集中</li>
+<li>只有一个子集被用来拟合模型，验证集的错误率可能会高估在整个数据集上拟合模型的测试误差</li>
+</ul>
+<h4 id="留一交叉验证loocv">
+<a class="header-anchor" href="#%e7%95%99%e4%b8%80%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81loocv"></a>
+留一交叉验证（LOOCV）
+</h4><p>选一个观测作为测试集，剩下n-1个观测作为训练集，训练并测试，得到这个观测的均方误差MSE</p>
+<p>重复这个步骤n次，得到n个MSE，然后使用如下公式计算平均的MSE
+</p>
+$$
+CV_{(n)}=\frac{1}{n}\sum_{i=1}^{n}MSE_i
+$$<h4 id="k折交叉验证">
+<a class="header-anchor" href="#k%e6%8a%98%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81"></a>
+K折交叉验证
+</h4><p>将观测机随机分为k个大小基本一致的组，每次选一个组作为测试集，剩下k-1个组作为训练集，训练并测试，得到这个测试集的均方误差MSE</p>
+<p>重复这个步骤k次，得到n个MSE，然后同样进行平均计算</p>
+<h5 id="优点-1">
+<a class="header-anchor" href="#%e4%bc%98%e7%82%b9-1"></a>
+优点
+</h5><ul>
+<li>相较LOOCV，方差更低</li>
+<li>相较LOOCV，计算更简便</li>
+</ul>
+<h5 id="缺点-1">
+<a class="header-anchor" href="#%e7%bc%ba%e7%82%b9-1"></a>
+缺点
+</h5><ul>
+<li>相较LOOCV，偏差更高</li>
+<li>相较LOOCV，存在分割的随机性，LOOCV不存在这个问题</li>
+</ul>
+<h5 id="k折交叉验证的偏差-方差权衡">
+<a class="header-anchor" href="#k%e6%8a%98%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81%e7%9a%84%e5%81%8f%e5%b7%ae-%e6%96%b9%e5%b7%ae%e6%9d%83%e8%a1%a1"></a>
+K折交叉验证的偏差-方差权衡
+</h5><p>K减小，偏差减小方差增大；K增大，方差减小偏差增大</p>
+<h3 id="自助法">
+<a class="header-anchor" href="#%e8%87%aa%e5%8a%a9%e6%b3%95"></a>
+自助法
+</h3><p>用途：用来衡量一个指定的估计量，比如估计线性回归模型中系数的标准误差</p>
+<p>随机从数据集中选择n个观测（有放回的抽样），组成一个自助法数据集$Z^{·1}$，使用这个数据集对α进行自助法估计，得到$\hat{α}^{·1}$</p>
+<p>重复B次（B是一个很大的值），得到B个对应的估计$\hat{α}^{·1},...,\hat{α}^{·B}$，然后通过公式能计算这些自助法估计的标准误差
+</p>
+$$
+SE_B(\hat{α})=\sqrt{\frac{1}{B-1}\sum_{r=1}^{B}(\hat{α}^{·r}-\frac{1}{B}\sum_{r^{'}=1}^{B}\hat{α}^{·r^{'}})^2}
+$$<h4 id="自助法的其他用途">
+<a class="header-anchor" href="#%e8%87%aa%e5%8a%a9%e6%b3%95%e7%9a%84%e5%85%b6%e4%bb%96%e7%94%a8%e9%80%94"></a>
+自助法的其他用途
+</h4><ul>
+<li>主要用于得到估计的标准误差</li>
+<li>还提供了总体参数的近似置信区间</li>
+</ul>
+<h4 id="自助法不能估计测试误差的原因">
+<a class="header-anchor" href="#%e8%87%aa%e5%8a%a9%e6%b3%95%e4%b8%8d%e8%83%bd%e4%bc%b0%e8%ae%a1%e6%b5%8b%e8%af%95%e8%af%af%e5%b7%ae%e7%9a%84%e5%8e%9f%e5%9b%a0"></a>
+自助法不能估计测试误差的原因
+</h4><ul>
+<li>k折交叉验证中，每一折中的k-1训练集和验证集都不重叠</li>
+<li>使用自助法估计测试误差，假如使用每个抽样的样本作为训练样本，原始样本作为验证样本，发现每个抽样样本和原始样本有显著的重叠（约三分之二），导致其严重低估真实的测试误差</li>
+</ul>
+<h3 id="方法比较-1">
+<a class="header-anchor" href="#%e6%96%b9%e6%b3%95%e6%af%94%e8%be%83-1"></a>
+方法比较
+</h3><table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>自助法</th>
+          <th>交叉验证</th>
+          <th>验证集法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>数据利用率</strong></td>
+          <td>每次生成的样本约63.2%数据被训练用，多次重采样覆盖全部数据。</td>
+          <td>每次仅用部分数据作为测试集，其余数据用于训练。</td>
+          <td>留出一部分数据做验证集，浪费部分数据。</td>
+      </tr>
+      <tr>
+          <td><strong>评估可靠性</strong></td>
+          <td>稍逊，因生成的样本可能失真。</td>
+          <td>更可靠，因所有数据都参与训练和测试。</td>
+          <td>结果可能因划分随机性不稳定。</td>
+      </tr>
+      <tr>
+          <td><strong>计算成本</strong></td>
+          <td>低，每次只需生成样本并训练一个模型。</td>
+          <td>高，需要多次训练模型并测试。</td>
+          <td>较低，只需训练一个模型并测试一次。</td>
+      </tr>
+      <tr>
+          <td><strong>适用场景</strong></td>
+          <td>数据量较小时，尤其适合。</td>
+          <td>需要更可靠评估时适用，尤其是数据量较小。</td>
+          <td>数据量较大时快速评估。</td>
+      </tr>
+      <tr>
+          <td><strong>是否浪费数据</strong></td>
+          <td>否，所有数据多次被利用。</td>
+          <td>否，所有数据都被用到。</td>
+          <td>是，验证集不参与训练。</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%879-178212128365779.png" alt=""></p>
+<h2 id="第六章-线性模型选择与正则化">
+<a class="header-anchor" href="#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e7%ba%bf%e6%80%a7%e6%a8%a1%e5%9e%8b%e9%80%89%e6%8b%a9%e4%b8%8e%e6%ad%a3%e5%88%99%e5%8c%96"></a>
+第六章 线性模型选择与正则化
+</h2><p>采用其他拟合方法替代最小二乘法的原因：其他方法有<strong>更高的预测准确率</strong>，<strong>更好的模型解释力</strong></p>
+<p><strong>预测准确率</strong></p>
+<ul>
+<li>不满足n远大于p，则最小二乘可能过拟合</li>
+<li>若p&gt;n，最小二乘得到的系数估计结果不唯一，此时方差无穷大，无法使用最小二乘</li>
+</ul>
+<p><u>改进：通过<strong>限制</strong>或<strong>缩减</strong>待估计系数，牺牲偏差的同时显著减小估计量方差</u></p>
+<p><strong>模型解释力</strong></p>
+<ul>
+<li>多元回归模型中，常存在多个变量与响应变量不存在线性关系的情况，增加复杂度却与模型无关</li>
+<li>去除不相关特征可以得到更容易解释的模型，而最小二乘很难将系数置为0</li>
+</ul>
+<p><u>改进：通过自动进行<strong>特征选择</strong>或<strong>变量选择</strong>，实现对无关变量的筛选</u></p>
+<p><img src="/note_images/gaotong/6_1-178212128365782.png" alt=""></p>
+<h3 id="子集选择">
+<a class="header-anchor" href="#%e5%ad%90%e9%9b%86%e9%80%89%e6%8b%a9"></a>
+子集选择
+</h3><h4 id="最优子集选择">
+<a class="header-anchor" href="#%e6%9c%80%e4%bc%98%e5%ad%90%e9%9b%86%e9%80%89%e6%8b%a9"></a>
+最优子集选择
+</h4><p>对于k=1,2,&hellip;,p: 拟合$C_p^k$个包含k个预测变量的模型，并且在这$C_p^k$个模型中选择RSS最小或$R^2$最大的模型</p>
+<p>然后根据交叉验证预测误差、$C^p(AIC)$、$BIC$或调整$R^2$从这些模型中选一个最优模型</p>
+<ul>
+<li>缺陷明显：p比较大时不具有计算可行性</li>
+</ul>
+<h4 id="逐步选择">
+<a class="header-anchor" href="#%e9%80%90%e6%ad%a5%e9%80%89%e6%8b%a9"></a>
+逐步选择
+</h4><p>逐步选择包括<strong>向前逐步选择</strong>和<strong>向后逐步选择</strong></p>
+<h5 id="向前逐步选择">
+<a class="header-anchor" href="#%e5%90%91%e5%89%8d%e9%80%90%e6%ad%a5%e9%80%89%e6%8b%a9"></a>
+向前逐步选择
+</h5><p>对于k=1,2,&hellip;,p: 从p-k个模型中选择（在前一个模型基础上增加一个变量），并且在这p-k个模型中选择RSS最小或$R^2$最大的模型</p>
+<p>然后根据交叉验证预测误差、$C^p(AIC)$、$BIC$或调整$R^2$从这些模型中选一个最优模型</p>
+<h5 id="后向逐步选择">
+<a class="header-anchor" href="#%e5%90%8e%e5%90%91%e9%80%90%e6%ad%a5%e9%80%89%e6%8b%a9"></a>
+后向逐步选择
+</h5><p>对于k=p,p-1,&hellip;,1: 从k个模型中选择（在前一个模型基础上减少一个变量），并且在这p-k个模型中选择RSS最小或$R^2$最大的模型</p>
+<p>然后根据交叉验证预测误差、$C^p(AIC)$、$BIC$或调整$R^2$从这些模型中选一个最优模型</p>
+<h4 id="选择最优模型的指标">
+<a class="header-anchor" href="#%e9%80%89%e6%8b%a9%e6%9c%80%e4%bc%98%e6%a8%a1%e5%9e%8b%e7%9a%84%e6%8c%87%e6%a0%87"></a>
+选择最优模型的指标
+</h4><p>$C_p$、$AIC$、$BIC$和调整$R^2$
+</p>
+$$
+C_p=\frac{1}{n}(RSS+2d\hat{σ}^2)
+$$$$
+AIC=\frac{1}{n\hat{σ}^2}(RSS+2d\hat{σ}^2)
+$$$$
+BIC=\frac{1}{n}(RSS+log(n)d\hat{σ}^2)
+$$$$
+调整R^2=1-\frac{RSS/(n-d-1)}{TSS/(n-1)}
+$$<h3 id="压缩估计方法">
+<a class="header-anchor" href="#%e5%8e%8b%e7%bc%a9%e4%bc%b0%e8%ae%a1%e6%96%b9%e6%b3%95"></a>
+压缩估计方法
+</h3><h4 id="岭回归l2正则化">
+<a class="header-anchor" href="#%e5%b2%ad%e5%9b%9e%e5%bd%92l2%e6%ad%a3%e5%88%99%e5%8c%96"></a>
+岭回归（L2正则化）
+</h4><p>与最小二乘相似，但增加了压缩惩罚
+</p>
+$$
+\sum_{i=1}^{n}(y_i-β_0-\sum_{j=1}^{p}β_jx_{ij})^2+λ\sum_{j=1}^{p}β_j^2=RSS+λ\sum_{j=1}^{p}β_j^2
+$$<p>
+λ≥0是调节参数，λ越小光滑度越高，偏差越小方差越大</p>
+<p>※ 使用岭回归之前最好先对预测变量进行标准化</p>
+<h4 id="lassol1正则化">
+<a class="header-anchor" href="#lassol1%e6%ad%a3%e5%88%99%e5%8c%96"></a>
+Lasso（L1正则化）
+</h4>$$
+\sum_{i=1}^{n}(y_i-β_0-\sum_{j=1}^{p}β_jx_{ij})^2+λ\sum_{j=1}^{p}|β_j|=RSS+λ\sum_{j=1}^{p}|β_j|
+$$<p>λ≥0是调节参数，λ越小光滑度越高，偏差越小方差越大</p>
+<h4 id="岭回归和lasso的等价问题">
+<a class="header-anchor" href="#%e5%b2%ad%e5%9b%9e%e5%bd%92%e5%92%8classo%e7%9a%84%e7%ad%89%e4%bb%b7%e9%97%ae%e9%a2%98"></a>
+岭回归和Lasso的等价问题
+</h4><p>Lasso回归等价于求解
+</p>
+$$
+\mathop{minimize}\limits_{β}\{\sum_{i=1}^{n}(y_i-β_0-\sum_{j=1}^{p}β_ix_{ij})^2\},\sum_{j=1}^{p}|β_j|≤s
+$$<p>
+岭回归等价于求解
+</p>
+$$
+\mathop{minimize}\limits_{β}\{\sum_{i=1}^{n}(y_i-β_0-\sum_{j=1}^{p}β_ix_{ij})^2\},\sum_{j=1}^{p}β_j^2≤s
+$$<p>
+<img src="images/6_2.png" alt=""></p>
+<p>将上式数形结合表示如图，黑色区域为≤s的区域，椭圆是RSS等高线</p>
+<h4 id="岭回归和lasso的贝叶斯解释">
+<a class="header-anchor" href="#%e5%b2%ad%e5%9b%9e%e5%bd%92%e5%92%8classo%e7%9a%84%e8%b4%9d%e5%8f%b6%e6%96%af%e8%a7%a3%e9%87%8a"></a>
+岭回归和Lasso的贝叶斯解释
+</h4><p>岭回归对应高斯分布的密度函数</p>
+<p>Lasso对应拉普拉斯分布的密度函数</p>
+<h3 id="降维方法">
+<a class="header-anchor" href="#%e9%99%8d%e7%bb%b4%e6%96%b9%e6%b3%95"></a>
+降维方法
+</h3><h4 id="主成分回归pca">
+<a class="header-anchor" href="#%e4%b8%bb%e6%88%90%e5%88%86%e5%9b%9e%e5%bd%92pca"></a>
+主成分回归（PCA）
+</h4><p>见第十章</p>
+<h4 id="偏最小二乘pls">
+<a class="header-anchor" href="#%e5%81%8f%e6%9c%80%e5%b0%8f%e4%ba%8c%e4%b9%98pls"></a>
+偏最小二乘（PLS）
+</h4><p>偏最小二乘用响应变量Y的信息筛选新变量</p>
+<h4 id="pca-和-pls-区别">
+<a class="header-anchor" href="#pca-%e5%92%8c-pls-%e5%8c%ba%e5%88%ab"></a>
+PCA 和 PLS 区别
+</h4><table>
+  <thead>
+      <tr>
+          <th><strong>属性</strong></th>
+          <th><strong>PCA（主成分分析）</strong></th>
+          <th><strong>PLS（偏最小二乘法）</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>学习类型</strong></td>
+          <td>无监督学习</td>
+          <td>监督学习</td>
+      </tr>
+      <tr>
+          <td><strong>输入数据</strong></td>
+          <td>仅 ( X )</td>
+          <td>( X ) 和 ( Y )</td>
+      </tr>
+      <tr>
+          <td><strong>目标</strong></td>
+          <td>最大化 ( X ) 的方差</td>
+          <td>同时解释 ( X ) 的方差和 ( X )-( Y ) 的关系</td>
+      </tr>
+      <tr>
+          <td><strong>投影方向</strong></td>
+          <td>基于 ( X ) 的协方差矩阵</td>
+          <td>基于 ( X ) 和 ( Y ) 的协方差矩阵</td>
+      </tr>
+      <tr>
+          <td><strong>应用场景</strong></td>
+          <td>数据降维、压缩、去噪</td>
+          <td>回归、预测、多变量分析</td>
+      </tr>
+      <tr>
+          <td><strong>输出结果</strong></td>
+          <td>与 ( Y ) 无关的降维特征</td>
+          <td>与 ( Y ) 强相关的降维特征</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="高维数据的回归问题">
+<a class="header-anchor" href="#%e9%ab%98%e7%bb%b4%e6%95%b0%e6%8d%ae%e7%9a%84%e5%9b%9e%e5%bd%92%e9%97%ae%e9%a2%98"></a>
+高维数据的回归问题
+</h3><p>拟合并不光滑的最小二乘模型在高维中作用很大：</p>
+<ul>
+<li>正则或压缩在高维问题中至关重要</li>
+<li>合适的调节参数对于得到好的预测非常关键</li>
+<li>测试误差会随着数据维度的增加而增大，除非新增特征变量与响应变量确实相关</li>
+</ul>
+<h2 id="第七章-非线性模型">
+<a class="header-anchor" href="#%e7%ac%ac%e4%b8%83%e7%ab%a0-%e9%9d%9e%e7%ba%bf%e6%80%a7%e6%a8%a1%e5%9e%8b"></a>
+第七章 非线性模型
+</h2><h3 id="多项式回归">
+<a class="header-anchor" href="#%e5%a4%9a%e9%a1%b9%e5%bc%8f%e5%9b%9e%e5%bd%92"></a>
+多项式回归
+</h3>$$
+y=β_0+β_1x_i+β_2x_i^2+β_3x_i^3+...+β_dx_i^d+ε_i
+$$<h3 id="阶梯函数">
+<a class="header-anchor" href="#%e9%98%b6%e6%a2%af%e5%87%bd%e6%95%b0"></a>
+阶梯函数
+</h3><p>创建分割点$c_1,c_2,...,c_K$，然后构造K+1个新变量：$C_0(X)=I(X<c_1),...,C_K(X)=I(c_k≤X)$
+</p>
+$$
+y_i=β_0+β_1C_1(x_i)+β_2C_2(x_i)+...+β_KC_K(x_i)+ε_i
+$$<h3 id="基函数">
+<a class="header-anchor" href="#%e5%9f%ba%e5%87%bd%e6%95%b0"></a>
+基函数
+</h3><p>多项式和阶梯函数回归模型实际上是特殊的基函数方法，对变量X的函数变换$b_1(X),b_2(X),...,b_K(X)$进行建模
+</p>
+$$
+y_i=β_0+β_1b_1(x_i)+β_2b_2(x_i)+...+β_Kb_K(x_i)+ε_i
+$$<h3 id="回归样条">
+<a class="header-anchor" href="#%e5%9b%9e%e5%bd%92%e6%a0%b7%e6%9d%a1"></a>
+回归样条
+</h3><p>不同区域拟合不同的多项式函数，可以这样表示</p>
+<p><img src="/note_images/gaotong/7_1-178212128365780.png" alt=""></p>
+<p>没有约束的有K个结点的三次样条会产生4K+4个自由度</p>
+<p>有K个结点的三次样条会产生K+4个自由度（原因是每个结点处增加了三个约束：连续、一阶导连续、二阶导连续）</p>
+<p>同时也可以使用样条基函数表示
+</p>
+$$
+y_i=β_0+β_1b_1(x_i)+β_2b_2(x_i)+...+β_{K+3}b_{K+3}(x_i)+ε_i
+$$<h4 id="截断幂基">
+<a class="header-anchor" href="#%e6%88%aa%e6%96%ad%e5%b9%82%e5%9f%ba"></a>
+截断幂基
+</h4><p>在上述基函数式子中，可以选择不同的基函数得到等价的三次样条，比如截断幂基的方式是先以三次多项式的基为基础（$x,x_2,x_3$），然后在每个结点添加一个截断幂基函数</p>
+<p><img src="/note_images/gaotong/7_2-178212128365781.png" alt=""></p>
+<p>其中ξ是结点</p>
+<h4 id="确定结点的个数和位置">
+<a class="header-anchor" href="#%e7%a1%ae%e5%ae%9a%e7%bb%93%e7%82%b9%e7%9a%84%e4%b8%aa%e6%95%b0%e5%92%8c%e4%bd%8d%e7%bd%ae"></a>
+确定结点的个数和位置
+</h4><p>使用交叉验证确定：首先移除10%的数据，用剩余的数据拟合，然后对那部分被移除的数据进行预测（10折交叉验证），最后计算整体的交叉验证RSS。整个过程对不同的结点数K不断尝试</p>
+<p>回归样条通常结果比多项式回归好且稳定，回归样条通过固定自由度但是多设立结点的方式来获得稳定的估计结果</p>
+<h3 id="光滑样条">
+<a class="header-anchor" href="#%e5%85%89%e6%bb%91%e6%a0%b7%e6%9d%a1"></a>
+光滑样条
+</h3><p>如果对$g(x_i)$不添加任何约束条件，只能得到一个取值为0的RSS，这样的函数对数据严重过拟合。而实际上真正需要的g是满足RSS尽量小，同时曲线尽量平滑（较少的突变，光滑度下降）</p>
+<p>可以通过最小化下式
+</p>
+$$
+\sum_{i=1}^{n}(y_i-g(x_i))^2+λ\int g''(t)^2dt
+$$<p>
+λ由0增至∞，实际自由度$df_{λ}$从n降至2</p>
+<h3 id="局部回归">
+<a class="header-anchor" href="#%e5%b1%80%e9%83%a8%e5%9b%9e%e5%bd%92"></a>
+局部回归
+</h3><p>选取s=k/n比例的最靠近$x_0$的数据$x_i$</p>
+<p>对选出的数据赋予其权重$K_{i0}=K(x_i,x_0)$，离$x_0$最远的点权重为0，而最近的点权重最高</p>
+<p>用定义好的权重在$x_i$处拟合加权最小二乘回归</p>
+<p>根据$\hat{f}(x_0)=\hat{β}_0+\hat{β}_1x_0$得到$x_0$的拟合结果</p>
+<h3 id="广义可加模型">
+<a class="header-anchor" href="#%e5%b9%bf%e4%b9%89%e5%8f%af%e5%8a%a0%e6%a8%a1%e5%9e%8b"></a>
+广义可加模型
+</h3><p>每一个变量用一个非线性函数替换
+</p>
+$$
+y_i=β_0+f_1(x_{i1})+f_2(x_{i2})+...+f_p(x_{ip})+ε_i
+$$<h4 id="gam的优点与不足">
+<a class="header-anchor" href="#gam%e7%9a%84%e4%bc%98%e7%82%b9%e4%b8%8e%e4%b8%8d%e8%b6%b3"></a>
+GAM的优点与不足
+</h4><ul>
+<li>
+<p>允许每一个$X_i$都拟合一个非线性$f_i$，非线性拟合模型能预测得更精准，且模型可加，能保持其他变量不变情况下观测单变量对Y的影响效果</p>
+</li>
+<li>
+<p>局限在于形式被限定为可加形式</p>
+</li>
+</ul>
+<h4 id="用于分类的gam">
+<a class="header-anchor" href="#%e7%94%a8%e4%ba%8e%e5%88%86%e7%b1%bb%e7%9a%84gam"></a>
+用于分类的GAM
+</h4><p>用逻辑斯蒂回归的对数发生比即可
+</p>
+$$
+log(\frac{p(X)}{1-p(X)})=β_0+f_1(X_1)+f_2(X_2)+...+f_p(X_p)
+$$$$
+p(X)=Pr(y>n|f_1(X),f_2(X),f_3(X)...)
+$$<h2 id="第八章-基于树的方法">
+<a class="header-anchor" href="#%e7%ac%ac%e5%85%ab%e7%ab%a0-%e5%9f%ba%e4%ba%8e%e6%a0%91%e7%9a%84%e6%96%b9%e6%b3%95"></a>
+第八章 基于树的方法
+</h2><h3 id="决策树基本概念">
+<a class="header-anchor" href="#%e5%86%b3%e7%ad%96%e6%a0%91%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
+决策树基本概念
+</h3><h4 id="回归树">
+<a class="header-anchor" href="#%e5%9b%9e%e5%bd%92%e6%a0%91"></a>
+回归树
+</h4><p>建立回归树的步骤：</p>
+<p>1.将预测变量空间（X1&hellip;Xp可能取值的集合）分为J个互不重叠的区域R1&hellip;Rj</p>
+<p>2.对落入Rj的每个观测值作同样的预测，预测值等于Rj上训练集响应值的算术平均，如果是分类树，则分类为该区域最多的那类</p>
+<p>计算决策树模型的RSS：
+</p>
+$$
+\sum_{j=1}^{J}\sum_{i∈Rj}(y_i-\hat{y}_{R_j})^2
+$$<p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8722-178212128365783.png" alt=""></p>
+<h4 id="分类树">
+<a class="header-anchor" href="#%e5%88%86%e7%b1%bb%e6%a0%91"></a>
+分类树
+</h4><p>分类树与回归树类似，但是评判标注不能使用RSS，改为分类错误率、基尼系数和互熵</p>
+<p>分类错误率（classification error rate）
+</p>
+$$
+E=1-\mathop{max}\limits_{p}(\hat{p}_{mk})
+$$<p>
+基尼系数（Gini index）
+</p>
+$$
+G=\sum_{k=1}^{K}\hat{p}_{mk}(1-\hat{p}_{mk})
+$$<p>
+如果它较小，就意味着某个结点包含的观棋i值几乎都来自同一类别。
+互熵（cross-entropy）
+</p>
+$$
+D=-\sum_{k=1}^{K}\hat{p}_{mk}log\hat{p}_{mk}
+$$<p>
+与基尼系数类似，如果第 m 个结点纯度较高(数据平均地来自不同类别)，则互熵值较小。</p>
+<h4 id="分类指标">
+<a class="header-anchor" href="#%e5%88%86%e7%b1%bb%e6%8c%87%e6%a0%87"></a>
+分类指标
+</h4><blockquote>
+<p>在一个仅有两个类别的简单分类情况下考虑基尼系数、分类误差和互熵。创建一张图，将这几个量分别表示为pm1的函数。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8710-178212128365784.png" alt=""></p>
+</blockquote>
+<h3 id="树的剪枝">
+<a class="header-anchor" href="#%e6%a0%91%e7%9a%84%e5%89%aa%e6%9e%9d"></a>
+树的剪枝
+</h3><p>上述方法在训练集取得良好预测效果，但是可能造成过拟合，更好的策略是生成一个很大的树$T_0$，然后通过剪枝得到子树</p>
+<p>剪枝的目的是选出使测试集预测误差最小的子树</p>
+<p><strong>代价复杂性剪枝</strong>也称<strong>最弱联系剪枝</strong>，不考虑每一棵可能的子树，而是考虑以非负调整参数α标记的一系列子树，每一个α的取值对应一棵子树$T⊂T_0$，当α一定时，其对应的子树使下式最小
+</p>
+$$
+\sum_{m=1}^{|T|}\sum_{x_i∈Rm}(y_i-\hat{y}_{R_m})^2+α|T|
+$$<p>
+$|T|$表示终端结点数，调整系数α在子树的复杂性与训练数据的契合度之间控制权衡，α增大：模型的偏差变大方差变小</p>
+<p>剪枝过程：</p>
+<pre tabindex="0"><code>(1)利用递归二叉分裂在训练集中生成一颗大树，只有当终端结点包含的观测值个数低于某个最小值时才停止
+(2)对大树进行代价复杂性剪技，得到一系列最优子树，子树是α的函数
+(3)利用K折交叉验证选择α。具体做法是将训练集分为K折。对所有k=1,...,K，有:
+	(a)对训练集上所有不属于第K折的数据重复步骤1和2，得到与α一一对应的子树
+	(b)求出上述子树在第k折上的均方预测误差
+	上述操作结束后，每个α会有相应的K个均方预测误差，对这K个值求平均，选出使平均误差最小的α
+(4)找出选定的α值在步骤2中对应的子树中即可
+</code></pre><h3 id="决策树评估">
+<a class="header-anchor" href="#%e5%86%b3%e7%ad%96%e6%a0%91%e8%af%84%e4%bc%b0"></a>
+决策树评估
+</h3><h4 id="树与线性模型的比较">
+<a class="header-anchor" href="#%e6%a0%91%e4%b8%8e%e7%ba%bf%e6%80%a7%e6%a8%a1%e5%9e%8b%e7%9a%84%e6%af%94%e8%be%83"></a>
+树与线性模型的比较
+</h4><p>线性回归假设了如下模型形式：
+</p>
+$$
+f(X)=β_0+\sum_{j=1}^{P}X_jβ_j
+$$<p>
+回归树的模型形式为：
+</p>
+$$
+f(X)=\sum_{m=1}^{M}c_m*1_{(X∈R_m)}
+$$<p>
+真实模型线性时，线性模型更好；真实模型复杂且高度非线性时，树方法更好</p>
+<h4 id="树的优缺点">
+<a class="header-anchor" href="#%e6%a0%91%e7%9a%84%e4%bc%98%e7%bc%ba%e7%82%b9"></a>
+树的优缺点
+</h4><p>优点：</p>
+<ul>
+<li>解释性强，比线性回归更好解释</li>
+<li>更接近人的决策模式</li>
+<li>可以使用图形表示，非专业人士轻松解释</li>
+<li>可以直接处理定性的预测变量而不需创建哑变量</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>预测准确率一般低于其他回归和分类方法的水平</li>
+</ul>
+<h3 id="装袋法随机森林和提升法">
+<a class="header-anchor" href="#%e8%a3%85%e8%a2%8b%e6%b3%95%e9%9a%8f%e6%9c%ba%e6%a3%ae%e6%9e%97%e5%92%8c%e6%8f%90%e5%8d%87%e6%b3%95"></a>
+装袋法、随机森林和提升法
+</h3><h4 id="装袋法">
+<a class="header-anchor" href="#%e8%a3%85%e8%a2%8b%e6%b3%95"></a>
+装袋法
+</h4><h5 id="基本概念">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
+基本概念
+</h5><p>基本思想/目的：对一组观测求平均可以减小方差</p>
+<p>从总体中抽取多个训练集，对每个训练集分别建立预测模型，再对由此得到的多个预测值求平均
+</p>
+$$
+\hat{f}_{avg}(x)=\frac{1}{B}\sum_{b=1}^{B}\hat{f}^b(x)
+$$<p>
+求平均的具体方法：多数投票（majority vote），将B个预测中出现频率最高的类作为总体预测</p>
+<h5 id="袋外误差估计">
+<a class="header-anchor" href="#%e8%a2%8b%e5%a4%96%e8%af%af%e5%b7%ae%e4%bc%b0%e8%ae%a1"></a>
+袋外误差估计
+</h5><p>平均每棵树能利用约三分之二的观测值，剩余三分之一没有使用的观测称为此树的袋外（out-of-bag，OOB）观测值</p>
+<p>可以用所有将第i个观测值作为OOB的树来预测第i个观测值的响应值，则有B/3个对第i个观测值的预测，对这些值计算总体的OOB均方误差（对回归问题）或分类误差（对分类问题），由此得到的OOB误差是对装袋法模型测试误差的有效估计</p>
+<h5 id="变量重要性">
+<a class="header-anchor" href="#%e5%8f%98%e9%87%8f%e9%87%8d%e8%a6%81%e6%80%a7"></a>
+变量重要性
+</h5><p>对基尼系数平均减小值最多的变量</p>
+<h4 id="随机森林">
+<a class="header-anchor" href="#%e9%9a%8f%e6%9c%ba%e6%a3%ae%e6%9e%97"></a>
+随机森林
+</h4><h5 id="基本概念-1">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5-1"></a>
+基本概念
+</h5><p>基本思想/目的：根分裂结点基本上都是最重要的预测变量，导致装袋法中抽取的树高度相关。故每次分裂点随机取变量，对树作去相关处理，降低模型方差</p>
+<p>每次考虑树上的一个分裂点，从全部的p个变量中随机（每次都随机）选m个，作为候选变量。这次的分裂点只能从这m个中挑选，通常$m≈\sqrt{p}$</p>
+<h4 id="提升法">
+<a class="header-anchor" href="#%e6%8f%90%e5%8d%87%e6%b3%95"></a>
+提升法
+</h4><h5 id="基本概念-2">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5-2"></a>
+基本概念
+</h5><p>目的：降低学习率，舒缓的迭代，使模型预测效果变好</p>
+<p>1.对训练集中的所有i，令$\hat{f}(x=0)$，$r_i=y_i$</p>
+<p>2.对$b=1,2,...,B$重复以下过程</p>
+<p>​	（a）对训练数据$(X,r)$建立一棵有d个分裂点的树$\hat{f}^b$</p>
+<p>​	（b）将压缩后的新树加入模型以更新$\hat{f}$：
+</p>
+$$
+\hat{f}(x)⬅\hat{f}(x)+λ\hat{f}^b(x)
+$$<p>
+​	（c）更新残差：
+</p>
+$$
+r_i⬅r_i-λ\hat{f}^b(x)
+$$<p>
+3.输出经过提升的模型：
+</p>
+$$
+\hat{f}(x)=\sum_{b=1}^{B}λ\hat{f}^b(x)
+$$<h5 id="三个参数">
+<a class="header-anchor" href="#%e4%b8%89%e4%b8%aa%e5%8f%82%e6%95%b0"></a>
+三个参数
+</h5><p>（1）树的总数B：与装袋法和随机森林不同，B值过大可能过拟合，但是发展很缓慢，用交叉验证来选择B</p>
+<p>（2）取极小正值的压缩参数λ：控制学习速度，常取0.01或0.001，若λ很小，B则需要大一些</p>
+<p>（3）每棵树的分裂点数d：控制模型的复杂度，表示交互深度，d=1时（每棵树都是一个树桩）通常效果上佳。树更小模型解释性更强，用树桩会得到所谓加法模型</p>
+<hr>
+<h2 id="第九章-支持向量机">
+<a class="header-anchor" href="#%e7%ac%ac%e4%b9%9d%e7%ab%a0-%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f%e6%9c%ba"></a>
+第九章 支持向量机
+</h2><h3 id="最大间隔分类器">
+<a class="header-anchor" href="#%e6%9c%80%e5%a4%a7%e9%97%b4%e9%9a%94%e5%88%86%e7%b1%bb%e5%99%a8"></a>
+最大间隔分类器
+</h3><h4 id="超平面">
+<a class="header-anchor" href="#%e8%b6%85%e5%b9%b3%e9%9d%a2"></a>
+超平面
+</h4><p>比如二维超平面：
+</p>
+$$
+β_0+β_1X_1+β_2X_2=0
+$$<p>
+p维超平面：
+</p>
+$$
+β_0+β_1X_1+β_2X_2+...+β_pX_p=0
+$$<p>
+使用超平面分类数据点
+</p>
+$$
+β_0+β_1X_1+β_2X_2+...+β_pX_p>0，如果y_i=1
+$$$$
+β_0+β_1X_1+β_2X_2+...+β_pX_p<0，如果y_i=-1
+$$<p>等价于
+</p>
+$$
+y_i(β_0+β_1X_1+β_2X_2+...+β_pX_p)>0
+$$<h4 id="最大间隔超平面">
+<a class="header-anchor" href="#%e6%9c%80%e5%a4%a7%e9%97%b4%e9%9a%94%e8%b6%85%e5%b9%b3%e9%9d%a2"></a>
+最大间隔超平面
+</h4><p>某种意义上说是能够插入两个类别之间的最宽的平板的中线</p>
+<p>构建最大间隔分类器，就是如下优化问题的解
+</p>
+$$
+\mathop{maximize}\limits_{β_0,β_1,...,β_p}M
+$$<p>
+满足
+</p>
+$$
+\sum_{j=1}^{p}β_j^2=1
+$$$$
+y_i(β_0+β_1X_{i1}+β_2X_{i2}+...+β_pX_{ip})≥M,i=1,...,n
+$$<p>M大于0，代表了超平面的间隔，优化问题就是找出最大化M时的$β_0,β_1,...,β_p$</p>
+<p>可能存在线性不可分的情况</p>
+<h3 id="支持向量分类器">
+<a class="header-anchor" href="#%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f%e5%88%86%e7%b1%bb%e5%99%a8"></a>
+支持向量分类器
+</h3><p>为了提高分类器对单个观测分类的稳定性以及使大部分训练观测更好地被分类，允许被误分类
+</p>
+$$
+\mathop{maximize}\limits_{β_0,β_1,...,β_p}M
+$$<p>
+满足
+</p>
+$$
+\sum_{j=1}^{p}β_j^2=1
+$$$$
+y_i(β_0+β_1X_{i1}+β_2X_{i2}+...+β_pX_{ip})≥M(1-ε_i)
+$$$$
+ε_i≥0,\sum_{i=1}^{n}ε_i≤C
+$$<p>C是非负的调节参数，C增大，允许穿过间隔的点就更多，方差减小偏差增大</p>
+<p>$ε_i$是松弛变量，允许小部分观测可以落在间隔错误或是超平面错误的一侧</p>
+<h4 id="最大间隔分类器-1">
+<a class="header-anchor" href="#%e6%9c%80%e5%a4%a7%e9%97%b4%e9%9a%94%e5%88%86%e7%b1%bb%e5%99%a8-1"></a>
+最大间隔分类器
+</h4><p>在所有分离超平面中，找出使两类之间的间隙或间隔最大的超平面。</p>
+<p>首先，计算每个训练观测到一个分割超平面的距离，取最小值，称为间隔（margin）。这个间隔值最大的那个分割超平面即为最大间隔超平面。</p>
+<p>然后，用此最大间隔超平面判断测试样本落在哪一侧，就可以分类。此为最大间隔分类器。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8711-178212128365785.png" alt=""></p>
+<h4 id="支持向量">
+<a class="header-anchor" href="#%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f"></a>
+支持向量
+</h4><p>刚好落在间隔上和落在间隔错误一侧的观测叫做<strong>支持向量</strong>，只有这些观测会影响支持向量分类器</p>
+<h4 id="支持向量分类器-1">
+<a class="header-anchor" href="#%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f%e5%88%86%e7%b1%bb%e5%99%a8-1"></a>
+支持向量分类器
+</h4><p>只要求超平面几乎能够把类别区分开，即使用所谓的软间隔( soft
+margin) 。<strong>最大间隔分类器</strong>在线性不可分情况
+下的推广叫做支持向量分类器 (support vector classifier)。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8712-178212128365786.png" alt=""></p>
+<h5 id="软间隔范围限定">
+<a class="header-anchor" href="#%e8%bd%af%e9%97%b4%e9%9a%94%e8%8c%83%e5%9b%b4%e9%99%90%e5%ae%9a"></a>
+软间隔范围限定
+</h5>$$
+y_i(β_0+β_1x_{i1}+β_2x_{i2}+...+β_1p_{ip})≥M(1-ε_i)
+$$<p>
+</p>
+$$
+ε_i≥0,\sum_{i=1}^{n}ε_i≤C,\sum_{j=1}^{p}β_{j}^2=1
+$$<p>
+怎么调整C限制𝜖𝑖,使得超平面虽被violated，但能在接受范围内?
+𝜖𝑖：0，正确间隔；&gt;0，错误间隔；&gt;1(右式为负数)，错误超平面侧。</p>
+<p>C：0，所有𝜖𝑖为0，不允许穿过间隔；&gt;0，最多可以有C个观测落到超平面错误一侧，因为每个错误落侧都对应其𝜖𝑖&gt;1(因为得为负)。至于穿过间隔多少个，无法说
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8713-178212128365787.png" alt=""></p>
+<h4 id="非线性决策边界分类">
+<a class="header-anchor" href="#%e9%9d%9e%e7%ba%bf%e6%80%a7%e5%86%b3%e7%ad%96%e8%be%b9%e7%95%8c%e5%88%86%e7%b1%bb"></a>
+非线性决策边界分类
+</h4><p>如果预测变量和响应变量之间的关系是非线性的，可以使用预测变量的高阶多项式来扩大特征空间</p>
+<p>比如可以使用2p个特征（多包含了二次项）来得到支持向量分类器：
+</p>
+$$
+\mathop{maximize}\limits_{β_0,β_{11},β_{12}，...,β_{p1}，β_{p2},ε_1,ε_2,...,ε_n}M
+$$<p>
+满足
+</p>
+$$
+y_i(β_0+\sum_{j=1}^{p}β_{j1}x_{ij}\sum_{j=1}^{p}β_{j2}x_{ij}^2)≥M(1-ε_i)
+$$$$
+ε_i≥0,\sum_{i=1}^{n}ε_i≤C,\sum_{j=1}^{p}\sum_{k=1}^{2}β_{jk}^2=1
+$$<p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8714-178212128365788.png" alt=""></p>
+<h3 id="支持向量机">
+<a class="header-anchor" href="#%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f%e6%9c%ba"></a>
+支持向量机
+</h3><p>是支持向量分类器的一个扩展，使用<strong>核函数</strong>来扩大特征空间</p>
+<p>内积：两个p维向量a和b的<strong>内积</strong>定义为
+</p>
+$$
+<x_i,x_{i'}>=\sum_{j=1}^{p}x_{ij}x_{i'j}
+$$<h5 id="线性支持向量分类器">
+<a class="header-anchor" href="#%e7%ba%bf%e6%80%a7%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f%e5%88%86%e7%b1%bb%e5%99%a8"></a>
+线性支持向量分类器
+</h5><p>线性支持向量分类器可以描述为
+</p>
+$$
+f(x)=β_0+\sum_{i=1}^{n}α_i<x,x_i>
+$$<p>
+式子有n个参数$α_i$，每个训练观测对应一个参数</p>
+<p>为了估计$α_i$和$β_0$，只需要所有训练观测的$C_n^2$个成对组合的内积$<x_i,x_{i'}>$</p>
+<p>注意：非支持向量的观测的$α_i$=0</p>
+<p>用一种一般化的形式$K(x_i,x_{i'})$来代替内积，这里K是一个核函数，用来衡量观测之间相似性的函数</p>
+<p>比如使用简单的核函数$K(x_i,x_{i'})=\sum_{j=1}^{p}x_{ij}x_{i'j}$（<strong>线性核函数</strong>），即此时核函数就是$x_i$和$x_{i'}$的内积</p>
+<h6 id="核函数">
+<a class="header-anchor" href="#%e6%a0%b8%e5%87%bd%e6%95%b0"></a>
+核函数
+</h6><p>核函数的主要作用是通过隐式映射将数据从原始的输入空间映射到一个更高维的特征空间，在高维空间中，数据可能变得线性可分，从而可以使用线性分类器解决原本的非线性问题。</p>
+<h5 id="自由度为d的多项式核函数">
+<a class="header-anchor" href="#%e8%87%aa%e7%94%b1%e5%ba%a6%e4%b8%bad%e7%9a%84%e5%a4%9a%e9%a1%b9%e5%bc%8f%e6%a0%b8%e5%87%bd%e6%95%b0"></a>
+自由度为d的多项式核函数
+</h5>$$
+K(x_i,x_{i'})=(1+\sum_{j=1}^{p}x_{ij}x_{i'j})^d
+$$<p>和标准的线性核函数相比，能生成光滑度更高的决策边界</p>
+<p>支持向量分类器与这样的非线性核函数的结合，就是<strong>支持向量机</strong></p>
+<p>这种情况下非线性核函数的形式为$f(x)=β_0+\sum_{i∈S}α_iK(x,x_i)$</p>
+<h5 id="径向核函数">
+<a class="header-anchor" href="#%e5%be%84%e5%90%91%e6%a0%b8%e5%87%bd%e6%95%b0"></a>
+径向核函数
+</h5>$$
+K(x_i,x_{i'})=exp(-γ\sum_{j=1}^{p}(x_{ij}-x_{i'j})^2)
+$$<p>原理是以欧氏距离衡量，离测试观测远的训练观测的影响很小，某种意义上径向核函数是一种局部方法</p>
+<h5 id="使用核函数的优势">
+<a class="header-anchor" href="#%e4%bd%bf%e7%94%a8%e6%a0%b8%e5%87%bd%e6%95%b0%e7%9a%84%e4%bc%98%e5%8a%bf"></a>
+使用核函数的优势
+</h5><p>计算量更小</p>
+<ul>
+<li>核函数只需要为$C_n^2$个不同对配对$i,i'$计算$K(x_i,x_i')$</li>
+<li>而在扩大的特征空间中没有明确的计算量</li>
+</ul>
+<h3 id="多分类的svmsupport-vector-machine">
+<a class="header-anchor" href="#%e5%a4%9a%e5%88%86%e7%b1%bb%e7%9a%84svmsupport-vector-machine"></a>
+多分类的SVM(support vector machine)
+</h3><p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8716-178212128365789.png" alt="">
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8715-178212128365790.png" alt=""></p>
+<h2 id="第十章-无监督学习">
+<a class="header-anchor" href="#%e7%ac%ac%e5%8d%81%e7%ab%a0-%e6%97%a0%e7%9b%91%e7%9d%a3%e5%ad%a6%e4%b9%a0"></a>
+第十章 无监督学习
+</h2><h3 id="主成分分析-pca">
+<a class="header-anchor" href="#%e4%b8%bb%e6%88%90%e5%88%86%e5%88%86%e6%9e%90-pca"></a>
+主成分分析 PCA
+</h3><p>PCA产生一个对数据集的低维表示。它可以找到具有最大方差且互不相关的变量的线性组合序列。</p>
+<h4 id="标准化">
+<a class="header-anchor" href="#%e6%a0%87%e5%87%86%e5%8c%96"></a>
+标准化
+</h4>$$
+𝑍_1=𝜙_{11} 𝑋_1+𝜙_{21} 𝑋_2+…+𝜙_{p1} 𝑋_𝑝
+$$<p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8717-178212128365792.png" alt="">
+主成分受变量度量单位的选择影响，会导致结果的任意性。通常在进行PCA之前，需要将每个变量都标准化，使得它们的方差都为1。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8718-178212128365791.png" alt=""></p>
+<h3 id="聚类分析法">
+<a class="header-anchor" href="#%e8%81%9a%e7%b1%bb%e5%88%86%e6%9e%90%e6%b3%95"></a>
+聚类分析法
+</h3><p>聚类分析(clustering)是在一个数据集中寻找子群(subgroups)或类(clusters)的技术，应用非常广泛。</p>
+<h4 id="k均值聚类k-means-clustering">
+<a class="header-anchor" href="#k%e5%9d%87%e5%80%bc%e8%81%9a%e7%b1%bbk-means-clustering"></a>
+K均值聚类(K-means clustering)
+</h4><p>试图将观测划分到事先规定数量的类中。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8719-178212128365793.png" alt="">
+K均值聚类法的思想是，一个好的聚类法可以使类内差异(within-cluster variation)尽可能小。
+算法</p>
+<blockquote>
+<ol>
+<li>为每个观测随机分配一个从1到K的数字。这些数字可以看作对这些观测的初始类。</li>
+<li>重复下列操作，直到类的分配停止为止：
+2.1 分别计算K个类的类中心。第k个类中心(centroid)是第k个类中的p维观测向量的均值向量。
+2.2 将每个观测分配到距离其最近的类中心所在的类中（用欧式距离定义“最近(closest)”）。</li>
+</ol>
+</blockquote>
+<h4 id="系统聚类hierarchical-clustering">
+<a class="header-anchor" href="#%e7%b3%bb%e7%bb%9f%e8%81%9a%e7%b1%bbhierarchical-clustering"></a>
+系统聚类(hierarchical clustering)
+</h4><p>并不需要事先规定所需的类数。我们最后会通过分析观测的树型表示，即谱系图(dendrogram)来确定类数。通过看谱系图还可以马上获得从1类到𝑛类类数不等的分类情况。</p>
+<p>算法</p>
+<blockquote>
+<p>从谱系图的底部开始，𝑛个观测各自都被看作一类
+再将两个最为相似的类汇合到一起，就得到了𝑛−1个类；
+然后再把两个最为相似的类汇合到一起，就得到了𝑛−2个类；
+如此进行下去，到所有观测都属于某一个类时停止</p>
+</blockquote>
+<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8720-178212128365794.png" alt=""></p>
+<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8721-178212128365795.png" alt=""></p>
+<h2 id="第十一章-各模型评测">
+<a class="header-anchor" href="#%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0-%e5%90%84%e6%a8%a1%e5%9e%8b%e8%af%84%e6%b5%8b"></a>
+第十一章 各模型评测
+</h2><h3 id="各模型偏差-方差均衡以及光滑度-可解释性均衡">
+<a class="header-anchor" href="#%e5%90%84%e6%a8%a1%e5%9e%8b%e5%81%8f%e5%b7%ae-%e6%96%b9%e5%b7%ae%e5%9d%87%e8%a1%a1%e4%bb%a5%e5%8f%8a%e5%85%89%e6%bb%91%e5%ba%a6-%e5%8f%af%e8%a7%a3%e9%87%8a%e6%80%a7%e5%9d%87%e8%a1%a1"></a>
+各模型偏差-方差均衡以及光滑度-可解释性均衡
+</h3><h4 id="偏差-方差均衡">
+<a class="header-anchor" href="#%e5%81%8f%e5%b7%ae-%e6%96%b9%e5%b7%ae%e5%9d%87%e8%a1%a1"></a>
+偏差-方差均衡
+</h4><table>
+  <thead>
+      <tr>
+          <th>模型</th>
+          <th>偏差减小，方差增大</th>
+          <th>方差减小，偏差增大</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>线性回归</td>
+          <td>系数个数增多</td>
+          <td>系数个数减少</td>
+      </tr>
+      <tr>
+          <td>K最近邻（KNN）</td>
+          <td>K减小</td>
+          <td>K增大</td>
+      </tr>
+      <tr>
+          <td>岭回归/Lasso</td>
+          <td>λ减小</td>
+          <td>λ增大</td>
+      </tr>
+      <tr>
+          <td>多项式回归</td>
+          <td>最高项次数增大</td>
+          <td>最高项次数减小</td>
+      </tr>
+      <tr>
+          <td>阶梯函数</td>
+          <td>分割点个数增多</td>
+          <td>分割点个数减少</td>
+      </tr>
+      <tr>
+          <td>回归样条</td>
+          <td>自由度增大</td>
+          <td>自由度减小</td>
+      </tr>
+      <tr>
+          <td>光滑样条</td>
+          <td>λ减小</td>
+          <td>λ增大</td>
+      </tr>
+      <tr>
+          <td>局部回归</td>
+          <td>比例s减小</td>
+          <td>比例s增大</td>
+      </tr>
+      <tr>
+          <td>广义可加模型</td>
+          <td>&ndash;</td>
+          <td>&ndash;</td>
+      </tr>
+      <tr>
+          <td>决策树</td>
+          <td>α减小</td>
+          <td>α增大</td>
+      </tr>
+      <tr>
+          <td>支持向量分类器</td>
+          <td>C减小/cost值增大</td>
+          <td>C增大/cost值减小</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="光滑度-可解释性均衡">
+<a class="header-anchor" href="#%e5%85%89%e6%bb%91%e5%ba%a6-%e5%8f%af%e8%a7%a3%e9%87%8a%e6%80%a7%e5%9d%87%e8%a1%a1"></a>
+光滑度-可解释性均衡
+</h4><p><img src="/note_images/gaotong/0_1-178212128365896.png" alt=""></p>
+<h3 id="置信区间和预测区间的区别">
+<a class="header-anchor" href="#%e7%bd%ae%e4%bf%a1%e5%8c%ba%e9%97%b4%e5%92%8c%e9%a2%84%e6%b5%8b%e5%8c%ba%e9%97%b4%e7%9a%84%e5%8c%ba%e5%88%ab"></a>
+置信区间和预测区间的区别
+</h3><p>区别</p>
+<table>
+  <thead>
+      <tr>
+          <th><strong>属性</strong></th>
+          <th><strong>置信区间 (CI)</strong></th>
+          <th><strong>预测区间 (PI)</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>目的</strong></td>
+          <td>估计<strong>总体平均值</strong>的范围</td>
+          <td>估计<strong>单个预测值</strong>的范围</td>
+      </tr>
+      <tr>
+          <td><strong>包含内容</strong></td>
+          <td>仅包含模型的不确定性（标准误差 $SE$）</td>
+          <td>包含模型不确定性 + 数据固有波动（$\sigma$）</td>
+      </tr>
+      <tr>
+          <td><strong>区间宽度</strong></td>
+          <td>相对较窄</td>
+          <td>相对较宽</td>
+      </tr>
+      <tr>
+          <td><strong>应用场景</strong></td>
+          <td>用于描述模型对总体均值预测的精度</td>
+          <td>用于预测新数据点的可能范围</td>
+      </tr>
+      <tr>
+          <td><strong>解释方式</strong></td>
+          <td>“在95%的置信水平下，真实的均值落在区间内。”</td>
+          <td>“在95%的置信水平下，未来的某个值落在区间内。”</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p>常见的惩罚向
+支持向量机(lamba=C,C越大，软间隔越大，方差越小，偏差增大)
+Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差减少，偏差增大)
+岭回归(lamba增大，变量数量变少，系数减少，趋近于线性，方差减少，偏差增大)
+光华样条(λ由0增至∞，实际自由度$df_{λ}$从n降至2,自由度降低，趋近于线性，方差减少，偏差增大)</p>
+</div>
+    <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
+    <a
+      class="article-category-link"
+      href="/categories/%e4%b8%93%e4%b8%9a%e8%af%be"
+      data-aos="zoom-in"
+      >专业课</a
+    >
+    </li></ul>
+<ul class="article-tag-list" itemprop="keywords"></ul>
+</footer>
+  </div><nav
+    id="article-nav"
+    aria-label="Article navigation"
+    data-aos="fade-up"
+  ><div class="article-nav-link-wrap left"><img
+            data-src="/images/covers/9.jpg"
+            data-sizes="auto"
+            alt="SQL"
+            class="lazyload"
+          /><a
+          href="/post/sql/"
+          aria-label="Prev:SQL"
+          title="Prev:SQL"
+        ></a>
+        <div class="article-nav-caption">Prev</div>
+        <h3 class="article-nav-title">SQL</h3>
+      </div></nav></article></section>
+        </div><footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info"><div>
+      <span class="icon-copyright"></span>2020-2026<span class="footer-info-sep rotate"></span>scqwq
+    </div><div>
+        Powered by&nbsp;<a
+          href="https://gohugo.io/"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Hugo</a
+        >&nbsp;Theme.<a
+          href="https://github.com/D-Sketon/hugo-theme-reimu"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Reimu</a
+        >
+      </div><div>
+        <span class="icon-brush"
+          >&nbsp;19.6k</span
+        >
+        &nbsp;|&nbsp;
+        <span class="icon-coffee">&nbsp;01:41</span>
+      </div><div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv"
+          >Number of visits&nbsp;<span
+            id="busuanzi_value_site_pv"
+          ></span
+        ></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv"
+          >Number of visitors&nbsp;<span
+            id="busuanzi_value_site_uv"
+          ></span
+        ></span>
+      </div></div>
+</footer>
+<div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div><div id="mask" class="hide"></div>
+      </div><nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#高统">高统</a>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li></li>
+                <li><a href="#5112024-linxililinxi-2024-gaotong">5/11/2024 Linxi(LiLinxi) 2024 Gaotong</a></li>
+                <li><a href="#reference2020yangchengyu">Reference:2020YangChengYu</a></li>
+                <li><a href="#">https://github.com/EternityQAQ2/DLUT_2024_GaoTong</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第二章-统计学习">第二章 统计学习</a>
+          <ul>
+            <li><a href="#什么是统计学习">什么是统计学习</a>
+              <ul>
+                <li><a href="#什么情况下需要估计f">什么情况下需要估计f</a></li>
+                <li><a href="#如何估计f">如何估计f</a></li>
+                <li><a href="#预测精度和模型解释性的权衡">预测精度和模型解释性的权衡</a></li>
+                <li><a href="#指导学习和无指导学习">指导学习和无指导学习</a></li>
+                <li><a href="#回归与分类问题">回归与分类问题</a></li>
+              </ul>
+            </li>
+            <li><a href="#评价模型精度">评价模型精度</a>
+              <ul>
+                <li><a href="#拟合效果检验">拟合效果检验</a></li>
+                <li><a href="#偏差-方差权衡">偏差-方差权衡</a></li>
+                <li><a href="#分类模型">分类模型</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第三章-线性模型">第三章 线性模型</a>
+          <ul>
+            <li><a href="#简单线性回归">简单线性回归</a>
+              <ul>
+                <li><a href="#定义">定义</a></li>
+                <li><a href="#目标">目标</a></li>
+                <li><a href="#标准误差和置信区间">标准误差和置信区间</a></li>
+                <li><a href="#假设">假设</a></li>
+              </ul>
+            </li>
+            <li><a href="#多元线性回归">多元线性回归</a>
+              <ul>
+                <li><a href="#定义-1">定义</a></li>
+                <li><a href="#目标-1">目标</a></li>
+                <li><a href="#假设-1">假设</a></li>
+              </ul>
+            </li>
+            <li><a href="#评估模型参数">评估模型参数</a></li>
+            <li><a href="#回归模型的其他问题">回归模型的其他问题</a>
+              <ul>
+                <li><a href="#数据的非线性">数据的非线性</a></li>
+                <li><a href="#误差项自相关">误差项自相关</a></li>
+                <li><a href="#误差项方差非恒定">误差项方差非恒定</a></li>
+                <li><a href="#离群点">离群点</a></li>
+                <li><a href="#高杠杆点">高杠杆点</a></li>
+                <li><a href="#r语言-residuals-vs-leverage-图">R语言 Residuals vs Leverage 图</a></li>
+                <li><a href="#共线性">共线性</a></li>
+                <li><a href="#线性回归与k最近邻法的比较-维度灾难">线性回归与K最近邻法的比较 维度灾难。</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第四章-分类">第四章 分类</a>
+          <ul>
+            <li><a href="#逻辑斯蒂回归">逻辑斯蒂回归</a>
+              <ul>
+                <li><a href="#概述">概述</a></li>
+                <li><a href="#数学表达">数学表达</a></li>
+              </ul>
+            </li>
+            <li><a href="#线性判别分析">线性判别分析</a>
+              <ul>
+                <li><a href="#概述-1">概述</a></li>
+                <li><a href="#核心思想">核心思想</a></li>
+                <li><a href="#roc曲线">ROC曲线</a></li>
+              </ul>
+            </li>
+            <li><a href="#二次判别分析">二次判别分析</a></li>
+            <li><a href="#方法比较">方法比较</a></li>
+          </ul>
+        </li>
+        <li><a href="#第五章-重抽样方法">第五章 重抽样方法</a>
+          <ul>
+            <li><a href="#交叉验证法">交叉验证法</a>
+              <ul>
+                <li><a href="#验证集方法">验证集方法</a></li>
+                <li><a href="#留一交叉验证loocv">留一交叉验证（LOOCV）</a></li>
+                <li><a href="#k折交叉验证">K折交叉验证</a></li>
+              </ul>
+            </li>
+            <li><a href="#自助法">自助法</a>
+              <ul>
+                <li><a href="#自助法的其他用途">自助法的其他用途</a></li>
+                <li><a href="#自助法不能估计测试误差的原因">自助法不能估计测试误差的原因</a></li>
+              </ul>
+            </li>
+            <li><a href="#方法比较-1">方法比较</a></li>
+          </ul>
+        </li>
+        <li><a href="#第六章-线性模型选择与正则化">第六章 线性模型选择与正则化</a>
+          <ul>
+            <li><a href="#子集选择">子集选择</a>
+              <ul>
+                <li><a href="#最优子集选择">最优子集选择</a></li>
+                <li><a href="#逐步选择">逐步选择</a></li>
+                <li><a href="#选择最优模型的指标">选择最优模型的指标</a></li>
+              </ul>
+            </li>
+            <li><a href="#压缩估计方法">压缩估计方法</a>
+              <ul>
+                <li><a href="#岭回归l2正则化">岭回归（L2正则化）</a></li>
+                <li><a href="#lassol1正则化">Lasso（L1正则化）</a></li>
+                <li><a href="#岭回归和lasso的等价问题">岭回归和Lasso的等价问题</a></li>
+                <li><a href="#岭回归和lasso的贝叶斯解释">岭回归和Lasso的贝叶斯解释</a></li>
+              </ul>
+            </li>
+            <li><a href="#降维方法">降维方法</a>
+              <ul>
+                <li><a href="#主成分回归pca">主成分回归（PCA）</a></li>
+                <li><a href="#偏最小二乘pls">偏最小二乘（PLS）</a></li>
+                <li><a href="#pca-和-pls-区别">PCA 和 PLS 区别</a></li>
+              </ul>
+            </li>
+            <li><a href="#高维数据的回归问题">高维数据的回归问题</a></li>
+          </ul>
+        </li>
+        <li><a href="#第七章-非线性模型">第七章 非线性模型</a>
+          <ul>
+            <li><a href="#多项式回归">多项式回归</a></li>
+            <li><a href="#阶梯函数">阶梯函数</a></li>
+            <li><a href="#基函数">基函数</a></li>
+            <li><a href="#回归样条">回归样条</a>
+              <ul>
+                <li><a href="#截断幂基">截断幂基</a></li>
+                <li><a href="#确定结点的个数和位置">确定结点的个数和位置</a></li>
+              </ul>
+            </li>
+            <li><a href="#光滑样条">光滑样条</a></li>
+            <li><a href="#局部回归">局部回归</a></li>
+            <li><a href="#广义可加模型">广义可加模型</a>
+              <ul>
+                <li><a href="#gam的优点与不足">GAM的优点与不足</a></li>
+                <li><a href="#用于分类的gam">用于分类的GAM</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第八章-基于树的方法">第八章 基于树的方法</a>
+          <ul>
+            <li><a href="#决策树基本概念">决策树基本概念</a>
+              <ul>
+                <li><a href="#回归树">回归树</a></li>
+                <li><a href="#分类树">分类树</a></li>
+                <li><a href="#分类指标">分类指标</a></li>
+              </ul>
+            </li>
+            <li><a href="#树的剪枝">树的剪枝</a></li>
+            <li><a href="#决策树评估">决策树评估</a>
+              <ul>
+                <li><a href="#树与线性模型的比较">树与线性模型的比较</a></li>
+                <li><a href="#树的优缺点">树的优缺点</a></li>
+              </ul>
+            </li>
+            <li><a href="#装袋法随机森林和提升法">装袋法、随机森林和提升法</a>
+              <ul>
+                <li><a href="#装袋法">装袋法</a></li>
+                <li><a href="#随机森林">随机森林</a></li>
+                <li><a href="#提升法">提升法</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第九章-支持向量机">第九章 支持向量机</a>
+          <ul>
+            <li><a href="#最大间隔分类器">最大间隔分类器</a>
+              <ul>
+                <li><a href="#超平面">超平面</a></li>
+                <li><a href="#最大间隔超平面">最大间隔超平面</a></li>
+              </ul>
+            </li>
+            <li><a href="#支持向量分类器">支持向量分类器</a>
+              <ul>
+                <li><a href="#最大间隔分类器-1">最大间隔分类器</a></li>
+                <li><a href="#支持向量">支持向量</a></li>
+                <li><a href="#支持向量分类器-1">支持向量分类器</a></li>
+                <li><a href="#非线性决策边界分类">非线性决策边界分类</a></li>
+              </ul>
+            </li>
+            <li><a href="#支持向量机">支持向量机</a>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+            <li><a href="#多分类的svmsupport-vector-machine">多分类的SVM(support vector machine)</a></li>
+          </ul>
+        </li>
+        <li><a href="#第十章-无监督学习">第十章 无监督学习</a>
+          <ul>
+            <li><a href="#主成分分析-pca">主成分分析 PCA</a>
+              <ul>
+                <li><a href="#标准化">标准化</a></li>
+              </ul>
+            </li>
+            <li><a href="#聚类分析法">聚类分析法</a>
+              <ul>
+                <li><a href="#k均值聚类k-means-clustering">K均值聚类(K-means clustering)</a></li>
+                <li><a href="#系统聚类hierarchical-clustering">系统聚类(hierarchical clustering)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#第十一章-各模型评测">第十一章 各模型评测</a>
+          <ul>
+            <li><a href="#各模型偏差-方差均衡以及光滑度-可解释性均衡">各模型偏差-方差均衡以及光滑度-可解释性均衡</a>
+              <ul>
+                <li><a href="#偏差-方差均衡">偏差-方差均衡</a></li>
+                <li><a href="#光滑度-可解释性均衡">光滑度-可解释性均衡</a></li>
+              </ul>
+            </li>
+            <li><a href="#置信区间和预测区间的区别">置信区间和预测区间的区别</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div></div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.jpg"
+    data-sizes="auto"
+    alt="scqwq"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">scqwq</div>
+  <div class="sidebar-description">lets do it again...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div><div class="sidebar-state-number">17</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>Categories</div>
+    <div class="sidebar-state-number">
+      4
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-github sidebar-social-icon">
+        <a
+          href="https://github.com/scqwq"
+          itemprop="url"
+          target="_blank"
+          aria-label="github"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-qq sidebar-social-icon">
+        <a
+          href="https://scqwq.github.io/2593335313"
+          itemprop="url"
+          target="_blank"
+          aria-label="qq"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="Home"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Home</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="Archives"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Archives</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="About"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">About</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="Friend"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Friend</div>
+    </div></div></div></div><div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div></nav>
+</div><script
+    src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
+    
+    
+    
+    
+    integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"
+    
+    
+    
+    
+    integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script src="/js/main.js"  ></script><script src="/js/aos.js"  ></script><script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", aosInit);
+    } else {
+      aosInit();
+    }
+  </script><script src="/js/pjax_main.js" data-pjax ></script><script>
+  
+
+
+
+</script><script
+    src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js"
+    defer
+    
+    
+    onload="setupFirework()"
+    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script>
+
+<div id="lazy-script">
+  <div><script data-pjax>
+        window.REIMU_POST = {
+          author: "scqwq",
+          title: "统计学习",
+          url: "http:\/\/localhost:1313\/post\/gaotong\/",
+          description: "\r高统\r注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!\r5\/11\/2024 Linxi(LiLinxi) 2024 Gaotong\rReference:2020YangChengYu\rhttps:\/\/github.com\/EternityQAQ2\/DLUT_2024_GaoTong\rRSS（残差平方和）、RSE（残差标准误）和MSE（均方误差） $$\rRSS = \\sum_{i=1}^n (Y_i - \\hat{Y}_i)^2\r$$ $$\rMSE = \\frac{RSS}{n - p}\r$$ $$\rRSE = \\sqrt{MSE} = \\sqrt{\\frac{RSS}{n - …",
+          cover: "http:\/\/localhost:1313\/images\/covers\/11.png",
+        };
+      </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")}).init();
+          }
+        }
+        const pswp = () => {
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
+        }
+        pswp()
+      </script><script data-pjax>
+          window.MathJax = JSON.parse("[{\"loader\":{\"load\":[\"input/asciimath\",\"[tex]/noerrors\"]},\"options\":{\"ignoreHtmlClass\":\"tex2jax_ignore\",\"processHtmlClass\":\"tex2jax_process\",\"skipHtmlTags\":[\"script\",\"noscript\",\"style\",\"textarea\",\"pre\",\"code\"]},\"tex\":{\"autoload\":{\"color\":[],\"colorv2\":[\"color\"]},\"displayMath\":[[\"$$\",\"$$\"],[\"\\\\\\\\[\",\"\\\\\\\\]\"]],\"inlineMath\":[[\"$\",\"$\"],[\"\\\\\\\\(\",\"\\\\\\\\)\"]],\"packages\":{\"[+]\":[\"noerrors\"]},\"processEnvironments\":true,\"processEscapes\":true,\"tags\":\"ams\",\"useLabelIds\":true}}]")[0];
+        </script><script
+    src="https://npm.webcache.cn/mathjax@3.2.2/es5/tex-mml-chtml.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei" crossorigin="anonymous"></script></div>
+</div><script
+    src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js"
+    
+    async
+    
+    
+    integrity="sha384-0M75wtSkhjIInv4coYlaJU83&#43;OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id&#43;S" crossorigin="anonymous"></script><script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script><script>
+  const reimuCopyright = String.raw`
+   ______     ______     __     __    __     __  __    
+  /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+  \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+   \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+    \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                    
+  `;
+  console.log(String.raw`%c ${reimuCopyright}`, "color: #ff5252;");
+  console.log(
+    "%c Theme.Reimu" + " %c https://github.com/D-Sketon/hugo-theme-reimu ",
+    "color: white; background: #ff5252; padding:5px 0;",
+    "padding:4px;border:1px solid #ff5252;",
+  );
+</script></body>
+</html>

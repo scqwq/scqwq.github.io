@@ -2,7 +2,7 @@
 title: 'SQL'
 draft: false
 categories: ["专业课"]
-cover: "images/covers/7.jpg"
+cover: "images/covers/9.jpg"
 date: 2026-06-20T21:00:00+08:00
 lastmod: 2026-06-20T21:00:00+08:00
 ---

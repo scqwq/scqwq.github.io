@@ -43,10 +43,10 @@
     property="og:site_name"
     content="lets say hello world again"
   />
-  <meta property="og:image" content="http://localhost:1313/images/covers/7.jpg" />
+  <meta property="og:image" content="http://localhost:1313/images/covers/9.jpg" />
   <meta property="article:author" content="scqwq" />
   <meta property="article:published_time" content="2026-06-20T21:00:00&#43;08:00" />
-  <meta property="article:modified_time" content="2026-06-20T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/7.jpg" />
+  <meta property="article:modified_time" content="2026-06-20T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/9.jpg" />
 <link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
     rel="preload"
     as="style"
@@ -122,7 +122,7 @@ This article does not have a corresponding language version
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
 <header id="header" aria-label="Site header"><picture></picture>
-    <img  fetchpriority="high" src="/images/covers/7.jpg" alt="数据库系统概述"><div id="header-outer">
+    <img  fetchpriority="high" src="/images/covers/9.jpg" alt="数据库系统概述"><div id="header-outer">
     <div id="header-title"><span id="logo">
             <h1 data-aos="slide-up">数据库系统概述</h1>
           </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
@@ -139,7 +139,7 @@ This article does not have a corresponding language version
   <nav id="TableOfContents">
   <ul>
     <li><a href="#数据库系统">数据库系统</a></li>
-    <li><a href="#相关">相关</a>
+    <li><a href="#一相关">一、相关</a>
       <ul>
         <li>
           <ul>
@@ -171,7 +171,7 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
-    <li><a href="#关系数据库">关系数据库</a>
+    <li><a href="#二关系数据库">二、关系数据库</a>
       <ul>
         <li>
           <ul>
@@ -187,7 +187,7 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
-    <li><a href="#关系理论">关系理论</a>
+    <li><a href="#三关系理论">三、关系理论</a>
       <ul>
         <li>
           <ul>
@@ -213,6 +213,7 @@ This article does not have a corresponding language version
             </li>
             <li><a href="#模式分解">模式分解</a>
               <ul>
+                <li></li>
                 <li><a href="#无损连接分解后再次自然连接与分解前相同">无损连接：分解后再次自然连接，与分解前相同</a></li>
               </ul>
             </li>
@@ -220,7 +221,7 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
-    <li><a href="#查询处理和查询优化">查询处理和查询优化</a>
+    <li><a href="#四查询处理和查询优化">四、查询处理和查询优化</a>
       <ul>
         <li>
           <ul>
@@ -236,7 +237,7 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
-    <li><a href="#恢复系统事务调度">恢复系统/事务调度</a>
+    <li><a href="#五恢复系统事务调度">五、恢复系统/事务调度</a>
       <ul>
         <li>
           <ul>
@@ -260,7 +261,7 @@ This article does not have a corresponding language version
         </li>
       </ul>
     </li>
-    <li><a href="#并发控制">并发控制</a>
+    <li><a href="#六并发控制">六、并发控制</a>
       <ul>
         <li>
           <ul>
@@ -290,7 +291,7 @@ This article does not have a corresponding language version
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">16</div>
+    <div>Posts</div><div class="sidebar-state-number">17</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -372,9 +373,9 @@ This article does not have a corresponding language version
 </div><div class="hr-line"></div><div class="e-content article-entry tex2jax_process" itemprop="articleBody"><h1 id="数据库系统">
 <a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e5%ba%93%e7%b3%bb%e7%bb%9f"></a>
 数据库系统
-</h1><h1 id="相关">
-<a class="header-anchor" href="#%e7%9b%b8%e5%85%b3"></a>
-相关
+</h1><h1 id="一相关">
+<a class="header-anchor" href="#%e4%b8%80%e7%9b%b8%e5%85%b3"></a>
+一、相关
 </h1><h3 id="基本概念">
 <a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
 基本概念：
@@ -392,7 +393,10 @@ This article does not have a corresponding language version
 </ol>
 <p><strong>数据管理的目标</strong>：课支持人民高校获取和维护可共享、安全的、可靠的数据</p>
 <p><strong>文件系统管理的问题</strong>：数据冗余和不一致、数据访问困难、数据孤立、完整性问题、原子性问题、并发访问异常、安全性问题</p>
-<p><strong>模式</strong>：数据库的总体设计，类似于变量的定义声明</p>
+<p><strong>元组</strong>：一行</p>
+<p><strong>属性</strong>：一列</p>
+<p><strong>关系</strong>：指表，包含所有具体的行数据</p>
+<p><strong>模式</strong>：数据库的总体设计，类似于变量的定义声明，只有列名、类型和约束</p>
 <p><strong>实例</strong>：一个使用中的数据库在某个时刻的数据，类似于变量某时刻的值</p>
 <p><strong>关系的完整性</strong>：是指数据库中数据应满足的<strong>约束条件</strong>，用以保证数据的正确性、有效性和一致性。三类完整性约束：</p>
 <ul>
@@ -404,7 +408,32 @@ This article does not have a corresponding language version
 <h3 id="发展阶段">
 <a class="header-anchor" href="#%e5%8f%91%e5%b1%95%e9%98%b6%e6%ae%b5"></a>
 发展阶段
-</h3><p>略</p>
+</h3><p>数据库技术的发展大致经历了以下几个阶段：</p>
+<ol>
+<li>人工管理阶段（20 世纪 50 年代中期以前）：
+<ul>
+<li>数据不保存。</li>
+<li>数据不共享。</li>
+<li>数据不独立。</li>
+<li>应用程序管理数据。</li>
+</ul>
+</li>
+<li>文件系统阶段（20 世纪 50 年代中期至 60 年代中期）：
+<ul>
+<li>数据可长期保存。</li>
+<li>文件记录的概念。</li>
+<li>记录格式化和文件结构化。</li>
+<li>缺点：数据冗余、不一致性、应用程序依赖于文件、数据间联系弱、安全性差。</li>
+</ul>
+</li>
+<li>数据库系统阶段（20 世纪 60 年代末至今）：
+<ul>
+<li>早期数据库系统：层次模型和网状模型数据库系统（如 IMS、IDMS）。</li>
+<li>关系数据库系统（20 世纪 70 年代）：基于关系模型，具有坚实的数学基础和简单的用户抽象（如 System R、Oracle、DB2、SQL Server）。</li>
+<li>新一代数据库系统（20 世纪 80 年代中期以后）：面向对象数据库、对象关系数据库、XML 数据库、NoSQL 数据库、NewSQL 数据库等。</li>
+</ul>
+</li>
+</ol>
 <h3 id="管理和设计">
 <a class="header-anchor" href="#%e7%ae%a1%e7%90%86%e5%92%8c%e8%ae%be%e8%ae%a1"></a>
 管理和设计
@@ -420,9 +449,9 @@ This article does not have a corresponding language version
 <a class="header-anchor" href="#%e6%a8%a1%e5%9e%8b%e4%b8%89%e8%a6%81%e7%b4%a0"></a>
 模型三要素
 </h4><ul>
-<li>数据结构：描述组成对象和对象之间的联系，对模型的静态特征的描述</li>
-<li>数据操作：操作的集合、操作的语言，是对模型的动态特性的描述</li>
-<li>数据的完整性约束</li>
+<li><strong>数据结构</strong>：描述组成对象和对象之间的联系，对模型的静态特征的描述</li>
+<li><strong>数据操作</strong>：操作的集合、操作的语言，是对模型的动态特性的描述</li>
+<li><strong>数据的完整性约束</strong></li>
 </ul>
 <p>结构 + 完整性约束 = 模式</p>
 <h4 id="三级模式架构">
@@ -513,7 +542,8 @@ This article does not have a corresponding language version
 <h3 id="e-r图">
 <a class="header-anchor" href="#e-r%e5%9b%be"></a>
 E-R图
-</h3><h5 id="基本概念-1">
+</h3><img src="/note_images/database/image-20260622103710987.png" alt="image-20260622103710987" style="zoom:50%;" />
+<h5 id="基本概念-1">
 <a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5-1"></a>
 基本概念：
 </h5><ul>
@@ -528,9 +558,31 @@ E-R图
 ER图符号：
 </h5><ul>
 <li>矩形：表示实体集。</li>
-<li>椭圆：表示属性。</li>
+<li>椭圆：表示属性。（此处不用）</li>
 <li>菱形：表示联系（关系）集。</li>
 <li>线段：连接属性与实体集、实体集与联系集。</li>
+</ul>
+<h5 id="画图">
+<a class="header-anchor" href="#%e7%94%bb%e5%9b%be"></a>
+画图：
+</h5><p>一对一：两个表与关系的接触部分画朝向表的箭头</p>
+<img src="/note_images/database/image-20260621191054905.png" alt="image-20260621191054905" style="zoom:50%;" />
+<p>一对多：1的一方画箭头</p>
+<img src="/note_images/database/image-20260621191146073.png" alt="image-20260621191146073" style="zoom:50%;" />
+<p>多对多：无箭头，并在中间建立关联表</p>
+<img src="/note_images/database/image-20260621191215472.png" alt="image-20260621191215472" style="zoom:50%;" />
+<p>另外，ER图中不需要把联系的属性画在两边的表中（ER图不需要画出外键）</p>
+<p><strong>双线</strong>：</p>
+<p>也叫存在依赖（Existence Dependency）。</p>
+<p>用一句人话翻译就是：“这边的实体，必须至少有一个‘身份’挂在这个关系上，没有例外
+如：如果员工端画双线：意味着<strong>每个员工必须属于至少一个部门</strong>（公司不允许无部门人员）</p>
+<p>虚线：</p>
+<p>不常用</p>
+<p>当线段画成虚线时，表示弱实体（Weak Entity）与其所依赖的“所有者实体（Owner Entity）”之间的联系。</p>
+<p>具体场景：子实体（弱实体）没有自己的主键，必须依赖于父实体的主键才能唯一标识。</p>
+<p>例如订单（父）和 订单明细（子）。</p>
+<ul>
+<li>一条“订单明细”离开了“订单”就毫无意义（它的主键是 <code>订单号 + 行号</code>）</li>
 </ul>
 <h3 id="关系模型-1">
 <a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e6%a8%a1%e5%9e%8b-1"></a>
@@ -587,9 +639,9 @@ ER图符号：
 <li><strong>两级映射</strong>：外/概（保证改表不重写程序——逻辑独立）；概/内（保证改存储不改表结构——物理独立）。</li>
 </ul>
 <p>这么分就是为了实现<strong>数据独立性</strong></p>
-<h1 id="关系数据库">
-<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e5%ba%93"></a>
-关系数据库
+<h1 id="二关系数据库">
+<a class="header-anchor" href="#%e4%ba%8c%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e5%ba%93"></a>
+二、关系数据库
 </h1><p>关系数据库是建立在关系模型基础上的数据库，是目前最主要的数据库类型。</p>
 <h3 id="基本概念-2">
 <a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5-2"></a>
@@ -688,13 +740,18 @@ $$
 关系操作：
 </h4><p>关系操作是对关系进行查询和修改的操作，基本操作包括</p>
 <p>对元组进行：查询、删除、插入、修改</p>
-<h1 id="关系理论">
-<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e7%90%86%e8%ae%ba"></a>
-关系理论
+<h1 id="三关系理论">
+<a class="header-anchor" href="#%e4%b8%89%e5%85%b3%e7%b3%bb%e7%90%86%e8%ae%ba"></a>
+三、关系理论
 </h1><h3 id="函数依赖">
 <a class="header-anchor" href="#%e5%87%bd%e6%95%b0%e4%be%9d%e8%b5%96"></a>
 函数依赖
-</h3><ul>
+</h3><p>指一个属性集可以推出另一个属性集</p>
+<h5 id="函数集">
+<a class="header-anchor" href="#%e5%87%bd%e6%95%b0%e9%9b%86"></a>
+函数集
+</h5><p>多个函数依赖的集合</p>
+<ul>
 <li>
 <p>非平凡的函数依赖： X -&gt; Y 且 Y 不是 X 的子集</p>
 </li>
@@ -714,11 +771,14 @@ $$
 部分函数依赖：
 </h5><p>设 X→Y是一个函数依赖，如果存在 X 的<strong>一个真子集</strong> X&rsquo;（X′⊂X），使得 X′→Y 也成立，那么称 Y部分函数依赖于 X。</p>
 <p>当 Y 不完全函数依赖于X，记作 X -&gt; Y，箭头上是P，例如 A -&gt; C 又有 AB -&gt; C，那么C就是部分函数依赖于AB的，这种情况会造成 <strong>数据冗余</strong></p>
-<p>数据冗余会造成三大异常：更新异常、更新异常、删除异常</p>
+<p>数据冗余会造成三大异常：更新异常、插入异常、删除异常</p>
 <h3 id="码">
 <a class="header-anchor" href="#%e7%a0%81"></a>
 码
-</h3><p><strong>候选码</strong>：是一个属性组（或者属性），通过该属性组能推出所有的属性，并且该属性组的任意子集都不能再推出所有属性了，即在满足完全函数依赖的前提下，还将是最小的属性组。答题时将这些候选码构成集合。</p>
+</h3><h5 id="候选码">
+<a class="header-anchor" href="#%e5%80%99%e9%80%89%e7%a0%81"></a>
+候选码
+</h5><p>是一个属性组（或者属性），通过该属性组能推出所有的属性，并且该属性组的任意子集都不能再推出所有属性了，即在满足完全函数依赖的前提下，还将是最小的属性组（但是注意，不同订单候选码依旧<strong>可能长短不一</strong>）。答题时将这些候选码构成集合。</p>
 <p>人话就是，一些属性组可以推出整个表的属性值，如学号可以推出姓名，但是没了学号只有课程号不能推出姓名，并且这个组最小</p>
 <h5 id="找候选码">
 <a class="header-anchor" href="#%e6%89%be%e5%80%99%e9%80%89%e7%a0%81"></a>
@@ -815,14 +875,30 @@ BCNF：
 <a class="header-anchor" href="#%e6%a8%a1%e5%bc%8f%e5%88%86%e8%a7%a3"></a>
 模式分解
 </h3><p>模式分解有两个准则：无损连接和保持函数依赖</p>
+<h5 id="3nf">
+<a class="header-anchor" href="#3nf"></a>
+3NF
+</h5><p>先求最小函数依赖集，然后候选码只出现在左边（注意左边也可以出现非候选码），然后看是否有一个关系包含候选码，没有就新建一个。</p>
+<h5 id="bcnf-1">
+<a class="header-anchor" href="#bcnf-1"></a>
+BCNF
+</h5><p>所有依赖项的决定因素都是候选码，也就是左边应该全是候选码</p>
+<p>依旧先拿到最小依赖集，把这些关系（X -&gt; Y）中找到的不满足左边是超键的部分（X），<strong>将依赖“分组”成关系</strong>：</p>
+<p>将关系 R 分解为：</p>
+<ul>
+<li>R1=XY把决定因素和它决定的属性放一起）</li>
+<li>将最小依赖集被分出去的非主码部分用主码表示</li>
+<li>循环递归直到结束</li>
+</ul>
 <h4 id="无损连接分解后再次自然连接与分解前相同">
 <a class="header-anchor" href="#%e6%97%a0%e6%8d%9f%e8%bf%9e%e6%8e%a5%e5%88%86%e8%a7%a3%e5%90%8e%e5%86%8d%e6%ac%a1%e8%87%aa%e7%84%b6%e8%bf%9e%e6%8e%a5%e4%b8%8e%e5%88%86%e8%a7%a3%e5%89%8d%e7%9b%b8%e5%90%8c"></a>
 无损连接：分解后再次自然连接，与分解前相同
-</h4><p>判断无损链接的方法：</p>
-<h1 id="查询处理和查询优化">
-<a class="header-anchor" href="#%e6%9f%a5%e8%af%a2%e5%a4%84%e7%90%86%e5%92%8c%e6%9f%a5%e8%af%a2%e4%bc%98%e5%8c%96"></a>
-查询处理和查询优化
-</h1><p>查询处理指的是从数据库中提取数据所设计的一系列活动</p>
+</h4><p>判断无损连接/分解的方法：
+把一个表 R 拆成 R1 和 R2 两个表，当以后再把 R1 和 R2 自然连接（⋈） 回去时，数据一条不多、一条不少，完全复原成原来的 R</p>
+<h1 id="四查询处理和查询优化">
+<a class="header-anchor" href="#%e5%9b%9b%e6%9f%a5%e8%af%a2%e5%a4%84%e7%90%86%e5%92%8c%e6%9f%a5%e8%af%a2%e4%bc%98%e5%8c%96"></a>
+四、查询处理和查询优化
+</h1><p>查询处理指的是从数据库中提取数据所设1计的一系列活动</p>
 <p>查询 -&gt; 查询分析 -&gt; 查询检查 -&gt; 查询优化 -&gt; 查询执行</p>
 <p><strong>工作方式</strong>：</p>
 <ol>
@@ -881,9 +957,9 @@ BCNF：
 <p>当选择条件是对普通属性的索引时，应估计返回的行数多少。如果大小小于整体10%，则可以使用索引。</p>
 </li>
 </ul>
-<h1 id="恢复系统事务调度">
-<a class="header-anchor" href="#%e6%81%a2%e5%a4%8d%e7%b3%bb%e7%bb%9f%e4%ba%8b%e5%8a%a1%e8%b0%83%e5%ba%a6"></a>
-恢复系统/事务调度
+<h1 id="五恢复系统事务调度">
+<a class="header-anchor" href="#%e4%ba%94%e6%81%a2%e5%a4%8d%e7%b3%bb%e7%bb%9f%e4%ba%8b%e5%8a%a1%e8%b0%83%e5%ba%a6"></a>
+五、恢复系统/事务调度
 </h1><h3 id="事务">
 <a class="header-anchor" href="#%e4%ba%8b%e5%8a%a1"></a>
 事务
@@ -913,11 +989,17 @@ BCNF：
 </h3><h5 id="故障的分类">
 <a class="header-anchor" href="#%e6%95%85%e9%9a%9c%e7%9a%84%e5%88%86%e7%b1%bb"></a>
 故障的分类：
-</h5><img src="/note_images/database/image-20260619190529914.png" alt="image-20260619190529914" style="zoom:50%;" />
+</h5><ul>
+<li>事务</li>
+<li>系统</li>
+<li>介质</li>
+</ul>
+<img src="/note_images/database/image-20260619190529914.png" alt="image-20260619190529914" style="zoom:50%;" />
 <h4 id="故障恢复">
 <a class="header-anchor" href="#%e6%95%85%e9%9a%9c%e6%81%a2%e5%a4%8d"></a>
 故障恢复：
-</h4><img src="/note_images/database/image-20260619190657997.png" alt="image-20260619190657997" style="zoom:67%;" />
+</h4><p>数据转储，登记日志文件</p>
+<img src="/note_images/database/image-20260619190657997.png" alt="image-20260619190657997" style="zoom:67%;" />
 <h5 id="恢复算法">
 <a class="header-anchor" href="#%e6%81%a2%e5%a4%8d%e7%ae%97%e6%b3%95"></a>
 恢复算法：
@@ -970,10 +1052,13 @@ BCNF：
 <p>冲突可串行化 =&gt; 可串行化</p>
 <p>冲突操作：不同事务对同一数据分别进行读和写；不同事务对同一数据分别进行写和写</p>
 <p>冲突可串行化调度，即不交换不同事务的冲突操作次序，也不交换同一事务的两个操作次序，但可以交换不同事物对不同数据各种操作次序，也可以交换不同事务对同一数据的读取操作次序</p>
-<h1 id="并发控制">
-<a class="header-anchor" href="#%e5%b9%b6%e5%8f%91%e6%8e%a7%e5%88%b6"></a>
-并发控制
-</h1><h3 id="封锁">
+<h1 id="六并发控制">
+<a class="header-anchor" href="#%e5%85%ad%e5%b9%b6%e5%8f%91%e6%8e%a7%e5%88%b6"></a>
+六、并发控制
+</h1><p>主要技术：封锁、时间戳、乐观控制阀、多版本并发控制</p>
+<p>并发带来的数据不一致性：</p>
+<p>丢失修改、不可重复读、读脏数据</p>
+<h3 id="封锁">
 <a class="header-anchor" href="#%e5%b0%81%e9%94%81"></a>
 封锁：
 </h3><h5 id="x锁">
@@ -1059,7 +1144,7 @@ S锁
         <div class="article-nav-caption">Prev</div>
         <h3 class="article-nav-title">毛概与中特</h3>
       </div><div class="article-nav-link-wrap right"><img
-            data-src="/images/covers/7.jpg"
+            data-src="/images/covers/9.jpg"
             data-sizes="auto"
             alt="SQL"
             class="lazyload"
@@ -1091,10 +1176,10 @@ S锁
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;18.5k</span
+          >&nbsp;19.6k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;01:34</span>
+        <span class="icon-coffee">&nbsp;01:41</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -1121,7 +1206,7 @@ S锁
   <nav id="TableOfContents">
   <ul>
     <li><a href="#数据库系统">数据库系统</a></li>
-    <li><a href="#相关">相关</a>
+    <li><a href="#一相关">一、相关</a>
       <ul>
         <li>
           <ul>
@@ -1153,7 +1238,7 @@ S锁
         </li>
       </ul>
     </li>
-    <li><a href="#关系数据库">关系数据库</a>
+    <li><a href="#二关系数据库">二、关系数据库</a>
       <ul>
         <li>
           <ul>
@@ -1169,7 +1254,7 @@ S锁
         </li>
       </ul>
     </li>
-    <li><a href="#关系理论">关系理论</a>
+    <li><a href="#三关系理论">三、关系理论</a>
       <ul>
         <li>
           <ul>
@@ -1195,6 +1280,7 @@ S锁
             </li>
             <li><a href="#模式分解">模式分解</a>
               <ul>
+                <li></li>
                 <li><a href="#无损连接分解后再次自然连接与分解前相同">无损连接：分解后再次自然连接，与分解前相同</a></li>
               </ul>
             </li>
@@ -1202,7 +1288,7 @@ S锁
         </li>
       </ul>
     </li>
-    <li><a href="#查询处理和查询优化">查询处理和查询优化</a>
+    <li><a href="#四查询处理和查询优化">四、查询处理和查询优化</a>
       <ul>
         <li>
           <ul>
@@ -1218,7 +1304,7 @@ S锁
         </li>
       </ul>
     </li>
-    <li><a href="#恢复系统事务调度">恢复系统/事务调度</a>
+    <li><a href="#五恢复系统事务调度">五、恢复系统/事务调度</a>
       <ul>
         <li>
           <ul>
@@ -1242,7 +1328,7 @@ S锁
         </li>
       </ul>
     </li>
-    <li><a href="#并发控制">并发控制</a>
+    <li><a href="#六并发控制">六、并发控制</a>
       <ul>
         <li>
           <ul>
@@ -1272,7 +1358,7 @@ S锁
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">16</div>
+    <div>Posts</div><div class="sidebar-state-number">17</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -1374,8 +1460,8 @@ S锁
           author: "scqwq",
           title: "数据库系统概述",
           url: "http:\/\/localhost:1313\/post\/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0\/",
-          description: "\r数据库系统\r相关\r基本概念：\r数据（Data）是描述事物的符号记录，是对客观事物的属性的度量或表达，是可以鉴别的、可以被计算机处理的符号，只有数据没有用，要有解释，此时就形成了 信息。 数据库（Database, DB）是长期存储在计算机内、有组织的、可共享的大量数据的集合。数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度、较高的数据独立性和易扩展性，并可为各种用户共享。\n数据库系统（Database System, DBS）是由数据库、数据库管理系统（及其应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。\n数据库管理系统 …",
-          cover: "http:\/\/localhost:1313\/images\/covers\/7.jpg",
+          description: "\r数据库系统\r一、相关\r基本概念：\r数据（Data）是描述事物的符号记录，是对客观事物的属性的度量或表达，是可以鉴别的、可以被计算机处理的符号，只有数据没有用，要有解释，此时就形成了 信息。 数据库（Database, DB）是长期存储在计算机内、有组织的、可共享的大量数据的集合。数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度、较高的数据独立性和易扩展性，并可为各种用户共享。\n数据库系统（Database System, DBS）是由数据库、数据库管理系统（及其应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。\n数据库管理系统 …",
+          cover: "http:\/\/localhost:1313\/images\/covers\/9.jpg",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
           if (_$$(`${gallery} ${children}`).length > 0) {

@@ -43,10 +43,10 @@
     property="og:site_name"
     content="lets say hello world again"
   />
-  <meta property="og:image" content="http://localhost:1313/images/covers/7.jpg" />
+  <meta property="og:image" content="http://localhost:1313/images/covers/9.jpg" />
   <meta property="article:author" content="scqwq" />
   <meta property="article:published_time" content="2026-06-20T21:00:00&#43;08:00" />
-  <meta property="article:modified_time" content="2026-06-20T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/7.jpg" />
+  <meta property="article:modified_time" content="2026-06-20T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/9.jpg" />
 <link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
     rel="preload"
     as="style"
@@ -122,7 +122,7 @@ This article does not have a corresponding language version
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
 <header id="header" aria-label="Site header"><picture></picture>
-    <img  fetchpriority="high" src="/images/covers/7.jpg" alt="SQL"><div id="header-outer">
+    <img  fetchpriority="high" src="/images/covers/9.jpg" alt="SQL"><div id="header-outer">
     <div id="header-title"><span id="logo">
             <h1 data-aos="slide-up">SQL</h1>
           </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
@@ -190,6 +190,12 @@ This article does not have a corresponding language version
                 <li><a href="#delete删除数据">DELETE删除数据</a></li>
               </ul>
             </li>
+            <li><a href="#select">※SELECT</a>
+              <ul>
+                <li></li>
+                <li><a href="#示例">示例：</a></li>
+              </ul>
+            </li>
             <li><a href="#6导出导入数据">6.导出导入数据</a>
               <ul>
                 <li><a href="#mysql-1">Mysql</a></li>
@@ -241,7 +247,7 @@ This article does not have a corresponding language version
             </li>
             <li><a href="#19多表查询">19.多表查询</a>
               <ul>
-                <li><a href="#多表查询">多表查询</a></li>
+                <li><a href="#多表查询-1">多表查询</a></li>
                 <li><a href="#集合操作">集合操作</a></li>
               </ul>
             </li>
@@ -264,7 +270,7 @@ This article does not have a corresponding language version
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">16</div>
+    <div>Posts</div><div class="sidebar-state-number">17</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -415,6 +421,7 @@ mysqlsh进入mySQL-shell工具
 <a class="header-anchor" href="#%e8%af%ad%e6%b3%95"></a>
 语法:
 </h1><p>首先默认数据类型是列，对象是行</p>
+<img src="/note_images/sql/image-20260622100652948.png" alt="image-20260622100652948" style="zoom:50%;" />
 <h5 id="1数据库">
 <a class="header-anchor" href="#1%e6%95%b0%e6%8d%ae%e5%ba%93"></a>
 1.数据库
@@ -697,6 +704,103 @@ DELETE删除数据
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 删除特定情况的数据(行)
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> player <span style="color:#66d9ef">where</span> gold <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; 
+</span></span></code></pre></div><h3 id="select">
+<a class="header-anchor" href="#select"></a>
+※SELECT
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">WITH</span> <span style="color:#960050;background-color:#1e0010">新表名</span> <span style="color:#66d9ef">AS</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">选择查询返回的新表</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> (<span style="color:#66d9ef">DISTINCT</span>) <span style="color:#960050;background-color:#1e0010">属性，属性</span> <span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">表</span> <span style="color:#960050;background-color:#1e0010">（缩写名）</span>(<span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">别名</span>) (<span style="color:#960050;background-color:#1e0010">多表查询</span> xxx <span style="color:#66d9ef">JOIN</span>) <span style="color:#66d9ef">WHERE</span><span style="color:#f92672">/</span> <span style="color:#66d9ef">LIKE</span> <span style="color:#960050;background-color:#1e0010">满足查询的要求的记录</span> <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">根据什么分组</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#960050;background-color:#1e0010">筛选分组后的数据</span> <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">属性名</span> <span style="color:#960050;background-color:#1e0010">排序顺序</span> <span style="color:#66d9ef">LIMIT</span> <span style="color:#960050;background-color:#1e0010">选择展现数量</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">EXCEPT</span> <span style="color:#75715e">-- EXCEPT返回第一个查询中存在但第二个查询中不存在的行。
+</span></span></span></code></pre></div><p>起别名不用引号，做比对用单引号，和关键字冲突用双引号</p>
+<h5 id="distinct">
+<a class="header-anchor" href="#distinct"></a>
+DISTINCT
+</h5><p>在SELECT后使用<strong>DISTINCT</strong>去除重复记录(因为删除列之后可能会有两个相同的行)</p>
+<h5 id="属性">
+<a class="header-anchor" href="#%e5%b1%9e%e6%80%a7"></a>
+属性:
+</h5><p>1.正常列名，可以起别名</p>
+<p>2.可以是子查询</p>
+<p>3.聚合函数（可以不用分组直接使用）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 1.
+</span></span></span><span style="display:flex;"><span>r.name <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">零售商名称</span>,
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 2.
+</span></span></span><span style="display:flex;"><span>    (
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;Order&#34;</span> o
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">WHERE</span> o.rID <span style="color:#f92672">=</span> r.rID 
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">AND</span> o.<span style="color:#66d9ef">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;普通订单&#39;</span>
+</span></span><span style="display:flex;"><span>    ) <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">普通订单数量</span>,
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 3.
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">AVG</span> (price)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 聚合函数也可以用DISTINCT 如：
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#66d9ef">DISTINCT</span> p.pID) <span style="color:#66d9ef">FROM</span>
+</span></span></code></pre></div><h5 id="多表查询">
+<a class="header-anchor" href="#%e5%a4%9a%e8%a1%a8%e6%9f%a5%e8%af%a2"></a>
+多表查询
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>xxx <span style="color:#66d9ef">JOIN</span> <span style="color:#960050;background-color:#1e0010">表</span><span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">（缩写名</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">）</span> <span style="color:#66d9ef">ON</span> <span style="color:#960050;background-color:#1e0010">连接条件</span>
+</span></span><span style="display:flex;"><span>xxx <span style="color:#66d9ef">JOIN</span> <span style="color:#960050;background-color:#1e0010">表</span><span style="color:#ae81ff">2</span> <span style="color:#960050;background-color:#1e0010">（缩写名</span><span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">）</span> <span style="color:#66d9ef">ON</span> <span style="color:#960050;background-color:#1e0010">连接条件</span>
+</span></span></code></pre></div><p>xxx有INNER / LEFT /RIGHT</p>
+<h5 id="wherelike">
+<a class="header-anchor" href="#wherelike"></a>
+WHERE/like
+</h5><p><strong>where</strong>：</p>
+<p>可以使用AND 、OR 、 <strong>IN</strong> 、<strong>EXISTS</strong>、NOT、BETWEEN AND、正则表达式来寻找行</p>
+<p>不能用聚合函数，Having才能用聚合函数</p>
+<p>where后也可以跟子查询</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 判断某个字段的值，是否等于子查询返回结果中的任意一个值。
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Sdept <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> Sdept <span style="color:#66d9ef">FROM</span> Student <span style="color:#66d9ef">WHERE</span> Sname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;张三&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 比较运算符 返沪一个聚合查询的结构
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Grade <span style="color:#f92672">&gt;</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">AVG</span>(Grade) <span style="color:#66d9ef">FROM</span> SC);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 带 EXISTS 谓词的子查询 返回是否存在1/0
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">EXISTS</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> SC <span style="color:#66d9ef">WHERE</span> SC.Sno <span style="color:#f92672">=</span> Student.Sno <span style="color:#66d9ef">AND</span> Cno <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;001&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- ANY/ALL  返回多个行
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Grade <span style="color:#f92672">&gt;=</span> <span style="color:#66d9ef">ALL</span> (<span style="color:#66d9ef">SELECT</span> Grade <span style="color:#66d9ef">FROM</span> SC <span style="color:#66d9ef">WHERE</span> Cno <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;002&#39;</span>);
+</span></span></code></pre></div><p><strong>like</strong>：</p>
+<p>模糊查询， %表示任何字符，_表示一个字符</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%王_&#39;</span>
+</span></span></code></pre></div><h5 id="group-by">
+<a class="header-anchor" href="#group-by"></a>
+GROUP by
+</h5><p>根据什么分组，所有出现在 SELECT列表中的列，如果不是聚合函数的参数，则必须出现在 GROUP BY 子句中</p>
+<p>可以和WHERE配合，WHERE过滤行，GROUP BY将剩下的行分组，HAVING将</p>
+<h5 id="having">
+<a class="header-anchor" href="#having"></a>
+HAVING
+</h5><p>分组之后过滤组，筛选分组后的数据，此时要使用聚合函数，如</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">AVG</span>(salary) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5000</span>;
+</span></span></code></pre></div><h5 id="order-by">
+<a class="header-anchor" href="#order-by"></a>
+ORDER BY
+</h5><p>降序DESC 升序ASC 可以用数字表示列数</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">/</span>price <span style="color:#66d9ef">DESC</span><span style="color:#f92672">/</span><span style="color:#66d9ef">ASC</span> 
+</span></span></code></pre></div><p>注意，查询中第一个查询的排在最上面，所以升序从上往下递增，最上面的是最小的，降序同理</p>
+<h5 id="limit">
+<a class="header-anchor" href="#limit"></a>
+LIMIT
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">3</span>  <span style="color:#75715e">-- 只取前三条
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span> <span style="color:#75715e">-- 返回第四到第六名 第一个三表示偏移量 第二个表示往后取三个
+</span></span></span></code></pre></div><h4 id="示例">
+<a class="header-anchor" href="#%e7%a4%ba%e4%be%8b"></a>
+示例：
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span>  <span style="color:#75715e">-- 这里DISTINCT在分组后其实冗余（因为GROUP BY已确保唯一），但为了演示语法我保留它
+</span></span></span><span style="display:flex;"><span>    n.nID <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">管理员编号</span>,
+</span></span><span style="display:flex;"><span>    n.nName <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">管理员姓名</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">COUNT</span>(bs.bsID) <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">管理实体书总数</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> BookSKU bs
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> BookPub bp <span style="color:#66d9ef">ON</span> bs.bpID <span style="color:#f92672">=</span> bp.bpID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> Shelf s <span style="color:#66d9ef">ON</span> bs.sID <span style="color:#f92672">=</span> s.sID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> Librarian n <span style="color:#66d9ef">ON</span> s.nID <span style="color:#f92672">=</span> n.nID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> Room r <span style="color:#66d9ef">ON</span> s.rID <span style="color:#f92672">=</span> r.rID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> r.rName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;信息技术图书室&#39;</span>     <span style="color:#75715e">-- 位置条件
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> bp.bpTitle <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%数据%&#39;</span>      <span style="color:#75715e">-- LIKE条件
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> bs.bsRegTime <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;2026-01-01&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> n.nID, n.nName
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(bs.bsID) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span>          <span style="color:#75715e">-- 分组后筛选
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">COUNT</span>(bs.bsID) <span style="color:#66d9ef">DESC</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">2</span>;
 </span></span></code></pre></div><h3 id="6导出导入数据">
 <a class="header-anchor" href="#6%e5%af%bc%e5%87%ba%e5%af%bc%e5%85%a5%e6%95%b0%e6%8d%ae"></a>
 6.导出导入数据
@@ -784,7 +888,9 @@ tips:null值相关
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> player <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> level <span style="color:#66d9ef">DESC</span>,exp <span style="color:#66d9ef">ASC</span>;  
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 且可以使用列数进行排列,假设level为第五列 则有
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> player <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#ae81ff">5</span> <span style="color:#66d9ef">DESC</span>,exp <span style="color:#66d9ef">ASC</span>;  
-</span></span></code></pre></div><p>效果如：</p>
+</span></span></code></pre></div><p>升序：</p>
+<img src="/note_images/sql/image-20260621152538386.png" alt="image-20260621152538386" style="zoom: 67%;" />
+<p>效果如：</p>
 <table>
   <thead>
       <tr>
@@ -1092,8 +1198,8 @@ WITH
 </span></span></code></pre></div><h3 id="19多表查询">
 <a class="header-anchor" href="#19%e5%a4%9a%e8%a1%a8%e6%9f%a5%e8%af%a2"></a>
 19.多表查询
-</h3><h4 id="多表查询">
-<a class="header-anchor" href="#%e5%a4%9a%e8%a1%a8%e6%9f%a5%e8%af%a2"></a>
+</h3><h4 id="多表查询-1">
+<a class="header-anchor" href="#%e5%a4%9a%e8%a1%a8%e6%9f%a5%e8%af%a2-1"></a>
 多表查询
 </h4><p>内连接Inner JOIN</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 查询每个员工及其部门名称
@@ -1119,6 +1225,30 @@ WITH
 <p>FULL [OUTER] JOIN（全外连接）</p>
 <p>返回两个表的<strong>所有行</strong>，对方无匹配时填 NULL。MySQL 原生不支持，但可用 <code>LEFT JOIN UNION RIGHT JOIN</code> 模拟。</p>
 <p>还有交叉连接（笛卡尔积）和自连接</p>
+<h5 id="遇到null也要保留的情况时">
+<a class="header-anchor" href="#%e9%81%87%e5%88%b0null%e4%b9%9f%e8%a6%81%e4%bf%9d%e7%95%99%e7%9a%84%e6%83%85%e5%86%b5%e6%97%b6"></a>
+遇到NULL也要保留的情况时：
+</h5><p>如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    r.rName <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">图书室名称</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">COUNT</span>(<span style="color:#66d9ef">CASE</span> <span style="color:#66d9ef">WHEN</span> bp.bpPrice <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50</span> <span style="color:#66d9ef">THEN</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">END</span>) <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">单价超</span><span style="color:#ae81ff">50</span><span style="color:#960050;background-color:#1e0010">元图书数量</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Room r
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> Shelf s <span style="color:#66d9ef">ON</span> r.rID <span style="color:#f92672">=</span> s.rID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> BookSKU bs <span style="color:#66d9ef">ON</span> s.sID <span style="color:#f92672">=</span> bs.sID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> BookPub bp <span style="color:#66d9ef">ON</span> bs.bpID <span style="color:#f92672">=</span> bp.bpID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> r.rID, r.rName
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> r.rName;
+</span></span></code></pre></div><p>CASE WHEN：开始逻辑判断，类似if</p>
+<p>THEN 1：条件为真时返回的值（1）</p>
+<p>END：结束CASE表达式</p>
+<p>隐含ELSE：不写ELSE则<strong>数据库默认返回 <code>NULL</code></strong>。这是整个技巧能成立的核心！</p>
+<p>然后COUNT会看到类似于：1，1，NULL，NULL，开始统计</p>
+<p>(附：</p>
+<ul>
+<li><code>COUNT</code> 只在乎括号里是不是 <strong><code>NULL</code></strong>。</li>
+<li>如果是 <code>NULL</code>，忽略；如果不是 <code>NULL</code>（无论是 <code>1</code>、<code>0</code>、<code>'abc'</code> 还是 <code>true</code>），都计数。</li>
+</ul>
+<p>）</p>
 <h4 id="集合操作">
 <a class="header-anchor" href="#%e9%9b%86%e5%90%88%e6%93%8d%e4%bd%9c"></a>
 集合操作
@@ -1191,7 +1321,7 @@ WHERE EXISTS (
     aria-label="Article navigation"
     data-aos="fade-up"
   ><div class="article-nav-link-wrap left"><img
-            data-src="/images/covers/7.jpg"
+            data-src="/images/covers/9.jpg"
             data-sizes="auto"
             alt="数据库系统概述"
             class="lazyload"
@@ -1202,6 +1332,18 @@ WHERE EXISTS (
         ></a>
         <div class="article-nav-caption">Prev</div>
         <h3 class="article-nav-title">数据库系统概述</h3>
+      </div><div class="article-nav-link-wrap right"><img
+            data-src="/images/covers/11.png"
+            data-sizes="auto"
+            alt="统计学习"
+            class="lazyload"
+          /><a
+          href="/post/gaotong/"
+          aria-label="Next:统计学习"
+          title="Next:统计学习"
+        ></a>
+        <div class="article-nav-caption">Next</div>
+        <h3 class="article-nav-title">统计学习</h3>
       </div></nav></article></section>
         </div><footer id="footer" aria-label="Site footer">
   <div style="width: 100%; overflow: hidden">
@@ -1223,10 +1365,10 @@ WHERE EXISTS (
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;18.5k</span
+          >&nbsp;19.6k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;01:34</span>
+        <span class="icon-coffee">&nbsp;01:41</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -1304,6 +1446,12 @@ WHERE EXISTS (
                 <li><a href="#delete删除数据">DELETE删除数据</a></li>
               </ul>
             </li>
+            <li><a href="#select">※SELECT</a>
+              <ul>
+                <li></li>
+                <li><a href="#示例">示例：</a></li>
+              </ul>
+            </li>
             <li><a href="#6导出导入数据">6.导出导入数据</a>
               <ul>
                 <li><a href="#mysql-1">Mysql</a></li>
@@ -1355,7 +1503,7 @@ WHERE EXISTS (
             </li>
             <li><a href="#19多表查询">19.多表查询</a>
               <ul>
-                <li><a href="#多表查询">多表查询</a></li>
+                <li><a href="#多表查询-1">多表查询</a></li>
                 <li><a href="#集合操作">集合操作</a></li>
               </ul>
             </li>
@@ -1378,7 +1526,7 @@ WHERE EXISTS (
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">16</div>
+    <div>Posts</div><div class="sidebar-state-number">17</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -1481,7 +1629,7 @@ WHERE EXISTS (
           title: "SQL",
           url: "http:\/\/localhost:1313\/post\/sql\/",
           description: "\rSQL\rpostgre SQL\rcmd\rdocker ps 查看容器列表 docker exec -it p1 bash\n如果用postgres用户连接数据库，则不用输入密码 即psql -U postgres 即可\npsql -U user -d db_name -h 127.0.0.1 -p 5432 数据库操作:\r\\l 查看数据库列表 \\c 切换数据库 create database db1 建库 drop database db1 删除数据库 createdb -U postgres mydb 在shell直接建库\nSQL\r按照功能不同可以分为以下几类\nDDL:用于定义数据库对象，例 …",
-          cover: "http:\/\/localhost:1313\/images\/covers\/7.jpg",
+          cover: "http:\/\/localhost:1313\/images\/covers\/9.jpg",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
           if (_$$(`${gallery} ${children}`).length > 0) {

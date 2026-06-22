@@ -1,0 +1,1160 @@
+<!doctype html>
+<html
+  lang="en-us" 
+  data-theme-mode="auto"
+  >
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/><title>
+  数据库系统概述 | scqwq
+</title>
+<meta name="description" content="lets do it again..."/><script>
+  window.siteConfig = JSON.parse("{\"anchor_icon\":false,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_ex15nbittbh\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
+  
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<link
+    rel="preload"
+    href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  /><link rel="stylesheet" href="/css/loader.css" /><meta property="og:type" content="website" />
+  <meta property="og:title" content="数据库系统概述 | scqwq" />
+  <meta
+    property="og:description"
+    content="lets do it again..."
+  />
+  <meta property="og:url" content="http://localhost:1313/hide/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" />
+  <meta
+    property="og:site_name"
+    content="lets say hello world again"
+  />
+  <meta property="og:image" content="http://localhost:1313/images/covers/7.jpg" />
+  <meta property="article:author" content="scqwq" />
+  <meta property="article:published_time" content="2026-06-20T21:00:00&#43;08:00" />
+  <meta property="article:modified_time" content="2026-06-20T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/covers/7.jpg" />
+<link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css"
+    integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/katex@0.16.24/dist/katex.min.css"
+    integrity="sha384-tTgKLjMYmJr94v8qu2PE5MUGSMbyN2xiH266JUB3gpm8vnnJywd1dWSOEfrFz&#43;YI" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><script
+    src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"
+    
+    
+    
+    
+    integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css"
+    integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous"/><link rel="stylesheet" href="/css/cyberpunk.css"></head>
+  <body><div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate"><svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+          M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg></div><div class="loading-word">Loading...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script><div id="copy-tooltip"></div>
+<div id="lang-tooltip">
+This article does not have a corresponding language version
+</div>
+<div id="heatmap-tooltip"></div><div id="container">
+      <div id="wrap"><div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation"><a class="main-nav-link-wrap" href="/"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Home</span>
+      </a><a class="main-nav-link-wrap" href="/archives"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Archives</span>
+      </a><a class="main-nav-link-wrap" href="/about"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">About</span>
+      </a><a class="main-nav-link-wrap" href="/friend"><div class='main-nav-icon icon rotate'>&#xe62b;</div><span class="main-nav-link">Friend</span>
+      </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
+<header id="header" aria-label="Site header"><picture></picture>
+    <img  fetchpriority="high" src="/images/covers/7.jpg" alt="数据库系统概述"><div id="header-outer">
+    <div id="header-title"><span id="logo">
+            <h1 data-aos="slide-up">数据库系统概述</h1>
+          </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
+  </div>
+</header><div id="content"
+          aria-label="Page content"
+          
+          class="sidebar-right"  ><aside id="sidebar" aria-label="Sidebar"><div class="sidebar-wrapper-container "><div class="sidebar-wrapper">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    ><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.jpg"
+    data-sizes="auto"
+    alt="scqwq"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">scqwq</div>
+  <div class="sidebar-description">lets do it again...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div><div class="sidebar-state-number">17</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>Categories</div>
+    <div class="sidebar-state-number">
+      4
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-github sidebar-social-icon">
+        <a
+          href="https://github.com/scqwq"
+          itemprop="url"
+          target="_blank"
+          aria-label="github"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-qq sidebar-social-icon">
+        <a
+          href="https://scqwq.github.io/2593335313"
+          itemprop="url"
+          target="_blank"
+          aria-label="qq"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="Home"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Home</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="Archives"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Archives</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="About"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">About</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="Friend"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Friend</div>
+    </div></div></div>
+  </div><div class="sidebar-widget"><div class="widget-wrapper">
+    <div
+      class="widget-wrap"
+      data-aos="fade-up"
+    >
+      <div style="display: flex; justify-content: space-between;">
+        <h3 class="widget-title">Categories</h3></div>
+      <div class="widget">
+        <ul class="category-list"><li class="category-list-item">
+                <a class="category-list-link" href="/categories/agent/" 
+                  title="Agent"
+                  >Agent</a
+                >
+              </li><li class="category-list-item">
+                <a class="category-list-link" href="/categories/golang/" 
+                  title="GoLang"
+                  >GoLang</a
+                >
+              </li><li class="category-list-item">
+                <a class="category-list-link" href="/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/" 
+                  title="专业课"
+                  >专业课</a
+                >
+              </li><li class="category-list-item">
+                <a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/" 
+                  title="前端"
+                  >前端</a
+                >
+              </li></ul>
+      </div>
+    </div>
+  </div><div class="widget-wrapper">
+    <div
+      class="widget-wrap"
+      data-aos="fade-up"
+    >
+      <h3 class="widget-title">Recent Posts</h3>
+      <div class="widget">
+        <ul><li>
+              <a href="/post/sql/" title="SQL">SQL</a>
+            </li><li>
+              <a href="/post/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" title="数据库系统概述">数据库系统概述</a>
+            </li><li>
+              <a href="/post/%E6%AF%9B%E6%A6%82/" title="毛概与中特">毛概与中特</a>
+            </li><li>
+              <a href="/post/%E8%AE%A1%E7%BB%84/" title="计组">计组</a>
+            </li><li>
+              <a href="/post/%E8%AE%A1%E7%BD%91/" title="计网">计网</a>
+            </li></ul>
+      </div>
+    </div>
+  </div></div></div></aside>
+<section id="main" aria-label="Main content"><article
+  class="h-entry article"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta"><div class="article-date">
+  <span
+    class="article-date-link icon-calendar"
+    data-aos="zoom-in"
+  >
+    <time datetime="2026-06-20 21:00:00 &#43;0800 CST" itemprop="datePublished"
+      >2026-06-20</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2026-06-20</time
+    >
+  </span></div>
+</div><div class="hr-line"></div><div class="e-content article-entry tex2jax_process" itemprop="articleBody"><h1 id="数据库系统">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e5%ba%93%e7%b3%bb%e7%bb%9f"></a>
+数据库系统
+</h1><h1 id="相关">
+<a class="header-anchor" href="#%e7%9b%b8%e5%85%b3"></a>
+相关
+</h1><h3 id="基本概念">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
+基本概念：
+</h3><p><strong>数据</strong>（Data）是描述事物的符号记录，是对客观事物的属性的度量或表达，是可以鉴别的、可以被计算机处理的符号，只有数据没有用，要有解释，此时就形成了 <strong>信息</strong>。
+<strong>数据库</strong>（Database, DB）是长期存储在计算机内、有组织的、可共享的大量数据的集合。数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度、较高的数据独立性和易扩展性，并可为各种用户共享。</p>
+<p><strong>数据库系统</strong>（Database System, DBS）是由数据库、数据库管理系统（及其应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。</p>
+<p><strong>数据库管理系统</strong>（Database Management System, DBMS）位于用户与操作系统之间，是一层数据管理软件，是基础软件，也是一个大型复杂的软件系统。DBMS 的主要功能包括：</p>
+<ol>
+<li>数据定义功能：提供数据定义语言（DDL），定义数据库中的数据对象。</li>
+<li>数据操纵功能：提供数据操纵语言（DML），实现对数据库的基本操作。</li>
+<li>数据控制功能：实现数据的安全性、完整性控制，以及并发控制。</li>
+<li>数据组织、存储和管理：提供多种存取方法，提高存储效率和存取速度。</li>
+<li>数据库的建立和维护功能：提供数据库初始数据的转入、转储、恢复、重组和性能监视等工具。</li>
+<li>其他功能：如通信、网络功能等。</li>
+</ol>
+<p><strong>数据管理的目标</strong>：课支持人民高校获取和维护可共享、安全的、可靠的数据</p>
+<p><strong>文件系统管理的问题</strong>：数据冗余和不一致、数据访问困难、数据孤立、完整性问题、原子性问题、并发访问异常、安全性问题</p>
+<p><strong>模式</strong>：数据库的总体设计，类似于变量的定义声明</p>
+<p><strong>实例</strong>：一个使用中的数据库在某个时刻的数据，类似于变量某时刻的值</p>
+<p><strong>关系的完整性</strong>：是指数据库中数据应满足的<strong>约束条件</strong>，用以保证数据的正确性、有效性和一致性。三类完整性约束：</p>
+<ul>
+<li>实体完整性：关系的主码不能取空值（因为主码用于唯一标识一个元组）</li>
+<li>参照完整性：如果关系 R 的外码 FK 是关系 S 的主码 PK，则 R 中任何元组在 FK 上的值要么取空值，要么等于 S 中某个元组在 PK 上的值。（要确保引用的实体必须存在。）</li>
+<li>用户定义的完整性：针对特定应用环境的约束条件，由用户自定义。例如年龄区间、工资区间</li>
+</ul>
+<img src="/note_images/database/image-20260619150703229.png" alt="image-20260619150703229" style="zoom:50%;" />
+<h3 id="发展阶段">
+<a class="header-anchor" href="#%e5%8f%91%e5%b1%95%e9%98%b6%e6%ae%b5"></a>
+发展阶段
+</h3><p>略</p>
+<h3 id="管理和设计">
+<a class="header-anchor" href="#%e7%ae%a1%e7%90%86%e5%92%8c%e8%ae%be%e8%ae%a1"></a>
+管理和设计
+</h3><p>要高效存取数据，使用复杂的数据结构的同时为用户提供容易使用的数据存储方式</p>
+<p>核心思路：使用多层抽象因此内部实现的复杂性</p>
+<h3 id="数据模型">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e6%a8%a1%e5%9e%8b"></a>
+数据模型
+</h3><p><strong>数据模型</strong>是对现实世界数据特征的抽象，是数据库系统的核心和基础。一个数据模型通常由<strong>数据结构、数据操作和数据完整性约束</strong>三部分组成。</p>
+<p>数据库用于描述以下对象的概念工具集合：
+数据、数据联系、数据语义、一致性约束（表示模型用来描述什么对象）</p>
+<h4 id="模型三要素">
+<a class="header-anchor" href="#%e6%a8%a1%e5%9e%8b%e4%b8%89%e8%a6%81%e7%b4%a0"></a>
+模型三要素
+</h4><ul>
+<li>数据结构：描述组成对象和对象之间的联系，对模型的静态特征的描述</li>
+<li>数据操作：操作的集合、操作的语言，是对模型的动态特性的描述</li>
+<li>数据的完整性约束</li>
+</ul>
+<p>结构 + 完整性约束 = 模式</p>
+<h4 id="三级模式架构">
+<a class="header-anchor" href="#%e4%b8%89%e7%ba%a7%e6%a8%a1%e5%bc%8f%e6%9e%b6%e6%9e%84"></a>
+三级模式架构
+</h4><p>外模式、概念模式、内模式，分别对应外部层、概念层、内部层</p>
+<p>模式：对应子模式、逻辑模式、物理模式</p>
+<h4 id="设计流程">
+<a class="header-anchor" href="#%e8%ae%be%e8%ae%a1%e6%b5%81%e7%a8%8b"></a>
+设计流程
+</h4><p><strong>概念模型</strong>：</p>
+<ul>
+<li>按用户的观点对数据和信息建模，主要用于数据库设计的概念级，与具体的 DBMS 无关。</li>
+<li>最常用的概念模型是<strong>实体-联系模型（E-R 模型）</strong>。</li>
+</ul>
+<p><strong>逻辑模型</strong>：</p>
+<ul>
+<li>按计算机系统的观点对数据建模，主要用于数据库设计的逻辑级，与具体的 DBMS 有关。</li>
+<li>主要包括：层次模型、网状模型、关系模型、面向对象模型等。</li>
+</ul>
+<p><strong>物理模型</strong>：</p>
+<ul>
+<li>对数据最底层的抽象，描述数据在存储介质上的存储结构和存取方法，是面向计算机系统的。</li>
+</ul>
+<h4 id="常见的数据模型">
+<a class="header-anchor" href="#%e5%b8%b8%e8%a7%81%e7%9a%84%e6%95%b0%e6%8d%ae%e6%a8%a1%e5%9e%8b"></a>
+常见的数据模型
+</h4><h5 id="层次模型">
+<a class="header-anchor" href="#%e5%b1%82%e6%ac%a1%e6%a8%a1%e5%9e%8b"></a>
+层次模型：
+</h5><ul>
+<li>数据结构呈树形结构，有且仅有一个结点没有父结点，称为根结点。</li>
+<li>除根结点外，其他结点有且仅有一个父结点，可以有零个或多个子结点。</li>
+<li>结点之间是 1:n（一对多）的联系。</li>
+</ul>
+<h5 id="网状模型">
+<a class="header-anchor" href="#%e7%bd%91%e7%8a%b6%e6%a8%a1%e5%9e%8b"></a>
+网状模型：
+</h5><ul>
+<li>数据结构是有向图结构，允许多个结点没有父结点。</li>
+<li>一个结点可以有多个父结点和多个子结点。</li>
+<li>结点之间可以是 m:n（多对多）的联系。</li>
+</ul>
+<h5 id="关系模型">
+<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e6%a8%a1%e5%9e%8b"></a>
+关系模型：
+</h5><p>是目前最主要的数据库模型</p>
+<ul>
+<li>数据结构是一张<strong>二维表</strong>，称为关系。（此时行叫做元组，列叫做属性）</li>
+<li>关系是一组具有相同属性的元组（tuple）的集合。</li>
+<li>关系模型建立在严格的数学基础上。</li>
+</ul>
+<h4 id="两级映像">
+<a class="header-anchor" href="#%e4%b8%a4%e7%ba%a7%e6%98%a0%e5%83%8f"></a>
+两级映像：
+</h4><p>外模式/模式的映像在外模式中定义</p>
+<p>内模式/模式的映像在模式中定义</p>
+<ul>
+<li><strong>三级</strong>：外（用户看）、概（全局看）、内（机器存）。</li>
+<li><strong>两级映射</strong>：外/概（保证改表不重写程序——逻辑独立）；概/内（保证改存储不改表结构——物理独立）。</li>
+</ul>
+<p>这么分就是为了实现<strong>数据独立性</strong></p>
+<h5 id="数据独立性">
+<a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e7%8b%ac%e7%ab%8b%e6%80%a7"></a>
+数据独立性：
+</h5><p><strong>数据独立性</strong>是指数据与程序的相互独立性，是数据库系统的重要特征，分为两类：</p>
+<ol>
+<li>
+<p>物理数据独立性：</p>
+<ul>
+<li>指应用程序和数据库逻辑结构独立于数据的物理存储结构。</li>
+<li>内模式改变，模式不变，应用程序不受影响。</li>
+<li>由模式/内模式映射来实现。</li>
+</ul>
+<p>当存储的物理结构变化（如不是顺序存放时），让模式保持不变，保证数据和程序的物理独立性</p>
+</li>
+<li>
+<p>逻辑数据独立性：</p>
+<ul>
+<li>指用户的应用程序独立于数据库的逻辑结构。</li>
+<li>模式改变，<strong>外模式不变，应用程序不受影响。</strong></li>
+<li>由外模式/模式映射来实现。</li>
+</ul>
+<p>人话：模式改变的时候，数据库管理员对外模式/模式的映像作改变，让外模式保持不变，让基于外模式的应用程序几乎不受影响</p>
+</li>
+</ol>
+<p>综上，三级模式、二级映像简化了应用程序的编制，提高了应用的开发效率和维护成本</p>
+<h3 id="e-r图">
+<a class="header-anchor" href="#e-r%e5%9b%be"></a>
+E-R图
+</h3><h5 id="基本概念-1">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5-1"></a>
+基本概念：
+</h5><ul>
+<li>实体：客观存在并可相互区别的事物称为实体。实体集是具有相同属性的实体的集合。</li>
+<li>属性：实体所具有的某一特性称为属性。一个实体可以由多个属性来描述。</li>
+<li>码：能唯一标识实体的属性或属性集称为码。</li>
+<li>联系：表示实体之间的关联，是现实世界中事物内部以及事物之间的联系在数据模型中的反映
+联系的<strong>类型</strong>包括：1:1（一对一）、1:n（一对多）、m:n（多对多）</li>
+</ul>
+<h5 id="er图符号">
+<a class="header-anchor" href="#er%e5%9b%be%e7%ac%a6%e5%8f%b7"></a>
+ER图符号：
+</h5><ul>
+<li>矩形：表示实体集。</li>
+<li>椭圆：表示属性。</li>
+<li>菱形：表示联系（关系）集。</li>
+<li>线段：连接属性与实体集、实体集与联系集。</li>
+</ul>
+<h3 id="关系模型-1">
+<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e6%a8%a1%e5%9e%8b-1"></a>
+关系模型
+</h3><ol>
+<li>将实体的各个名字转换为各个关系的模式的名字</li>
+<li>实体的属性就是关系的属性，码就是关系的码</li>
+<li><strong>联系的转换</strong>：
+<ul>
+<li>1对1：任意一方加入对方的主码并设为外码，并加入联系本身的属性（如果有的话）</li>
+<li>1对n：将1方的主码加入n方作为外码，并同时将联系的属性加入n方</li>
+<li>n对m：将联系本身转换为一个关系模式（新作一张表）：将联系双方的主码加入其中设为码，并将联系的属性也加入其中</li>
+</ul>
+</li>
+</ol>
+<h3 id="三级模式结构">
+<a class="header-anchor" href="#%e4%b8%89%e7%ba%a7%e6%a8%a1%e5%bc%8f%e7%bb%93%e6%9e%84"></a>
+三级模式结构：
+</h3><p><strong>三级模式结构</strong>是 ANSI/SPARC（美国国家标准协会/系统规划与需求委员会）于 1975 年提出的，包括外模式、模式和内模式三个层次。</p>
+<p>还包括两个映像：外模式/模式的映像和内模式/模式的映像</p>
+<h5 id="外模式external-schema">
+<a class="header-anchor" href="#%e5%a4%96%e6%a8%a1%e5%bc%8fexternal-schema"></a>
+外模式（External Schema）：
+</h5><ul>
+<li>也称为子模式或用户模式。</li>
+<li>描述了数据库中与特定用户组相关的局部数据视图。</li>
+<li>一个数据库可以有多个外模式。</li>
+<li>同一模式可以导出多个外模式。</li>
+</ul>
+<h5 id="模式schema">
+<a class="header-anchor" href="#%e6%a8%a1%e5%bc%8fschema"></a>
+模式（Schema）：
+</h5><ul>
+<li>也称为概念模式或逻辑模式。</li>
+<li>描述了数据库中全局的逻辑结构和特征。</li>
+<li>对数据的逻辑结构、联系、约束等进行定义。</li>
+<li>一个数据库只有一个模式。</li>
+</ul>
+<h5 id="内模式internal-schema">
+<a class="header-anchor" href="#%e5%86%85%e6%a8%a1%e5%bc%8finternal-schema"></a>
+内模式（Internal Schema）：
+</h5><ul>
+<li>也称为存储模式。</li>
+<li>描述了数据库的物理存储结构和存取方法。</li>
+<li>一个数据库只有一个内模式。</li>
+</ul>
+<h4 id="两级映像-1">
+<a class="header-anchor" href="#%e4%b8%a4%e7%ba%a7%e6%98%a0%e5%83%8f-1"></a>
+两级映像：
+</h4><p>外模式/模式的映像在外模式中定义</p>
+<p>内模式/模式的映像在模式中定义</p>
+<ul>
+<li><strong>三级</strong>：外（用户看）、概（全局看）、内（机器存）。</li>
+<li><strong>两级映射</strong>：外/概（保证改表不重写程序——逻辑独立）；概/内（保证改存储不改表结构——物理独立）。</li>
+</ul>
+<p>这么分就是为了实现<strong>数据独立性</strong></p>
+<h1 id="关系数据库">
+<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e5%ba%93"></a>
+关系数据库
+</h1><p>关系数据库是建立在关系模型基础上的数据库，是目前最主要的数据库类型。</p>
+<h3 id="基本概念-2">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5-2"></a>
+基本概念
+</h3><ol>
+<li>关系：对应一张二维表，由行和列组成。</li>
+<li>元组：对应表中的一行，表示一个实体或一个联系的实例。</li>
+<li>属性：对应表中的一列，表示实体或联系的一个特性。</li>
+<li>码：可以唯一标识一个元组的属性集称为候选码，从中选定一个作为主码。</li>
+<li>域：属性的取值范围，即一组相同数据类型的值的集合。</li>
+<li>分量：元组中的一个属性值。</li>
+<li>关系模式：对关系的描述，一般表示为 R(A₁, A₂, …, Aₙ)，其中 R 为关系名，A₁, A₂, …, Aₙ 为属性名。</li>
+</ol>
+<h3 id="关系的性质">
+<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e7%9a%84%e6%80%a7%e8%b4%a8"></a>
+关系的性质
+</h3><ol>
+<li>列同质性：每一列中的数据类型相同。</li>
+<li>不同列可允许不同的数据类型。</li>
+<li>列的顺序无关紧要：列的次序可以任意交换，不影响关系的实际含义。</li>
+<li>行的顺序无关紧要：行的次序可以任意交换，不影响关系的实际含义。</li>
+<li>行列交叉处的每个值都是不可分的原子值。</li>
+<li>不允许表中有完全相同的元组：每个元组都是唯一的。</li>
+</ol>
+<h3 id="关系代数">
+<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e4%bb%a3%e6%95%b0"></a>
+关系代数
+</h3><p>关系代数是一种抽象的查询语言，是一种过程化的语言，用对关系的运算来表达查询。</p>
+<p>投影运算的结果是一个<strong>集合（Set）</strong>。在数学集合中，<strong>重复的元组（行）会被自动合并（去重）</strong>。也就是说，如果两个老师的工资和名字完全一样，在关系代数的结果里只会出现一次。</p>
+<p>课件的六个基本：
+<img src="/note_images/database/image-20260620161714398.png" alt="image-20260620161714398" style="zoom:67%;" /></p>
+<h5 id="选择">
+<a class="header-anchor" href="#%e9%80%89%e6%8b%a9"></a>
+选择：
+</h5><p>选取满足给定谓词的元组，形成r(R)的一个子集</p>
+<img src="/note_images/database/image-20260620204138924.png" alt="image-20260620204138924" style="zoom:50%;" />
+<p>σ条件(R)={t∣t∈R∧F(t)=true}</p>
+<p>条件是选择谓词，可以用连词将多个谓词合并为一个大谓词</p>
+<img src="/note_images/database/image-20260620204156513.png" alt="image-20260620204156513" style="zoom:50%;" />
+<h5 id="投影">
+<a class="header-anchor" href="#%e6%8a%95%e5%bd%b1"></a>
+投影：
+</h5><p>投影是一元运算，返回作为参数的关系，但把某些属性排除在外，但由于关系是一个集合，所以所有重复的行均被去除</p>
+<img src="/note_images/database/image-20260620204356528.png" alt="image-20260620204356528" style="zoom:50%;" />
+<p>也就是，并非相当于 <code>SELECT A,C FROM r</code></p>
+<p>而是<code>SELECT DISTINCT A,C FROM r</code></p>
+<h5 id="组合">
+<a class="header-anchor" href="#%e7%bb%84%e5%90%88"></a>
+组合：
+</h5><p>多个关系代数运算可以组合，形成关系代数表达式</p>
+<p>位置表记法：用$n表示第n各属性</p>
+<h5 id="并">
+<a class="header-anchor" href="#%e5%b9%b6"></a>
+并：
+</h5><p>满足以下条件才有效：</p>
+<ul>
+<li>r，s必须属性数目相同</li>
+<li>对应的属性域必须相同</li>
+</ul>
+<img src="/note_images/database/image-20260620204646142.png" alt="image-20260620204646142" style="zoom: 67%;" />
+<h5 id="差">
+<a class="header-anchor" href="#%e5%b7%ae"></a>
+差：
+</h5><img src="/note_images/database/image-20260620204713711.png" alt="image-20260620204713711" style="zoom: 50%;" />
+<p>有效的要求和并相同</p>
+<h5 id="笛卡尔积">
+<a class="header-anchor" href="#%e7%ac%9b%e5%8d%a1%e5%b0%94%e7%a7%af"></a>
+笛卡尔积：
+</h5><img src="/note_images/database/image-20260620204756464.png" alt="image-20260620204756464" style="zoom: 67%;" />
+<h5 id="更名">
+<a class="header-anchor" href="#%e6%9b%b4%e5%90%8d"></a>
+更名：
+</h5><p>用于为关系代数表达式附上名字以引用</p>
+<img src="/note_images/database/image-20260620204901134.png" alt="image-20260620204901134" style="zoom:60%;" />
+<h5 id="自然连接">
+<a class="header-anchor" href="#%e8%87%aa%e7%84%b6%e8%bf%9e%e6%8e%a5"></a>
+自然连接：
+</h5><p>将两张表自动按照所有同名的列进行等值连接，并只保留一份同名列，去掉另一份重复的列，其他的列正常存在。然后对所有的列检查匹配，自然连接的结果行数 = 匹配上的行数。</p>
+<img src="/note_images/database/image-20260620210226617.png" alt="image-20260620210226617" style="zoom:60%;" />
+<h5 id="θ-连接">
+<a class="header-anchor" href="#%ce%b8-%e8%bf%9e%e6%8e%a5"></a>
+θ 连接
+</h5>$$
+R \bowtie_{\text{条件}} S = \{ t_r \bowtie t_s \mid t_r \in R \land t_s \in S \land t_r.A \theta t_s.B \}
+$$<img src="/note_images/database/image-20260620210530290.png" alt="image-20260620210530290" style="zoom:67%;" />
+<h5 id="聚集运算">
+<a class="header-anchor" href="#%e8%81%9a%e9%9b%86%e8%bf%90%e7%ae%97"></a>
+聚集运算
+</h5><img src="/note_images/database/image-20260620214052325.png" alt="image-20260620214052325" style="zoom: 67%;" />
+$$
+\text{Retailer} \bowtie(rID \, \mathcal{F}_{\operatorname{SUM}(itemPrice)}(\text{OdrDetail}))
+$$
+先对 `OdrDetail` 按 `rID` 分组求和，再把结果连接回 `Retailer` 表以获得零售商名字。
+<h4 id="关系操作">
+<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e6%93%8d%e4%bd%9c"></a>
+关系操作：
+</h4><p>关系操作是对关系进行查询和修改的操作，基本操作包括</p>
+<p>对元组进行：查询、删除、插入、修改</p>
+<h1 id="关系理论">
+<a class="header-anchor" href="#%e5%85%b3%e7%b3%bb%e7%90%86%e8%ae%ba"></a>
+关系理论
+</h1><h3 id="函数依赖">
+<a class="header-anchor" href="#%e5%87%bd%e6%95%b0%e4%be%9d%e8%b5%96"></a>
+函数依赖
+</h3><ul>
+<li>
+<p>非平凡的函数依赖： X -&gt; Y 且 Y 不是 X 的子集</p>
+</li>
+<li>
+<p>平凡的函数依赖： X -&gt; Y 且 Y 是 X 的子集(废话)</p>
+</li>
+</ul>
+<p>无特殊说明的情况下，均讨论非平凡的函数依赖。</p>
+<p>非平凡函数需要被主键或唯一约束强制锁定
+比如 <code>学号 → 姓名</code>（右边没有包含在左边）。为了让这个依赖成立（即确保一个学号只能有一个姓名），数据库必须在 <code>学号</code> 列上建立主键索引或唯一索引</p>
+<h5 id="完全函数依赖">
+<a class="header-anchor" href="#%e5%ae%8c%e5%85%a8%e5%87%bd%e6%95%b0%e4%be%9d%e8%b5%96"></a>
+完全函数依赖：
+</h5><p>X -&gt; Y 并且对于 X 的任意真子集 X&rsquo; 都推不出 Y ，则称 Y 完全函数依赖于 X ，记作：x -&gt; Y ，箭头上有个F</p>
+<h5 id="部分函数依赖">
+<a class="header-anchor" href="#%e9%83%a8%e5%88%86%e5%87%bd%e6%95%b0%e4%be%9d%e8%b5%96"></a>
+部分函数依赖：
+</h5><p>设 X→Y是一个函数依赖，如果存在 X 的<strong>一个真子集</strong> X&rsquo;（X′⊂X），使得 X′→Y 也成立，那么称 Y部分函数依赖于 X。</p>
+<p>当 Y 不完全函数依赖于X，记作 X -&gt; Y，箭头上是P，例如 A -&gt; C 又有 AB -&gt; C，那么C就是部分函数依赖于AB的，这种情况会造成 <strong>数据冗余</strong></p>
+<p>数据冗余会造成三大异常：更新异常、更新异常、删除异常</p>
+<h3 id="码">
+<a class="header-anchor" href="#%e7%a0%81"></a>
+码
+</h3><p><strong>候选码</strong>：是一个属性组（或者属性），通过该属性组能推出所有的属性，并且该属性组的任意子集都不能再推出所有属性了，即在满足完全函数依赖的前提下，还将是最小的属性组。答题时将这些候选码构成集合。</p>
+<p>人话就是，一些属性组可以推出整个表的属性值，如学号可以推出姓名，但是没了学号只有课程号不能推出姓名，并且这个组最小</p>
+<h5 id="找候选码">
+<a class="header-anchor" href="#%e6%89%be%e5%80%99%e9%80%89%e7%a0%81"></a>
+找候选码：
+</h5><h6 id="1先判断">
+<a class="header-anchor" href="#1%e5%85%88%e5%88%a4%e6%96%ad"></a>
+1.先判断
+</h6><p>在函数依赖集中会有一些关系</p>
+<p>一定属于候选码：只出现在左边或者左右都没出现</p>
+<p>可能属于候选码：左右都出现</p>
+<p>不属于候选码：只在右边出现</p>
+<h6 id="2对确定的属性求闭包">
+<a class="header-anchor" href="#2%e5%af%b9%e7%a1%ae%e5%ae%9a%e7%9a%84%e5%b1%9e%e6%80%a7%e6%b1%82%e9%97%ad%e5%8c%85"></a>
+2.对确定的属性求闭包
+</h6><p>先对确定的属性求闭包，若不能构成闭包，再将确定的属性和待定的属性进行组合，做闭包运算，直到遇到的属性组能够推出全部的属性</p>
+<p>所谓求闭包，就是根据现有的函数依赖集和属性求出可推出的最大属性集。给了起点后，顺着依赖关系“箭头”一路走下去，最终能到达的所有属性的总集。</p>
+<p><strong>过程</strong>：</p>
+<p>首先设有集合X ，X = { 该属性组 }</p>
+<p>X^(0) = 自身</p>
+<p>X^(1) = X^(0)中所能推出的</p>
+<p>X^(i + 1) = X^(i)中所能推出的</p>
+<p>以此类推直到 X ^ (i+1) = X ^ (i) 或 X ^ (i) = U，就求得了属性组的闭包</p>
+<p>闭包运算还可以用于判断 X -&gt; Y 是否成立 ，当 Y 属于 {(X)_F}^+时，有X -&gt; Y</p>
+<p>闭包运算结果用{(X)_F}^+表示：
+</p>
+$$
+(X)_F^+
+$$<p>
+候选码写法可为：{（ABD）、（BCD）、（BDE） }</p>
+<h5 id="超码">
+<a class="header-anchor" href="#%e8%b6%85%e7%a0%81"></a>
+超码：
+</h5><p>能推出所有属性的属性组的集合，感觉概念可知，<strong>候选码是极小的超码集</strong>，是超码的子集</p>
+<h5 id="主码">
+<a class="header-anchor" href="#%e4%b8%bb%e7%a0%81"></a>
+主码：
+</h5><p>当有多个候选码时，挑出一个作为主码，简称<strong>码</strong></p>
+<h5 id="主属性">
+<a class="header-anchor" href="#%e4%b8%bb%e5%b1%9e%e6%80%a7"></a>
+主属性：
+</h5><p>包含在任何一个候选码中的属性，如例子候选码中的B、D都是主属性</p>
+<h5 id="非主属性">
+<a class="header-anchor" href="#%e9%9d%9e%e4%b8%bb%e5%b1%9e%e6%80%a7"></a>
+非主属性：
+</h5><p>不包含在任何一个候选码中的属性，如例子中的 G</p>
+<h5 id="外码">
+<a class="header-anchor" href="#%e5%a4%96%e7%a0%81"></a>
+外码：
+</h5><p>关系模式R中，若有一个属性或者属性组X，他不是R的码，但X是另一个关系模式S中的码，称X是R的外码</p>
+<h5 id="全码">
+<a class="header-anchor" href="#%e5%85%a8%e7%a0%81"></a>
+全码：
+</h5><p>最极端情况下，整个属性组都是码，则称为全码</p>
+<h3 id="范式">
+<a class="header-anchor" href="#%e8%8c%83%e5%bc%8f"></a>
+范式
+</h3><h5 id="第一范式1nf">
+<a class="header-anchor" href="#%e7%ac%ac%e4%b8%80%e8%8c%83%e5%bc%8f1nf"></a>
+第一范式（1NF）
+</h5><p>所有属性都是不可分割的数据项</p>
+<h5 id="第二范式2nf">
+<a class="header-anchor" href="#%e7%ac%ac%e4%ba%8c%e8%8c%83%e5%bc%8f2nf"></a>
+第二范式（2NF）
+</h5><p>满足1NF前提下，不包含非主属性对码的部分的函数依赖（每一个非主属性都完全函数依赖于码）</p>
+<h5 id="第三范式3nf">
+<a class="header-anchor" href="#%e7%ac%ac%e4%b8%89%e8%8c%83%e5%bc%8f3nf"></a>
+第三范式（3NF）
+</h5><p>满足2NF前提下，不包含非主属性对码的传递函数依赖，即码应该直接决定非主属性，不能间接决定</p>
+<h5 id="bcnf">
+<a class="header-anchor" href="#bcnf"></a>
+BCNF：
+</h5><p>消除任何属性对候选码的传递依赖，即每一个决定因素都包含码（具体表现为：在函数依赖集中，左边的都包含候选码）</p>
+<h5 id="分解">
+<a class="header-anchor" href="#%e5%88%86%e8%a7%a3"></a>
+分解：
+</h5><p>将导致不符合要求的关系的左右部分单独提出来</p>
+<h5 id="第四范式">
+<a class="header-anchor" href="#%e7%ac%ac%e5%9b%9b%e8%8c%83%e5%bc%8f"></a>
+第四范式
+</h5><h3 id="最小函数依赖集">
+<a class="header-anchor" href="#%e6%9c%80%e5%b0%8f%e5%87%bd%e6%95%b0%e4%be%9d%e8%b5%96%e9%9b%86"></a>
+最小函数依赖集
+</h3><p>最小函数依赖集可能有多个，存在多个时任选一个即可</p>
+<h5 id="求法">
+<a class="header-anchor" href="#%e6%b1%82%e6%b3%95"></a>
+求法：
+</h5><ol>
+<li>拆分右侧，例如将 A -&gt; BC 分成 A -&gt; B 和 A -&gt; C</li>
+<li>去除自身求闭包
+若有AB -&gt; C，BC -&gt; E，AE -&gt; G，在去除AB自身能推出的C（去除AB -&gt; C条件）的<strong>前提</strong>下，基于<strong>剩余的依赖关系</strong>求AB的闭包，若AB通过剩余的关系也能求出C，那么可以删除AB -&gt; C</li>
+<li>左侧最小化：ABC -&gt; D 若C能被AB推出则删除C</li>
+</ol>
+<h3 id="模式分解">
+<a class="header-anchor" href="#%e6%a8%a1%e5%bc%8f%e5%88%86%e8%a7%a3"></a>
+模式分解
+</h3><p>模式分解有两个准则：无损连接和保持函数依赖</p>
+<h4 id="无损连接分解后再次自然连接与分解前相同">
+<a class="header-anchor" href="#%e6%97%a0%e6%8d%9f%e8%bf%9e%e6%8e%a5%e5%88%86%e8%a7%a3%e5%90%8e%e5%86%8d%e6%ac%a1%e8%87%aa%e7%84%b6%e8%bf%9e%e6%8e%a5%e4%b8%8e%e5%88%86%e8%a7%a3%e5%89%8d%e7%9b%b8%e5%90%8c"></a>
+无损连接：分解后再次自然连接，与分解前相同
+</h4><p>判断无损链接的方法：</p>
+<h1 id="查询处理和查询优化">
+<a class="header-anchor" href="#%e6%9f%a5%e8%af%a2%e5%a4%84%e7%90%86%e5%92%8c%e6%9f%a5%e8%af%a2%e4%bc%98%e5%8c%96"></a>
+查询处理和查询优化
+</h1><p>查询处理指的是从数据库中提取数据所设计的一系列活动</p>
+<p>查询 -&gt; 查询分析 -&gt; 查询检查 -&gt; 查询优化 -&gt; 查询执行</p>
+<p><strong>工作方式</strong>：</p>
+<ol>
+<li>词法分析、语法分析</li>
+<li>查询检查，使用数据字典检查查询的语义信息，检查权限、完整性约束</li>
+<li>然后将查询语句转化为等价的关系代数表达式</li>
+</ol>
+<h4 id="查询优化">
+<a class="header-anchor" href="#%e6%9f%a5%e8%af%a2%e4%bc%98%e5%8c%96"></a>
+查询优化：
+</h4><p>指从多种可能的查询执行计划中选择最有效的执行计划</p>
+<ul>
+<li>
+<p>代数优化：在等价的关系代数表达式中选择最有效的表达式。</p>
+</li>
+<li>
+<p>物理优化：为关系代数表达式选择详细的执行策略，包括可用的算法、索引等。</p>
+</li>
+</ul>
+<h4 id="查询执行">
+<a class="header-anchor" href="#%e6%9f%a5%e8%af%a2%e6%89%a7%e8%a1%8c"></a>
+查询执行：
+</h4><p>指根据最优的执行计划生成查询执行代码，并执行代码以获取所需的记录。</p>
+<ul>
+<li>在执行查询之前，还会进行安全检查，以确保执行查询的用户具有相应的访问权限。</li>
+<li>对于数据库更新操作，还会检查完整性约束。</li>
+</ul>
+<h4 id="查询处理">
+<a class="header-anchor" href="#%e6%9f%a5%e8%af%a2%e5%a4%84%e7%90%86"></a>
+查询处理：
+</h4><ul>
+<li>表扫描：顺序扫描</li>
+<li>索引扫描：使用索引结构或哈希函数找到满足条件的数据之战，并通过指针直接访问学生表中的数据</li>
+</ul>
+<h3 id="查询优化-1">
+<a class="header-anchor" href="#%e6%9f%a5%e8%af%a2%e4%bc%98%e5%8c%96-1"></a>
+查询优化
+</h3><p>从多种可能的查询执行计划中选择最有效的执行计划</p>
+<p>开销主要包括I/O操作、CPU执行、RAM操作何通信。通常使用IO世界来评估执行成本</p>
+<p><strong>代数优化策略</strong>通过关系代数表达式的等价变换来提高查询效率</p>
+<p>例如：</p>
+<img src="/note_images/database/image-20260619184310479.png" alt="image-20260619184310479" style="zoom:50%;" />
+<p><strong>物理优化</strong>指选择最有效的操作算法或存取路径来执行关系代数表达式</p>
+<p>包括：</p>
+<ul>
+<li>基于规则的启发式优化</li>
+<li>基于代价估算的优化，需要计算每个操作算法的执行成本</li>
+<li>混合优化方法</li>
+</ul>
+<p>例如：SELECT操作的启发式优化规则</p>
+<ul>
+<li>
+<p>当选择条件<strong>是主键时，可以使用主键上的索引</strong>。通常关系数据库管理系统会自动在主键上建立索引。</p>
+</li>
+<li>
+<p>当选择条件是对普通属性的索引时，应估计返回的行数多少。如果大小小于整体10%，则可以使用索引。</p>
+</li>
+</ul>
+<h1 id="恢复系统事务调度">
+<a class="header-anchor" href="#%e6%81%a2%e5%a4%8d%e7%b3%bb%e7%bb%9f%e4%ba%8b%e5%8a%a1%e8%b0%83%e5%ba%a6"></a>
+恢复系统/事务调度
+</h1><h3 id="事务">
+<a class="header-anchor" href="#%e4%ba%8b%e5%8a%a1"></a>
+事务
+</h3><p>事务：事务时程序的执行单元，将<strong>访问或更新</strong>(R和W)部分数据项</p>
+<h5 id="需要满足的特性">
+<a class="header-anchor" href="#%e9%9c%80%e8%a6%81%e6%bb%a1%e8%b6%b3%e7%9a%84%e7%89%b9%e6%80%a7"></a>
+需要满足的特性：
+</h5><p>为了保障数据一致性，数据库系统中运行的事务必须遵守：</p>
+<ul>
+<li>
+<p>原子性要求、持久性要求、</p>
+</li>
+<li>
+<p>一致性要求：事务不能破坏数据库中预定义的<strong>完整性约束</strong>和<strong>业务逻辑规则</strong>，数据必须始终是合法、有效的。）</p>
+</li>
+<li>
+<p>隔离性要求：一个事务的内部操作和数据状态，在提交之前，对其他并发事务是不可见的。 最终效果必须与这些事务按<strong>某种顺序</strong>串行执行（一个接一个地跑）的结果完全一致。</p>
+</li>
+</ul>
+<h5 id="事务的状态">
+<a class="header-anchor" href="#%e4%ba%8b%e5%8a%a1%e7%9a%84%e7%8a%b6%e6%80%81"></a>
+事务的状态：
+</h5><img src="/note_images/database/image-20260619190306128.png" alt="image-20260619190306128" style="zoom:67%;" />
+<h3 id="故障">
+<a class="header-anchor" href="#%e6%95%85%e9%9a%9c"></a>
+故障
+</h3><h5 id="故障的分类">
+<a class="header-anchor" href="#%e6%95%85%e9%9a%9c%e7%9a%84%e5%88%86%e7%b1%bb"></a>
+故障的分类：
+</h5><img src="/note_images/database/image-20260619190529914.png" alt="image-20260619190529914" style="zoom:50%;" />
+<h4 id="故障恢复">
+<a class="header-anchor" href="#%e6%95%85%e9%9a%9c%e6%81%a2%e5%a4%8d"></a>
+故障恢复：
+</h4><img src="/note_images/database/image-20260619190657997.png" alt="image-20260619190657997" style="zoom:67%;" />
+<h5 id="恢复算法">
+<a class="header-anchor" href="#%e6%81%a2%e5%a4%8d%e7%ae%97%e6%b3%95"></a>
+恢复算法：
+</h5><img src="/note_images/database/image-20260619190712577.png" alt="image-20260619190712577" style="zoom: 67%;" />
+<h5 id="转存">
+<a class="header-anchor" href="#%e8%bd%ac%e5%ad%98"></a>
+转存：
+</h5><img src="/note_images/database/image-20260619190729883.png" alt="image-20260619190729883" style="zoom: 50%;" />
+<h5 id="日志">
+<a class="header-anchor" href="#%e6%97%a5%e5%bf%97"></a>
+日志：
+</h5><img src="/note_images/database/image-20260619190745572.png" alt="image-20260619190745572" style="zoom: 67%;" />
+<h5 id="撤销和重做">
+<a class="header-anchor" href="#%e6%92%a4%e9%94%80%e5%92%8c%e9%87%8d%e5%81%9a"></a>
+撤销和重做：
+</h5><img src="/note_images/database/image-20260619190812056.png" alt="image-20260619190812056" style="zoom:67%;" />
+<p>基于日志的数据恢复：</p>
+<img src="/note_images/database/image-20260619190841515.png" alt="image-20260619190841515" style="zoom:67%;" />
+<h5 id="检查点">
+<a class="header-anchor" href="#%e6%a3%80%e6%9f%a5%e7%82%b9"></a>
+检查点：
+</h5><p>在磁盘写日志记录&lt; checkpoint N &gt;，其中N代表当前正在活动状态的事务集合</p>
+<p>添加检查点的过程中，所有事务的数据更新操作被禁止</p>
+<p><strong>基于检查的的数据恢复</strong>：<img src="/note_images/database/image-20260619191123943.png" alt="image-20260619191123943" style="zoom:50%;" /></p>
+<p><strong>数据恢复</strong>：</p>
+<ul>
+<li>从事务故障中恢复</li>
+</ul>
+<p>基于日志的恢复（带检查点）</p>
+<ul>
+<li>从系统崩溃中恢复</li>
+</ul>
+<p>基于日志的恢复（带检查点）</p>
+<ul>
+<li>从介质故障中恢复</li>
+</ul>
+<p>转储+基于日志的恢复（带检查点）</p>
+<h3 id="事务调度准则">
+<a class="header-anchor" href="#%e4%ba%8b%e5%8a%a1%e8%b0%83%e5%ba%a6%e5%87%86%e5%88%99"></a>
+事务调度准则：
+</h3><h5 id="1一组事务必须保证">
+<a class="header-anchor" href="#1%e4%b8%80%e7%bb%84%e4%ba%8b%e5%8a%a1%e5%bf%85%e9%a1%bb%e4%bf%9d%e8%af%81"></a>
+1.一组事务必须保证：
+</h5><p>包含了所有事务的操作指令：一个事务内部的指令顺序必须保持不变</p>
+<h5 id="2并行事务调度必须保证">
+<a class="header-anchor" href="#2%e5%b9%b6%e8%a1%8c%e4%ba%8b%e5%8a%a1%e8%b0%83%e5%ba%a6%e5%bf%85%e9%a1%bb%e4%bf%9d%e8%af%81"></a>
+2.并行事务调度必须保证：
+</h5><p>可串行化：将所有可能的串行调度结果推演一遍，对于某个具体的串行调度执行一遍，看是否结果相同</p>
+<p><strong>判断可串行化的充分条件</strong>：</p>
+<p>冲突可串行化 =&gt; 可串行化</p>
+<p>冲突操作：不同事务对同一数据分别进行读和写；不同事务对同一数据分别进行写和写</p>
+<p>冲突可串行化调度，即不交换不同事务的冲突操作次序，也不交换同一事务的两个操作次序，但可以交换不同事物对不同数据各种操作次序，也可以交换不同事务对同一数据的读取操作次序</p>
+<h1 id="并发控制">
+<a class="header-anchor" href="#%e5%b9%b6%e5%8f%91%e6%8e%a7%e5%88%b6"></a>
+并发控制
+</h1><h3 id="封锁">
+<a class="header-anchor" href="#%e5%b0%81%e9%94%81"></a>
+封锁：
+</h3><h5 id="x锁">
+<a class="header-anchor" href="#x%e9%94%81"></a>
+X锁
+</h5><p>写锁，某事物上锁后可以读取和修改，其他事务不可添加锁</p>
+<h5 id="s锁">
+<a class="header-anchor" href="#s%e9%94%81"></a>
+S锁
+</h5><p>读锁，某事务对数据对象上锁后，可读取但不可修改，其他事务可以对该数据对象添加S锁，但不可添加X锁</p>
+<h5 id="其他">
+<a class="header-anchor" href="#%e5%85%b6%e4%bb%96"></a>
+其他
+</h5><p>“事务结束”特指提交（COMMIT）或回滚（ROLLBACK）的那一刻。</p>
+<h4 id="封锁协议">
+<a class="header-anchor" href="#%e5%b0%81%e9%94%81%e5%8d%8f%e8%ae%ae"></a>
+封锁协议
+</h4><p>封锁协议规定了何时以及如何对数据对象加锁和解锁，以避免并发问题</p>
+<h5 id="一级封锁协议">
+<a class="header-anchor" href="#%e4%b8%80%e7%ba%a7%e5%b0%81%e9%94%81%e5%8d%8f%e8%ae%ae"></a>
+一级封锁协议：
+</h5><p>写前加写锁，事务结束释放写锁；可防止丢失修改</p>
+<h5 id="二级">
+<a class="header-anchor" href="#%e4%ba%8c%e7%ba%a7"></a>
+二级：
+</h5><p>写前加写锁，读前加读锁，读完释放读锁，事务结束释放各锁；可防止丢失修改和读脏数据</p>
+<h5 id="三级">
+<a class="header-anchor" href="#%e4%b8%89%e7%ba%a7"></a>
+三级：
+</h5><p>写前加写锁，读前加读锁，事务结束释放各锁；可防止丢失修改、读脏数据和不可重复读</p>
+<p>三级相比二级，就是为了在本事务不读的时候数据被修改，再次读入的时候读了脏数据。当事务结束即可释放锁。</p>
+<p>如果所有事务都遵循三级封锁协议，由于其隔离级别高，那么这些事务无论怎么样交叉并行，都是可串行化的阅读</p>
+<h5 id="两段锁协议">
+<a class="header-anchor" href="#%e4%b8%a4%e6%ae%b5%e9%94%81%e5%8d%8f%e8%ae%ae"></a>
+两段锁协议：
+</h5><img src="/note_images/database/image-20260619180836643.png" alt="image-20260619180836643" style="zoom: 67%;" />
+<p>两段锁协议要求每个事务分为两个阶段：</p>
+<ol>
+<li><strong>扩展阶段</strong>：事务只能获得锁，不能释放锁。</li>
+<li><strong>收缩阶段</strong>：事务只能释放锁，不能获得锁。</li>
+</ol>
+<p>两段锁协议能够保证调度的冲突可串行性，从而维护事务的隔离性</p>
+<h4 id="活锁死锁">
+<a class="header-anchor" href="#%e6%b4%bb%e9%94%81%e6%ad%bb%e9%94%81"></a>
+活锁死锁
+</h4><ul>
+<li>活锁：事务无法获得某些数据项的锁，因此该事务永远无法继续执行
+用先到先服务可以避免</li>
+<li>死锁：系统中存在一组事务，每个事务都在等待组中的另一个事务释放锁</li>
+</ul>
+<h5 id="死锁处理">
+<a class="header-anchor" href="#%e6%ad%bb%e9%94%81%e5%a4%84%e7%90%86"></a>
+死锁处理：
+</h5><ul>
+<li>死锁预防：一次性封锁，事务在执行前锁定所以会操作的数据项；顺序封锁：对所有数据进行排序，并要求事务按该顺序加锁</li>
+<li>死锁诊断与解除：用等待图进行建模</li>
+</ul>
+</div>
+    <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
+    <a
+      class="article-category-link"
+      href="/categories/%e4%b8%93%e4%b8%9a%e8%af%be"
+      data-aos="zoom-in"
+      >专业课</a
+    >
+    </li></ul>
+<ul class="article-tag-list" itemprop="keywords"></ul>
+</footer>
+  </div></article></section>
+        </div><footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info"><div>
+      <span class="icon-copyright"></span>2020-2026<span class="footer-info-sep rotate"></span>scqwq
+    </div><div>
+        Powered by&nbsp;<a
+          href="https://gohugo.io/"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Hugo</a
+        >&nbsp;Theme.<a
+          href="https://github.com/D-Sketon/hugo-theme-reimu"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Reimu</a
+        >
+      </div><div>
+        <span class="icon-brush"
+          >&nbsp;19.6k</span
+        >
+        &nbsp;|&nbsp;
+        <span class="icon-coffee">&nbsp;01:41</span>
+      </div><div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv"
+          >Number of visits&nbsp;<span
+            id="busuanzi_value_site_pv"
+          ></span
+        ></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv"
+          >Number of visitors&nbsp;<span
+            id="busuanzi_value_site_uv"
+          ></span
+        ></span>
+      </div></div>
+</footer>
+<div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div><div id="mask" class="hide"></div>
+      </div><nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.jpg"
+    data-sizes="auto"
+    alt="scqwq"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">scqwq</div>
+  <div class="sidebar-description">lets do it again...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Posts</div><div class="sidebar-state-number">17</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>Categories</div>
+    <div class="sidebar-state-number">
+      4
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>Tags</div>
+    <div class="sidebar-state-number">0</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-github sidebar-social-icon">
+        <a
+          href="https://github.com/scqwq"
+          itemprop="url"
+          target="_blank"
+          aria-label="github"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-qq sidebar-social-icon">
+        <a
+          href="https://scqwq.github.io/2593335313"
+          itemprop="url"
+          target="_blank"
+          aria-label="qq"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="Home"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Home</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="Archives"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Archives</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="About"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">About</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="Friend"
+      ></a><div class='sidebar-menu-icon icon rotate'>&#xe62b;</div><div class="sidebar-menu-link">Friend</div>
+    </div></div></div></nav>
+</div><script
+    src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
+    
+    
+    
+    
+    integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"
+    
+    
+    
+    
+    integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script src="/js/main.js"  ></script><script src="/js/aos.js"  ></script><script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", aosInit);
+    } else {
+      aosInit();
+    }
+  </script><script src="/js/pjax_main.js" data-pjax ></script><script>
+  
+
+
+
+</script><script
+    src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js"
+    defer
+    
+    
+    onload="setupFirework()"
+    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script>
+
+<div id="lazy-script">
+  <div><script data-pjax>
+        window.REIMU_POST = {
+          author: "scqwq",
+          title: "数据库系统概述",
+          url: "http:\/\/localhost:1313\/hide\/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0\/",
+          description: "\r数据库系统\r相关\r基本概念：\r数据（Data）是描述事物的符号记录，是对客观事物的属性的度量或表达，是可以鉴别的、可以被计算机处理的符号，只有数据没有用，要有解释，此时就形成了 信息。 数据库（Database, DB）是长期存储在计算机内、有组织的、可共享的大量数据的集合。数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度、较高的数据独立性和易扩展性，并可为各种用户共享。\n数据库系统（Database System, DBS）是由数据库、数据库管理系统（及其应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。\n数据库管理系统 …",
+          cover: "http:\/\/localhost:1313\/images\/covers\/7.jpg",
+        };
+      </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")}).init();
+          }
+        }
+        const pswp = () => {
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
+        }
+        pswp()
+      </script><script data-pjax>
+          window.MathJax = JSON.parse("[{\"loader\":{\"load\":[\"input/asciimath\",\"[tex]/noerrors\"]},\"options\":{\"ignoreHtmlClass\":\"tex2jax_ignore\",\"processHtmlClass\":\"tex2jax_process\",\"skipHtmlTags\":[\"script\",\"noscript\",\"style\",\"textarea\",\"pre\",\"code\"]},\"tex\":{\"autoload\":{\"color\":[],\"colorv2\":[\"color\"]},\"displayMath\":[[\"$$\",\"$$\"],[\"\\\\\\\\[\",\"\\\\\\\\]\"]],\"inlineMath\":[[\"$\",\"$\"],[\"\\\\\\\\(\",\"\\\\\\\\)\"]],\"packages\":{\"[+]\":[\"noerrors\"]},\"processEnvironments\":true,\"processEscapes\":true,\"tags\":\"ams\",\"useLabelIds\":true}}]")[0];
+        </script><script
+    src="https://npm.webcache.cn/mathjax@3.2.2/es5/tex-mml-chtml.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei" crossorigin="anonymous"></script></div>
+</div><script
+    src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js"
+    
+    async
+    
+    
+    integrity="sha384-0M75wtSkhjIInv4coYlaJU83&#43;OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id&#43;S" crossorigin="anonymous"></script><script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script><script>
+  const reimuCopyright = String.raw`
+   ______     ______     __     __    __     __  __    
+  /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+  \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+   \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+    \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                    
+  `;
+  console.log(String.raw`%c ${reimuCopyright}`, "color: #ff5252;");
+  console.log(
+    "%c Theme.Reimu" + " %c https://github.com/D-Sketon/hugo-theme-reimu ",
+    "color: white; background: #ff5252; padding:5px 0;",
+    "padding:4px;border:1px solid #ff5252;",
+  );
+</script></body>
+</html>
