@@ -9,6 +9,8 @@ lastmod: 2026-06-20T21:00:00+08:00
 
 
 
+
+
 # SQL
 
 # postgre SQL
@@ -82,6 +84,8 @@ bash中输入`mysqlsh`启动,也可以在VScode中找到mysqlsh
 # 语法:
 
 首先默认数据类型是列，对象是行
+
+<img src="/note_images/sql/image-20260622100652948.png" alt="image-20260622100652948" style="zoom:50%;" />
 
 ##### 1.数据库
 
@@ -365,6 +369,139 @@ DROP TABLE tb_name ;
 DELETE FROM player where gold = 0; 
 ```
 
+### ※SELECT
+
+```sql
+WITH 新表名 AS(
+    SELECT 选择查询返回的新表
+)
+SELECT (DISTINCT) 属性，属性 FROM 表 （缩写名）(AS 别名) (多表查询 xxx JOIN) WHERE/ LIKE 满足查询的要求的记录 GROUP BY 根据什么分组
+HAVING 筛选分组后的数据 ORDER BY 属性名 排序顺序 LIMIT 选择展现数量
+EXCEPT -- EXCEPT返回第一个查询中存在但第二个查询中不存在的行。
+```
+
+ 起别名不用引号，做比对用单引号，和关键字冲突用双引号
+
+##### DISTINCT
+
+在SELECT后使用**DISTINCT**去除重复记录(因为删除列之后可能会有两个相同的行)
+
+##### 属性:
+
+1.正常列名，可以起别名
+
+2.可以是子查询
+
+3.聚合函数（可以不用分组直接使用）
+
+```sql
+-- 1.
+r.name AS 零售商名称,
+-- 2.
+    (
+        SELECT COUNT(*)
+        FROM "Order" o
+        WHERE o.rID = r.rID 
+          AND o.type = '普通订单'
+    ) AS 普通订单数量,
+-- 3.
+AVG (price)
+-- 聚合函数也可以用DISTINCT 如：
+SELECT COUNT(DISTINCT p.pID) FROM
+```
+
+##### 多表查询
+
+```sql
+xxx JOIN 表1 （缩写名1） ON 连接条件
+xxx JOIN 表2 （缩写名2） ON 连接条件
+```
+
+xxx有INNER / LEFT /RIGHT
+
+##### WHERE/like
+
+**where**：
+
+可以使用AND 、OR 、 **IN** 、**EXISTS**、NOT、BETWEEN AND、正则表达式来寻找行
+
+不能用聚合函数，Having才能用聚合函数
+
+where后也可以跟子查询
+
+```sql
+-- 判断某个字段的值，是否等于子查询返回结果中的任意一个值。
+WHERE Sdept IN (SELECT Sdept FROM Student WHERE Sname = '张三');
+-- 比较运算符 返沪一个聚合查询的结构
+WHERE Grade > (SELECT AVG(Grade) FROM SC);
+-- 带 EXISTS 谓词的子查询 返回是否存在1/0
+WHERE EXISTS (SELECT * FROM SC WHERE SC.Sno = Student.Sno AND Cno = '001');
+-- ANY/ALL  返回多个行
+WHERE Grade >= ALL (SELECT Grade FROM SC WHERE Cno = '002');
+```
+
+**like**：
+
+模糊查询， %表示任何字符，_表示一个字符
+
+```sql
+LIKE '%王_'
+```
+
+##### GROUP by
+
+根据什么分组，所有出现在 SELECT列表中的列，如果不是聚合函数的参数，则必须出现在 GROUP BY 子句中
+
+可以和WHERE配合，WHERE过滤行，GROUP BY将剩下的行分组，HAVING将
+
+##### HAVING
+
+分组之后过滤组，筛选分组后的数据，此时要使用聚合函数，如
+
+```sql
+HAVING AVG(salary) > 5000;
+```
+
+##### ORDER BY
+
+降序DESC 升序ASC 可以用数字表示列数
+
+```sql
+ORDER BY 5/price DESC/ASC 
+```
+
+注意，查询中第一个查询的排在最上面，所以升序从上往下递增，最上面的是最小的，降序同理
+
+##### LIMIT
+
+```sql
+LIMIT 3  -- 只取前三条
+LIMIT 3,3 -- 返回第四到第六名 第一个三表示偏移量 第二个表示往后取三个
+```
+
+#### 示例：
+
+```sql
+SELECT DISTINCT  -- 这里DISTINCT在分组后其实冗余（因为GROUP BY已确保唯一），但为了演示语法我保留它
+    n.nID AS 管理员编号,
+    n.nName AS 管理员姓名,
+    COUNT(bs.bsID) AS 管理实体书总数
+FROM BookSKU bs
+INNER JOIN BookPub bp ON bs.bpID = bp.bpID
+INNER JOIN Shelf s ON bs.sID = s.sID
+INNER JOIN Librarian n ON s.nID = n.nID
+INNER JOIN Room r ON s.rID = r.rID
+WHERE r.rName = '信息技术图书室'     -- 位置条件
+  AND bp.bpTitle LIKE '%数据%'      -- LIKE条件
+  AND bs.bsRegTime >= '2026-01-01'
+GROUP BY n.nID, n.nName
+HAVING COUNT(bs.bsID) >= 2          -- 分组后筛选
+ORDER BY COUNT(bs.bsID) DESC
+LIMIT 2;
+```
+
+
+
 ### 6.导出导入数据
 
 不同的sql数据库有着不同的语法，仅列出Mysql和pgsql
@@ -479,6 +616,10 @@ SELECT * FROM player ORDER BY level DESC,exp ASC;
 -- 且可以使用列数进行排列,假设level为第五列 则有
 SELECT * FROM player ORDER BY 5 DESC,exp ASC;  
 ```
+
+升序：
+
+<img src="/note_images/sql/image-20260621152538386.png" alt="image-20260621152538386" style="zoom: 67%;" />
 
 效果如：
 
@@ -873,6 +1014,39 @@ FULL [OUTER] JOIN（全外连接）
 返回两个表的**所有行**，对方无匹配时填 NULL。MySQL 原生不支持，但可用 `LEFT JOIN UNION RIGHT JOIN` 模拟。
 
 还有交叉连接（笛卡尔积）和自连接
+
+##### 遇到NULL也要保留的情况时：
+
+如：
+
+```sql
+SELECT 
+    r.rName AS 图书室名称,
+    COUNT(CASE WHEN bp.bpPrice > 50 THEN 1 END) AS 单价超50元图书数量
+FROM Room r
+LEFT JOIN Shelf s ON r.rID = s.rID
+LEFT JOIN BookSKU bs ON s.sID = bs.sID
+LEFT JOIN BookPub bp ON bs.bpID = bp.bpID
+GROUP BY r.rID, r.rName
+ORDER BY r.rName;
+```
+
+CASE WHEN：开始逻辑判断，类似if
+
+THEN 1：条件为真时返回的值（1）
+
+END：结束CASE表达式
+
+隐含ELSE：不写ELSE则**数据库默认返回 `NULL`**。这是整个技巧能成立的核心！
+
+然后COUNT会看到类似于：1，1，NULL，NULL，开始统计
+
+(附：
+
+- `COUNT` 只在乎括号里是不是 **`NULL`**。
+- 如果是 `NULL`，忽略；如果不是 `NULL`（无论是 `1`、`0`、`'abc'` 还是 `true`），都计数。
+
+）
 
 #### 集合操作
 
