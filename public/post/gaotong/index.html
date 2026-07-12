@@ -144,7 +144,6 @@ This article does not have a corresponding language version
           <ul>
             <li>
               <ul>
-                <li></li>
                 <li><a href="#5112024-linxililinxi-2024-gaotong">5/11/2024 Linxi(LiLinxi) 2024 Gaotong</a></li>
                 <li><a href="#reference2020yangchengyu">Reference:2020YangChengYu</a></li>
                 <li><a href="#">https://github.com/EternityQAQ2/DLUT_2024_GaoTong</a></li>
@@ -232,7 +231,7 @@ This article does not have a corresponding language version
                 <li><a href="#k折交叉验证">K折交叉验证</a></li>
               </ul>
             </li>
-            <li><a href="#自助法">自助法</a>
+            <li><a href="#自助法bootstrap">自助法(Bootstrap)</a>
               <ul>
                 <li><a href="#自助法的其他用途">自助法的其他用途</a></li>
                 <li><a href="#自助法不能估计测试误差的原因">自助法不能估计测试误差的原因</a></li>
@@ -252,6 +251,7 @@ This article does not have a corresponding language version
             </li>
             <li><a href="#压缩估计方法">压缩估计方法</a>
               <ul>
+                <li><a href="#正则化">正则化：</a></li>
                 <li><a href="#岭回归l2正则化">岭回归（L2正则化）</a></li>
                 <li><a href="#lassol1正则化">Lasso（L1正则化）</a></li>
                 <li><a href="#岭回归和lasso的等价问题">岭回归和Lasso的等价问题</a></li>
@@ -281,8 +281,9 @@ This article does not have a corresponding language version
             </li>
             <li><a href="#光滑样条">光滑样条</a></li>
             <li><a href="#局部回归">局部回归</a></li>
-            <li><a href="#广义可加模型">广义可加模型</a>
+            <li><a href="#广义可加模型gam">广义可加模型(GAM)</a>
               <ul>
+                <li></li>
                 <li><a href="#gam的优点与不足">GAM的优点与不足</a></li>
                 <li><a href="#用于分类的gam">用于分类的GAM</a></li>
               </ul>
@@ -309,7 +310,7 @@ This article does not have a corresponding language version
               <ul>
                 <li><a href="#装袋法">装袋法</a></li>
                 <li><a href="#随机森林">随机森林</a></li>
-                <li><a href="#提升法">提升法</a></li>
+                <li><a href="#提升法boosting">提升法（Boosting）</a></li>
               </ul>
             </li>
           </ul>
@@ -381,7 +382,7 @@ This article does not have a corresponding language version
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">17</div>
+    <div>Posts</div><div class="sidebar-state-number">18</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -463,10 +464,10 @@ This article does not have a corresponding language version
 </div><div class="hr-line"></div><div class="e-content article-entry tex2jax_process" itemprop="articleBody"><h1 id="高统">
 <a class="header-anchor" href="#%e9%ab%98%e7%bb%9f"></a>
 高统
-</h1><h5 id="注意这不是我写的这是云盘里的为了方便观看push上来的">
-<a class="header-anchor" href="#%e6%b3%a8%e6%84%8f%e8%bf%99%e4%b8%8d%e6%98%af%e6%88%91%e5%86%99%e7%9a%84%e8%bf%99%e6%98%af%e4%ba%91%e7%9b%98%e9%87%8c%e7%9a%84%e4%b8%ba%e4%ba%86%e6%96%b9%e4%be%bf%e8%a7%82%e7%9c%8bpush%e4%b8%8a%e6%9d%a5%e7%9a%84"></a>
-<strong>注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!</strong>
-</h5><h4 id="5112024-linxililinxi-2024-gaotong">
+</h1><p><strong>注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!</strong></p>
+<p>另外，这是添加了细节的版本，尽量把第一眼看不清楚的地方做了解释</p>
+<p>原笔记地址如下：</p>
+<h4 id="5112024-linxililinxi-2024-gaotong">
 <a class="header-anchor" href="#5112024-linxililinxi-2024-gaotong"></a>
 5/11/2024 Linxi(LiLinxi) 2024 Gaotong
 </h4><h4 id="reference2020yangchengyu">
@@ -475,7 +476,7 @@ Reference:2020YangChengYu
 </h4><h4 id="">
 <a class="header-anchor" href="#"></a>
 <a href="https://github.com/EternityQAQ2/DLUT_2024_GaoTong">https://github.com/EternityQAQ2/DLUT_2024_GaoTong</a>
-</h4><p>RSS（残差平方和）、RSE（残差标准误）和MSE（均方误差）
+</h4><p>RSS（残差平方和）、RSE（残差标准误，即 σ）和MSE（均方误差），p是要预测的参数个数（例如一个变量，一个截距则为两个，当然也可以表示p为要预测的变量的个数然后变成n - p - 1）
 </p>
 $$
 RSS = \sum_{i=1}^n (Y_i - \hat{Y}_i)^2
@@ -487,7 +488,18 @@ $$<p>
 </p>
 $$
 RSE = \sqrt{MSE} = \sqrt{\frac{RSS}{n - p}}
-$$<h2 id="第二章-统计学习">
+$$<ul>
+<li>
+<p>变异（Variability）：“数据点离中心（平均数）的远近程度”。</p>
+</li>
+<li>
+<p>模型参数（Model Parameters）：机器自己从数据里“学”出来的。比如线性回归里的系数 β斜率）、神经网络的权重。</p>
+</li>
+<li>
+<p>超参数（Hyperparameters）：你在启动训练之前，自己手动设定的“旋钮”或“开关”。机器不能从数据里直接学会它，只能靠你定，或者靠你通过试验去试出最好的值。</p>
+</li>
+</ul>
+<h2 id="第二章-统计学习">
 <a class="header-anchor" href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e7%bb%9f%e8%ae%a1%e5%ad%a6%e4%b9%a0"></a>
 第二章 统计学习
 </h2><h3 id="什么是统计学习">
@@ -518,7 +530,7 @@ f是X的函数，固定但未知，f表达了X提供给Y的系统信息，ε是<
 如何估计f
 </h4><p>估计任务大多可分为<strong>参数方法</strong>和<strong>非参数方法</strong>
 非参数方法的关键特点是：这些方法不假定特定的概率分布或数据模型形式。换句话说，非参数方法不预设数据生成过程的具体数学形式，而是通过数据本身来揭示变量之间的关系。
-<img src="/note_images/gaotong/Y1-178212128365665.png" alt="">
+<img src="/note_images/gaotong/Y1-178212128365665-17822383769941.png" alt="">
 自然样条曲线并不假设数据符合某种特定的函数形式（如线性或多项式），而是通过分段多项式和节点（knots)来灵活拟合数据。这是非参数特性。
 回归树不需要预先设定任何特定的模型形式，而是通过数据驱动的方式划分输入空间。</p>
 <h5 id="非参数方法的共同特征">
@@ -584,6 +596,7 @@ $$<p>
 <a class="header-anchor" href="#%e8%87%aa%e7%94%b1%e5%ba%a6"></a>
 自由度
 </h5><p>自由度是<strong>描述曲线光滑程度</strong>的正式术语</p>
+<p>自由度 = 样本数量 n - 你必须满足的“硬性约束条件”数量。</p>
 <h4 id="偏差-方差权衡">
 <a class="header-anchor" href="#%e5%81%8f%e5%b7%ae-%e6%96%b9%e5%b7%ae%e6%9d%83%e8%a1%a1"></a>
 偏差-方差权衡
@@ -632,7 +645,7 @@ $$
       </tr>
   </tbody>
 </table>
-<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%871-178212128365668.jpg" alt=""></p>
+<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%871-178212128365668-17822383769952.jpg" alt=""></p>
 <p>如果一个统计学习模型被称为测试性能好，则要求该模型有较小的方差和较小的偏差
 <strong>一般而言，使用光滑度更高的方法，所得的模型方差会增加，偏差会减小。</strong></p>
 <h4 id="分类模型">
@@ -647,10 +660,12 @@ $$<p>
 </p>
 $$
 Ave(I(y0 \neq \hat y0))
-$$<p>贝叶斯分类器
+$$<p>贝叶斯公式：</p>
+<img src="/note_images/gaotong/image-20260623222201784.png" alt="image-20260623222201784" style="zoom:67%;" />
+<p>贝叶斯分类器
 KNN
 k 的选择对获得 KNN 分类器有根本性的影响。当 K= 1 时，决策边界很不规则，从数据中拟合的模型不能与贝叶斯决策边界完全契合。这个分类器虽然偏差较低但方差很大。当 K 增加时，模型的光滑性减弱，得到一个接近线性的决策边界。
-<img src="/note_images/gaotong/Y3-178212128365666.png" alt=""></p>
+<img src="/note_images/gaotong/Y3-178212128365666-17822383769953.png" alt=""></p>
 <hr>
 <h2 id="第三章-线性模型">
 <a class="header-anchor" href="#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e7%ba%bf%e6%80%a7%e6%a8%a1%e5%9e%8b"></a>
@@ -662,7 +677,7 @@ k 的选择对获得 KNN 分类器有根本性的影响。当 K= 1 时，决策�
 </h3><h4 id="定义">
 <a class="header-anchor" href="#%e5%ae%9a%e4%b9%89"></a>
 定义
-</h4><p>简单线性回归用于研究两个变量之间的线性关系，其中一个是<strong>自变量</strong>（<code>X</code>），另一个是<strong>因变量</strong>（<code>Y</code>）。其数学模型表示为：
+</h4><p>简单线性回归用于研究<strong>两个变量</strong>之间的线性关系，其中一个是<strong>自变量</strong>（<code>X</code>），另一个是<strong>因变量</strong>（<code>Y</code>）。其数学模型表示为：
 </p>
 $$
 Y = \beta_0 + \beta_1X + \epsilon
@@ -687,7 +702,9 @@ $\beta_1$ 的标准误差公式如下：
 $$
 SE(\hat{\beta}_1) = \sqrt{\frac{\hat{\sigma}^2}{\sum_{i=1}^n (X_i - \bar{X})^2}}
 $$<p>
-对于线性回归模型，$\beta_1$的置信区间如下：
+对于σ：他就是残差标准误（RSE）σ^2 = MSE = [ RSS/(n - p) ] ^ 1/2</p>
+<p>随机误差项 ϵ 的方差 σ^2 的无偏估计量。它衡量的是：即使模型完全正确，数据点围绕着真实回归直线上下波动的“噪音”大小。<img src="/note_images/gaotong/image-20260622205955068.png" alt="image-20260622205955068" style="zoom:50%;" /></p>
+<p>对于线性回归模型，$\beta_1$的置信区间如下：
 </p>
 $$
 \hat \beta_1 \pm 2 *SE(\hat \beta_1)
@@ -735,7 +752,22 @@ $$<h4 id="假设-1">
 <h3 id="评估模型参数">
 <a class="header-anchor" href="#%e8%af%84%e4%bc%b0%e6%a8%a1%e5%9e%8b%e5%8f%82%e6%95%b0"></a>
 评估模型参数
-</h3><p><img src="/note_images/gaotong/Y4-178212128365667.png" alt="">
+</h3><ul>
+<li>
+<p>TSS：总平方和，衡量因变量 Y 自身的总变异（即：在完全不看任何 X的情况下，Y值有多大的波动），它代表的是“待解释的<strong>总信息量</strong>”。如果所有 Y都相等（没变异），TSS 就等于 0，也就没必要做回归了。</p>
+<p>原因：TSS 代表的是：在你“毫无信息（没有 X）”的原始愚昧状态下，数据天然带给你的总误差负担，此时猜平均数能让误差平方和最小。然后建立回归模型后RSS是未被解释的<strong>剩余误差</strong></p>
+<p>TSS（原始误差）减去 RSS（剩余误差），得到的就是 “模型帮你减少的误差”</p>
+</li>
+<li>
+<p>R方：决定系数，表示模型解释掉了 Y 的总变异的百分比。</p>
+</li>
+</ul>
+<p>（注意：R2有个缺点——你塞进模型的自变量越多（p 越大），RSS 只会减少不会增加，所以 R2 会虚高。 因此实战中更常用 调整后的 R²（Adjusted R²），它会惩罚自变量个数（分母用 n−p−1））</p>
+<ul>
+<li>F：它用来检验一个联合假设：“是不是所有斜率系数 β1,β2,&hellip;β p全部等于 0？（模型帮你减去的误差 比上 原本的白噪音误差）
+<img src="/note_images/gaotong/image-20260622212544787.png" alt="image-20260622212544787" style="zoom:50%;" /></li>
+</ul>
+<p><img src="/note_images/gaotong/Y4-178212128365667-17822383769964.png" alt="">
 </p>
 $$
 RSE = \sqrt{\hat{\sigma}^2} = \sqrt{\frac{1}{n - p - 1} \sum_{i=1}^n (Y_i - \hat{Y}_i)^2}
@@ -748,7 +780,7 @@ $$<p>
 $$
 F = \frac{\frac{\text{Explained Variance}}{p}}{\frac{\text{Unexplained Variance}}{n - p - 1}} = \frac{\frac{TSS - RSS}{p}}{\frac{RSS}{n - p - 1}}
 $$<p>
-RSE越小、$R^2$越大，F越小，结果越好。</p>
+RSE越小、$R^2$越大，F越大，结果越好。</p>
 <h3 id="回归模型的其他问题">
 <a class="header-anchor" href="#%e5%9b%9e%e5%bd%92%e6%a8%a1%e5%9e%8b%e7%9a%84%e5%85%b6%e4%bb%96%e9%97%ae%e9%a2%98"></a>
 回归模型的其他问题
@@ -756,23 +788,23 @@ RSE越小、$R^2$越大，F越小，结果越好。</p>
 <a class="header-anchor" href="#%e6%95%b0%e6%8d%ae%e7%9a%84%e9%9d%9e%e7%ba%bf%e6%80%a7"></a>
 数据的非线性
 </h4><p>残差图( residual plot) 是一种很有用的图形工具，可用于识别非线性。给定一个简单线性回归模型，我们就可以绘制残差 $ ei = Yi - Yi $ 和预测变量 X i 的散点图。在多元回归中，因为有多个预测变量，我们转而绘制残差与预测值(或拟合值 ( fitted)) Yi 的散点图。<strong>理想情况下，残差图显示不出明显的规律。若存在明显规律，则表示线性模型的某些方面可能有问题。</strong></p>
-<p><img src="/note_images/gaotong/Y5-178212128365669.png" alt=""></p>
+<p><img src="/note_images/gaotong/Y5-178212128365669-17822383769965.png" alt=""></p>
 <h4 id="误差项自相关">
 <a class="header-anchor" href="#%e8%af%af%e5%b7%ae%e9%a1%b9%e8%87%aa%e7%9b%b8%e5%85%b3"></a>
 误差项自相关
-</h4><p>线性回归模型的一个重要假设是误差项𝜀_1,𝜀_2,… 𝜀_𝑛不相关。如果误差项相关，那么估计标准误往往低估了真实标准误，因此，置信区间和预测区间比真实区间窄。例如95%置信区间包含真实参数的实际概率将远低于0.95。这可能导致得出错误的结论。</p>
+</h4><p>线性回归模型的一个重要假设是误差项𝜀1,𝜀2,… 𝜀_𝑛不相关。如果误差项相关，那么估计标准误往往低估了真实标准误，因此，置信区间和预测区间比真实区间窄。例如95%置信区间包含真实参数的实际概率将远低于0.95。这可能导致得出错误的结论。</p>
 <h4 id="误差项方差非恒定">
 <a class="header-anchor" href="#%e8%af%af%e5%b7%ae%e9%a1%b9%e6%96%b9%e5%b7%ae%e9%9d%9e%e6%81%92%e5%ae%9a"></a>
 误差项方差非恒定
 </h4><p>线性回归模型的另一个重要假设是误差项的方差是恒定的$ VAR(𝜀_𝑖)=𝜎^2$。假设检验和标准误差、置信区间计算依赖这一假设。
 但通常，误差项的方差不是恒定的。例如，误差项的方差可能会随响应值的增加而增加。如果残差图呈漏斗形，说明误差项方差非恒定或存在异方差性。
 下左图，残差随拟合值增加而增加。
-<img src="/note_images/gaotong/Y6-178212128365670.png" alt=""></p>
+<img src="/note_images/gaotong/Y6-178212128365670-17822383769966.png" alt=""></p>
 <h4 id="离群点">
 <a class="header-anchor" href="#%e7%a6%bb%e7%be%a4%e7%82%b9"></a>
 离群点
 </h4><p>离群点(outlier) 是指 Yi 远离模型预测值的点。
-<img src="/note_images/gaotong/Y7-178212128365672.png" alt=""></p>
+<img src="/note_images/gaotong/Y7-178212128365672-17822383769967.png" alt=""></p>
 <h4 id="高杠杆点">
 <a class="header-anchor" href="#%e9%ab%98%e6%9d%a0%e6%9d%86%e7%82%b9"></a>
 高杠杆点
@@ -792,20 +824,23 @@ Cook’s Distance：用虚线表示，用于综合评估点对模型的影响力
 <a class="header-anchor" href="#%e9%ab%98%e6%9d%a0%e6%9d%86%e7%82%b9-1"></a>
 高杠杆点：
 </h5><p>横轴位置靠右，杠杆值较高。这些点的 Cook’s Distance 较大，可能显著影响模型参数。
-<img src="/note_images/gaotong/Y8-178212128365671.png" alt="">
+<img src="/note_images/gaotong/Y8-178212128365671-17822383769968.png" alt="">
 117是高杠杆点，纵坐标大于2的是离群点。</p>
 <h4 id="共线性">
 <a class="header-anchor" href="#%e5%85%b1%e7%ba%bf%e6%80%a7"></a>
 共线性
 </h4><p>共线性是指两个或更多的预测变量高度相关。如下图Credit数据集（右图），它会导致难以分离单个变量对响应值的影响。
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%873-178212128365673.png" alt="">
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%873-178212128365673-178223837699610.png" alt="">
 检测共线性的一个简单方法是看预测变量的相关系数矩阵。但即使没有某对变量具有特别高的相关性，有可能三个或更多变量之间存在共线性，成为多重共线性。
 更好的方法是计算方差膨胀引子（VIF），VIF是拟合全模型时的系数(𝛽_𝑗 ) ̂的方差除以单变量回归中(𝛽_𝑗 ) ̂的方差所得的比例。VIF最小可能值是1，表示完全不存在共线性。通常情况，VIF值超过5或10就表示有共线性问题。</p>
 <h4 id="线性回归与k最近邻法的比较-维度灾难">
 <a class="header-anchor" href="#%e7%ba%bf%e6%80%a7%e5%9b%9e%e5%bd%92%e4%b8%8ek%e6%9c%80%e8%bf%91%e9%82%bb%e6%b3%95%e7%9a%84%e6%af%94%e8%be%83-%e7%bb%b4%e5%ba%a6%e7%81%be%e9%9a%be"></a>
 线性回归与K最近邻法的比较 维度灾难。
-</h4><p>预测效果随着维数的增加而恶化是KNN一个普遍问题，因为在高维中样本量大大减少。下图有100个训练观察，当p=1时，这些点提供了足够的信息来准确估计f(X)。然而，当这100个观测值分布在p=20个维度上时，将使给定的观测附近没有邻点——即	若每个预测变量仅有少量观测，参数化方法往往优于非参数方法。
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%874-178212128365674.png" alt=""></p>
+</h4><p>维度灾难：</p>
+<p>因为随着维度（特征数 p）增加，样本在空间中<strong>呈指数级稀疏</strong>。绝大多数点都悬浮在空间的边缘和角落，中心区域几乎空无一物。在高维空间里，KNN的逻辑会崩塌。因为在高维空间中，所有样本点之间的距离都变得差不多远。</p>
+<p>数学上有过一个经典推导：在高维空间中，最远邻居的距离与最近邻居的距离之比，趋近于 <strong>1</strong>。</p>
+<p>预测效果随着维数的增加而恶化是KNN一个普遍问题，因为在高维中样本量大大减少。下图有100个训练观察，当p=1时，这些点提供了足够的信息来准确估计f(X)。然而，当这100个观测值分布在p=20个维度上时，将使给定的观测附近没有邻点——即	若每个预测变量仅有少量观测，参数化方法往往优于非参数方法。
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%874-178212128365674-17822383769969.png" alt=""></p>
 <h2 id="第四章-分类">
 <a class="header-anchor" href="#%e7%ac%ac%e5%9b%9b%e7%ab%a0-%e5%88%86%e7%b1%bb"></a>
 第四章 分类
@@ -840,12 +875,12 @@ $$<p>
 核心思想
 </h4><p>LDA的目标是找到一个线性变换矩阵 ( W )，使得投影后的数据在类间的距离最大化，同时类内的距离最小化。
 LDA的目的是将高维特征投影到一个低维子空间中同时保持类间的良好可分性和类内的最大化方差。
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%875-178212128365675.png" alt=""></p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%875-178212128365675-178223837699612.png" alt=""></p>
 <h4 id="roc曲线">
 <a class="header-anchor" href="#roc%e6%9b%b2%e7%ba%bf"></a>
 ROC曲线
-</h4><p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%876-178212128365677.png" alt="">
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%877-178212128365778.png" alt=""></p>
+</h4><p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%876-178212128365677-178223837699611.png" alt="">
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%877-178212128365778-178223837699613.png" alt=""></p>
 <ol>
 <li>
 <p>预测阳性率 (PPV)
@@ -856,18 +891,18 @@ ROC曲线
 预测阴性率指的是，模型预测为阴性的样本中，实际为阴性的比例。它衡量的是模型预测结果为“阴性”时的可靠性。.</p>
 </li>
 <li>
-<p>假阳性率是预测为阳性，但真实是阴性.</p>
+<p>假阳性率是预测为阳性，但真实是阴性.(1类)</p>
 </li>
 <li>
-<p>假阴性率是预测为阴性，真实是阳性。</p>
+<p>假阴性率是预测为阴性，真实是阳性。（2类）</p>
 </li>
 </ol>
 <h3 id="二次判别分析">
 <a class="header-anchor" href="#%e4%ba%8c%e6%ac%a1%e5%88%a4%e5%88%ab%e5%88%86%e6%9e%90"></a>
 二次判别分析
 </h3><p>如果假设服从多元高斯分布，但每一类观测都有自己的协方差矩阵，则称作二次判别分析(quadratic discriminant analysis, QDA)
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%878-178212128365676.png" alt="">
-贝叶斯（紫色虚钱）、LDA（黑色点钱）、QDA（绿色实钱）</p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%878-178212128365676-178223837699614.png" alt="">
+贝叶斯（紫色虚线）、LDA（黑色点线）、QDA（绿色实线)</p>
 <h3 id="方法比较">
 <a class="header-anchor" href="#%e6%96%b9%e6%b3%95%e6%af%94%e8%be%83"></a>
 方法比较
@@ -883,7 +918,7 @@ LDA是通过估计的正态分布均值和方差计算出来的
 第五章 重抽样方法
 </h2><p>引入的目的：为了估计测试误差</p>
 <p>基本方法：将可用的样本随机分为<strong>训练集</strong>和<strong>测试集</strong></p>
-<p>定量的响应应使用均方误差估计，定性的响应应使用误分类率评估</p>
+<p>定量的响应应使用均方误差估计，定性的响应（分类变量）应使用误分类率评估（模型预测错误的样本数量占总样本数量的比例。也叫分类错误率）</p>
 <h3 id="交叉验证法">
 <a class="header-anchor" href="#%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81%e6%b3%95"></a>
 交叉验证法
@@ -916,7 +951,8 @@ CV_{(n)}=\frac{1}{n}\sum_{i=1}^{n}MSE_i
 $$<h4 id="k折交叉验证">
 <a class="header-anchor" href="#k%e6%8a%98%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81"></a>
 K折交叉验证
-</h4><p>将观测机随机分为k个大小基本一致的组，每次选一个组作为测试集，剩下k-1个组作为训练集，训练并测试，得到这个测试集的均方误差MSE</p>
+</h4><p>最终的目的是<strong>为了给“超参数”投出最终选票，并评估最终模型的泛化能力！！！</strong></p>
+<p>将观测机随机分为k个大小基本一致的组，每次选一个组作为测试集，剩下k-1个组作为训练集，训练并测试，得到这个测试集的均方误差MSE</p>
 <p>重复这个步骤k次，得到n个MSE，然后同样进行平均计算</p>
 <h5 id="优点-1">
 <a class="header-anchor" href="#%e4%bc%98%e7%82%b9-1"></a>
@@ -935,17 +971,24 @@ K折交叉验证
 <h5 id="k折交叉验证的偏差-方差权衡">
 <a class="header-anchor" href="#k%e6%8a%98%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81%e7%9a%84%e5%81%8f%e5%b7%ae-%e6%96%b9%e5%b7%ae%e6%9d%83%e8%a1%a1"></a>
 K折交叉验证的偏差-方差权衡
-</h5><p>K减小，偏差减小方差增大；K增大，方差减小偏差增大</p>
-<h3 id="自助法">
-<a class="header-anchor" href="#%e8%87%aa%e5%8a%a9%e6%b3%95"></a>
-自助法
-</h3><p>用途：用来衡量一个指定的估计量，比如估计线性回归模型中系数的标准误差</p>
+</h5><p>K增大，偏差减小方差增大；K减小，方差减小偏差增大</p>
+<ul>
+<li>K减小：数据量减小，模型无法充分学习数据分布，容易导致<strong>欠拟合</strong>，所以<strong>偏差大</strong>。但是K减小，不同折模型的重叠程度大大增大，如果数据中存在一个<strong>异常值（Outlier）</strong>，这个异常值在留一法中，几乎每一次都会被包含在训练集里（除了一次）。这导致<strong>几乎所有模型的参数都被这个异常值“带偏”</strong>。因此，这K个模型在遇到各自的测试集（虽然测试集只有1个样本）时，<strong>测试误差会剧烈波动</strong></li>
+<li>K增大：与K减小相反，模型之间的独立性更强，测试集也更大，平均下来误差波动较小，所以<strong>方差小</strong>。</li>
+</ul>
+<h3 id="自助法bootstrap">
+<a class="header-anchor" href="#%e8%87%aa%e5%8a%a9%e6%b3%95bootstrap"></a>
+自助法(Bootstrap)
+</h3><p>用途：用来衡量一个指定的估计量，比如估计线性回归模型中系数的标准误差，通过抽取生成多个训练集，原集减训练集就是测试集，对测试集进行测试衡量指定的估计量。</p>
+<p><strong>注</strong>：这要求样本能够反映总体特性，不然会继承并放大这种偏差</p>
 <p>随机从数据集中选择n个观测（有放回的抽样），组成一个自助法数据集$Z^{·1}$，使用这个数据集对α进行自助法估计，得到$\hat{α}^{·1}$</p>
 <p>重复B次（B是一个很大的值），得到B个对应的估计$\hat{α}^{·1},...,\hat{α}^{·B}$，然后通过公式能计算这些自助法估计的标准误差
 </p>
 $$
 SE_B(\hat{α})=\sqrt{\frac{1}{B-1}\sum_{r=1}^{B}(\hat{α}^{·r}-\frac{1}{B}\sum_{r^{'}=1}^{B}\hat{α}^{·r^{'}})^2}
-$$<h4 id="自助法的其他用途">
+$$<p>用此标准误差查置信区间的含义是：
+如果我们把‘去野外重新抓100次蝴蝶，计算100次准确率’这个实验，重复无限遍，那么在这些无限多的区间里，<strong>大约有95%的区间会包含真实的总体准确率</strong>。</p>
+<h4 id="自助法的其他用途">
 <a class="header-anchor" href="#%e8%87%aa%e5%8a%a9%e6%b3%95%e7%9a%84%e5%85%b6%e4%bb%96%e7%94%a8%e9%80%94"></a>
 自助法的其他用途
 </h4><ul>
@@ -1004,12 +1047,13 @@ $$<h4 id="自助法的其他用途">
       </tr>
   </tbody>
 </table>
-<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%879-178212128365779.png" alt=""></p>
+<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%879-178212128365779-178223837699617.png" alt=""></p>
 <h2 id="第六章-线性模型选择与正则化">
 <a class="header-anchor" href="#%e7%ac%ac%e5%85%ad%e7%ab%a0-%e7%ba%bf%e6%80%a7%e6%a8%a1%e5%9e%8b%e9%80%89%e6%8b%a9%e4%b8%8e%e6%ad%a3%e5%88%99%e5%8c%96"></a>
 第六章 线性模型选择与正则化
 </h2><p>采用其他拟合方法替代最小二乘法的原因：其他方法有<strong>更高的预测准确率</strong>，<strong>更好的模型解释力</strong></p>
 <p><strong>预测准确率</strong></p>
+<p>n：训练样本量  p：“特征”的数量，也就是：自变/因变量 的个数</p>
 <ul>
 <li>不满足n远大于p，则最小二乘可能过拟合</li>
 <li>若p&gt;n，最小二乘得到的系数估计结果不唯一，此时方差无穷大，无法使用最小二乘</li>
@@ -1017,11 +1061,12 @@ $$<h4 id="自助法的其他用途">
 <p><u>改进：通过<strong>限制</strong>或<strong>缩减</strong>待估计系数，牺牲偏差的同时显著减小估计量方差</u></p>
 <p><strong>模型解释力</strong></p>
 <ul>
-<li>多元回归模型中，常存在多个变量与响应变量不存在线性关系的情况，增加复杂度却与模型无关</li>
+<li>多元回归模型中，常存在多个变量与响应变量不存在线性关系的情况，增加复杂度却与模型无关
+复杂度：参数数量、参数大小、模型结构</li>
 <li>去除不相关特征可以得到更容易解释的模型，而最小二乘很难将系数置为0</li>
 </ul>
 <p><u>改进：通过自动进行<strong>特征选择</strong>或<strong>变量选择</strong>，实现对无关变量的筛选</u></p>
-<p><img src="/note_images/gaotong/6_1-178212128365782.png" alt=""></p>
+<p><img src="/note_images/gaotong/6_1-178212128365782-178223837699615.png" alt=""></p>
 <h3 id="子集选择">
 <a class="header-anchor" href="#%e5%ad%90%e9%9b%86%e9%80%89%e6%8b%a9"></a>
 子集选择
@@ -1050,7 +1095,8 @@ $$<h4 id="自助法的其他用途">
 <h4 id="选择最优模型的指标">
 <a class="header-anchor" href="#%e9%80%89%e6%8b%a9%e6%9c%80%e4%bc%98%e6%a8%a1%e5%9e%8b%e7%9a%84%e6%8c%87%e6%a0%87"></a>
 选择最优模型的指标
-</h4><p>$C_p$、$AIC$、$BIC$和调整$R^2$
+</h4><p>此处公式中的 d 就是特征个数，即前面的 p</p>
+<p>$C_p$、$AIC$、$BIC$和调整$R^2$
 </p>
 $$
 C_p=\frac{1}{n}(RSS+2d\hat{σ}^2)
@@ -1060,10 +1106,44 @@ $$$$
 BIC=\frac{1}{n}(RSS+log(n)d\hat{σ}^2)
 $$$$
 调整R^2=1-\frac{RSS/(n-d-1)}{TSS/(n-1)}
-$$<h3 id="压缩估计方法">
+$$<ul>
+<li>
+<p>对于Cp = 数值越小，模型越好。它希望你在减少 RSS 和增加特征之间找到平衡，惩罚项是2dσ^2^</p>
+</li>
+<li>
+<p>ALC（赤池信息准则）：你把括号里的 σ^2^约分一下就发现 ∝ Cp
+即在高斯线性回归的假设下，AIC 和 Cp完全等价</p>
+</li>
+<li>
+<p>BIC（贝叶斯信息准则）：惩罚项 log⁡(n)⋅d⋅σ^2，logn一般比较大，所以 BIC 对特征数量的惩罚远远重于 AIC 和 Cp</p>
+<p>以上三个都是数值越小越好</p>
+</li>
+<li>
+<p>调整R^2^：相比普通<img src="/note_images/gaotong/image-20260623144734183.png" alt="image-20260623144734183" style="zoom:50%;" />，多加入一个特征，分泌变小，让分整个分数增大，因为前面是减号，故R^2^下降。
+<strong>数值越大（越接近1）越好</strong>。它不像 AIC/BIC 那样追求绝对值最小，而是告诉你模型解释了多少方差，同时扣除了特征带来的冗余</p>
+</li>
+</ul>
+<h3 id="压缩估计方法">
 <a class="header-anchor" href="#%e5%8e%8b%e7%bc%a9%e4%bc%b0%e8%ae%a1%e6%96%b9%e6%b3%95"></a>
 压缩估计方法
-</h3><h4 id="岭回归l2正则化">
+</h3><p>在最小二乘法的损失函数（RSS）后面，强行加上一个“惩罚项（Penalty）”，以此来约束模型的系数（β）不要太大，甚至直接压缩到0。</p>
+<p>因为加了惩罚，系数被“压缩”得离0更近，所以叫<strong>压缩估计</strong>。它通过<strong>牺牲一点点偏差（Bias）</strong>，来<strong>大幅度降低方差（Variance）</strong>，从而解决过拟合问题。</p>
+<p>人话：给你系数参数删了换我稳定</p>
+<h4 id="正则化">
+<a class="header-anchor" href="#%e6%ad%a3%e5%88%99%e5%8c%96"></a>
+正则化：
+</h4><p>正则化是在损失函数（Loss Function）后面额外加上一项“惩罚项”，用来约束模型参数（系数）的大小或结构，从而防止过拟合。</p>
+<h5 id="原因">
+<a class="header-anchor" href="#%e5%8e%9f%e5%9b%a0"></a>
+原因：
+</h5><p>鲸鱼：当 p（特征数）很大时，最小二乘法为了把训练集误差降为0，会把某些系数调成天文数字（正负几万）。这就像一个<strong>极度谄媚的奴才</strong>，为了讨好每一个数据点，不惜扭曲自己的形态——结果就是“过拟合”（方差极大）</p>
+<p>核心哲学：允许模型在训练集上稍微“犯错”（增加一点偏差），来换取模型在面对新数据时的“稳定”（大幅减少方差）。 这就是统计学中著名的“偏差-方差权衡”在正则化上的完美体现。</p>
+<h5 id="正则化的作用">
+<a class="header-anchor" href="#%e6%ad%a3%e5%88%99%e5%8c%96%e7%9a%84%e4%bd%9c%e7%94%a8"></a>
+正则化的作用：
+</h5><img src="/note_images/gaotong/image-20260623165128365.png" alt="image-20260623165128365" style="zoom:67%;" />
+<p>λ（惩罚系数）：这是一个超参数，用来平衡“拟合得好不好”和“模型简不简单”。λ 越大，惩罚越重，则模型偏差变大，方差变小</p>
+<h4 id="岭回归l2正则化">
 <a class="header-anchor" href="#%e5%b2%ad%e5%9b%9e%e5%bd%92l2%e6%ad%a3%e5%88%99%e5%8c%96"></a>
 岭回归（L2正则化）
 </h4><p>与最小二乘相似，但增加了压缩惩罚
@@ -1071,18 +1151,33 @@ $$<h3 id="压缩估计方法">
 $$
 \sum_{i=1}^{n}(y_i-β_0-\sum_{j=1}^{p}β_jx_{ij})^2+λ\sum_{j=1}^{p}β_j^2=RSS+λ\sum_{j=1}^{p}β_j^2
 $$<p>
-λ≥0是调节参数，λ越小光滑度越高，偏差越小方差越大</p>
+λ≥0是调节参数，λ越小光滑度越低，偏差越小方差越大</p>
+<img src="/note_images/gaotong/image-20260623171029233.png" alt="image-20260623171029233" style="zoom:50%;" />
+<ul>
+<li>偏差：λ小则损失函数几乎没有加约束，模型自由地把系数调到最优值</li>
+<li>方差：λ小，系数对数据的微小变化极其敏感，稍微换一个训练集，系数就剧烈抖动</li>
+</ul>
+<p>惩罚项：$\lambda \sum_{j=1}^p \beta_j^2$</p>
 <p>※ 使用岭回归之前最好先对预测变量进行标准化</p>
+<p><strong>标准化</strong>：对数据表格里的每一列（每个特征），都减去这一列的均值（中心化），再除以这一列的标准差（缩放）。此时单位会消失，这些特征才能站到同一起跑线供模型训练。</p>
+<p><strong>压缩效果</strong>：它会把所有系数<strong>等比例地缩小</strong>，但<strong>绝不杀死任何一个</strong>。如果你有100个特征，岭回归会让这100个系数都变小，但全部保留</p>
 <h4 id="lassol1正则化">
 <a class="header-anchor" href="#lassol1%e6%ad%a3%e5%88%99%e5%8c%96"></a>
 Lasso（L1正则化）
 </h4>$$
 \sum_{i=1}^{n}(y_i-β_0-\sum_{j=1}^{p}β_jx_{ij})^2+λ\sum_{j=1}^{p}|β_j|=RSS+λ\sum_{j=1}^{p}|β_j|
 $$<p>λ≥0是调节参数，λ越小光滑度越高，偏差越小方差越大</p>
+<p>惩罚项：有λ的那项（即系数的绝对值之和）</p>
+<ul>
+<li>数学特质（自带特征筛选）：只要 λ 足够大，某些不重要的系数会被<strong>精确地压缩到 0</strong>。</li>
+<li><strong>压缩效果</strong>：它会把不重要的特征直接“开除”（系数归零），留下一组稀疏的、最重要的特征。它把“压缩”和“特征选择”一步到位做完</li>
+</ul>
 <h4 id="岭回归和lasso的等价问题">
 <a class="header-anchor" href="#%e5%b2%ad%e5%9b%9e%e5%bd%92%e5%92%8classo%e7%9a%84%e7%ad%89%e4%bb%b7%e9%97%ae%e9%a2%98"></a>
 岭回归和Lasso的等价问题
-</h4><p>Lasso回归等价于求解
+</h4><img src="/note_images/gaotong/image-20260623171629020.png" alt="image-20260623171629020" style="zoom: 50%;" />
+<img src="/note_images/gaotong/image-20260623171833048.png" alt="image-20260623171833048" style="zoom: 50%;" />
+<p>Lasso回归等价于求解
 </p>
 $$
 \mathop{minimize}\limits_{β}\{\sum_{i=1}^{n}(y_i-β_0-\sum_{j=1}^{p}β_ix_{ij})^2\},\sum_{j=1}^{p}|β_j|≤s
@@ -1092,24 +1187,26 @@ $$<p>
 $$
 \mathop{minimize}\limits_{β}\{\sum_{i=1}^{n}(y_i-β_0-\sum_{j=1}^{p}β_ix_{ij})^2\},\sum_{j=1}^{p}β_j^2≤s
 $$<p>
-<img src="images/6_2.png" alt=""></p>
+<img src="img/6_2.png" alt=""></p>
 <p>将上式数形结合表示如图，黑色区域为≤s的区域，椭圆是RSS等高线</p>
 <h4 id="岭回归和lasso的贝叶斯解释">
 <a class="header-anchor" href="#%e5%b2%ad%e5%9b%9e%e5%bd%92%e5%92%8classo%e7%9a%84%e8%b4%9d%e5%8f%b6%e6%96%af%e8%a7%a3%e9%87%8a"></a>
 岭回归和Lasso的贝叶斯解释
 </h4><p>岭回归对应高斯分布的密度函数</p>
 <p>Lasso对应拉普拉斯分布的密度函数</p>
+<p>拉普拉斯分布：像一个尖顶的金字塔或钻石。它在正中间（均值0处）有一个极其尖锐的“尖点”，两侧像指数函数一样急剧下降，但尾巴拖得比正态分布更长、更厚。</p>
 <h3 id="降维方法">
 <a class="header-anchor" href="#%e9%99%8d%e7%bb%b4%e6%96%b9%e6%b3%95"></a>
 降维方法
 </h3><h4 id="主成分回归pca">
 <a class="header-anchor" href="#%e4%b8%bb%e6%88%90%e5%88%86%e5%9b%9e%e5%bd%92pca"></a>
 主成分回归（PCA）
-</h4><p>见第十章</p>
+</h4><p>它只做数学计算，找到这100个指标的<strong>线性组合</strong>，组合成新的变量，叫主成分（PC），最后只用前几个主成分（比如用5个新变量代替100个旧变量），数据信息量保留了90%以上</p>
 <h4 id="偏最小二乘pls">
 <a class="header-anchor" href="#%e5%81%8f%e6%9c%80%e5%b0%8f%e4%ba%8c%e4%b9%98pls"></a>
 偏最小二乘（PLS）
 </h4><p>偏最小二乘用响应变量Y的信息筛选新变量</p>
+<p>它不仅要让新变量能解释 X 里的信息，更要让新变量<strong>与 y 的协方差最大</strong>（即相关性最强）</p>
 <h4 id="pca-和-pls-区别">
 <a class="header-anchor" href="#pca-%e5%92%8c-pls-%e5%8c%ba%e5%88%ab"></a>
 PCA 和 PLS 区别
@@ -1174,22 +1271,25 @@ y=β_0+β_1x_i+β_2x_i^2+β_3x_i^3+...+β_dx_i^d+ε_i
 $$<h3 id="阶梯函数">
 <a class="header-anchor" href="#%e9%98%b6%e6%a2%af%e5%87%bd%e6%95%b0"></a>
 阶梯函数
-</h3><p>创建分割点$c_1,c_2,...,c_K$，然后构造K+1个新变量：$C_0(X)=I(X<c_1),...,C_K(X)=I(c_k≤X)$
+</h3><p>创建分割点$c_1,c_2,...,c_K$，然后构造K+1个新变量：</p>
+<p>$C_0(X)=I(X<c_1),...,C_K(X)=I(c_k≤X)$
 </p>
 $$
 y_i=β_0+β_1C_1(x_i)+β_2C_2(x_i)+...+β_KC_K(x_i)+ε_i
-$$<h3 id="基函数">
+$$<p><strong>特点</strong>：极度简单、易于解释（如收入分段税率）。但致命缺陷是不连续，在切点处会出现“跳跃”，拟合出的图像像楼梯，无法描绘平滑变化趋势，且容易过拟合。</p>
+<h3 id="基函数">
 <a class="header-anchor" href="#%e5%9f%ba%e5%87%bd%e6%95%b0"></a>
 基函数
-</h3><p>多项式和阶梯函数回归模型实际上是特殊的基函数方法，对变量X的函数变换$b_1(X),b_2(X),...,b_K(X)$进行建模
+</h3><p>多项式和阶梯函数回归模型<strong>实际上是特殊的基函数方法</strong>，对变量X的函数变换$b_1(X),b_2(X),...,b_K(X)$进行建模
 </p>
 $$
 y_i=β_0+β_1b_1(x_i)+β_2b_2(x_i)+...+β_Kb_K(x_i)+ε_i
 $$<h3 id="回归样条">
 <a class="header-anchor" href="#%e5%9b%9e%e5%bd%92%e6%a0%b7%e6%9d%a1"></a>
 回归样条
-</h3><p>不同区域拟合不同的多项式函数，可以这样表示</p>
-<p><img src="/note_images/gaotong/7_1-178212128365780.png" alt=""></p>
+</h3><p>阶梯函数有着不连续和多项式波动剧烈的问题，而回归样条将 X 分成若干区间，在每个区间拟合一个<strong>低阶多项式</strong>，并强制要求相邻多项式在连接点（结点）处连续且平滑（导数连续）。</p>
+<p>不同区域拟合不同的多项式函数，可以这样表示</p>
+<p><img src="/note_images/gaotong/7_1-178212128365780-178223837699616.png" alt=""></p>
 <p>没有约束的有K个结点的三次样条会产生4K+4个自由度</p>
 <p>有K个结点的三次样条会产生K+4个自由度（原因是每个结点处增加了三个约束：连续、一阶导连续、二阶导连续）</p>
 <p>同时也可以使用样条基函数表示
@@ -1200,7 +1300,7 @@ $$<h4 id="截断幂基">
 <a class="header-anchor" href="#%e6%88%aa%e6%96%ad%e5%b9%82%e5%9f%ba"></a>
 截断幂基
 </h4><p>在上述基函数式子中，可以选择不同的基函数得到等价的三次样条，比如截断幂基的方式是先以三次多项式的基为基础（$x,x_2,x_3$），然后在每个结点添加一个截断幂基函数</p>
-<p><img src="/note_images/gaotong/7_2-178212128365781.png" alt=""></p>
+<p><img src="/note_images/gaotong/7_2-178212128365781-178223837699618.png" alt=""></p>
 <p>其中ξ是结点</p>
 <h4 id="确定结点的个数和位置">
 <a class="header-anchor" href="#%e7%a1%ae%e5%ae%9a%e7%bb%93%e7%82%b9%e7%9a%84%e4%b8%aa%e6%95%b0%e5%92%8c%e4%bd%8d%e7%bd%ae"></a>
@@ -1224,14 +1324,19 @@ $$<p>
 <p>对选出的数据赋予其权重$K_{i0}=K(x_i,x_0)$，离$x_0$最远的点权重为0，而最近的点权重最高</p>
 <p>用定义好的权重在$x_i$处拟合加权最小二乘回归</p>
 <p>根据$\hat{f}(x_0)=\hat{β}_0+\hat{β}_1x_0$得到$x_0$的拟合结果</p>
-<h3 id="广义可加模型">
-<a class="header-anchor" href="#%e5%b9%bf%e4%b9%89%e5%8f%af%e5%8a%a0%e6%a8%a1%e5%9e%8b"></a>
-广义可加模型
+<h3 id="广义可加模型gam">
+<a class="header-anchor" href="#%e5%b9%bf%e4%b9%89%e5%8f%af%e5%8a%a0%e6%a8%a1%e5%9e%8bgam"></a>
+广义可加模型(GAM)
 </h3><p>每一个变量用一个非线性函数替换
 </p>
 $$
 y_i=β_0+f_1(x_{i1})+f_2(x_{i2})+...+f_p(x_{ip})+ε_i
-$$<h4 id="gam的优点与不足">
+$$<h5 id="防止过拟合">
+<a class="header-anchor" href="#%e9%98%b2%e6%ad%a2%e8%bf%87%e6%8b%9f%e5%90%88"></a>
+防止过拟合：
+</h5><p>样条如果结点放得太多，曲线会剧烈震荡（过拟合）。GAM的标准解法是引入<strong>惩罚平滑样条</strong></p>
+<img src="/note_images/gaotong/image-20260623175118619.png" alt="image-20260623175118619" style="zoom:50%;" />
+<h4 id="gam的优点与不足">
 <a class="header-anchor" href="#gam%e7%9a%84%e4%bc%98%e7%82%b9%e4%b8%8e%e4%b8%8d%e8%b6%b3"></a>
 GAM的优点与不足
 </h4><ul>
@@ -1261,6 +1366,7 @@ $$<h2 id="第八章-基于树的方法">
 <a class="header-anchor" href="#%e5%9b%9e%e5%bd%92%e6%a0%91"></a>
 回归树
 </h4><p>建立回归树的步骤：</p>
+<p>对每个变量找切分点（切成几份自己决定，即J份，J - 1 个切分点），切分之后对两边的因变量求RSS，最低的地方就是单个变量要切的位置，再拿每个变量的RSS比较，越小的放在越上面</p>
 <p>1.将预测变量空间（X1&hellip;Xp可能取值的集合）分为J个互不重叠的区域R1&hellip;Rj</p>
 <p>2.对落入Rj的每个观测值作同样的预测，预测值等于Rj上训练集响应值的算术平均，如果是分类树，则分类为该区域最多的那类</p>
 <p>计算决策树模型的RSS：
@@ -1268,17 +1374,19 @@ $$<h2 id="第八章-基于树的方法">
 $$
 \sum_{j=1}^{J}\sum_{i∈Rj}(y_i-\hat{y}_{R_j})^2
 $$<p>
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8722-178212128365783.png" alt=""></p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8722-178212128365783-178223837699620.png" alt=""></p>
 <h4 id="分类树">
 <a class="header-anchor" href="#%e5%88%86%e7%b1%bb%e6%a0%91"></a>
 分类树
 </h4><p>分类树与回归树类似，但是评判标注不能使用RSS，改为分类错误率、基尼系数和互熵</p>
+<p>此处的Pmk表示：第 m 个节点（Node）中，属于第 k  类（Class）的样本所占的比例（概率）。</p>
 <p>分类错误率（classification error rate）
 </p>
 $$
-E=1-\mathop{max}\limits_{p}(\hat{p}_{mk})
+E=1-\mathop{max}\limits_{k}(\hat{p}_{mk})
 $$<p>
-基尼系数（Gini index）
+表示 1 - 少的那个占的比例</p>
+<p>基尼系数（Gini index）
 </p>
 $$
 G=\sum_{k=1}^{K}\hat{p}_{mk}(1-\hat{p}_{mk})
@@ -1295,12 +1403,20 @@ $$<p>
 分类指标
 </h4><blockquote>
 <p>在一个仅有两个类别的简单分类情况下考虑基尼系数、分类误差和互熵。创建一张图，将这几个量分别表示为pm1的函数。
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8710-178212128365784.png" alt=""></p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8710-178212128365784-178223837699619.png" alt=""></p>
 </blockquote>
 <h3 id="树的剪枝">
 <a class="header-anchor" href="#%e6%a0%91%e7%9a%84%e5%89%aa%e6%9e%9d"></a>
 树的剪枝
-</h3><p>上述方法在训练集取得良好预测效果，但是可能造成过拟合，更好的策略是生成一个很大的树$T_0$，然后通过剪枝得到子树</p>
+</h3><ul>
+<li>
+<p>预减枝：</p>
+</li>
+<li>
+<p>后减枝：</p>
+</li>
+</ul>
+<p>上述方法在训练集取得良好预测效果，但是可能造成过拟合，更好的策略是生成一个很大的树$T_0$，然后通过剪枝得到子树</p>
 <p>剪枝的目的是选出使测试集预测误差最小的子树</p>
 <p><strong>代价复杂性剪枝</strong>也称<strong>最弱联系剪枝</strong>，不考虑每一棵可能的子树，而是考虑以非负调整参数α标记的一系列子树，每一个α的取值对应一棵子树$T⊂T_0$，当α一定时，其对应的子树使下式最小
 </p>
@@ -1353,7 +1469,8 @@ $$<p>
 </h3><h4 id="装袋法">
 <a class="header-anchor" href="#%e8%a3%85%e8%a2%8b%e6%b3%95"></a>
 装袋法
-</h4><h5 id="基本概念">
+</h4><p>Bagging = Bootstrap采样 + 多棵独立生长的深树 + 平均/投票</p>
+<h5 id="基本概念">
 <a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
 基本概念
 </h5><p>基本思想/目的：对一组观测求平均可以减小方差</p>
@@ -1375,18 +1492,27 @@ $$<p>
 <h4 id="随机森林">
 <a class="header-anchor" href="#%e9%9a%8f%e6%9c%ba%e6%a3%ae%e6%9e%97"></a>
 随机森林
-</h4><h5 id="基本概念-1">
+</h4><p>是bagging的进化版，随机森林 = Bagging + 特征随机子空间</p>
+<p>为了保证每棵树的多样性，引入双重随机</p>
+<p>双重随机：</p>
+<ul>
+<li>有放回抽样（Bootstrap）：从原数据集中随机有放回地抽取N个样本，构成该树的专属训练子集</li>
+<li>特征子空间（特征随机）：每个节点进行分裂时考虑全部特征，而是随机抽取一个子集（通常是总特征数 p^1/2^ ），仅在这些候选特征中寻找最优分裂点</li>
+</ul>
+<h5 id="基本概念-1">
 <a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5-1"></a>
 基本概念
 </h5><p>基本思想/目的：根分裂结点基本上都是最重要的预测变量，导致装袋法中抽取的树高度相关。故每次分裂点随机取变量，对树作去相关处理，降低模型方差</p>
 <p>每次考虑树上的一个分裂点，从全部的p个变量中随机（每次都随机）选m个，作为候选变量。这次的分裂点只能从这m个中挑选，通常$m≈\sqrt{p}$</p>
-<h4 id="提升法">
-<a class="header-anchor" href="#%e6%8f%90%e5%8d%87%e6%b3%95"></a>
-提升法
+<p>每棵树大约有1/3的样本没参与训练，这些袋外样本是天然的验证集</p>
+<h4 id="提升法boosting">
+<a class="header-anchor" href="#%e6%8f%90%e5%8d%87%e6%b3%95boosting"></a>
+提升法（Boosting）
 </h4><h5 id="基本概念-2">
 <a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5-2"></a>
 基本概念
 </h5><p>目的：降低学习率，舒缓的迭代，使模型预测效果变好</p>
+<p>使用经典的梯度提升（此梯度指的是模型的能力上升）</p>
 <p>1.对训练集中的所有i，令$\hat{f}(x=0)$，$r_i=y_i$</p>
 <p>2.对$b=1,2,...,B$重复以下过程</p>
 <p>​	（a）对训练数据$(X,r)$建立一棵有d个分裂点的树$\hat{f}^b$</p>
@@ -1440,7 +1566,15 @@ $$<p>等价于
 </p>
 $$
 y_i(β_0+β_1X_1+β_2X_2+...+β_pX_p)>0
-$$<h4 id="最大间隔超平面">
+$$<ul>
+<li>w 的方向：它永远垂直于（正交于）超平面本身。我们称之为“法向量”。w 是超平面的“方向箭头</li>
+</ul>
+<p>通过缩放w和b，得到如下式子：</p>
+<img src="/note_images/gaotong/image-20260623202416487.png" alt="image-20260623202416487" style="zoom:67%;" />
+<p>然后要找出离两侧最近的点，通过缩放w和b，强制让距离超平面最近的那几个点满足 ∣wTXi+b∣=1，这样一来，两侧“马路牙子”之间的距离就恰好是 2 / ∣∣w∣∣</p>
+<p>我们要让马路最宽，即最大化 2∣∣w∣∣，这等价于最小化 ||w||^2^/2
+因此，最大间隔超平面的求解归结为凸二次规划问题**</p>
+<h4 id="最大间隔超平面">
 <a class="header-anchor" href="#%e6%9c%80%e5%a4%a7%e9%97%b4%e9%9a%94%e8%b6%85%e5%b9%b3%e9%9d%a2"></a>
 最大间隔超平面
 </h4><p>某种意义上说是能够插入两个类别之间的最宽的平板的中线</p>
@@ -1481,24 +1615,33 @@ $$<p>C是非负的调节参数，C增大，允许穿过间隔的点就更多，�
 </h4><p>在所有分离超平面中，找出使两类之间的间隙或间隔最大的超平面。</p>
 <p>首先，计算每个训练观测到一个分割超平面的距离，取最小值，称为间隔（margin）。这个间隔值最大的那个分割超平面即为最大间隔超平面。</p>
 <p>然后，用此最大间隔超平面判断测试样本落在哪一侧，就可以分类。此为最大间隔分类器。
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8711-178212128365785.png" alt=""></p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8711-178212128365785-178223837699621.png" alt=""></p>
 <h4 id="支持向量">
 <a class="header-anchor" href="#%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f"></a>
 支持向量
 </h4><p>刚好落在间隔上和落在间隔错误一侧的观测叫做<strong>支持向量</strong>，只有这些观测会影响支持向量分类器</p>
+<p>换句话说，决策边界上下移动，来到对应的间隔上下边界，由于上下边界一定会经过一些 <strong>样本数据点</strong>，这些点离决策边界最近，决定了间隔距离，因此称这些点未支持向量</p>
 <h4 id="支持向量分类器-1">
 <a class="header-anchor" href="#%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f%e5%88%86%e7%b1%bb%e5%99%a8-1"></a>
 支持向量分类器
 </h4><p>只要求超平面几乎能够把类别区分开，即使用所谓的软间隔( soft
 margin) 。<strong>最大间隔分类器</strong>在线性不可分情况
 下的推广叫做支持向量分类器 (support vector classifier)。
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8712-178212128365786.png" alt=""></p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8712-178212128365786-178223837699622.png" alt=""></p>
 <h5 id="软间隔范围限定">
 <a class="header-anchor" href="#%e8%bd%af%e9%97%b4%e9%9a%94%e8%8c%83%e5%9b%b4%e9%99%90%e5%ae%9a"></a>
 软间隔范围限定
-</h5>$$
-y_i(β_0+β_1x_{i1}+β_2x_{i2}+...+β_1p_{ip})≥M(1-ε_i)
+</h5><p>软间隔：<strong>允许个别样本“违规”（越过马路牙子甚至分错），但要为此付出代价（惩罚）。</strong> 我们牺牲一点点训练集的“完美分类”，换取测试集上更大的“泛化能力”。</p>
+<p>软间隔在硬间隔的基础上，仅仅引入了两个新东西：松弛变量 ξi  和 惩罚系数 C
+</p>
+$$
+y_i(β_0+β_1x_{i1}+β_2x_{i2}+...+β_1x_{ip})≥M(1-ε_i)
 $$<p>
+M是我们想要最大化的“半间隔宽度”，硬间隔要求≥M，软间隔在这里放宽了要求：允许个别点离超平面近一点（甚至跑到对面去），但要把放宽的量记为 εi。</p>
+<p>这个松弛变量εi就是“计分卡”，</p>
+<img src="/note_images/gaotong/image-20260623211943640.png" alt="image-20260623211943640" style="zoom:50%;" />
+<p><strong>总预算</strong>：C，它规定：所有样本的“违规分数”加起来，不能超过 C</p>
+<p><strong>归一化硬约束</strong>（β部分）：它强制要求系数向量 (β1,&hellip;,βp)的模长恰好为 1。因为模长是 1，所以第一行左边的 β0+β1xi1+&hellip;+βpxi 不需要再除以任何分母，它直接等于样本到超平面的垂直距离。
 </p>
 $$
 ε_i≥0,\sum_{i=1}^{n}ε_i≤C,\sum_{j=1}^{p}β_{j}^2=1
@@ -1506,7 +1649,7 @@ $$<p>
 怎么调整C限制𝜖𝑖,使得超平面虽被violated，但能在接受范围内?
 𝜖𝑖：0，正确间隔；&gt;0，错误间隔；&gt;1(右式为负数)，错误超平面侧。</p>
 <p>C：0，所有𝜖𝑖为0，不允许穿过间隔；&gt;0，最多可以有C个观测落到超平面错误一侧，因为每个错误落侧都对应其𝜖𝑖&gt;1(因为得为负)。至于穿过间隔多少个，无法说
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8713-178212128365787.png" alt=""></p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8713-178212128365787-178223837699724.png" alt=""></p>
 <h4 id="非线性决策边界分类">
 <a class="header-anchor" href="#%e9%9d%9e%e7%ba%bf%e6%80%a7%e5%86%b3%e7%ad%96%e8%be%b9%e7%95%8c%e5%88%86%e7%b1%bb"></a>
 非线性决策边界分类
@@ -1523,12 +1666,12 @@ y_i(β_0+\sum_{j=1}^{p}β_{j1}x_{ij}\sum_{j=1}^{p}β_{j2}x_{ij}^2)≥M(1-ε_i)
 $$$$
 ε_i≥0,\sum_{i=1}^{n}ε_i≤C,\sum_{j=1}^{p}\sum_{k=1}^{2}β_{jk}^2=1
 $$<p>
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8714-178212128365788.png" alt=""></p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8714-178212128365788-178223837699723.png" alt=""></p>
 <h3 id="支持向量机">
 <a class="header-anchor" href="#%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f%e6%9c%ba"></a>
 支持向量机
 </h3><p>是支持向量分类器的一个扩展，使用<strong>核函数</strong>来扩大特征空间</p>
-<p>内积：两个p维向量a和b的<strong>内积</strong>定义为
+<p>内积：两个p维向量a和b的<strong>内积</strong>定义为(就是点乘)
 </p>
 $$
 <x_i,x_{i'}>=\sum_{j=1}^{p}x_{ij}x_{i'j}
@@ -1563,6 +1706,7 @@ $$<p>和标准的线性核函数相比，能生成光滑度更高的决策边界
 </h5>$$
 K(x_i,x_{i'})=exp(-γ\sum_{j=1}^{p}(x_{ij}-x_{i'j})^2)
 $$<p>原理是以欧氏距离衡量，离测试观测远的训练观测的影响很小，某种意义上径向核函数是一种局部方法</p>
+<p>RBF核只看“邻居”。当某个训练样本离测试样本稍微远一点，它的核函数值会指数级急剧衰减，迅速趋近于 0。这意味着，在决定测试样本属于哪一类时，只有离它非常近的那几个“街坊邻居”有话语权，离得远的样本根本插不上嘴。所以，RBF核天然就是一种“近朱者赤，近墨者黑”的局部相似度度量。</p>
 <h5 id="使用核函数的优势">
 <a class="header-anchor" href="#%e4%bd%bf%e7%94%a8%e6%a0%b8%e5%87%bd%e6%95%b0%e7%9a%84%e4%bc%98%e5%8a%bf"></a>
 使用核函数的优势
@@ -1574,8 +1718,8 @@ $$<p>原理是以欧氏距离衡量，离测试观测远的训练观测的影响
 <h3 id="多分类的svmsupport-vector-machine">
 <a class="header-anchor" href="#%e5%a4%9a%e5%88%86%e7%b1%bb%e7%9a%84svmsupport-vector-machine"></a>
 多分类的SVM(support vector machine)
-</h3><p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8716-178212128365789.png" alt="">
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8715-178212128365790.png" alt=""></p>
+</h3><p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8716-178212128365789-178223837699725.png" alt="">
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8715-178212128365790-178223837699727.png" alt=""></p>
 <h2 id="第十章-无监督学习">
 <a class="header-anchor" href="#%e7%ac%ac%e5%8d%81%e7%ab%a0-%e6%97%a0%e7%9b%91%e7%9d%a3%e5%ad%a6%e4%b9%a0"></a>
 第十章 无监督学习
@@ -1583,15 +1727,16 @@ $$<p>原理是以欧氏距离衡量，离测试观测远的训练观测的影响
 <a class="header-anchor" href="#%e4%b8%bb%e6%88%90%e5%88%86%e5%88%86%e6%9e%90-pca"></a>
 主成分分析 PCA
 </h3><p>PCA产生一个对数据集的低维表示。它可以找到具有最大方差且互不相关的变量的线性组合序列。</p>
+<p>它的任务就是：找到几个新的方向（主成分），让这些新方向能最大程度地保留原始数据X里的“差异”和“波动”，因此不需要相应的Y</p>
 <h4 id="标准化">
 <a class="header-anchor" href="#%e6%a0%87%e5%87%86%e5%8c%96"></a>
 标准化
 </h4>$$
 𝑍_1=𝜙_{11} 𝑋_1+𝜙_{21} 𝑋_2+…+𝜙_{p1} 𝑋_𝑝
 $$<p>
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8717-178212128365792.png" alt="">
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8717-178212128365792-178223837699726.png" alt="">
 主成分受变量度量单位的选择影响，会导致结果的任意性。通常在进行PCA之前，需要将每个变量都标准化，使得它们的方差都为1。
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8718-178212128365791.png" alt=""></p>
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8718-178212128365791-178223837699728.png" alt=""></p>
 <h3 id="聚类分析法">
 <a class="header-anchor" href="#%e8%81%9a%e7%b1%bb%e5%88%86%e6%9e%90%e6%b3%95"></a>
 聚类分析法
@@ -1600,7 +1745,7 @@ $$<p>
 <a class="header-anchor" href="#k%e5%9d%87%e5%80%bc%e8%81%9a%e7%b1%bbk-means-clustering"></a>
 K均值聚类(K-means clustering)
 </h4><p>试图将观测划分到事先规定数量的类中。
-<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8719-178212128365793.png" alt="">
+<img src="/note_images/gaotong/%E5%9B%BE%E7%89%8719-178212128365793-178223837699729.png" alt="">
 K均值聚类法的思想是，一个好的聚类法可以使类内差异(within-cluster variation)尽可能小。
 算法</p>
 <blockquote>
@@ -1622,8 +1767,22 @@ K均值聚类法的思想是，一个好的聚类法可以使类内差异(within
 然后再把两个最为相似的类汇合到一起，就得到了𝑛−2个类；
 如此进行下去，到所有观测都属于某一个类时停止</p>
 </blockquote>
-<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8720-178212128365794.png" alt=""></p>
-<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8721-178212128365795.png" alt=""></p>
+<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8720-178212128365794-178223837699730.png" alt=""></p>
+<p><img src="/note_images/gaotong/%E5%9B%BE%E7%89%8721-178212128365795-178223837699731.png" alt=""></p>
+<ul>
+<li>最短距离法：两个类中，<strong>距离最近</strong>的那两个样本点之间的距离，作为两类之间的距离。
+特点
+优点：擅长抓取<strong>长条状、不规则</strong>的形状（比如“S”形分布）。
+缺点（链式效应）：对噪声极其敏感。只要存在一个离群点充当了“桥”，两个完全不相干的簇就会被错误地连在一起。在实战中，这是<strong>最不稳健</strong>的方法。</li>
+<li>最长距离法：两个类中，<strong>距离最远</strong>的那两个样本点之间的距离，作为两类之间的距离。
+特点：
+优点：<strong>极度稳健</strong>，不受离群点影响，倾向于生成紧凑、球状的簇。
+缺点：对长条形或细长分布的数据很不友好，会强行把长条切成两段。</li>
+<li>类平均法：如名
+特点：这是生物信息学（构建进化树）中最经典的方法。既不像最短法那么容易被噪声带偏，也不像最长法那么“强迫症”非要缩成球。它在绝大多数实战场景下，稳健性优于前两者。</li>
+<li>重心法：两个类的<strong>质心（几何中心点）<strong>之间的距离，作为两类之间的距离。
+缺陷：它</strong>可能存在“反转现象”</strong>。什么意思？在合并过程中，可能出现当前这一步合并的两个类之间的距离，比上一步合并的两个类之间的距离还要小。这在几何上会让“树状图（Dendrogram）”出现交叉，导致不直观。</li>
+</ul>
 <h2 id="第十一章-各模型评测">
 <a class="header-anchor" href="#%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0-%e5%90%84%e6%a8%a1%e5%9e%8b%e8%af%84%e6%b5%8b"></a>
 第十一章 各模型评测
@@ -1702,7 +1861,7 @@ K均值聚类法的思想是，一个好的聚类法可以使类内差异(within
 <h4 id="光滑度-可解释性均衡">
 <a class="header-anchor" href="#%e5%85%89%e6%bb%91%e5%ba%a6-%e5%8f%af%e8%a7%a3%e9%87%8a%e6%80%a7%e5%9d%87%e8%a1%a1"></a>
 光滑度-可解释性均衡
-</h4><p><img src="/note_images/gaotong/0_1-178212128365896.png" alt=""></p>
+</h4><p><img src="/note_images/gaotong/0_1-178212128365896-178223837699732.png" alt=""></p>
 <h3 id="置信区间和预测区间的区别">
 <a class="header-anchor" href="#%e7%bd%ae%e4%bf%a1%e5%8c%ba%e9%97%b4%e5%92%8c%e9%a2%84%e6%b5%8b%e5%8c%ba%e9%97%b4%e7%9a%84%e5%8c%ba%e5%88%ab"></a>
 置信区间和预测区间的区别
@@ -1765,17 +1924,17 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
     aria-label="Article navigation"
     data-aos="fade-up"
   ><div class="article-nav-link-wrap left"><img
-            data-src="/images/covers/9.jpg"
+            data-src="/images/covers/5.jpg"
             data-sizes="auto"
-            alt="SQL"
+            alt="MC服务器"
             class="lazyload"
           /><a
-          href="/post/sql/"
-          aria-label="Prev:SQL"
-          title="Prev:SQL"
+          href="/post/mc%E5%BC%80%E6%9C%8D/"
+          aria-label="Prev:MC服务器"
+          title="Prev:MC服务器"
         ></a>
         <div class="article-nav-caption">Prev</div>
-        <h3 class="article-nav-title">SQL</h3>
+        <h3 class="article-nav-title">MC服务器</h3>
       </div></nav></article></section>
         </div><footer id="footer" aria-label="Site footer">
   <div style="width: 100%; overflow: hidden">
@@ -1797,10 +1956,10 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;19.6k</span
+          >&nbsp;20.0k</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;01:41</span>
+        <span class="icon-coffee">&nbsp;01:43</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
@@ -1832,7 +1991,6 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
           <ul>
             <li>
               <ul>
-                <li></li>
                 <li><a href="#5112024-linxililinxi-2024-gaotong">5/11/2024 Linxi(LiLinxi) 2024 Gaotong</a></li>
                 <li><a href="#reference2020yangchengyu">Reference:2020YangChengYu</a></li>
                 <li><a href="#">https://github.com/EternityQAQ2/DLUT_2024_GaoTong</a></li>
@@ -1920,7 +2078,7 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
                 <li><a href="#k折交叉验证">K折交叉验证</a></li>
               </ul>
             </li>
-            <li><a href="#自助法">自助法</a>
+            <li><a href="#自助法bootstrap">自助法(Bootstrap)</a>
               <ul>
                 <li><a href="#自助法的其他用途">自助法的其他用途</a></li>
                 <li><a href="#自助法不能估计测试误差的原因">自助法不能估计测试误差的原因</a></li>
@@ -1940,6 +2098,7 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
             </li>
             <li><a href="#压缩估计方法">压缩估计方法</a>
               <ul>
+                <li><a href="#正则化">正则化：</a></li>
                 <li><a href="#岭回归l2正则化">岭回归（L2正则化）</a></li>
                 <li><a href="#lassol1正则化">Lasso（L1正则化）</a></li>
                 <li><a href="#岭回归和lasso的等价问题">岭回归和Lasso的等价问题</a></li>
@@ -1969,8 +2128,9 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
             </li>
             <li><a href="#光滑样条">光滑样条</a></li>
             <li><a href="#局部回归">局部回归</a></li>
-            <li><a href="#广义可加模型">广义可加模型</a>
+            <li><a href="#广义可加模型gam">广义可加模型(GAM)</a>
               <ul>
+                <li></li>
                 <li><a href="#gam的优点与不足">GAM的优点与不足</a></li>
                 <li><a href="#用于分类的gam">用于分类的GAM</a></li>
               </ul>
@@ -1997,7 +2157,7 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
               <ul>
                 <li><a href="#装袋法">装袋法</a></li>
                 <li><a href="#随机森林">随机森林</a></li>
-                <li><a href="#提升法">提升法</a></li>
+                <li><a href="#提升法boosting">提升法（Boosting）</a></li>
               </ul>
             </li>
           </ul>
@@ -2069,7 +2229,7 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div><div class="sidebar-state-number">17</div>
+    <div>Posts</div><div class="sidebar-state-number">18</div>
   </div>
   <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
     <div>Categories</div>
@@ -2171,7 +2331,7 @@ Lasso(lamba增大，变量数量变少，系数减少，趋近于线性，方差
           author: "scqwq",
           title: "统计学习",
           url: "http:\/\/localhost:1313\/post\/gaotong\/",
-          description: "\r高统\r注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!\r5\/11\/2024 Linxi(LiLinxi) 2024 Gaotong\rReference:2020YangChengYu\rhttps:\/\/github.com\/EternityQAQ2\/DLUT_2024_GaoTong\rRSS（残差平方和）、RSE（残差标准误）和MSE（均方误差） $$\rRSS = \\sum_{i=1}^n (Y_i - \\hat{Y}_i)^2\r$$ $$\rMSE = \\frac{RSS}{n - p}\r$$ $$\rRSE = \\sqrt{MSE} = \\sqrt{\\frac{RSS}{n - …",
+          description: "\r高统\r注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!\n另外，这是添加了细节的版本，尽量把第一眼看不清楚的地方做了解释\n原笔记地址如下：\n5\/11\/2024 Linxi(LiLinxi) 2024 Gaotong\rReference:2020YangChengYu\rhttps:\/\/github.com\/EternityQAQ2\/DLUT_2024_GaoTong\rRSS（残差平方和）、RSE（残差标准误，即 σ）和MSE（均方误差），p是要预测的参数个数（例如一个变量，一个截距则为两个，当然也可以表示p为要预测的变量的个数然后变成n - p - 1） $$\rRSS = …",
           cover: "http:\/\/localhost:1313\/images\/covers\/11.png",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {

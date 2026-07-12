@@ -33,10 +33,10 @@
           <h1 id="高统">
 <a class="header-anchor" href="#%e9%ab%98%e7%bb%9f"></a>
 高统
-</h1><h5 id="注意这不是我写的这是云盘里的为了方便观看push上来的">
-<a class="header-anchor" href="#%e6%b3%a8%e6%84%8f%e8%bf%99%e4%b8%8d%e6%98%af%e6%88%91%e5%86%99%e7%9a%84%e8%bf%99%e6%98%af%e4%ba%91%e7%9b%98%e9%87%8c%e7%9a%84%e4%b8%ba%e4%ba%86%e6%96%b9%e4%be%bf%e8%a7%82%e7%9c%8bpush%e4%b8%8a%e6%9d%a5%e7%9a%84"></a>
-<strong>注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!</strong>
-</h5><h4 id="5112024-linxililinxi-2024-gaotong">
+</h1><p><strong>注意这不是我写的，这是云盘里的为了方便观看PUSH上来的!!!</strong></p>
+<p>另外，这是添加了细节的版本，尽量把第一眼看不清楚的地方做了解释</p>
+<p>原笔记地址如下：</p>
+<h4 id="5112024-linxililinxi-2024-gaotong">
 <a class="header-anchor" href="#5112024-linxililinxi-2024-gaotong"></a>
 5/11/2024 Linxi(LiLinxi) 2024 Gaotong
 </h4><h4 id="reference2020yangchengyu">
@@ -45,7 +45,7 @@ Reference:2020YangChengYu
 </h4><h4 id="">
 <a class="header-anchor" href="#"></a>
 <a href="https://github.com/EternityQAQ2/DLUT_2024_GaoTong">https://github.com/EternityQAQ2/DLUT_2024_GaoTong</a>
-</h4><p>RSS（残差平方和）、RSE（残差标准误）和MSE（均方误差）
+</h4><p>RSS（残差平方和）、RSE（残差标准误，即 σ）和MSE（均方误差），p是要预测的参数个数（例如一个变量，一个截距则为两个，当然也可以表示p为要预测的变量的个数然后变成n - p - 1）
 </p>
 $$
 RSS = \sum_{i=1}^n (Y_i - \hat{Y}_i)^2
@@ -57,7 +57,18 @@ $$<p>
 </p>
 $$
 RSE = \sqrt{MSE} = \sqrt{\frac{RSS}{n - p}}
-$$<h2 id="第二章-统计学习">
+$$<ul>
+<li>
+<p>变异（Variability）：“数据点离中心（平均数）的远近程度”。</p>
+</li>
+<li>
+<p>模型参数（Model Parameters）：机器自己从数据里“学”出来的。比如线性回归里的系数 β斜率）、神经网络的权重。</p>
+</li>
+<li>
+<p>超参数（Hyperparameters）：你在启动训练之前，自己手动设定的“旋钮”或“开关”。机器不能从数据里直接学会它，只能靠你定，或者靠你通过试验去试出最好的值。</p>
+</li>
+</ul>
+<h2 id="第二章-统计学习">
 <a class="header-anchor" href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e7%bb%9f%e8%ae%a1%e5%ad%a6%e4%b9%a0"></a>
 第二章 统计学习
 </h2><h3 id="什么是统计学习">
@@ -74,23 +85,6 @@ f是X的函数，固定但未知，f表达了X提供给Y的系统信息，ε是<
 <a class="header-anchor" href="#%e4%bb%80%e4%b9%88%e6%83%85%e5%86%b5%e4%b8%8b%e9%9c%80%e8%a6%81%e4%bc%b0%e8%ae%a1f"></a>
 什么情况下需要估计f
 </h4><p><strong>预测</strong>和<strong>推断</strong>。</p>
-<h5 id="预测">
-<a class="header-anchor" href="#%e9%a2%84%e6%b5%8b"></a>
-预测
-</h5><p>预测主要关心f的估计值的准确性，不关注其是如何预测的（将f当作黑箱）</p>
-<p>精确性包括<strong>可约误差</strong>与<strong>不可约误差</strong>，可约误差可以通过选择更合适的统计学习方法降低</p>
-<h5 id="推断">
-<a class="header-anchor" href="#%e6%8e%a8%e6%96%ad"></a>
-推断
-</h5><p>推断主要关心$X_1$,$X_2$,&hellip;变化时如何对Y产生影响（不能将f当作黑箱）</p>
-<h4 id="如何估计f">
-<a class="header-anchor" href="#%e5%a6%82%e4%bd%95%e4%bc%b0%e8%ae%a1f"></a>
-如何估计f
-</h4><p>估计任务大多可分为<strong>参数方法</strong>和<strong>非参数方法</strong>
-非参数方法的关键特点是：这些方法不假定特定的概率分布或数据模型形式。换句话说，非参数方法不预设数据生成过程的具体数学形式，而是通过数据本身来揭示变量之间的关系。
-<img src="/note_images/gaotong/Y1-178212128365665.png" alt="">
-自然样条曲线并不假设数据符合某种特定的函数形式（如线性或多项式），而是通过分段多项式和节点（knots)来灵活拟合数据。这是非参数特性。
-回归树不需要预先设定任何特定的模型形式，而是通过数据驱动的方式划分输入空间。</p>
         
         <hr><p>Published on 2026-06-21 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-06-21</p>]]>
       </description>
@@ -269,6 +263,120 @@ mysqlsh进入mySQL-shell工具
 <a class="header-anchor" href="#%e8%af%ad%e6%b3%95"></a>
 语法:
 </h1><p>首先默认数据类型是列，对象是行</p>
+        
+        <hr><p>Published on 2026-06-20 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-06-20</p>]]>
+      </description>
+      
+        <category>专业课</category>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>MC服务器</title>
+      <link>http://localhost:1313/post/mc%E5%BC%80%E6%9C%8D/</link>
+      <pubDate>Sat, 20 Jun 2026 21:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (scqwq)</author>
+      <guid>http://localhost:1313/post/mc%E5%BC%80%E6%9C%8D/</guid>
+      <description>
+        <![CDATA[<h1>MC服务器</h1><p>Author: scqwq(xxx@example.com)</p>
+        
+          <p>推荐阅读/参考：https://www.zouht.com/2954.html</p>
+<p>以下是MC购买服务器/开服的具体流程，可能会有没注意到的bug，可以自行AI搜索或查找其他资料</p>
+<h3 id="一先购买服务器">
+<a class="header-anchor" href="#%e4%b8%80%e5%85%88%e8%b4%ad%e4%b9%b0%e6%9c%8d%e5%8a%a1%e5%99%a8"></a>
+一、先购买服务器
+</h3><p>什么云自己看着办，记得要买弹性公网ip，一般推荐ubuntu操作系统</p>
+<h4 id="安全组">
+<a class="header-anchor" href="#%e5%ae%89%e5%85%a8%e7%bb%84"></a>
+安全组：
+</h4><p>该地址可以让人访问的端口，为了方便和联机，把以下端口放开：</p>
+<p>MCsmanager：23333、24444
+MC客户端登陆：25565</p>
+<h4 id="本地pscmd登录远程服务器">
+<a class="header-anchor" href="#%e6%9c%ac%e5%9c%b0pscmd%e7%99%bb%e5%bd%95%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8"></a>
+本地ps/cmd登录远程服务器
+</h4><p>创建服务器选择密码登录，则</p>
+<p>在本地的powershell中，可以使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh root@xxx.xxx.xxx.xxx
+</span></span></code></pre></div><p>这个root是具体看你服务器的用户名，你的用户名是ubuntu那就是换上，具体出错的情况问ai</p>
+<p>xxx是你的地址，之后输入密码就连接成功了</p>
+<h4 id="可能会出现的">
+<a class="header-anchor" href="#%e5%8f%af%e8%83%bd%e4%bc%9a%e5%87%ba%e7%8e%b0%e7%9a%84"></a>
+可能会出现的
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>@@@@@@@@@@@@@@@@@@@
+</span></span><span style="display:flex;"><span>@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+</span></span><span style="display:flex;"><span>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+</span></span></code></pre></div><p>出现这种情况，一般代表<strong>你本地电脑记录的服务器指纹和现在的不一致了</strong></p>
+<p>这通常发生在服务器被重装系统、更换密钥或IP被复用后。SSH 出于安全考虑会拒绝连接，以防中间人攻击。这不是密码问题，而是本地缓存需要清理。</p>
+<p>解决：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -R xxx.xxx.xxx.xxx
+</span></span></code></pre></div><p>就可以清除指纹记录了</p>
+<h3 id="二下载必要的东西">
+<a class="header-anchor" href="#%e4%ba%8c%e4%b8%8b%e8%bd%bd%e5%bf%85%e8%a6%81%e7%9a%84%e4%b8%9c%e8%a5%bf"></a>
+二，下载必要的东西
+</h3><h4 id="mc服务端">
+<a class="header-anchor" href="#mc%e6%9c%8d%e5%8a%a1%e7%ab%af"></a>
+MC服务端
+</h4><p>本机准备：要开服的服务端</p>
+<p>一般原版可以在各个网站中下载到，比如：https://mcversions.net/</p>
+<p>而对于整合包，大部分也应该提供相应的服务端，并且里面有适配linux的启动命令的，如果不适配可以让ai改一改（我不清楚）</p>
+<h4 id="服务器环境">
+<a class="header-anchor" href="#%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%8e%af%e5%a2%83"></a>
+服务器环境
+</h4><h5 id="java下载">
+<a class="header-anchor" href="#java%e4%b8%8b%e8%bd%bd"></a>
+java下载
+</h5><p>服务器登录后，下载java，以下是在ubuntu中下载java的命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update -y 或者 sudo yum update -y <span style="color:#75715e"># 更新软件包列表</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 有sudo </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#java 8</span>
+</span></span><span style="display:flex;"><span>sudo yum install java-1.8.0-openjdk-devel -y 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#java 11</span>
+</span></span><span style="display:flex;"><span>sudo yum install java-11-openjdk-devel -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#java 17</span>
+</span></span><span style="display:flex;"><span>sudo yum install java-17-openjdk-devel -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#java 21</span>
+</span></span><span style="display:flex;"><span>sudo apt install openjdk-21-jdk -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 直接下载(用户名是root则不用sudo)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Java 8</span>
+</span></span><span style="display:flex;"><span>apt install openjdk-8-jdk -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Java 11</span>
+</span></span><span style="display:flex;"><span>apt install openjdk-11-jdk -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Java 17</span>
+</span></span><span style="display:flex;"><span>apt install openjdk-17-jdk -y
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Java 21</span>
+</span></span><span style="display:flex;"><span>apt install openjdk-21-jdk -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看java版本</span>
+</span></span><span style="display:flex;"><span>java -version
+</span></span></code></pre></div><h5 id="mcsmanager下载">
+<a class="header-anchor" href="#mcsmanager%e4%b8%8b%e8%bd%bd"></a>
+mcsmanager下载
+</h5><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 下载</span>
+</span></span><span style="display:flex;"><span>sudo wget -qO- https://gitee.com/mcsmanager/script/raw/master/setup_cn.sh | sudo bash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 旧版：</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 启用 MCSManager 服务：</span>
+</span></span><span style="display:flex;"><span>systemctl enable mcsm-<span style="color:#f92672">{</span>daemon,web<span style="color:#f92672">}</span>.service
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 运行 MCSManager 服务：</span>
+</span></span><span style="display:flex;"><span>systemctl start mcsm-<span style="color:#f92672">{</span>daemon,web<span style="color:#f92672">}</span>.service
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 检查 MCSManager 服务状态：</span>
+</span></span><span style="display:flex;"><span>systemctl status mcsm-<span style="color:#f92672">{</span>daemon,web<span style="color:#f92672">}</span>.service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 新版：</span>
+</span></span><span style="display:flex;"><span>  systemctl start   mcsm-daemon.service
+</span></span><span style="display:flex;"><span>  systemctl stop    mcsm-daemon.service
+</span></span><span style="display:flex;"><span>  systemctl restart mcsm-daemon.service
+</span></span><span style="display:flex;"><span>  systemctl status  mcsm-daemon.service
+</span></span><span style="display:flex;"><span>  systemctl start   mcsm-web.service
+</span></span><span style="display:flex;"><span>  systemctl stop    mcsm-web.service
+</span></span><span style="display:flex;"><span>  systemctl restart mcsm-web.service
+</span></span><span style="display:flex;"><span>  systemctl status  mcsm-web.service
+</span></span></code></pre></div><p>运行好了之后在<strong>服务器地址</strong>的23333端口上打开面板即可</p>
         
         <hr><p>Published on 2026-06-20 at <a href='http://localhost:1313/'>lets say hello world again</a>, last modified on 2026-06-20</p>]]>
       </description>
